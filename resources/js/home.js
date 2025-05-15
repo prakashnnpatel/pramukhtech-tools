@@ -1,3 +1,11 @@
-$("document").on("ready", function(){
-    
+var Home = (function () {    
+    return {
+        init: function () {
+        }
+    };
+})();
+
+$(function () {
+    Home.init();
 });
+window.Home = Home;

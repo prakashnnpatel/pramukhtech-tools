@@ -5,5 +5,12 @@
 @endsection
 
 @push('page_scripts')
-    @vite('resources/js/home.js')
+@php
+	$relativePath = "resources/js/{$toolKey}.js";
+	$fullPath = base_path($relativePath);
+@endphp
+@if (file_exists($fullPath))
+	@vite($relativePath)	
+@endif
 @endpush
+

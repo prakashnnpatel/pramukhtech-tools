@@ -16,7 +16,8 @@
             @yield('content')   
         </div>        
     </div>
-    @vite('resources/js/frontend.js')   
+    @vite('resources/js/frontend.js')
+	@vite('resources/js/home.js')
 	@stack('page_scripts')
     @include('layouts.third-party-code')
 </body>
