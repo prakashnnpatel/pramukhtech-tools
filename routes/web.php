@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+#### For Frontside
+use App\Http\Controllers\{
+	HomeController,
+};
+
+Route::get('/{toolkey?}',[HomeController::class, 'index'])->name("toollist");
