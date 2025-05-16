@@ -1,4 +1,4 @@
-<div class="sidebar" id="sidebar-menu"> 
+{{--<div class="sidebar" id="sidebar-menu"> 
     <ul class="list-categories">
         <li>
             <a class="menu-title-link" href="javascript:void(0);" class="menu-title-link active" title="Formatters">
@@ -23,4 +23,42 @@
             </ul>
         </li>
     </ul>
+</div>--}}
+
+<div class="sidebar">
+  <div> 
+    <span class="sidebar-toggle" title="Toggle Sidebar">
+        <i class="fas fa-bars"></i>
+    </span>
+    <div class="sidebar-logo">
+        <img src="/images/logo-v1-2-1.png">        
+    </div>
+    <ul class="sidebar-menu">      
+      <li class="has-submenu open">
+        <a href="javascript:void(0)" class="submenu-toggle">
+          <i class="fas fa-calculator"></i>Calculator
+          <i class="fas fa-chevron-right arrow"></i>
+        </a>
+        <ul class="submenu">
+            <li><a href="{{route('toollist', 'fd-calculator')}}" class="{{$toolKey == 'fd-calculator' ? 'active' : ''}}" title="FD Calculator">FD Calculator</a></li>
+            <li><a href="{{route('toollist', 'sip-calculator')}}" class="{{$toolKey == 'sip-calculator' ? 'active' : ''}}" title="SIP Calculator">SIP Calculator</a></li>
+            <li><a href="{{route('toollist', 'emi-calculator')}}" title="EMI Calculator">EMI Calculator</a></li>
+        </ul>
+      </li>
+
+      <li class="has-submenu open">
+        <a href="javascript:void(0)" class="submenu-toggle">
+          <i class="fas fa-cog"></i>TimeZone
+          <i class="fas fa-chevron-right arrow"></i>
+        </a>
+        <ul class="submenu">
+            <li><a href="{{route('toollist', 'timezone')}}" title="UTC to IST">UTC to IST</a></li>
+            <li><a href="{{route('toollist', 'timezone')}}" title="IST to EST">IST to EST</a></li>
+            <li><a href="{{route('toollist', 'timezone')}}" title="UTC to EST">UTC to EST</a></li>
+            <li><a href="{{route('toollist', 'timezone')}}" title="UTC to CST">UTC to CST</a></li>
+            <li><a href="{{route('toollist', 'timezone')}}" title="GMT to PST">GMT to PST</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>

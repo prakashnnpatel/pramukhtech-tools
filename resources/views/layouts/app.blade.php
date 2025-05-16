@@ -5,17 +5,14 @@
     <link rel="shortcut icon" href="{{ url('/') }}/images/favicon.png">
     @include('layouts.meta')
     <meta name="csrf-token" content="{{ csrf_token() }}">
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     @vite('resources/sass/frontend.scss')
     @stack('page_css')
 </head>
 <body>
-  <div class="wrapper">
-        @include('layouts.header')
-        <div class="main">
-            @include('section.sidebar')
-            @yield('content')   
-        </div>        
-    </div>
+    @include('section.sidebar')
+    @yield('content') 
     @vite('resources/js/frontend.js')
 	@vite('resources/js/home.js')
 	@stack('page_scripts')
