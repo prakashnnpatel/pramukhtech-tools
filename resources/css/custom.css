@@ -243,6 +243,27 @@ td, th {
   display: none; /* hidden by default */
 }
 
+.sidebar-search {
+  padding: 10px 20px;
+}
+
+.sidebar-search-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
 @media (max-width: 768px) {
   .sidebar-toggle {
     position: fixed;

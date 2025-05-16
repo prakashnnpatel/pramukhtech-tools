@@ -40,6 +40,20 @@ var Home = (function () {
                 body.classList.toggle('sidebar-open');
             }
             });
+
+            document.getElementById('sidebarSearch').addEventListener('input', function () {
+                const query = this.value.toLowerCase();
+                const menuItems = document.querySelectorAll('#sidebarMenu li');
+
+                menuItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+                });
+            });
         }
     };
 })();
