@@ -64,3 +64,41 @@ html, body {
 .font-size-18 {
   font-size: 18px !important;
 }
+
+.th-btn {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #684DF4;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 20.5px 20px;
+  min-width: 144px;
+  border-radius: 4px;
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #e0e0e0;
+}
+
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+td, th {
+  border: 1px solid #e0e0e0;
+  padding: 9px 12px;
+}

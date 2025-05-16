@@ -1,0 +1,22 @@
+.ui-slider-horizontal {
+  height: .4em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: -0.5em;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+	border-radius: 100%;
+}
+.ui-slider-range { background: #684DF4}
+.ui-slider-handle { border-color: #684DF4 }
+.ui-widget-content {
+  background-color: #dee9ec;
+}
+.ui-widget.ui-widget-content {
+  border: 1px solid #dee9ec;
+}
+
+.text-font-bold {
+   font-weight: bold !important; 
+}
