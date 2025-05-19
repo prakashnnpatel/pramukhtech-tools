@@ -48,18 +48,10 @@
             <li><a href="{{route('toollist', 'emi-calculator')}}" class="{{$toolKey == 'emi-calculator' ? 'active' : ''}}" title="EMI Calculator">EMI Calculator</a></li>
         </ul>
       </li>
-      <li class="has-submenu open">
-        <a href="javascript:void(0)" class="submenu-toggle">
-          <i class="fas fa-cog"></i>TimeZone
-          <i class="fas fa-chevron-right arrow"></i>
+      <li class="{{$toolKey == 'timezone' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'timezone')}}" title="Timezone Converter">
+          <i class="fas fa-clock"></i>Timezone Converter   
         </a>
-        <ul class="submenu">
-            <li><a href="{{route('toollist', 'timezone')}}" class="{{$toolKey == 'timezone' ? 'active' : ''}}" title="UTC to IST">UTC to IST</a></li>
-            <li><a href="{{route('toollist', 'timezone')}}" class="{{$toolKey == 'timezone' ? 'active' : ''}}" title="IST to EST">IST to EST</a></li>
-            <li><a href="{{route('toollist', 'timezone')}}" class="{{$toolKey == 'timezone' ? 'active' : ''}}" title="UTC to EST">UTC to EST</a></li>
-            <li><a href="{{route('toollist', 'timezone')}}" class="{{$toolKey == 'timezone' ? 'active' : ''}}" title="UTC to CST">UTC to CST</a></li>
-            <li><a href="{{route('toollist', 'timezone')}}" class="{{$toolKey == 'timezone' ? 'active' : ''}}" title="GMT to PST">GMT to PST</a></li>
-        </ul>
       </li>
     </ul>
   </div>

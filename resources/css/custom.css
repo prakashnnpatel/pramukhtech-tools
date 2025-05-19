@@ -264,6 +264,11 @@ td, th {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
+.sidebar-menu li.active > a {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
 @media (max-width: 768px) {
   .sidebar-toggle {
     position: fixed;
