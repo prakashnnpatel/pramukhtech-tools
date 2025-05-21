@@ -16,6 +16,7 @@
 @else
 	<meta name="robots" content="noindex, nofollow" />
 @endif
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7987011474307455" crossorigin="anonymous"></script>
 @if(request()->segment(1) !== NULL)
 	@switch(request()->segment(1))
 		@case('timezone')
