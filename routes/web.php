@@ -7,4 +7,5 @@ use App\Http\Controllers\{
 	HomeController,
 };
 
+Route::get('/sitemap.xml', [HomeController::class, 'sitemap']);
 Route::get('/{toolkey?}',[HomeController::class, 'index'])->name("toollist");

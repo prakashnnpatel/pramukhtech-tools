@@ -10,4 +10,8 @@ class HomeController extends Controller
     {
         return view("home", ["toolKey" => $toolkey]);
     }
+
+	public function sitemap() {
+		return response()->view('sitemap')->header('Content-Type', 'text/xml');
+	}
 }

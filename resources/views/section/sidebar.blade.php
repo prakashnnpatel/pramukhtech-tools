@@ -31,7 +31,7 @@
         <i class="fas fa-bars"></i>
     </span>
     <div class="sidebar-logo">
-        <img src="/images/logo-v1-2-1.png">        
+        <img src="/images/logo.png" alt="{{ config('app.name') }}">        
     </div>
     <div class="sidebar-search">
       <input type="text" id="sidebarSearch" placeholder="Search..." class="sidebar-search-input" />

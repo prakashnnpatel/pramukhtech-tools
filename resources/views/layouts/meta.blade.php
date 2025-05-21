@@ -1,3 +1,4 @@
+<link rel="shortcut icon" href="{{ url('/') }}/images/favicon.png">
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,37 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{url()->current()}}" />
 <meta property="og:site_name" content="{{ config('app.name') }}" />
-<meta property="og:image" content="{{Request::root()}}/images/logo.png" />
+<meta property="og:image" content="{{ url('/') }}/images/logo.png" />
 <meta property="og:title" content="{{ config('app.name') }}" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="{{ config('app.name') }} offers Free tools for the public usage." />
 @if(config('app.env') == 'production')
 	<meta name="robots" content="index, follow" />
 @else
 	<meta name="robots" content="noindex, nofollow" />
 @endif
-
 @if(request()->segment(1) !== NULL)
 	@switch(request()->segment(1))
-		@case('sip-calculator')
-			<meta name="description" content="" />
+		@case('timezone')
+			<title>Smart Timezone Converter for Effortless Global Collaboration</title>
+			<meta name="description" content="The timezone converter tool is powerful & accurate time management, Convert Timezones Instantly and Schedule Meetings Globally with Ease." />
 		@break
 
-        @case('sip-calculator')
-			<meta name="description" content="" />
+		@case('emi-calculator')
+			<title>Free EMI Calculator for Home, Car, and Personal Loans</title>
+			<meta name="description" content="Use our EMI Calculator to calculate your loan EMIs with ease quickly. Get detailed insights into monthly payments, interest rates, and repayment schedules." />
+		@break
+
+		@case('sip-calculator')
+			<title>The Ultimate SIP Calculator to Maximize Your Investments</title>
+			<meta name="description" content="SIP Calculator - Systematic Investment Plan Calculator. This tool can help you determine the amount you want to invest and the estimated value of the returns." />
+		@break
+
+		@default	
+			<title>FD Calculator - Calculate Fixed Deposit Interest Online</title>
+			<meta name="description" content="Easily calculate fixed deposit interest and maturity value with PramukhTech's FD Calculator tool. Plan your savings efficiently with accurate results." />
 		@break
 	@endswitch
 @else
-    <meta name="description" content=""/>
+	<title>FD Calculator - Calculate Fixed Deposit Interest Online</title>
+    <meta name="description" content="Easily calculate fixed deposit interest and maturity value with PramukhTech's FD Calculator tool. Plan your savings efficiently with accurate results." />
 @endif
