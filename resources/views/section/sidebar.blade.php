@@ -30,8 +30,8 @@
     <span class="sidebar-toggle" title="Toggle Sidebar">
         <i class="fas fa-bars"></i>
     </span>
-    <div class="sidebar-logo">
-        <img src="/images/logo.png" alt="{{ config('app.name') }}">        
+    <div class="sidebar-logo text-center" style="display: block !important;">
+        <h5 style="color: #684DF4;font-weight: bolder;">Tools Hubspot</h5>        
     </div>
     <div class="sidebar-search">
       <input type="text" id="sidebarSearch" placeholder="Search..." class="sidebar-search-input" />

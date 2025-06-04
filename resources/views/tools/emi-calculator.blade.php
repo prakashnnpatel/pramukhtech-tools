@@ -1,5 +1,5 @@
 <h1 class="font-size-18 font-weight-bold">Free EMI Calculator for Loans</h1>
-<p>A SIP calculator is a simple tool that allows individuals to get an idea of the returns on their mutual fund investments made through SIP. SIP investments in mutual funds have become one of the most popular investment options for millennials lately.</p>
+<p>Instant & Free EMI Calculator – Plan Your Loan Smartly!</p>
 <div class="card">
   <div class="card-body">
 	 <div class="row">
