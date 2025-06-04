@@ -53,22 +53,38 @@ $totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
 				 </select>
 			  </div>
 		   </div>
-		   <div class="col-lg-12">
+		   <div class="col-lg-12 text-right">
 			  <div class="form-group">					
-				 <button type="submit" class="th-btn w-100">Convert Now</button>
+				<button type="submit" class="th-btn">Convert Now</button>
+				<button type="button" class="th-btn" style="background: #E2E8FA;color: #000;" id="swapTimezones">Swap Timezones</button>
 			  </div>
 		   </div>
-		   <div class="col-lg-12">
-			  <h4 class="sec-title title-selector mt-2" id="converted-time"></h4>
-		   </div>
-		   <div class="col-lg-12">
-			  <table class="font-weight-bold">
-				 <tbody>
+			<div class="col-md-6 mt-2">
+				<div class="card text-center p-3 mb-3">
+				  <h5>From Timezone</h5>
+				  <p id="fromTimeDisplay" class="h4 text-primary">-</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="card text-center p-3 mb-3">
+				  <h5>To Timezone</h5>
+				  <p id="toTimeDisplay" class="h4 text-success">-</p>
+				</div>
+			</div>
+
+		   <div class="col-lg-12 mt-4">
+			  <table class="font-weight-bold" id="timezone_table">
+				<thead>
 					<tr>
-					   <th colspan="3">
-						  <h4 class="font-size-18 font-weight-bold">Popular Timezone Converters</h4>
+					   <th colspan="4">
+						   <div class="row">
+							<div class="col-lg-6"><h4 class="font-size-18 font-weight-bold">Popular Timezone Converters</h4></div>
+							<div class="col-lg-6"><input type="text" id="timezone-search" class="form-control" placeholder="Search timezone converters..."></div>
+						   </div>
 					   </th>
 					</tr>
+				</thead>
+				 <tbody>					
 					<tr class="text-center">
 					   <td>
 						  <a href="{{route('toollist', 'timezone')}}?fromtz=UTC&totz=Asia/Kolkata">UTC to IST</a>
@@ -79,6 +95,7 @@ $totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
 					   <td>
 						  <a href="{{route('toollist', 'timezone')}}?fromtz=UTC&totz=America/Chicago">UTC to CST</a>
 					   </td>
+					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=UTC&totz=America/Los_Angeles">UTC to PST</a></td>
 					</tr>
 					<tr class="text-center fw-bold">
 					   <td>
@@ -90,6 +107,7 @@ $totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
 					   <td>
 						  <a href="{{route('toollist', 'timezone')}}?fromtz=Asia/Kolkata&totz=America/Los_Angeles">IST to PDT</a>
 					   </td>
+					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=America/New_York&totz=Europe/London">EST to GMT</a></td>
 					</tr>
 					<tr class="text-center fw-bold">
 					   <td>
@@ -101,6 +119,7 @@ $totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
 					   <td>
 						  <a href="{{route('toollist', 'timezone')}}?fromtz=Europe/London&totz=America/New_York">BST to EDT</a>
 					   </td>
+					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=Asia/Kolkata&totz=Europe/London">IST to GMT</a></td>
 					</tr>
 					<tr class="text-center fw-bold">
 					   <td>
@@ -112,6 +131,7 @@ $totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
 					   <td>
 						  <a href="{{route('toollist', 'timezone')}}?fromtz=UTC&totz=America/Los_Angeles">UTC to PDT</a>
 					   </td>
+					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=Asia/Tokyo&totz=America/New_York">JST to EST</a></td>
 					</tr>
 					<tr class="text-center fw-bold">
 					   <td>
@@ -123,6 +143,7 @@ $totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
 					   <td>
 						  <a href="{{route('toollist', 'timezone')}}?fromtz=America/Los_Angeles&totz=America/Chicago">PDT to CST</a>
 					   </td>
+					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=Australia/Sydney&totz=Asia/Kolkata">AEST to IST</a></td>
 					</tr>
 				 </tbody>
 			  </table>

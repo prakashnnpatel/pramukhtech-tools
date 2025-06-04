@@ -1,6 +1,16 @@
 $(document).ready(function ($) {
 	defaultCurrDateTime();
 
+	$('#from_timezone, #to_timezone').select2({
+		width: '100%',
+		templateResult: formatTimezone,
+		placeholder: "Select a timezone",
+	});
+	function formatTimezone(timezone) {
+		if (!timezone.id) return timezone.text;
+		return timezone.text.replace("UTC", "UTC");
+	}
+
 	$('#timezone-converter-form').on('submit', function (e) {
 		e.preventDefault();
 		
@@ -9,20 +19,62 @@ $(document).ready(function ($) {
 		const toTimezone = $('#to_timezone').val();
 
 		if (!datetime || !fromTimezone || !toTimezone) {
-			$('#converted-time').html('Please fill all fields.');
 			return;
 		}
 
 		// Create a DateTime object with the input datetime and source timezone
 		const dt = luxon.DateTime.fromISO(datetime, { zone: fromTimezone });
+		$('#fromTimeDisplay').text(dt.toLocaleString(luxon.DateTime.DATETIME_FULL));
 
 		// Convert the DateTime object to the target timezone
 		const convertedDt = dt.setZone(toTimezone);
+		$('#toTimeDisplay').text(convertedDt.toLocaleString(luxon.DateTime.DATETIME_FULL));
+	});
+	//Default call
+	$('#timezone-converter-form').trigger('submit');
 
-		// Format the converted datetime
-		const formattedConvertedTime = convertedDt.toLocaleString(luxon.DateTime.DATETIME_FULL);
+	/* Search on table td*/
+	$('#timezone-search').on('keyup', function() {
+		var searchTerm = $(this).val().toLowerCase().trim();
+		if (searchTerm === '') {
+			// Show all rows and all cells when search box is empty
+			$('#timezone_table tbody tr').show();
+			$('#timezone_table tbody td').show();
+			return;
+		}
 
-		$('#converted-time').html(`Converted Time: <span class="text-theme">${formattedConvertedTime}</span> <hr/>`);
+		// Otherwise, filter based on search term
+		$('#timezone_table tbody td').each(function() {
+		  var cellText = $(this).text().toLowerCase();
+
+		  if (cellText.indexOf(searchTerm) > -1) {
+			$(this).show();
+		  } else {
+			$(this).hide();
+		  }
+		});
+
+		// Hide rows where all <td> are hidden
+		$('#timezone_table tbody tr').each(function() {
+		  var visibleTds = $(this).find('td:visible').length;
+		  if (visibleTds === 0) {
+			$(this).hide();
+		  } else {
+			$(this).show();
+		  }
+		});
+	});
+
+	$('#swapTimezones').click(function () {
+		const from = $('#from_timezone').val();
+		const to = $('#to_timezone').val();
+		
+		// Swap the values
+		$('#from_timezone').val(to).trigger('change');  // trigger change to update Select2 display
+		$('#to_timezone').val(from).trigger('change');
+
+		// Then submit the form
+		$('#timezone-converter-form').trigger('submit');
 	});
 
 	function defaultCurrDateTime() {
@@ -55,4 +107,6 @@ $(document).ready(function ($) {
 			//console.log('Timezone not found in the dropdown');
 		}
 	}
+
+
 });
