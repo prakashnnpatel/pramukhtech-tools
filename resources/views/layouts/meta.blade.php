@@ -36,10 +36,10 @@
 
 		@default	
 			<title>FD Calculator - Calculate Fixed Deposit Interest Online</title>
-			<meta name="description" content="Easily calculate fixed deposit interest and maturity value with PramukhTech's FD Calculator tool. Plan your savings efficiently with accurate results." />
+			<meta name="description" content="Calculate fixed deposit interest easily and maturity value with {{ config('app.name') }} FD Calculator. Plan your savings efficiently with accurate results." />
 		@break
 	@endswitch
 @else
 	<title>FD Calculator - Calculate Fixed Deposit Interest Online</title>
-    <meta name="description" content="Easily calculate fixed deposit interest and maturity value with PramukhTech's FD Calculator tool. Plan your savings efficiently with accurate results." />
+    <meta name="description" content="Easily calculate fixed deposit interest and maturity value with {{ config('app.name') }} FD Calculator. Plan your savings efficiently with accurate results." />
 @endif

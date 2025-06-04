@@ -1,7 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('tools.'.$toolKey)
+    @php
+		$viewPath = 'tools.' . $toolKey;
+	@endphp
+
+	@if (View::exists($viewPath))
+		@include($viewPath)
+	@else
+		@include($toolKey)
+	@endif
 @endsection
 
 @push('page_scripts')
@@ -12,7 +20,7 @@
 	$fullPath = base_path($relativePath);
 @endphp
 	@if (file_exists($fullPath))
-		@vite($relativePath)	
+		@vite($relativePath)
 	@endif
 @endpush
 
