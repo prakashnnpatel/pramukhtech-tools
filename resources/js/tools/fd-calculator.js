@@ -47,28 +47,69 @@ var calculateLoadAmount = function()
 
 	// Display results
 	$('#result').html(`
-		<table>
-			<tr>
-				<th colspan="2">FD Summary</th>
-			</tr>
-			<tr>
-				<th>Invested Amount </th>
-				<th class="text-theme">${Math.round(principal).toLocaleString()}</th>
-			</tr>
-			<tr>
-				<th>Est. Interest </th>
-				<th class="text-theme">${Math.round(interest).toLocaleString()}</th>
-			</tr>
-			<tr>
-				<th>Maturity Amount </th>
-				<th class="text-theme">${Math.round(maturity).toLocaleString()}</th>
-			</tr>
-			<tr>
-				<th>Maturity Date </th>
-				<th class="text-theme">${maturityDateString}</th>
-			</tr>
-		</table>
+    <div class="row">
+      <div class="col-lg-6">
+          <table>
+            <tr>
+              <th colspan="2">FD Summary</th>
+            </tr>
+            <tr>
+              <th>Invested Amount </th>
+              <th class="text-theme">${Math.round(principal).toLocaleString()}</th>
+            </tr>
+            <tr>
+              <th>Est. Interest </th>
+              <th class="text-theme">${Math.round(interest).toLocaleString()}</th>
+            </tr>
+            <tr>
+              <th>Maturity Amount </th>
+              <th class="text-theme">${Math.round(maturity).toLocaleString()}</th>
+            </tr>
+            <tr>
+              <th>Maturity Date </th>
+              <th class="text-theme">${maturityDateString}</th>
+            </tr>
+          </table>
+        </div>
+        <div class="col-lg-6">
+          <div style="width:300px;">
+            <canvas id="myDoughnutChart"></canvas>
+          </div>
+        </div>
+    </div>
 	`);
+
+    const ctx = document.getElementById('myDoughnutChart').getContext('2d');
+    const myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Invested Amount', 'Maturity Amount'],
+            datasets: [{
+                label: 'Amount',
+                data: [Math.round(principal), Math.round(maturity)],
+                backgroundColor: [
+                    'rgba(223, 12, 58, 0.7)',
+                    '#684DF4',
+                    
+                ],
+                borderColor: '#fff',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            cutout: '30%', // adjust for thinner/thicker doughnut
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                },
+                title: {
+                    display: true,
+                    text: 'FD Summary'
+                }
+            }
+        }
+    });
 }
 
   $(function() {	  

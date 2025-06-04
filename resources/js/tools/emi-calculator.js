@@ -42,6 +42,8 @@ var calculateLoadAmount = function()
 
 	// Display results
 	$('#result').html(`
+		<div class="row">
+			<div class="col-lg-6">
 		<table>
 			<tr>
 				<th colspan="2">Loan Summary</th>
@@ -63,7 +65,46 @@ var calculateLoadAmount = function()
 				<th class="text-theme">${Math.round(monthlyPayment).toLocaleString()}</th>
 			</tr>
 		</table>
+		</div>
+			<div class="col-lg-6">
+			<div style="width:300px;">
+				<canvas id="myDoughnutChart"></canvas>
+			</div>
+			</div>
+		</div>
 	`);
+
+	const ctx = document.getElementById('myDoughnutChart').getContext('2d');
+    const myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Your Amount', 'Total Interest'],
+            datasets: [{
+                label: 'Amount',
+                data: [Math.round(loanAmount), Math.round(totalInterest)],
+                backgroundColor: [
+                    'rgba(223, 12, 58, 0.7)',
+                    '#684DF4',
+                    
+                ],
+                borderColor: '#fff',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            cutout: '30%', // adjust for thinner/thicker doughnut
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                },
+                title: {
+                    display: true,
+                    text: 'EMI Summary'
+                }
+            }
+        }
+    });
 }
 
 $(function() {	  
