@@ -71,7 +71,8 @@ var calculateLoadAmount = function()
             </tr>
           </table>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-1"></div>
+			  <div class="col-lg-5">
           <div style="width:300px;">
             <canvas id="myDoughnutChart"></canvas>
           </div>
