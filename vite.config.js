@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import glob from "glob";
 
 export default defineConfig({
     plugins: [
@@ -11,11 +12,8 @@ export default defineConfig({
                 'resources/js/frontend.js',
                 'resources/js/home.js',
                 'resources/js/jquery-ui.min.js',
-                'resources/js/jqueryUiTouch.js',                               
-                'resources/js/tools/fd-calculator.js',
-				'resources/js/tools/emi-calculator.js',
-				'resources/js/tools/sip-calculator.js',
-				'resources/js/tools/timezone.js',
+                'resources/js/jqueryUiTouch.js',
+				...glob.sync("resources/js/tools/*.js"),
             ],
             refresh: true,
         }),
