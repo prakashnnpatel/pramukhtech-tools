@@ -50,6 +50,11 @@
 			<meta name="description" content="We are a team of IT professionals passionate about delivering IT services and developing high-quality, free tools for public use on the Internet. The primary goal of this website is to offer a comprehensive collection of free online tools (e.g., calculators, color pickers, image resizers, code formatters, etc.) to make everyday tasks easier for users." />
 		@break
 
+		@case('screen-recording')
+			<title>Free Online Screen Recorder with Audio | No Installation | Download Free</title>
+			<meta name="description" content="Record your screen with system & mic audio online. No software needed. Free, easy, and secure screen recorder with instant HD download – no watermark!" />
+		@break
+
 		@default	
 			<title>FD Calculator - Calculate Fixed Deposit Interest Online</title>
 			<meta name="description" content="Calculate fixed deposit interest easily and maturity value with {{ config('app.name') }} FD Calculator. Plan your savings efficiently with accurate results." />

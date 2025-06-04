@@ -6,6 +6,7 @@ $urlList = [
 	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist','sip-calculator')],
 	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist','emi-calculator')],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','timezone')],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','screen-recording')],
 ];
 ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>

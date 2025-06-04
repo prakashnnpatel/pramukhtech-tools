@@ -2,7 +2,7 @@
     <ul class="list-categories">
         <li>
             <a class="menu-title-link" href="javascript:void(0);" class="menu-title-link active" title="Formatters">
-                <i class="fas fa-calculator menu-icn"></i><span>Calculator</span>                                           
+                <i class="fas fa-calculator menu-icn"></i><span>Calculator</span>
             </a>
             <ul class="sub-menu list-unstyled">
                 <li><a href="{{route('toollist', 'fd-calculator')}}" title="FD Calculator">FD Calculator</a></li>
@@ -50,7 +50,12 @@
       </li>
       <li class="{{$toolKey == 'timezone' ? 'active' : ''}}">
         <a href="{{route('toollist', 'timezone')}}" title="Timezone Converter">
-          <i class="fas fa-clock"></i>Timezone Converter   
+          <i class="fas fa-clock"></i>Timezone Converter  
+        </a>
+      </li>
+	  <li class="{{$toolKey == 'screen-recording' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'screen-recording')}}" title="Online Free Screen Recorder with Audio - Download FREE">
+          <i class="fa-solid fa-desktop"></i>Screen Recorder		  
         </a>
       </li>
     </ul>
