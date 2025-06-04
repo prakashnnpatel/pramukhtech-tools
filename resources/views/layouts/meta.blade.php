@@ -34,6 +34,21 @@
 			<meta name="description" content="SIP Calculator - Systematic Investment Plan Calculator. This tool can help you determine the amount you want to invest and the estimated value of the returns." />
 		@break
 
+		@case('contact-us')
+			<title>Have a Question? We're Just a Message Away</title>
+			<meta name="description" content="We are eager to discuss your needs and explore how we can help. Whether it's a new tools or enhancing an existing one, get in touch with us anytime." />
+		@break
+
+		@case('terms-of-use')
+			<title>Terms of Use</title>
+			<meta name="description" content="Welcome to {{ config('app.name') }}. These Terms and Conditions govern your use of our services, website, and related tools." />
+		@break
+
+		@case('privacy-policy')
+			<title>Privacy Policy</title>
+			<meta name="description" content="We are a team of IT professionals passionate about delivering IT services and developing high-quality, free tools for public use on the Internet. The primary goal of this website is to offer a comprehensive collection of free online tools (e.g., calculators, color pickers, image resizers, code formatters, etc.) to make everyday tasks easier for users." />
+		@break
+
 		@default	
 			<title>FD Calculator - Calculate Fixed Deposit Interest Online</title>
 			<meta name="description" content="Calculate fixed deposit interest easily and maturity value with {{ config('app.name') }} FD Calculator. Plan your savings efficiently with accurate results." />
