@@ -8,7 +8,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{url()->current()}}" />
 <meta property="og:site_name" content="{{ config('app.name') }}" />
-<meta property="og:image" content="{{ url('/') }}/images/logo.png" />
+<meta property="og:image" content="{{ url('/') }}/images/favicon.png" />
 <meta property="og:title" content="{{ config('app.name') }}" />
 <meta property="og:description" content="{{ config('app.name') }} offers Free tools for the public usage." />
 @if(config('app.env') == 'production')
