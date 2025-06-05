@@ -69,5 +69,21 @@
 			</div>
         </div>		
     </div>
+
+	<div class="row mt-5">
+	   <div class="col-lg-12">
+			<h3 class="font-size-18 font-weight-bold mb-20">Key Features & Benefits:</h3>
+			<ul style="line-height: 35px;">
+				<li><b>Free Online Advanced Color Picker Tool </b> - Instantly pick any color from screen, images, or design elements.</li>
+				<li><b>Get HEX, RGB, HSL & CMYK Codes </b> - Accurate and detailed color formats for designers and developers.</li>
+				<li><b>Click to Pick Any Color from Image or Webpage </b> - Use eyedropper functionality to grab any pixel color in real time.</li>
+				<li><b>Live Color Preview & Code Copy </b> - Preview selected color and copy color code instantly with one click.</li>
+				<li><b>Built-In Palette Generator & History </b> - Save your picked colors and generate custom color palettes on the fly.</li>
+				<li><b>Zoomed Pixel View for Precision Picking </b> - Advanced zoom and grid view for pixel-perfect color detection.</li>
+				<li><b>Works on All Devices and Browsers </b> - No installation needed. Works smoothly on Chrome, Firefox, Safari, and mobile browsers.</li>
+				<li><b>Perfect for UI/UX Designers, Developers, and Artists </b> - Ideal tool for accurate color matching and branding tasks.</li>
+			</ul>
+		</div>
+	</div>
   </div>
 </div>

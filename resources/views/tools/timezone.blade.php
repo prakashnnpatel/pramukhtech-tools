@@ -156,7 +156,7 @@ $totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
 			  <h3 class="font-size-18 font-weight-bold mb-20">Timezone Converter – Time Difference Calculator</h3>
 			  <p>Provides <a href="https://en.wikipedia.org/wiki/List_of_time_zones_by_country" target="_blank" rel="noopener" title="timezone conversions">timezone conversions</a> taking into account Daylight Saving Time (DST), and local time zone and accepts present, past, or future dates.</p>
 			  <h3 class="font-size-18 font-weight-bold mb-20">Powerful benefits</h3>
-			  <ul class="wp-block-list">
+			  <ul style="line-height: 35px;">
 				 <li>Say Goodbye to Confusing Time Differences with Our Easy Converter.</li>
 				 <li>Saves time by providing instant and accurate timezone conversions.</li>
 				 <li>Enables better planning for international meetings or events.</li>
