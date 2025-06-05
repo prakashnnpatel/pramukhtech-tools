@@ -13,9 +13,10 @@
 @endsection
 
 @push('page_scripts')
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 @vite("resources/js/jquery-ui.min.js")
-@vite("resources/js/jquery.signature.js")
+@if($toolKey == "signature")
+	@vite("resources/js/jquery.signature.js")
+@endif
 @vite("resources/js/jqueryUiTouch.js")
 @php
 	$relativePath = "resources/js/tools/{$toolKey}.js";

@@ -13,6 +13,7 @@ export default defineConfig({
                 'resources/js/home.js',
                 'resources/js/jquery-ui.min.js',
                 'resources/js/jqueryUiTouch.js',
+				'resources/js/jquery.signature.js',
 				...glob.sync("resources/js/tools/*.js"),
             ],
             refresh: true,
