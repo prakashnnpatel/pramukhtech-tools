@@ -44,28 +44,30 @@
                         <div class="color-preview" id="colorPreview"></div>
                     </div>
                 </div>
-            </div>           
+				<div class="col-lg-12">
+					<div class="form-group">
+						<label>Recent Colors:</label>
+						<div class="recent-colors" id="recentColors"></div>
+					</div>
+				</div>
+            </div>
         </div> 
         <div class="col-lg-6">
-        </div>     
-        <div class="col-lg-6">
-            <div class="form-group">
-                <label for="hexCode">Hex:</label>
-                <input type="text" id="hexCode" value="#ff0000" class="form-control">
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="form-group">
-                <label for="rgbCode">RGB:</label>
-                <input type="text" id="rgbCode" value="rgb(255, 0, 0)" class="form-control">
-            </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label>Recent Colors:</label>
-                <div class="recent-colors" id="recentColors"></div>
-            </div>
-        </div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="form-group">
+						<label for="hexCode">Hex:</label>
+						<input type="text" id="hexCode" value="#ff0000" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="form-group">
+						<label for="rgbCode">RGB:</label>
+						<input type="text" id="rgbCode" value="rgb(255, 0, 0)" class="form-control">
+					</div>
+				</div>
+			</div>
+        </div>		
     </div>
   </div>
 </div>
