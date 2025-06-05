@@ -31,7 +31,7 @@
         <i class="fas fa-bars"></i>
     </span>
     <div class="sidebar-logo text-center" style="display: block !important;">
-        <h5 style="color: #684DF4;font-weight: bolder;">Tools Hubspot</h5>        
+        <a href="{{route('toollist')}}" style="text-decoration: none;"><h5 style="color: #684DF4;font-weight: bolder;">Tools Hubspot</h5></a>        
     </div>
     <div class="sidebar-search">
       <input type="text" id="sidebarSearch" placeholder="Search..." class="sidebar-search-input" />

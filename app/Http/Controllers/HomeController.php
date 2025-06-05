@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index($toolkey = "fd-calculator")
+    public function index($toolkey = "toollist")
     {
         return view("home", ["toolKey" => $toolkey]);
     }
