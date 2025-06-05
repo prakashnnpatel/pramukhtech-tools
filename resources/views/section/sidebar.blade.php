@@ -59,7 +59,7 @@
       </li>
 	  <li class="has-submenu open">
         <a href="javascript:void(0)" class="submenu-toggle">
-          <i class="fas fa-calculator"></i>Calculator
+          <i class="fas fa-calculator"></i>Calculators
           <i class="fas fa-chevron-right arrow"></i>
         </a>
         <ul class="submenu">

@@ -9,8 +9,8 @@
 <meta property="og:url" content="{{url()->current()}}" />
 <meta property="og:site_name" content="{{ config('app.name') }}" />
 <meta property="og:image" content="{{ url('/') }}/images/tools/{{$toolKey}}.png" />
-<meta property="og:title" content="{{ config('app.name') }}" />
-<meta property="og:description" content="{{ config('app.name') }} offers Free tools for the public usage." />
+<meta property="og:title" content="Free Online Tools for Everyday Work - Screen Recorder, Timezone Converter & More | ToolHubSpot" />
+<meta property="og:description" content="Discover 100% free and easy-to-use online tools at ToolHubSpot - including screen recorder, digital signature creator, timezone converter, color picker, and more. No downloads, no sign-up. Boost productivity in seconds!" />
 @if(config('app.env') == 'production')
 	<meta name="robots" content="index, follow" />
 @else
@@ -65,12 +65,17 @@
 			<meta name="description" content="Use our free online Color Picker tool to select and copy any color on your screen. Instantly get HEX, RGB, or HSL codes. Perfect for designers and developers." />
 		@break
 
-		@default	
+		@case('fd-calculator')
 			<title>FD Calculator - Calculate Fixed Deposit Interest Online</title>
 			<meta name="description" content="Calculate fixed deposit interest easily and maturity value with {{ config('app.name') }} FD Calculator. Plan your savings efficiently with accurate results." />
 		@break
+
+		@default
+		<title>Free Online Tools for Everyday Work - Screen Recorder, Timezone Converter & More | ToolHubSpot</title>
+		<meta name="description" content="Discover 100% free and easy-to-use online tools at ToolHubSpot - including screen recorder, digital signature creator, timezone converter, color picker, and more. No downloads, no sign-up. Boost productivity in seconds!" />
+		@break
 	@endswitch
 @else
-	<title>FD Calculator - Calculate Fixed Deposit Interest Online</title>
-    <meta name="description" content="Easily calculate fixed deposit interest and maturity value with {{ config('app.name') }} FD Calculator. Plan your savings efficiently with accurate results." />
+	<title>Free Online Tools for Everyday Work - Screen Recorder, Timezone Converter & More | ToolHubSpot</title>
+    <meta name="description" content="Discover 100% free and easy-to-use online tools at ToolHubSpot - including screen recorder, digital signature creator, timezone converter, color picker, and more. No downloads, no sign-up. Boost productivity in seconds!" />
 @endif

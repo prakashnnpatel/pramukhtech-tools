@@ -1,6 +1,6 @@
-<h1 class="font-size-18 font-weight-bold">Free EMI Calculator for Loans</h1>
-<p>Instant & Free EMI Calculator – Plan Your Loan Smartly!</p>
-<div class="row">
+<h1 class="font-size-18 font-weight-bold">All-in-One FREE Online Tools to Boost Your Productivity</h1>
+<p>ToolHubSpot.com offers a wide range of free, easy-to-use online tools designed to simplify your daily digital tasks - from screen recording and digital signatures to timezone conversion, color picking, and more. Whether you're a developer, designer, remote worker, or everyday internet user, our tools are built to save you time and boost productivity without any downloads or sign-ups. Start using smart, accessible, and 100% free utilities at ToolHubSpot - your one-stop hub for all essential online tools.</p>
+<div class="row mt-5">
    <div class="col-md-3 mb-4">
       <a href="{{route('toollist', 'timezone')}}" title="Timezone Converter" style="text-decoration: none; color:#000;">
          <div class="card  shadow-sm">
