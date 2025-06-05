@@ -57,13 +57,13 @@
 				<div class="col-lg-12">
 					<div class="form-group">
 						<label for="hexCode">Hex:</label>
-						<input type="text" id="hexCode" value="#ff0000" class="form-control">
+						<input type="text" id="hexCode" value="#684DF4" class="form-control">
 					</div>
 				</div>
 				<div class="col-lg-12">
 					<div class="form-group">
 						<label for="rgbCode">RGB:</label>
-						<input type="text" id="rgbCode" value="rgb(255, 0, 0)" class="form-control">
+						<input type="text" id="rgbCode" value="rgb(104, 77, 244)" class="form-control">
 					</div>
 				</div>
 			</div>

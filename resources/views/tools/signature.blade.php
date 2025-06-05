@@ -17,8 +17,8 @@
         </div>
         <div class="col-lg-12">
             <div class="text-right mt-2 m-auto">		
-                <button id="doanload_signature" class="btn btn-primary btn-md">Download Signature</button>				
-                <button id="clear" class="btn btn-secondary btn-md">Clear Signature</button>
+                <button id="doanload_signature" class="th-btn btn-md">Download Signature</button>				
+                <button id="clear" class="th-btn btn-md" style="background-color: #E2E8FA; color:#000;">Clear Signature</button>
             </div>
         </div>
     </div>

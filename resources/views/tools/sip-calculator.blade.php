@@ -25,8 +25,8 @@
 		   </div>
 		</div>
 		<div class="col-lg-12">
-		   <div class="form-group">					
-			  <button type="button" value="Calculate" name="calculate" onClick="calculateLoadAmount();" class="th-btn w-100">Calculate Your SIP Now</button>
+		   <div class="form-group text-right">					
+			  <button type="button" value="Calculate" name="calculate" onClick="calculateLoadAmount();" class="th-btn">Calculate Your SIP Now</button>
 		   </div>
 		</div>
 	 </div>
