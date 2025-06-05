@@ -8,7 +8,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{url()->current()}}" />
 <meta property="og:site_name" content="{{ config('app.name') }}" />
-<meta property="og:image" content="{{ url('/') }}/images/favicon.png" />
+<meta property="og:image" content="{{ url('/') }}/images/tools/{{$toolKey}}.png" />
 <meta property="og:title" content="{{ config('app.name') }}" />
 <meta property="og:description" content="{{ config('app.name') }} offers Free tools for the public usage." />
 @if(config('app.env') == 'production')
@@ -52,7 +52,7 @@
 
 		@case('screen-recording')
 			<title>Free Online Screen Recorder with Audio | No Installation | Download Free</title>
-			<meta name="description" content="Record your screen with system & mic audio online. No software needed. Free, easy, and secure screen recorder with instant HD download – no watermark!" />
+			<meta name="description" content="Record your screen with system & mic audio online. No software needed. Free, easy, and secure screen recorder with instant HD download ï¿½ no watermark!" />
 		@break
 
 		@default	
