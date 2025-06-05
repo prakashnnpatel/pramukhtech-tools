@@ -53,11 +53,21 @@
           <i class="fas fa-clock"></i>Timezone Converter  
         </a>
       </li>
-	  <li class="{{$toolKey == 'screen-recording' ? 'active' : ''}}">
+	    <li class="{{$toolKey == 'screen-recording' ? 'active' : ''}}">
         <a href="{{route('toollist', 'screen-recording')}}" title="Online Free Screen Recorder with Audio - Download FREE">
           <i class="fa-solid fa-desktop"></i>Screen Recorder		  
         </a>
       </li>
+      <li class="{{$toolKey == 'signature' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'signature')}}" title="Create Your Digital Signature in Seconds">
+          <i class="fa-solid fa-pen"></i>Digital Signature		  
+        </a>
+      </li>
+      <li class="{{$toolKey == 'color-picker' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'color-picker')}}" title="Create Your Digital Signature in Seconds">
+          <i class="fa-solid fa-palette"></i>Color Picker		  
+        </a>
+      </li>      
     </ul>
   </div>
 </div>

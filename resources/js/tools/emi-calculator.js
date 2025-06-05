@@ -49,7 +49,7 @@ var calculateLoadAmount = function()
 				<th colspan="2">Loan Summary</th>
 			</tr>
 			<tr>
-				<th>Your Amount </th>
+				<th>Loan Amount </th>
 				<th>${loanAmount.toLocaleString()}</th>
 			</tr>
 			<tr>
@@ -79,7 +79,7 @@ var calculateLoadAmount = function()
     const myDoughnutChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Your Amount', 'Total Interest'],
+            labels: ['Loan Amount', 'Total Interest'],
             datasets: [{
                 label: 'Amount',
                 data: [Math.round(loanAmount), Math.round(totalInterest)],
