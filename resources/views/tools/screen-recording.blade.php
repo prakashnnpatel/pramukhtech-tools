@@ -5,8 +5,8 @@
 		<div class="row">			
 			<div class="col-lg-12 mb-3">
 				<button type="button" id="startRecording" class="th-btn mr-2">Start Recording</button>
-				<button type="button" id="stopRecording" class="th-btn mr-2" disabled style="background: #E2E8FA;color: #000;">Stop Recording</button>
-				<button type="button" id="downloadRecording" class="th-btn" disabled style="background: #E2E8FA;color: #000;">Download Video</button>
+				<button type="button" id="stopRecording" class="th-btn mr-2" disabled style="display:none;">Stop Recording</button>
+				<button type="button" id="downloadRecording" class="th-btn" disabled style="display:none;">Download Video</button>
 			</div>
 			<div class="col-lg-12">
 				<video id="recordedVideo" style="width:100%; display:none;" controls></video>

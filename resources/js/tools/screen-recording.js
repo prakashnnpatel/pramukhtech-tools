@@ -11,6 +11,9 @@ startRecordingButton.on("click", () => {
 		.then((audioStream) => {
 			navigator.mediaDevices.getDisplayMedia({ video: true })
 				.then((screenStream) => {
+					$("#startRecording").hide();
+					$("#stopRecording").show();
+					$("#downloadRecording").show();
 					// Combine audio and screen streams
 					const combinedStream = new MediaStream([...audioStream.getTracks(), ...screenStream.getTracks()]);
 
@@ -44,6 +47,7 @@ stopRecordingButton.on("click", () => {
 		});
 		startRecordingButton.prop("disabled", false);
 		stopRecordingButton.prop("disabled", true);
+		$("#startRecording").show();
 	}
 });
 

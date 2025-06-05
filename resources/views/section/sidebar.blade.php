@@ -36,8 +36,28 @@
     <div class="sidebar-search">
       <input type="text" id="sidebarSearch" placeholder="Search..." class="sidebar-search-input" />
     </div>
-    <ul class="sidebar-menu" id="sidebarMenu">      
-      <li class="has-submenu open">
+    <ul class="sidebar-menu" id="sidebarMenu">
+      <li class="{{$toolKey == 'timezone' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'timezone')}}" title="Timezone Converter">
+          <i class="fas fa-clock"></i>Timezone Converter  
+        </a>
+      </li>	   
+      <li class="{{$toolKey == 'signature' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'signature')}}" title="Create Your Digital Signature in Seconds">
+          <i class="fa-solid fa-pen"></i>Digital Signature		  
+        </a>
+      </li>
+	  <li class="{{$toolKey == 'screen-recording' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'screen-recording')}}" title="Online Free Screen Recorder with Audio - Download FREE">
+          <i class="fa-solid fa-desktop"></i>Screen Recorder		  
+        </a>
+      </li>
+      <li class="{{$toolKey == 'color-picker' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'color-picker')}}" title="Create Your Digital Signature in Seconds">
+          <i class="fa-solid fa-palette"></i>Color Picker		  
+        </a>
+      </li>
+	  <li class="has-submenu open">
         <a href="javascript:void(0)" class="submenu-toggle">
           <i class="fas fa-calculator"></i>Calculator
           <i class="fas fa-chevron-right arrow"></i>
@@ -48,26 +68,6 @@
             <li><a href="{{route('toollist', 'emi-calculator')}}" class="{{$toolKey == 'emi-calculator' ? 'active' : ''}}" title="EMI Calculator">EMI Calculator</a></li>
         </ul>
       </li>
-      <li class="{{$toolKey == 'timezone' ? 'active' : ''}}">
-        <a href="{{route('toollist', 'timezone')}}" title="Timezone Converter">
-          <i class="fas fa-clock"></i>Timezone Converter  
-        </a>
-      </li>
-	    <li class="{{$toolKey == 'screen-recording' ? 'active' : ''}}">
-        <a href="{{route('toollist', 'screen-recording')}}" title="Online Free Screen Recorder with Audio - Download FREE">
-          <i class="fa-solid fa-desktop"></i>Screen Recorder		  
-        </a>
-      </li>
-      <li class="{{$toolKey == 'signature' ? 'active' : ''}}">
-        <a href="{{route('toollist', 'signature')}}" title="Create Your Digital Signature in Seconds">
-          <i class="fa-solid fa-pen"></i>Digital Signature		  
-        </a>
-      </li>
-      <li class="{{$toolKey == 'color-picker' ? 'active' : ''}}">
-        <a href="{{route('toollist', 'color-picker')}}" title="Create Your Digital Signature in Seconds">
-          <i class="fa-solid fa-palette"></i>Color Picker		  
-        </a>
-      </li>      
     </ul>
   </div>
 </div>
