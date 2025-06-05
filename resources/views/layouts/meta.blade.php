@@ -52,7 +52,17 @@
 
 		@case('screen-recording')
 			<title>Free Online Screen Recorder with Audio | No Installation | Download Free</title>
-			<meta name="description" content="Record your screen with system & mic audio online. No software needed. Free, easy, and secure screen recorder with instant HD download � no watermark!" />
+			<meta name="description" content="Record your screen with system & mic audio online. No software needed. Free, easy, and secure screen recorder with instant HD download - no watermark!" />
+		@break
+
+		@case('signature')
+			<title>Free Digital Signature Tool - Create & Download Your E-Signature</title>
+			<meta name="description" content="Create your digital signature online for free. Draw or type your e-signature and download it as a transparent PNG. Fast, secure, and no registration required." />
+		@break
+
+		@case('color-picker')
+			<title>Free Online Color Picker Tool - Get HEX, RGB & HSL Instantly</title>
+			<meta name="description" content="Use our free online Color Picker tool to select and copy any color on your screen. Instantly get HEX, RGB, or HSL codes. Perfect for designers and developers." />
 		@break
 
 		@default	
