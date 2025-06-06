@@ -55,8 +55,8 @@ $totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
 		   </div>
 		   <div class="col-lg-12 text-right">
 			  <div class="form-group">					
-				<button type="submit" class="th-btn">Convert Now</button>
-				<button type="button" class="th-btn" style="background: #E2E8FA;color: #000;" id="swapTimezones">Swap Timezones</button>
+				<button type="submit" class="th-btn mb-2">Convert Now</button>
+				<button type="button" class="th-btn mb-2" style="background: #E2E8FA;color: #000;" id="swapTimezones">Swap Timezones</button>
 			  </div>
 		   </div>
 			<div class="col-md-6 mt-2">

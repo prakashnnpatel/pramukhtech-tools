@@ -4,11 +4,11 @@
 	<div class="card-body">
 		<div class="row">			
 			<div class="col-lg-6 mb-3">
-				<button type="button" id="startRecording" class="th-btn mr-2"> <i class="fa-solid fa-video mr-2"></i> Start Recording</button>
+				<button type="button" id="startRecording" class="th-btn mr-2 mb-2"> <i class="fa-solid fa-video mr-2"></i> Start Recording</button>
 			</div>
 			<div class="col-lg-6 mb-3 text-right">
-				<button type="button" id="stopRecording" class="th-btn mr-2" style="display:none;" disabled ><i class="fa-solid fa-video-slash mr-2"></i> Stop Recording</button>
-				<button type="button" id="downloadRecording" class="th-btn" style="display:none;" disabled ><i class="fa-solid fa-arrow-down mr-2"></i> Download Video</button>
+				<button type="button" id="stopRecording" class="th-btn mb-2 mr-2" style="display:none;" disabled ><i class="fa-solid fa-video-slash mr-2"></i> Stop Recording</button>
+				<button type="button" id="downloadRecording" class="th-btn mb-2" style="display:none;" disabled ><i class="fa-solid fa-arrow-down mr-2"></i> Download Video</button>
 			</div>
 			<div class="col-lg-12">
 				<video id="recordedVideo" style="width:100%; display:none;" controls></video>
