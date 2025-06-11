@@ -24,7 +24,8 @@
     </div>
 	<div class="row mt-5">
 	   <div class="col-lg-12">
-		  <h3 class="font-size-18 font-weight-bold mb-20">Key Features & Benefits:</h3>
+		  <p>Create your professional - looking digital signature now at ToolHubSpot. Add personality to your documents and emails with stylish, customizable options. No installation needed - design and download instantly!</p>
+		  <h2 class="font-size-18 font-weight-bold mb-20">Key Features & Benefits:</h2>
 		  <ul style="line-height: 35px;">
 			<li><b>Create Digital Signature Online for Free </b> - Instantly generate your e-signature without registration or downloads.</li>
 			<li><b>Draw Your Signature</b> - Choose to hand-draw your signature or type it in stylish fonts.</li>
@@ -32,8 +33,8 @@
 			<li><b>No Signup, No Ads, No Watermark</b> - <span style="color:green; font-weight:bold;">100% FREE</span>, private, and user-friendly tool for quick signature creation.</li>
 			<li><b>Use for PDFs, Word Docs, Emails, and Forms</b> - Perfect for contracts, agreements, and online form submissions.</li>
 			<li><b>Secure and Confidential</b> - Your signature is not stored or shared.</li>
-			<li><b>Create Digital Signature in Seconds</b> - Fast-loading, mobile-friendly tool for on-the-go signing needs.</li>
-			<li><b>Accessible from Any Device or Browser</b> - Works seamlessly on Chrome, Firefox, Safari, and all major platforms.</li>				
+			{{--<li><b>Create Digital Signature in Seconds</b> - Fast-loading, mobile-friendly tool for on-the-go signing needs.</li>
+			<li><b>Accessible from Any Device or Browser</b> - Works seamlessly on Chrome, Firefox, Safari, and all major platforms.</li>--}}				
 		  </ul>
 		</div>
 	</div>

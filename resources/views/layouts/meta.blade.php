@@ -1,4 +1,5 @@
 <link rel="shortcut icon" href="{{ url('/') }}/images/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,7 +57,7 @@
 		@break
 
 		@case('signature')
-			<title>Free Digital Signature Tool - Create & Download Your E-Signature</title>
+			<title>Free Digital Signature Tool - Create Your E-Signature</title>
 			<meta name="description" content="Create your digital signature online for free. Draw or type your e-signature and download it as a transparent PNG. Fast, secure, and no registration required." />
 		@break
 
