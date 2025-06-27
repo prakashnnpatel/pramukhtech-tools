@@ -20,9 +20,14 @@
           <i class="fa-solid fa-pen"></i>Digital Signature		  
         </a>
       </li>
-	  <li class="{{$toolKey == 'screen-recording' ? 'active' : ''}}">
+	    <li class="{{$toolKey == 'screen-recording' ? 'active' : ''}}">
         <a href="{{route('toollist', 'screen-recording')}}" title="Online Free Screen Recorder with Audio - Download FREE">
           <i class="fa-solid fa-desktop"></i>Screen Recorder		  
+        </a>
+      </li>
+      <li class="{{$toolKey == 'custom-invoice' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'custom-invoice')}}" title="Online Free Create Custom Invoice - Download FREE">
+          <i class="fa-solid fa-file-pdf"></i>Custom Invoice		  
         </a>
       </li>
       <li class="{{$toolKey == 'color-picker' ? 'active' : ''}}">
