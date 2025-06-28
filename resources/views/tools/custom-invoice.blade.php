@@ -1,4 +1,3 @@
-
 <style>
     .card-header-2 {
         background-color: #fff;
@@ -10,36 +9,46 @@
 <form action="javascript:void(0)" id="custominvoicefrm" method="post">
 <div class="row">
     <div class="col-lg-6">
-        <div class="card">
+        <div class="card pb-0">
             <div class="card-header card-header-2">
-                <h1 class="font-size-18 font-weight-bold">Invoice Branding</h1>
+                <h1 class="font-size-18 font-weight-bold">Add Your Branding</h1>
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label>Choose Invoice Logo</label>
+                            <label for="invoice_logo">Upload your logo if any</label>
                             <input class="form-control" id="invoice_logo" name="invoice_logo" type="file"/>
-                            <small>Logo size should be 75 X 75</small>
+                            <small style="font-size: 11px;">Logo size should be 75 X 75</small>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="form-group">
-                            <label>Invoice Title</label>
-                            <input type="text" name="invoice_heading" maxlength="13" class="form-control" id="invoice_create_date" value="" />
-                            <small style="font-size: 10px;">If logo not upload then title show in invoice header</small>
+                            <label for="invoice_heading">Company Name</label>
+                            <input type="text" name="invoice_heading" maxlength="50" class="form-control" id="invoice_heading" value="" placeholder="Company or Your Full Name"/>
+                            <small style="font-size: 11px;">If the logo does not exist, then this will be displayed in the header.</small>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="form-group">
-                            <label>Invoice Date</label>
-                            <input type="text" name="invoice_create_date" class="form-control" id="invoice_create_date" value="{{date('d/m/Y')}}" />
+                            <label for="invoice_create_date">Invoice Date</label>
+                            <input type="text" name="invoice_create_date" class="form-control" id="invoice_create_date" value="{{date('d/m/Y')}}" placeholder="Any Formate" />
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-4">
                         <div class="form-group">
-                            <label>Invoice #</label>
-                            <input type="text" name="invoice_number" class="form-control" id="invoice_number" value="1001" />
+                            <label for="invoice_number">Invoice #</label>
+                            <input type="text" name="invoice_number" class="form-control" id="invoice_number" value="" placeholder="701"/>
+                        </div>
+                    </div>
+					<div class="col-lg-4">
+                        <div class="form-group">
+                            <label for="status">Status</label>
+							<select name="status" id="status" class="form-control">
+								<option value="PAID">Paid</option>
+								<option value="UNPAID">Unpaid</option>
+								<option value="DUE">Due</option>
+							</select>
                         </div>
                     </div>
                 </div>
@@ -47,31 +56,28 @@
         </div>
     </div>
     <div class="col-lg-6">
-        <div class="card">
+        <div class="card pb-0">
             <div class="card-header card-header-2">
-                <h1 class="font-size-18 font-weight-bold">Other Setting</h1>
+                <h1 class="font-size-18 font-weight-bold">Billing & Shipping Address</h1>
             </div>
             <div class="card-body">
                 <div class="row">    
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label>From Address</label>
-                            <textarea class="form-control" rows="3" name="invoice_from_address" id="invoice_from_address" placeholder="Billing Address">Name
-Full Address
-Phone: 972X-XXX-XXX
-Email: email@gmail.com
-                            </textarea>
+							<textarea class="form-control" rows="4" name="invoice_from_address" id="invoice_from_address" placeholder="Billing Address">ABC Company Ltd.
+Full Address...
+Phone: 792X-XXX-XXX
+Email: abcxxxx@gmail.com</textarea>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label>To Address</label>
-                            <textarea class="form-control" placeholder="Shipping Address" rows="3" name="invoice_to_address" id="invoice_to_address">Name
-Full Address
-Phone: 972X-XXX-XXX
-Email: email@gmail.com</textarea>
-                            
-                            <br/>
+                            <textarea class="form-control" placeholder="Shipping Address" rows="4" name="invoice_to_address" id="invoice_to_address">Receiver Name
+Full Address...
+Phone: 987X-XXX-XXX
+Email: receixxxx@gmail.com</textarea>
                         </div>
                     </div>
                 </div>
@@ -108,8 +114,8 @@ Email: email@gmail.com</textarea>
                 </table>  
             </div>
             <div class="card-footer card-header-2 text-right" style="border:none;">
-                <button type="button" id="btn_add_row" class="btn btn-primary" onClick="customInvoice.generateInvoice('pdf');">Generate Invoice</button>
-                <button type="button" id="btn_add_row" class="btn btn-primary" onClick="customInvoice.generateInvoice('print');">Print Invoice</button>
+                <button type="button" id="btn_add_row" class="btn btn-primary" onClick="customInvoice.generateInvoice('pdf');">Create Invoice PDF</button>
+                <button type="button" id="btn_add_row" class="btn btn-primary" onClick="customInvoice.generateInvoice('print');">Preview</button>
             </div>
         </div>
     </div>

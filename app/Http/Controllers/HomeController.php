@@ -34,16 +34,13 @@ class HomeController extends Controller
         {
             if($param['flag'] == "pdf")
             {
-                $param['invoice_from_address'] = str_replace(["\n","\r"],["<br/>","&nbsp;"],$param['invoice_from_address']);
-                $param['invoice_to_address'] = str_replace(["\n"],["<br/>","&nbsp;"],$param['invoice_to_address']);
                 $content = PDF::loadView('invoice-print', ['param' => $param])->output();
                 file_put_contents($pdfName, $content);
                 return url("uploads/pdf/".$fileName);
             }
             else {
                  return view('invoice-print', ['param'=>$param]);
-            }
-           
+            }           
         }
         catch(Exception $e) {
             echo 'Message: ' .$e->getMessage();
