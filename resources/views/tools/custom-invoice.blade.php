@@ -20,7 +20,7 @@
                         <div class="form-group">
                             <label>Choose Invoice Logo</label>
                             <input class="form-control" id="invoice_logo" name="invoice_logo" type="file"/>
-                            <small>Logo Size should be 150 X 150</small>
+                            <small>Logo size should be 75 X 75</small>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label>Invoice Create Date</label>
+                            <label>Invoice Date</label>
                             <input type="text" name="invoice_create_date" class="form-control" id="invoice_create_date" value="{{date('d/m/Y')}}" />
                         </div>
                     </div>
@@ -56,13 +56,22 @@
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label>From Address</label>
-                            <textarea class="form-control" name="invoice_from_address" id="invoice_from_address"></textarea>
+                            <textarea class="form-control" rows="3" name="invoice_from_address" id="invoice_from_address" placeholder="Billing Address">Name
+Full Address
+Phone: 972X-XXX-XXX
+Email: email@gmail.com
+                            </textarea>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label>To Address</label>
-                            <textarea class="form-control" name="invoice_to_address" id="invoice_to_address"></textarea>
+                            <textarea class="form-control" placeholder="Shipping Address" rows="3" name="invoice_to_address" id="invoice_to_address">Name
+Full Address
+Phone: 972X-XXX-XXX
+Email: email@gmail.com</textarea>
+                            
+                            <br/>
                         </div>
                     </div>
                 </div>
