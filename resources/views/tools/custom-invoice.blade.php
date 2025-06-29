@@ -121,8 +121,8 @@ Email: receixxxx@gmail.com</textarea>
                 </table>  
             </div>
             <div class="card-footer card-header-2 text-right" style="border:none;">
-                <button type="button" id="btn_create_invoice" class="btn btn-primary" onClick="customInvoice.generateInvoice('pdf');">Create Invoice PDF</button>
-                <button type="button" id="btn_create_print" class="btn btn-primary" onClick="customInvoice.generateInvoice('print');">Preview</button>
+                <button type="button" id="btn_create_invoice" class="btn btn-primary" onClick="customInvoice.generateInvoice('pdf');">Download PDF</button>
+                <button type="button" id="btn_create_print" class="btn btn-primary" onClick="customInvoice.generateInvoice('print');">Print Preview</button>
             </div>
         </div>
     </div>

@@ -11,7 +11,7 @@
 		}
 
 		.table-shading {
-			border:1px solid #d4d8d6; padding: 10px; background-color:#684DF4; color: #FFFFFF;
+			border:1px solid #d4d8d6; padding: 10px; background-color:#e3e3e3; color: #000;
 		}
 		.remove_border-top {
 			border-top:0;
@@ -26,7 +26,7 @@
 			<tr>
 				<td style="padding-top: 5px; padding-bottom:5px; vertical-align:top; border-bottom:1px solid #d4d8d6;">
 					<div style="width: 100%;display:inline-block;vertical-align:top;padding-left:10px;">
-						<div style="width:25%; display: inline-block;">
+						<div style="width:25%; display: inline-block;vertical-align:top;">
 							@if(!empty($param['invoice_logo']))
 								<img src="{{$param['invoice_logo']}}" alt="Logo" class="rounded" style="height:auto; width:150px;">
 							@elseif(!empty($param['invoice_heading']))
@@ -36,11 +36,12 @@
 							@endif							
 						</div>
 						<div style="width:70%; display: inline-block; font-size:14px; vertical-align:top; text-align: right;">							
-							<div style="font-size:16px; font-weight:bold; margin-bottom:2px; color:#696969;">Invoice# {{$param['invoice_number'] ?? "1001"}}</div>
+							<div style="font-size:22px; font-weight:bold; margin-bottom:2px; color:#696969;">Invoice</div>
+							<div style="font-weight:bold; margin-bottom:2px; color:#696969;"># {{$param['invoice_number'] ?? "1001"}}</div>
 							@if(!empty($param['status']) && strtolower($param['status']) == "paid")
-								<div style="font-size:16px; font-weight:bold; margin-bottom:2px; color:green;">{{$param['status']}}</div>
+								<div style="font-weight:bold; margin-bottom:2px; color:green;">{{$param['status']}}</div>
 							@else
-								<div style="font-size:16px; font-weight:bold; margin-bottom:2px; color:red;">{{$param['status']}}</div>
+								<div style="font-weight:bold; margin-bottom:2px; color:red;">{{$param['status']}}</div>
 							@endif
 							@if(isset($param['invoice_create_date']))
 								<div style="font-weight:bold; color:#696969;">{{$param['invoice_create_date']}}</div>
@@ -58,22 +59,33 @@
         <table cellspacing=0 cellspadding=0  style="width:100%; border-collapse: collapse; border-bottom:0px; margin-top: 20px; font-family: DejaVu Sans, sans-serif; font-size:14px;">
 			<thead>
 				<tr>
-                    <th style="text-align:left;">From:</th>
-					<th style="text-align:left;">Bill To:</th>
+					@if(!empty($param['invoice_from_address']))
+	                    <th style="text-align:left; ">From:</th>
+					@endif
+					@if(!empty($param['invoice_to_address']))
+						<th style="text-align:left; ">To:</th>
+					@endif
 				</tr>
 			</thead>
-			<tbody>   
-				@php
-					$param['invoice_from_address'] = nl2br(e($param['invoice_from_address']));
-					$param['invoice_to_address'] = nl2br(e($param['invoice_to_address']));
-				@endphp
+			<tbody>
 				<tr>
-					<td style="padding: 5px; line-height:18px; vertical-align: top;">
-						{!! $param['invoice_from_address'] !!}
-					</td>
-					<td style="padding: 5px; line-height:18px; vertical-align: top;">
-						{!! $param['invoice_to_address'] !!}
-					</td>
+					@if(!empty($param['invoice_from_address']))
+						@php
+							$param['invoice_from_address'] = nl2br(e($param['invoice_from_address']));
+						@endphp
+						<td style="padding: 5px; line-height:18px; vertical-align: top;">
+							{!! $param['invoice_from_address'] !!}
+						</td>
+					@endif
+
+					@if(!empty($param['invoice_to_address']))
+						@php
+							$param['invoice_to_address'] = nl2br(e($param['invoice_to_address']));
+						@endphp
+						<td style="padding: 5px; line-height:18px; vertical-align: top;">
+							{!! $param['invoice_to_address'] !!}
+						</td>
+					@endif
 				</tr>
 			</tbody>
 		</table>
