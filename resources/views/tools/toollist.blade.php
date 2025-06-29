@@ -32,6 +32,16 @@
       </a>
    </div>
    <div class="col-md-3 mb-4">
+      <a href="{{route('toollist', 'custom-invoice')}}" title="Custom Invoice" style="text-decoration: none; color:#000;">
+         <div class="card shadow-sm">
+            <i class="fa-solid fa-file-pdf fa-2x pt-2" style="text-align:center; color:#684DF4;"></i>  
+            <div class="card-body">
+               <h5 class="card-title mt-2 text-center">Custom Invoice</h5>
+            </div>
+         </div>
+      </a>
+   </div>
+   <div class="col-md-3 mb-4">
       <a href="{{route('toollist', 'color-picker')}}" title="Color Picker" style="text-decoration: none; color:#000;">
          <div class="card  shadow-sm">
             <i class="fa-solid fa-palette fa-2x pt-2" style="text-align:center; color:#684DF4;"></i>  

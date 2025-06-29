@@ -56,6 +56,11 @@
 			<meta name="description" content="Record your screen with system & mic audio online. No software needed. Free, easy, and secure screen recorder with instant HD download - no watermark!" />
 		@break
 
+		@case('custom-invoice')
+			<title>Free Online Create professional branded invoices | Free Print | Free Download as PDF</title>
+			<meta name="description" content="Create professional, branded invoices in minutes with our easy-to-use custom invoice generator. Whether you're a freelancer, small business, or agency, you can design invoices that reflect your brand, add taxes, include multi-line descriptions, and download them instantly - no design skills needed." />
+		@break
+
 		@case('signature')
 			<title>Free Digital Signature Tool - Create Your E-Signature</title>
 			<meta name="description" content="Create your digital signature online for free. Draw or type your e-signature and download it as a transparent PNG. Fast, secure, and no registration required." />
