@@ -48,6 +48,7 @@
 								<option value="PAID">Paid</option>
 								<option value="UNPAID">Unpaid</option>
 								<option value="DUE">Due</option>
+                                <option value="">None</option>
 							</select>
                         </div>
                     </div>
