@@ -15,11 +15,16 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12" id="uploadsection">
                         <div class="form-group">
                             <label for="invoice_logo">Upload your logo if any</label>
                             <input class="form-control" id="invoice_logo" name="invoice_logo" type="file"/>
                             <small style="font-size: 11px;">Logo size should be 75 X 75</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" id="logosection" style="display:none;">
+                        <div class="form-group mt-4">                       
+                            <img src="" style="display:none;width: 85px;height: auto;" id="invoice_logo_preview"/>
                         </div>
                     </div>
                     <div class="col-lg-12">

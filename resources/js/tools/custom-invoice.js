@@ -178,7 +178,10 @@ var customInvoice = function()
                 if (file && file.type.startsWith('image/')) {
                     const reader = new FileReader();
                     reader.onload = function (e) {
-                        uploadedInvoiceLogo = e.target.result;                                                
+                        uploadedInvoiceLogo = e.target.result;  
+                        $("#invoice_logo_preview").attr("src", uploadedInvoiceLogo).show();  
+                        $("#uploadsection").attr("class", "col-lg-8");   
+                        $("#logosection").attr("class", "col-lg-4").show();                                       
                     };
                     reader.readAsDataURL(file);
                 }
