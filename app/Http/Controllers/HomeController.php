@@ -29,6 +29,9 @@ class HomeController extends Controller
         $fileName = "order_invoice_".time().".pdf";
         $pdfName = $path."/".$fileName;
         
+		if(!empty($param['currency']))
+			$param['currencySymbol'] = config('constants.currencies')[$param['currency']];
+
         /* Write PDF */
         try 
         {

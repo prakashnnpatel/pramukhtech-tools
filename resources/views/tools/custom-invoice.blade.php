@@ -101,7 +101,16 @@ Email: receixxxx@gmail.com</textarea>
                     <div class="col-lg-6">
                         <h1 class="font-size-18 font-weight-bold">Invoice Items</h1>
                     </div>
-                    <div class="col-lg-6 text-right">
+					<div class="col-lg-3">
+						<select name="currency" id="currency" class="form-control">
+							@foreach (config('constants.currencies') as $code => $symbol)
+								<option value="{{ $code }}" {{ old('currency') == $code ? 'selected' : '' }}>
+									{{ $code }} ({{ $symbol }})
+								</option>
+							@endforeach
+						</select>
+					</div>
+                    <div class="col-lg-3 text-right">
                         <button type="button" id="btn_add_row" class="th-btn btn-md" onClick="customInvoice.addCustomeOption();">Add New Item</button>
                     </div>
                 </div>                

@@ -113,36 +113,36 @@
                             {{$itemInfo['item_qty']}}
                         </td>
                         <td style="border:1px solid #d4d8d6;padding: 10px; text-align:center;">
-                            {{$itemInfo['item_price']}}
+                            {{$param['currencySymbol']}}{{$itemInfo['item_price']}}
                         </td>
                         <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">
-                            {{$itemInfo['item_total']}}
+                            {{$param['currencySymbol']}}{{$itemInfo['item_total']}}
                         </td>
                     </tr>
                 @endforeach
                 <tr>
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['subtotal'] ?? 'Sub Total'}}</td>
-                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['itemSummery']['subtotal']}}</td>
+                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['currencySymbol']}}{{$param['itemSummery']['subtotal']}}</td>
                 </tr>
 				@if(!empty($param['itemSummery']['discount']))
 				<tr>
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['discount'] ?? 'Sub Total'}}</td>
-                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['itemSummery']['discount']}}</td>
+                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['currencySymbol']}}{{$param['itemSummery']['discount']}}</td>
                 </tr>
 				@endif
                 <tr>
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['tax'] ?? 'Tax'}}</td>
-                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['itemSummery']['tax']}}</td>
+                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['currencySymbol']}}{{$param['itemSummery']['tax']}}</td>
                 </tr>
                 <tr>
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right; font-weight:bold;" colspan="4">{{$param['itemSummeryHeader']['grand_total'] ?? 'Grand Total'}}</td>
-                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right; font-weight:bold;">{{$param['itemSummery']['grand_total']}}</td>
+                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right; font-weight:bold;">{{$param['currencySymbol']}}{{$param['itemSummery']['grand_total']}}</td>
                 </tr>
             </tbody>
         </table>
 		@if(!empty($param['itemSummery']['grand_total']) && $param['itemSummery']['grand_total'] > 0)
 			<div style="text-align:center; margin-top:15px; font-weight: bold;">
-				With words: {{ ucwords(convertNumberToWord($param['itemSummery']['grand_total'])) }} Rupees Only
+				With words: {{ ucwords(convertNumberToWord($param['itemSummery']['grand_total'])) }} {{$param['currency']}} Only
 			</div>
 		@endif
 
