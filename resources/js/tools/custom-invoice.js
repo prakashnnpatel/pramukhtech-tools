@@ -18,8 +18,19 @@ var customInvoice = function()
             <tr>
                 <td style="text-align:right;" colspan="4">
                     <input type="text" style="width:200px; margin-left: 76%; font-weight: bold;" name="itemSummeryHeader[subtotal]" class="form-control" Placeholder="Sub Total" value="Sub Total"/>
+                    <a href="javascript:void(0);" onClick="customInvoice.showDiscount(this);">+ Add Discount</a>
+                </td>               
+                <td>
+                    <input type="text" id="tr_subtotal" name="itemSummery[subtotal]" onBlur="customInvoice.invoiceItemTotalCalculation();"  value="0" class="form-control">                    
                 </td>
-                <td><input type="text" id="tr_subtotal" name="itemSummery[subtotal]" onBlur="customInvoice.invoiceItemTotalCalculation();"  value="0" class="form-control"></td>
+            </tr>
+            <tr id="tr_total_descount_section" style="display:none;">
+                <td style="text-align:right;" colspan="4">
+                    <input type="text" style="width:200px; margin-left: 76%; font-weight: bold;" name="itemSummeryHeader[discount]" class="form-control" Placeholder="Discount" value="Discount"/>                    
+                </td>               
+                <td>
+                    <input type="text" id="tr_discount" name="itemSummery[discount]" onBlur="customInvoice.invoiceItemTotalCalculation();"  value="0" class="form-control">                    
+                </td>
             </tr>
             <tr>
                 <td style="text-align:right;" colspan="4">
@@ -36,6 +47,12 @@ var customInvoice = function()
         `);
         invoiceSubToalCalculation();
         invoiceItemTotalCalculation();
+    }
+
+    var showDiscount = function(obj)
+    {
+        $(obj).hide();
+        $("#tr_total_descount_section").show();
     }
 
     var addAutoRow = function(index)
@@ -84,9 +101,14 @@ var customInvoice = function()
 
     var invoiceItemTotalCalculation = function(){
         let subTotal = parseFloat($("#tr_subtotal").val());
+        let discount = parseFloat($("#tr_discount").val());
         let tax = parseFloat($("#tr_tax").val());
         if(!isNaN(subTotal) && !isNaN(tax)) {
-            $("#tr_grand_total").val((subTotal + tax).toFixed(2));
+           let totalCal = 0.00;
+            if(!isNaN(discount)) {
+                totalCal = subTotal - discount
+            }
+            $("#tr_grand_total").val((totalCal + tax).toFixed(2));
         }
         else {
             $("#tr_grand_total").val(0.00);
@@ -192,7 +214,8 @@ var customInvoice = function()
         invoiceItemCalculation,
         generateInvoice,
         invoiceItemTotalCalculation,
-        addAutoRow
+        addAutoRow,
+        showDiscount,
     }
 }();
 

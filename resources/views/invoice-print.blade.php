@@ -124,6 +124,12 @@
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['subtotal'] ?? 'Sub Total'}}</td>
                     <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['itemSummery']['subtotal']}}</td>
                 </tr>
+				@if(!empty($param['itemSummery']['discount']))
+				<tr>
+                    <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['discount'] ?? 'Sub Total'}}</td>
+                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['itemSummery']['discount']}}</td>
+                </tr>
+				@endif
                 <tr>
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['tax'] ?? 'Tax'}}</td>
                     <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['itemSummery']['tax']}}</td>
