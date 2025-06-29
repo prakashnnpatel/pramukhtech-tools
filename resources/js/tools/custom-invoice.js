@@ -17,19 +17,19 @@ var customInvoice = function()
         $("#invoice_item_section tfoot").html(`
             <tr>
                 <td style="text-align:right;" colspan="4">
-                    <input type="text" style="width:200px; margin-left: 76%;" name="itemSummeryHeader[subtotal]" class="form-control" Placeholder="Sub Total" value="Sub Total"/>
+                    <input type="text" style="width:200px; margin-left: 76%; font-weight: bold;" name="itemSummeryHeader[subtotal]" class="form-control" Placeholder="Sub Total" value="Sub Total"/>
                 </td>
                 <td><input type="text" id="tr_subtotal" name="itemSummery[subtotal]" onBlur="customInvoice.invoiceItemTotalCalculation();"  value="0" class="form-control"></td>
             </tr>
             <tr>
                 <td style="text-align:right;" colspan="4">
-                    <input type="text" style="width:200px; margin-left: 76%;" name="itemSummeryHeader[tax]" class="form-control" Placeholder="Tax" value="Tax"/>
+                    <input type="text" style="width:200px; margin-left: 76%; font-weight: bold;" name="itemSummeryHeader[tax]" class="form-control" Placeholder="Tax" value="Tax"/>
                 </td>
                 <td><input type="text" id="tr_tax" name="itemSummery[tax]" value="0.00" onBlur="customInvoice.invoiceItemTotalCalculation();" class="form-control"></td>
             </tr>
             <tr>
                 <td style="text-align:right;" colspan="4">                    
-                    <input type="text" style="width:200px; margin-left: 76%;" name="itemSummeryHeader[grand_total]" class="form-control" Placeholder="Grand Total" value="Grand Total"/>
+                    <input type="text" style="width:200px; margin-left: 76%; font-weight: bold;" name="itemSummeryHeader[grand_total]" class="form-control" Placeholder="Grand Total" value="Grand Total"/>
                 </td>
                 <td><input type="text" id="tr_grand_total" name="itemSummery[grand_total]" value="0.00" class="form-control"></td>
             </tr>    

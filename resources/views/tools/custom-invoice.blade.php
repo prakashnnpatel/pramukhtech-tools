@@ -103,11 +103,11 @@ Email: receixxxx@gmail.com</textarea>
                 <table class="table" id="invoice_item_section">
                     <thead class="text-center">
                         <tr>
-                            <th><input style="width:52px;" Placeholder="#" class="form-control" type="text" name="tableHeader[sr]" value="#"/></th>
-                            <th><input type="text" class="form-control" Placeholder="Item" name="tableHeader[item]" value="Item"/></th>
-                            <th><input type="text" class="form-control" Placeholder="Qty" name="tableHeader[qty]" value="Qty"/></th>
-                            <th><input type="text" class="form-control" Placeholder="Price" name="tableHeader[price]" value="Price"/></th>
-                            <th><input type="text" class="form-control" Placeholder="Total" name="tableHeader[total]" value="Total"/></th>
+                            <th><input style="width:52px;font-weight: bold;" Placeholder="#" class="form-control" type="text" name="tableHeader[sr]" value="#"/></th>
+                            <th><input type="text" style="font-weight: bold;" class="form-control" Placeholder="Item" name="tableHeader[item]" value="Item"/></th>
+                            <th><input type="text" style="font-weight: bold;" class="form-control" Placeholder="Qty" name="tableHeader[qty]" value="Qty"/></th>
+                            <th><input type="text"  style="font-weight: bold;" class="form-control" Placeholder="Price" name="tableHeader[price]" value="Price"/></th>
+                            <th><input type="text" style="font-weight: bold;" class="form-control" Placeholder="Total" name="tableHeader[total]" value="Total"/></th>
                         </tr>
                     </thead>
                     <tbody></tbody>
