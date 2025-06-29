@@ -57,8 +57,8 @@
 		@break
 
 		@case('custom-invoice')
-			<title>Free Online Create professional branded invoices | Free Print | Free Download as PDF</title>
-			<meta name="description" content="Create professional, branded invoices in minutes with our easy-to-use custom invoice generator. Whether you're a freelancer, small business, or agency, you can design invoices that reflect your brand, add taxes, include multi-line descriptions, and download them instantly - no design skills needed." />
+			<title>Free Custom Invoice Generator - 100% Editable & Downloadable PDF | Print Preview | ToolHubSpot</title>
+			<meta name="description" content="Create professional, branded invoices in minutes with our free custom invoice generator. Fully editable templates with multi-line items, tax options, and your own logo. No login needed, download in PDF format instantly, 100% free and easy to use!" />
 		@break
 
 		@case('signature')

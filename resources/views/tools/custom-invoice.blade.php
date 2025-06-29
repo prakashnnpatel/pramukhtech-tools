@@ -5,7 +5,8 @@
     }
 </style>
 <h1 class="font-size-18 font-weight-bold">Create Custom Invoice</h1>
-<p>Create professional, branded invoices in minutes with our easy-to-use custom invoice generator. Whether you're a freelancer, small business, or agency, you can design invoices that reflect your brand, add taxes, include multi-line descriptions, and download them instantly - no design skills needed.</p>
+<p>Create and download professional invoices in seconds with ToolHubSpot's Free Custom Invoice Generator. Whether you're a freelancer, small business owner, or entrepreneur, our tool offers a simple yet powerful way to design invoices that reflect your brand. You have full control over every field - add your logo, company details, customer information, items, taxes, and more.</p>
+<p>With a 100% customizable template and no sign-up required, you can generate invoices and download them in high-quality PDF format - completely free. Start invoicing smarter and faster with ToolHubSpot today!</p>
 <form action="javascript:void(0)" id="custominvoicefrm" method="post">
 <div class="row">
     <div class="col-lg-6">
