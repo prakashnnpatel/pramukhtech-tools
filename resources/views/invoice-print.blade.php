@@ -82,11 +82,11 @@
         <table cellspacing=0 cellspadding=0  style="width:100%; border-collapse: collapse; border-bottom:0px; margin-top: 20px; font-family: DejaVu Sans, sans-serif; font-size:14px;">
 			<thead>
 				<tr>
-                    <th class="table-shading">#</th>
-                    <th class="table-shading">Item Name</th>
-					<th class="table-shading">Qty</th>
-					<th class="table-shading">Price</th>
-					<th class="table-shading">Total</th>
+                    <th class="table-shading">{{$param['tableHeader']['sr'] ?? '#'}}</th>
+                    <th class="table-shading">{{$param['tableHeader']['item'] ?? 'Item Name'}}</th>
+					<th class="table-shading">{{$param['tableHeader']['qty'] ?? 'Qty'}}</th>
+					<th class="table-shading">{{$param['tableHeader']['price'] ?? 'Price'}}</th>
+					<th class="table-shading">{{$param['tableHeader']['total'] ?? 'Total'}}</th>
 				</tr>
 			</thead>
             <tbody>
@@ -110,15 +110,15 @@
                     </tr>
                 @endforeach
                 <tr>
-                    <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">Sub Total</td>
+                    <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['subtotal'] ?? 'Sub Total'}}</td>
                     <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['itemSummery']['subtotal']}}</td>
                 </tr>
                 <tr>
-                    <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">Tax</td>
+                    <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['tax'] ?? 'Tax'}}</td>
                     <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['itemSummery']['tax']}}</td>
                 </tr>
                 <tr>
-                    <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right; font-weight:bold;" colspan="4">Grand Total</td>
+                    <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right; font-weight:bold;" colspan="4">{{$param['itemSummeryHeader']['grand_total'] ?? 'Grand Total'}}</td>
                     <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right; font-weight:bold;">{{$param['itemSummery']['grand_total']}}</td>
                 </tr>
             </tbody>

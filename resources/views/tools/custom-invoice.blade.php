@@ -102,11 +102,11 @@ Email: receixxxx@gmail.com</textarea>
                 <table class="table" id="invoice_item_section">
                     <thead class="text-center">
                         <tr>
-                            <th>#</th>
-                            <th>Item</th>
-                            <th>Qty</th>
-                            <th>Price</th>
-                            <th>Total</th>
+                            <th><input style="width:52px;" Placeholder="#" class="form-control" type="text" name="tableHeader[sr]" value="#"/></th>
+                            <th><input type="text" class="form-control" Placeholder="Item" name="tableHeader[item]" value="Item"/></th>
+                            <th><input type="text" class="form-control" Placeholder="Qty" name="tableHeader[qty]" value="Qty"/></th>
+                            <th><input type="text" class="form-control" Placeholder="Price" name="tableHeader[price]" value="Price"/></th>
+                            <th><input type="text" class="form-control" Placeholder="Total" name="tableHeader[total]" value="Total"/></th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -114,8 +114,8 @@ Email: receixxxx@gmail.com</textarea>
                 </table>  
             </div>
             <div class="card-footer card-header-2 text-right" style="border:none;">
-                <button type="button" id="btn_add_row" class="btn btn-primary" onClick="customInvoice.generateInvoice('pdf');">Create Invoice PDF</button>
-                <button type="button" id="btn_add_row" class="btn btn-primary" onClick="customInvoice.generateInvoice('print');">Preview</button>
+                <button type="button" id="btn_create_invoice" class="btn btn-primary" onClick="customInvoice.generateInvoice('pdf');">Create Invoice PDF</button>
+                <button type="button" id="btn_create_print" class="btn btn-primary" onClick="customInvoice.generateInvoice('print');">Preview</button>
             </div>
         </div>
     </div>

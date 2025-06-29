@@ -16,15 +16,21 @@ var customInvoice = function()
         $("#tr_item_"+suggectionAddedCnt).trigger('focus');
         $("#invoice_item_section tfoot").html(`
             <tr>
-                <td style="text-align:right;" colspan="4">Sub Total</td>
+                <td style="text-align:right;" colspan="4">
+                    <input type="text" style="width:200px; margin-left: 76%;" name="itemSummeryHeader[subtotal]" class="form-control" Placeholder="Sub Total" value="Sub Total"/>
+                </td>
                 <td><input type="text" id="tr_subtotal" name="itemSummery[subtotal]" onBlur="customInvoice.invoiceItemTotalCalculation();"  value="0" class="form-control"></td>
             </tr>
             <tr>
-                <td style="text-align:right;" colspan="4">Tax</td>
+                <td style="text-align:right;" colspan="4">
+                    <input type="text" style="width:200px; margin-left: 76%;" name="itemSummeryHeader[tax]" class="form-control" Placeholder="Tax" value="Tax"/>
+                </td>
                 <td><input type="text" id="tr_tax" name="itemSummery[tax]" value="0.00" onBlur="customInvoice.invoiceItemTotalCalculation();" class="form-control"></td>
             </tr>
             <tr>
-                <td style="text-align:right;" colspan="4">Grand Total</td>
+                <td style="text-align:right;" colspan="4">                    
+                    <input type="text" style="width:200px; margin-left: 76%;" name="itemSummeryHeader[grand_total]" class="form-control" Placeholder="Grand Total" value="Grand Total"/>
+                </td>
                 <td><input type="text" id="tr_grand_total" name="itemSummery[grand_total]" value="0.00" class="form-control"></td>
             </tr>    
         `);
@@ -129,6 +135,24 @@ var customInvoice = function()
             url: '/generate-invoice',
             type: "POST",
             data: invoiceData,
+            beforeSend : function(){
+                if(flag == "pdf")
+                {   
+                    $("#btn_create_invoice").html(`<span class="spinner-border spinner-border-sm" 
+                        role="status" aria-hidden="true"></span> Please Wait...`);                    
+                }
+                else {
+                    $("#btn_create_print").html( `<span class="spinner-border spinner-border-sm"
+                         role="status" aria-hidden="true"></span> Please Wait...`);
+                         
+                } 
+                $("#btn_create_print, #btn_create_invoice").attr("disabled", true)
+            },
+            complete: function() {
+                $("#btn_create_invoice").text(`Create Invoice PDF`);
+                $("#btn_create_print").text(`Preview`);
+                $("#btn_create_print, #btn_create_invoice").attr("disabled", false)
+            },
             success: function(r) {
                 if(r != "" && r != 0)
 				{
