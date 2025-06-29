@@ -35,9 +35,8 @@
 								<h3>Invoice</h3>
 							@endif							
 						</div>
-						<div style="width:70%; display: inline-block; font-size:14px; vertical-align:top; text-align: right;">
-							<div style="font-size:22px; font-weight:bold; margin-bottom:2px;">INVOICE</div>
-							<div style="font-size:16px; font-weight:bold; margin-bottom:2px; color:#696969;"># {{$param['invoice_number'] ?? "1001"}}</div>
+						<div style="width:70%; display: inline-block; font-size:14px; vertical-align:top; text-align: right;">							
+							<div style="font-size:16px; font-weight:bold; margin-bottom:2px; color:#696969;">Invoice # {{$param['invoice_number'] ?? "1001"}}</div>
 							@if(!empty($param['status']) && strtolower($param['status']) == "paid")
 								<div style="font-size:16px; font-weight:bold; margin-bottom:2px; color:green;">{{$param['status']}}</div>
 							@else
