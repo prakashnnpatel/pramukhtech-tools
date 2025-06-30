@@ -7,6 +7,20 @@ $totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
 
 $fromtz = str_replace("-","/", $fromtz);
 $totz = str_replace("-","/", $totz);
+
+$customArr = [
+	"UTC" => "UTC",
+	"IST" => "Asia-Kolkata",
+	"EST" => "America-New_York",
+	"CST" => "America-Chicago",
+	"PST" => "America-Los_Angeles",
+	"PDT" => "America-Los_Angeles",
+	"GMT" => "Europe-London",
+	"BST" => "Europe-London",
+	"EDT" => "America-New_York",
+	"JST" => "Asia-Tokyo",
+	"AEST" => "Australia-Sydney"	
+]; 
 @endphp
 <h1 class="font-size-18 font-weight-bold">Timezone Converter</h1>
 <p>The timezone converter tool is powerful & accurate time management, the tool converts the datetime from one timezone to another time zone, which is designed to simplify time management across different regions.</p>
