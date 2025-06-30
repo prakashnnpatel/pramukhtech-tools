@@ -15,35 +15,27 @@ var customInvoice = function()
         $("#tr_id_"+suggectionAddedCnt).val(($(".cnt_invoice_custome_row").length));
         $("#tr_item_"+suggectionAddedCnt).trigger('focus');
         $("#invoice_item_section tfoot").html(`
+            <tr class="summary-row">
+                <td colspan="4" class="text-right label-cell">Sub Total</td>
+                <td><input type="text" id="tr_subtotal" name="itemSummery[subtotal]" class="form-control" value="0" onBlur="customInvoice.invoiceItemTotalCalculation();"></td>
+            </tr>
+            <tr id="tr_total_descount_section" class="summary-row" style="display:none;">
+                <td colspan="4" class="text-right label-cell">Discount</td>
+                <td><input type="text" id="tr_discount" name="itemSummery[discount]" class="form-control" value="0" onBlur="customInvoice.invoiceItemTotalCalculation();"></td>
+            </tr>
+            <tr class="summary-row">
+                <td colspan="4" class="text-right label-cell">Tax</td>
+                <td><input type="text" id="tr_tax" name="itemSummery[tax]" class="form-control" value="0" onBlur="customInvoice.invoiceItemTotalCalculation();"></td>
+            </tr>
+            <tr class="summary-row">
+                <td colspan="4" class="text-right label-cell">Grand Total</td>
+                <td><input type="text" id="tr_grand_total" name="itemSummery[grand_total]" class="form-control" value="0.00"></td>
+            </tr>
             <tr>
-                <td style="text-align:right;" colspan="4">
-                    <input type="text" style="width:200px; margin-left: 76%; font-weight: bold;" name="itemSummeryHeader[subtotal]" class="form-control" Placeholder="Sub Total" value="Sub Total"/>
+                <td colspan="5" class="text-right">
                     <a href="javascript:void(0);" onClick="customInvoice.showDiscount(this);">+ Add Discount</a>
-                </td>               
-                <td>
-                    <input type="text" id="tr_subtotal" name="itemSummery[subtotal]" onBlur="customInvoice.invoiceItemTotalCalculation();"  value="0" class="form-control">                    
                 </td>
             </tr>
-            <tr id="tr_total_descount_section" style="display:none;">
-                <td style="text-align:right;" colspan="4">
-                    <input type="text" style="width:200px; margin-left: 76%; font-weight: bold;" name="itemSummeryHeader[discount]" class="form-control" Placeholder="Discount" value="Discount"/>                    
-                </td>               
-                <td>
-                    <input type="text" id="tr_discount" name="itemSummery[discount]" onBlur="customInvoice.invoiceItemTotalCalculation();"  value="0" class="form-control">                    
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align:right;" colspan="4">
-                    <input type="text" style="width:200px; margin-left: 76%; font-weight: bold;" name="itemSummeryHeader[tax]" class="form-control" Placeholder="Tax" value="Tax"/>
-                </td>
-                <td><input type="text" id="tr_tax" name="itemSummery[tax]" value="0.00" onBlur="customInvoice.invoiceItemTotalCalculation();" class="form-control"></td>
-            </tr>
-            <tr>
-                <td style="text-align:right;" colspan="4">                    
-                    <input type="text" style="width:200px; margin-left: 76%; font-weight: bold;" name="itemSummeryHeader[grand_total]" class="form-control" Placeholder="Grand Total" value="Grand Total"/>
-                </td>
-                <td><input type="text" id="tr_grand_total" name="itemSummery[grand_total]" value="0.00" class="form-control"></td>
-            </tr>    
         `);
         invoiceSubToalCalculation();
         invoiceItemTotalCalculation();
@@ -118,7 +110,7 @@ var customInvoice = function()
     function optionPredefineHtml()
     {
         let predefineHtml = `<tr class="cnt_invoice_custome_row" id="custom_row_{row_index}">
-            <td>
+            <td data-label="Sr.no">
                 <div class="d-flex justify-content-start">                    
                     <div style="margin-right:10px;">
                         <input style="width:50px;" type="text" name="itemdetail[{row_index}][id]" id="tr_id_{row_index}" class="form-control">
@@ -128,16 +120,16 @@ var customInvoice = function()
                     </div>                
                 </div>
             </td>
-            <td>
+            <td data-label="Item">
                 <input type="text" id="tr_item_{row_index}" name="itemdetail[{row_index}][item_name]" class="form-control">
             </td>
-            <td>
+            <td data-label="Qty">
                 <input type="text" id="tr_qty_{row_index}" name="itemdetail[{row_index}][item_qty]" onBlur="customInvoice.invoiceItemCalculation({row_index})" class="form-control">
             </td>
-            <td>
+            <td data-label="Price">
                 <input type="text" id="tr_price_{row_index}" name="itemdetail[{row_index}][item_price]" onBlur="customInvoice.invoiceItemCalculation({row_index});customInvoice.addAutoRow({row_index})" class="form-control">
             </td>
-            <td>
+            <td data-label="Total">
                 <input type="text" id="tr_total_{row_index}" name="itemdetail[{row_index}][item_total]" class="form-control item_total" value="0">
             </td>
         </tr>`;

@@ -4,6 +4,95 @@
         padding: 0;
     }
 </style>
+
+<style>
+/* Desktop defaults */
+table.table tfoot td.label-cell {
+    text-align: right;
+    font-weight: bold;
+    vertical-align: middle;
+}
+#invoice-action-buttons button {
+    min-width: 150px;
+    margin-left:5px;
+}
+@media (max-width: 768px) {
+    table.table thead {
+        display: none;
+    }
+
+    table.table, table.table tbody, table.table tfoot, table.table tr, table.table td {
+        display: block;
+        width: 100%;
+    }
+
+    table.table tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        border-radius: 6px;
+        background: #fff;
+    }
+
+    table.table td {
+        padding: 8px 10px;
+        position: relative;
+    }
+
+    table.table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 6px;
+        color: #555;
+    }
+
+    table.table tfoot tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+    }
+
+    table.table tfoot td {
+        display: block;
+        width: 100% !important;
+        text-align: left !important;
+        padding: 6px 10px;
+    }
+
+    table.table tfoot td.label-cell::before {
+        content: attr(class); /* This avoids displaying anything extra */
+        display: none;
+    }
+
+    table.table tfoot td:not(.label-cell)::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    table.table tfoot input.form-control {
+        width: 100%;
+        
+    }
+
+    #invoice-action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #invoice-action-buttons button {
+        width: 100%;
+        margin-bottom:5px;
+    }
+}
+
+</style>
+
 <h1 class="font-weight-bold">Create Free Invoice</h1>
 <h3 class="font-size-18 font-weight-bold">Make Branded Invoices with one click! trusted by millions of people!</h3>
 <p>Create and download professional invoices in seconds with ToolHubSpot's Free Custom Invoice Generator. Whether you're a freelancer, small business owner, or entrepreneur, our tool offers a simple yet powerful way to design invoices that reflect your brand. You have full control over every field - add your logo, company details, customer information, items, taxes, and more.</p>
@@ -15,7 +104,7 @@
             <div class="card-header card-header-2">
                 <h1 class="font-size-18 font-weight-bold">Add Your Branding</h1>
             </div>
-            <div class="card-body">
+            <div class="card-body p-0 pt-2">
                 <div class="row">
                     <div class="col-lg-12" id="uploadsection">
                         <div class="form-group">
@@ -68,7 +157,7 @@
             <div class="card-header card-header-2">
                 <h1 class="font-size-18 font-weight-bold">Billing & Shipping Address</h1>
             </div>
-            <div class="card-body">
+            <div class="card-body p-0 pt-2">
                 <div class="row">    
                     <div class="col-lg-12">
                         <div class="form-group">
@@ -115,7 +204,7 @@ Email: receixxxx@gmail.com</textarea>
                     </div>
                 </div>                
             </div>
-            <div class="card-body">
+            <div class="card-body p-0 pt-2">
                 <table class="table" id="invoice_item_section">
                     <thead class="text-center">
                         <tr>
@@ -130,10 +219,14 @@ Email: receixxxx@gmail.com</textarea>
                     <tfoot></tfoot>
                 </table>  
             </div>
-            <div class="card-footer card-header-2 text-right" style="border:none;">
-                <button type="button" id="btn_create_invoice" class="th-btn btn-md" onClick="customInvoice.generateInvoice('pdf');">Download PDF</button>
-                <button type="button" id="btn_create_print" class="th-btn btn-md" onClick="customInvoice.generateInvoice('print');">Print Preview</button>
+            
+            <div class="card-footer card-header-2" style="border:none;">
+                <div class="d-flex flex-wrap justify-content-end gap-2 w-100" id="invoice-action-buttons">
+                    <button type="button" id="btn_create_invoice" class="th-btn btn-md" onClick="customInvoice.generateInvoice('pdf');">Download PDF</button>
+                    <button type="button" id="btn_create_print" class="th-btn btn-md" onClick="customInvoice.generateInvoice('print');">Print Preview</button>
+                </div>
             </div>
+
         </div>
     </div>
 </div>
