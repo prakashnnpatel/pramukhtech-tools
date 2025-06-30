@@ -10,6 +10,8 @@ $urlList = [
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','signature')],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','color-picker')],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','custom-invoice')],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','generate-quote')],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','purchase-order')],
 ];
 ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
