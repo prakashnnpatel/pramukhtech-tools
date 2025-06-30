@@ -98,6 +98,7 @@ table.table tfoot td.label-cell {
 <p>Generate accurate, branded purchase orders in minutes with ToolHubSpot's Free Purchase Order Generator. Whether you're managing inventory, placing supplier requests, or running a growing business, our tool provides a quick and easy way to create professional POs. Customize every detail - from supplier info and shipping terms to product line items, quantities, pricing, and tax.</p>
 <p>No design skills or registration required. Just enter your information, preview your purchase order, and download it as a high-quality PDF - completely free. With unlimited usage and full customization, ToolHubSpot helps you streamline procurement and present polished documents that build trust with vendors.</p>
 <form action="javascript:void(0)" id="custominvoicefrm" method="post">
+<input type="hidden" name="tool_name" id="tool_name" value="Purchase Order" />
 <div class="row">
     <div class="col-lg-6">
         <div class="card pb-0">
@@ -188,7 +189,7 @@ Email: receixxxx@gmail.com</textarea>
             <div class="card-hader card-header-2">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="font-size-18 font-weight-bold">Purchase Order Items</h1>
+                        <h1 class="font-size-18 font-weight-bold">Order Items</h1>
                     </div>
                     <div class="col-lg-6">
                         <div class="d-flex justify-content-end" style="gap: 14px;">

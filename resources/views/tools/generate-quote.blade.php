@@ -98,6 +98,7 @@ table.table tfoot td.label-cell {
 <p>Create and download professional client quotes in seconds with ToolHubSpot's Free Custom Quote Generator. Whether you're a freelancer, small business owner, consultant, or agency, our tool helps you generate polished, branded quotes that impress your clients. Easily add your logo, business information, client details, itemized services, taxes, and more - all from a clean, user-friendly interface.</p>
 <p>With fully customizable templates, no login required, and unlimited access, generating high-quality PDF quotes has never been easier. Print or send your quotes instantly - completely free. Trusted by thousands, ToolHubSpot lets you streamline your sales process and present your offers with confidence and professionalism.</p>
 <form action="javascript:void(0)" id="custominvoicefrm" method="post">
+<input type="hidden" name="tool_name" id="tool_name" value="Quotation" />
 <div class="row">
     <div class="col-lg-6">
         <div class="card pb-0">
@@ -188,7 +189,7 @@ Email: receixxxx@gmail.com</textarea>
             <div class="card-hader card-header-2">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="font-size-18 font-weight-bold">Quote Items</h1>
+                        <h1 class="font-size-18 font-weight-bold">Items</h1>
                     </div>
                     <div class="col-lg-6">
                         <div class="d-flex justify-content-end" style="gap: 14px;">

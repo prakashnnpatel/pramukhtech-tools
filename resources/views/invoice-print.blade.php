@@ -32,11 +32,11 @@
 							@elseif(!empty($param['invoice_heading']))
 								<h3>{{$param['invoice_heading']}}</h3>
 							@else
-								<h3>Invoice</h3>
+								<h3>Company Name</h3>
 							@endif							
 						</div>
 						<div style="width:70%; display: inline-block; font-size:14px; vertical-align:top; text-align: right;">							
-							<div style="font-size:22px; font-weight:bold; margin-bottom:2px; color:#696969;">Invoice</div>
+							<div style="font-size:22px; font-weight:bold; margin-bottom:2px; color:#696969;">{{$param['tool_name']}}</div>
 							<div style="font-weight:bold; margin-bottom:2px; color:#696969;"># {{$param['invoice_number'] ?? "1001"}}</div>
 							@if(!empty($param['status']) && strtolower($param['status']) == "paid")
 								<div style="font-weight:bold; margin-bottom:2px; color:green;">{{$param['status']}}</div>
@@ -160,7 +160,7 @@
 		</div>
 
 		<div style="text-align:center; margin-top:15px; color:#696969; font-size:11px;">
-			<p>The invoice has been generated through <a href="https://www.toolhubspot.com/" title="ToolHubSpot">ToolHubSpot.com</a></p>
+			<p>The {{strtolower($param['tool_name'])}} has been generated through <a href="https://www.toolhubspot.com/" title="ToolHubSpot">ToolHubSpot.com</a></p>
 		</div>
     @endif       
 </div>
