@@ -193,6 +193,7 @@ Email: receixxxx@gmail.com</textarea>
                     <div class="col-lg-6">
                         <div class="d-flex justify-content-end" style="gap: 14px;">
                             <select name="currency" id="currency">
+                                <option value="">Select Currency</option>
                                 @foreach (config('constants.currencies') as $code => $symbol)
                                     <option value="{{ $code }}" {{ old('currency') == $code ? 'selected' : '' }}>
                                         {{ $code }} ({{ $symbol }})

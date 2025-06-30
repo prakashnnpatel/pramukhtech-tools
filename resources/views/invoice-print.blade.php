@@ -141,27 +141,18 @@
             </tbody>
         </table>
 		@if(!empty($param['itemSummery']['grand_total']) && $param['itemSummery']['grand_total'] > 0)
-			<div style="text-align:center; margin-top:15px; font-weight: bold; font-size: 12px;">
+			<div style="text-align:center; margin-top:15px; font-weight: bold; font-size: 14px;">
 				With words: {{ ucwords(convertNumberToWord($param['itemSummery']['grand_total'])) }} {{$param['currency']}} Only
 			</div>
 		@endif
 
 		@if(!empty($param['notes']))
-			<table cellspacing=0 cellspadding=0  style="width:100%; border-collapse: collapse; border-bottom:0px; margin-top: 20px; font-family: DejaVu Sans, sans-serif; font-size:14px;">
-				<thead>
-					<tr>
-						<th  style="border:1px solid #d4d8d6;padding: 10px; text-align:left;">Notes</th>
-					</tr>					
-				</thead>
-				<tbody>
-					<tr>
-						@php
-							$param['notes'] = nl2br(e($param['notes']));
-						@endphp
-						<td style="border:1px solid #d4d8d6;padding: 10px; text-align:left;">{!! $param['notes'] !!}</td>
-					</tr>
-				</tbody>
-			</table>			
+		<div style="width:100%; margin-top: 20px; font-family: DejaVu Sans, sans-serif; font-size:14px;">
+			@php
+				$param['notes'] = nl2br(e($param['notes']));
+			@endphp
+			<strong>Note:</strong><br/> {!! $param['notes'] !!}
+		</div>			
 		@endif
 
 		<div style="text-align:center; margin-top:15px;">

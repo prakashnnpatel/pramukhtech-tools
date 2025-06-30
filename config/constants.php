@@ -1,7 +1,6 @@
 <?php
 return [
     "currencies" => [
-        '' => 'Select Currency',
         'USD' => '$',
         'CAD' => '$',
         'INR' => '₹',
