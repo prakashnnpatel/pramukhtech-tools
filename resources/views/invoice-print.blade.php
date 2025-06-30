@@ -89,7 +89,6 @@
 				</tr>
 			</tbody>
 		</table>
-
         <table cellspacing=0 cellspadding=0  style="width:100%; border-collapse: collapse; border-bottom:0px; margin-top: 20px; font-family: DejaVu Sans, sans-serif; font-size:14px;">
 			<thead>
 				<tr>
@@ -101,6 +100,7 @@
 				</tr>
 			</thead>
             <tbody>
+				@php $currencySymbol = $param['currencySymbol'] ?? ""; @endphp
                 @foreach($itemdetail as $key => $itemInfo)
                     <tr>
                         <td style="border:1px solid #d4d8d6;padding: 10px; text-align:center;">
@@ -113,37 +113,55 @@
                             {{$itemInfo['item_qty']}}
                         </td>
                         <td style="border:1px solid #d4d8d6;padding: 10px; text-align:center;">
-                            {{$param['currencySymbol']}}{{$itemInfo['item_price']}}
+                            {{$currencySymbol}}{{$itemInfo['item_price']}}
                         </td>
                         <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">
-                            {{$param['currencySymbol']}}{{$itemInfo['item_total']}}
+                            {{$currencySymbol}}{{$itemInfo['item_total']}}
                         </td>
                     </tr>
                 @endforeach
                 <tr>
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['subtotal'] ?? 'Sub Total'}}</td>
-                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['currencySymbol']}}{{$param['itemSummery']['subtotal']}}</td>
+                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$currencySymbol}}{{number_format($param['itemSummery']['subtotal'],2)}}</td>
                 </tr>
 				@if(!empty($param['itemSummery']['discount']))
 				<tr>
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['discount'] ?? 'Sub Total'}}</td>
-                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['currencySymbol']}}{{$param['itemSummery']['discount']}}</td>
+                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$currencySymbol}}{{number_format($param['itemSummery']['discount'],2)}}</td>
                 </tr>
 				@endif
                 <tr>
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['tax'] ?? 'Tax'}}</td>
-                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$param['currencySymbol']}}{{$param['itemSummery']['tax']}}</td>
+                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$currencySymbol}}{{number_format($param['itemSummery']['tax'],2)}}</td>
                 </tr>
                 <tr>
                     <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right; font-weight:bold;" colspan="4">{{$param['itemSummeryHeader']['grand_total'] ?? 'Grand Total'}}</td>
-                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right; font-weight:bold;">{{$param['currencySymbol']}}{{$param['itemSummery']['grand_total']}}</td>
+                    <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right; font-weight:bold;">{{$currencySymbol}}{{number_format($param['itemSummery']['grand_total'],2)}}</td>
                 </tr>
             </tbody>
         </table>
 		@if(!empty($param['itemSummery']['grand_total']) && $param['itemSummery']['grand_total'] > 0)
-			<div style="text-align:center; margin-top:15px; font-weight: bold;">
+			<div style="text-align:center; margin-top:15px; font-weight: bold; font-size: 12px;">
 				With words: {{ ucwords(convertNumberToWord($param['itemSummery']['grand_total'])) }} {{$param['currency']}} Only
 			</div>
+		@endif
+
+		@if(!empty($param['notes']))
+			<table cellspacing=0 cellspadding=0  style="width:100%; border-collapse: collapse; border-bottom:0px; margin-top: 20px; font-family: DejaVu Sans, sans-serif; font-size:14px;">
+				<thead>
+					<tr>
+						<th  style="border:1px solid #d4d8d6;padding: 10px; text-align:left;">Notes</th>
+					</tr>					
+				</thead>
+				<tbody>
+					<tr>
+						@php
+							$param['notes'] = nl2br(e($param['notes']));
+						@endphp
+						<td style="border:1px solid #d4d8d6;padding: 10px; text-align:left;">{!! $param['notes'] !!}</td>
+					</tr>
+				</tbody>
+			</table>			
 		@endif
 
 		<div style="text-align:center; margin-top:15px;">

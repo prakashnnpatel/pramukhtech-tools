@@ -15,8 +15,8 @@ var customInvoice = function()
         $("#tr_id_"+suggectionAddedCnt).val(($(".cnt_invoice_custome_row").length));
         $("#tr_item_"+suggectionAddedCnt).trigger('focus');
         $("#invoice_item_section tfoot").html(`
-            <tr class="summary-row">
-                <td colspan="4" class="text-right label-cell">Sub Total</td>
+            <tr class="summary-row">                
+                <td  colspan="4" class="text-right label-cell">Sub Total</td>
                 <td><input type="text" id="tr_subtotal" name="itemSummery[subtotal]" class="form-control" value="0" onBlur="customInvoice.invoiceItemTotalCalculation();"></td>
             </tr>
             <tr id="tr_total_descount_section" class="summary-row" style="display:none;">
@@ -28,14 +28,15 @@ var customInvoice = function()
                 <td><input type="text" id="tr_tax" name="itemSummery[tax]" class="form-control" value="0" onBlur="customInvoice.invoiceItemTotalCalculation();"></td>
             </tr>
             <tr class="summary-row">
-                <td colspan="4" class="text-right label-cell">Grand Total</td>
-                <td><input type="text" id="tr_grand_total" name="itemSummery[grand_total]" class="form-control" value="0.00"></td>
-            </tr>
-            <tr>
-                <td colspan="5" class="text-right">
+                <td  colspan="3" class="text-right label-cell">
+                    <textarea name="notes" class="form-control" placeholder="Notes"></textarea>
+                </td>
+                <td class="text-right label-cell">Grand Total</td>
+                <td>
+                    <input type="text" id="tr_grand_total" name="itemSummery[grand_total]" class="form-control" value="0.00">
                     <a href="javascript:void(0);" onClick="customInvoice.showDiscount(this);">+ Add Discount</a>
                 </td>
-            </tr>
+            </tr>            
         `);
         invoiceSubToalCalculation();
         invoiceItemTotalCalculation();
