@@ -127,13 +127,13 @@ table.table tfoot td.label-cell {
                     </div>
                     <div class="col-lg-4">
                         <div class="form-group">
-                            <label for="invoice_create_date">Invoice Date</label>
+                            <label for="invoice_create_date">Order Date</label>
                             <input type="text" name="invoice_create_date" class="form-control" id="invoice_create_date" value="{{date('d/m/Y')}}" placeholder="Any Formate" />
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="form-group">
-                            <label for="invoice_number">Invoice #</label>
+                            <label for="invoice_number">Order #</label>
                             <input type="text" name="invoice_number" class="form-control" id="invoice_number" value="" placeholder="701"/>
                         </div>
                     </div>
@@ -188,7 +188,7 @@ Email: receixxxx@gmail.com</textarea>
             <div class="card-hader card-header-2">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="font-size-18 font-weight-bold">Invoice Items</h1>
+                        <h1 class="font-size-18 font-weight-bold">Purchase Order Items</h1>
                     </div>
                     <div class="col-lg-6">
                         <div class="d-flex justify-content-end" style="gap: 14px;">
