@@ -25,6 +25,11 @@
           <i class="fa-solid fa-desktop"></i>Screen Recorder		  
         </a>
       </li>
+      <li class="{{$toolKey == 'color-picker' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'color-picker')}}" title="Create Your Digital Signature in Seconds">
+          <i class="fa-solid fa-palette"></i>Color Picker		  
+        </a>
+      </li>
       <li class="has-submenu open">
         <a href="#" class="submenu-toggle" onclick="event.preventDefault();">
           <i class="fas fa-file-pdf"></i>Invoices
@@ -35,12 +40,7 @@
             <li><a href="{{route('toollist', 'generate-quote')}}" class="{{$toolKey == 'generate-quote' ? 'active' : ''}}" title="Quote">Generate Quote</a></li>
             <li><a href="{{route('toollist', 'purchase-order')}}" class="{{$toolKey == 'purchase-order' ? 'active' : ''}}" title="Purchase Order">Purchase Order</a></li>
         </ul>
-      </li>      
-      <li class="{{$toolKey == 'color-picker' ? 'active' : ''}}">
-        <a href="{{route('toollist', 'color-picker')}}" title="Create Your Digital Signature in Seconds">
-          <i class="fa-solid fa-palette"></i>Color Picker		  
-        </a>
-      </li>
+      </li> 
 	   <li class="has-submenu open">
         <a href="#" class="submenu-toggle" onclick="event.preventDefault();">
           <i class="fas fa-calculator"></i>Calculators

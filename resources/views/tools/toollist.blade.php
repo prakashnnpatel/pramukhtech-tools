@@ -42,6 +42,26 @@
       </a>
    </div>
    <div class="col-md-3 mb-4">
+      <a href="{{route('toollist', 'generate-quote')}}" title="Generate Quote" style="text-decoration: none; color:#000;">
+         <div class="card shadow-sm">
+            <i class="fa-solid fa-file-pdf fa-2x pt-2" style="text-align:center; color:#684DF4;"></i>  
+            <div class="card-body">
+               <h5 class="card-title mt-2 text-center">Generate Quote</h5>
+            </div>
+         </div>
+      </a>
+   </div>
+   <div class="col-md-3 mb-4">
+      <a href="{{route('toollist', 'purchase-order')}}" title="Purchase Order" style="text-decoration: none; color:#000;">
+         <div class="card shadow-sm">
+            <i class="fa-solid fa-file-pdf fa-2x pt-2" style="text-align:center; color:#684DF4;"></i>  
+            <div class="card-body">
+               <h5 class="card-title mt-2 text-center">Purchase Order</h5>
+            </div>
+         </div>
+      </a>
+   </div>
+   <div class="col-md-3 mb-4">
       <a href="{{route('toollist', 'color-picker')}}" title="Color Picker" style="text-decoration: none; color:#000;">
          <div class="card  shadow-sm">
             <i class="fa-solid fa-palette fa-2x pt-2" style="text-align:center; color:#684DF4;"></i>  
