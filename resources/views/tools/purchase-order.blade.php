@@ -93,10 +93,10 @@ table.table tfoot td.label-cell {
 
 </style>
 
-<h1 class="font-weight-bold">Create Free Purchase Order</h1>
-<h3 class="font-size-18 font-weight-bold">Make Branded Invoices with one click! trusted by millions of people!</h3>
-<p>Create and download professional invoices in seconds with ToolHubSpot's Free Custom Invoice Generator. Whether you're a freelancer, small business owner, or entrepreneur, our tool offers a simple yet powerful way to design invoices that reflect your brand. You have full control over every field - add your logo, company details, customer information, items, taxes, and more.</p>
-<p>With a 100% customizable template and no sign-up required, you can generate invoices and download them in high-quality PDF format - completely free. Start invoicing smarter and faster with ToolHubSpot today!</p>
+<h1 class="font-weight-bold">Create Professional Purchase Orders - Free, Customizable & Ready to Download</h1>
+<h3 class="font-size-18 font-weight-bold">Make Branded Purchase Orders with one click! trusted by millions of people!</h3>
+<p>Generate accurate, branded purchase orders in minutes with ToolHubSpot's Free Purchase Order Generator. Whether you're managing inventory, placing supplier requests, or running a growing business, our tool provides a quick and easy way to create professional POs. Customize every detail - from supplier info and shipping terms to product line items, quantities, pricing, and tax.</p>
+<p>No design skills or registration required. Just enter your information, preview your purchase order, and download it as a high-quality PDF - completely free. With unlimited usage and full customization, ToolHubSpot helps you streamline procurement and present polished documents that build trust with vendors.</p>
 <form action="javascript:void(0)" id="custominvoicefrm" method="post">
 <div class="row">
     <div class="col-lg-6">

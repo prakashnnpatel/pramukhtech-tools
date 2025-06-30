@@ -93,10 +93,10 @@ table.table tfoot td.label-cell {
 
 </style>
 
-<h1 class="font-weight-bold">Generate Free Order Quote</h1>
-<h3 class="font-size-18 font-weight-bold">Make Branded Invoices with one click! trusted by millions of people!</h3>
-<p>Create and download professional invoices in seconds with ToolHubSpot's Free Custom Invoice Generator. Whether you're a freelancer, small business owner, or entrepreneur, our tool offers a simple yet powerful way to design invoices that reflect your brand. You have full control over every field - add your logo, company details, customer information, items, taxes, and more.</p>
-<p>With a 100% customizable template and no sign-up required, you can generate invoices and download them in high-quality PDF format - completely free. Start invoicing smarter and faster with ToolHubSpot today!</p>
+<h1 class="font-weight-bold">Generate Free Client Quotes Instantly - Fully Customizable & Downloadable</h1>
+<h3 class="font-size-18 font-weight-bold">Make Branded Quote with one click! trusted by millions of people!</h3>
+<p>Create and download professional client quotes in seconds with ToolHubSpot's Free Custom Quote Generator. Whether you're a freelancer, small business owner, consultant, or agency, our tool helps you generate polished, branded quotes that impress your clients. Easily add your logo, business information, client details, itemized services, taxes, and more - all from a clean, user-friendly interface.</p>
+<p>With fully customizable templates, no login required, and unlimited access, generating high-quality PDF quotes has never been easier. Print or send your quotes instantly - completely free. Trusted by thousands, ToolHubSpot lets you streamline your sales process and present your offers with confidence and professionalism.</p>
 <form action="javascript:void(0)" id="custominvoicefrm" method="post">
 <div class="row">
     <div class="col-lg-6">

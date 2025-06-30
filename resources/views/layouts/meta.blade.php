@@ -61,6 +61,16 @@
 			<meta name="description" content="Create professional, branded invoices in minutes with our free custom invoice generator. Fully editable templates with multi-line items, tax options, and your own logo. No login needed, download in PDF format instantly, 100% free and easy to use!" />
 		@break
 
+		@case('generate-quote')
+			<title>Free Quote Generator for Clients - Create & Download Custom Quotes | ToolHubSpot</title>
+			<meta name="description" content="Generate professional, branded quotes for your clients with ToolHubSpot's free quote generator. 100% customizable, no sign-up required. Download as PDF instantly!" />
+		@break
+
+		@case('purchase-order')
+			<title>Free Purchase Order Generator - Create & Download Custom POs Online | ToolHubSpot</title>
+			<meta name="description" content="Generate professional purchase orders for free with ToolHubSpot's online PO generator. Fully customizable templates. No sign-up required. Download as PDF instantly!" />
+		@break
+
 		@case('signature')
 			<title>Free Digital Signature Tool - Create Your E-Signature</title>
 			<meta name="description" content="Create your digital signature online for free. Draw or type your e-signature and download it as a transparent PNG. Fast, secure, and no registration required." />
