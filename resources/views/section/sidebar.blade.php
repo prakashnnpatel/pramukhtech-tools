@@ -25,17 +25,23 @@
           <i class="fa-solid fa-desktop"></i>Screen Recorder		  
         </a>
       </li>
-      <li class="{{$toolKey == 'custom-invoice' ? 'active' : ''}}">
-        <a href="{{route('toollist', 'custom-invoice')}}" title="Online Free Create Custom Invoice - Download FREE">
-          <i class="fa-solid fa-file-pdf"></i>Custom Invoice		  
+      <li class="has-submenu open">
+        <a href="#" class="submenu-toggle" onclick="event.preventDefault();">
+          <i class="fas fa-file-pdf"></i>Invoices
+          <i class="fas fa-chevron-right arrow"></i>
         </a>
-      </li>
+        <ul class="submenu">
+            <li><a href="{{route('toollist', 'custom-invoice')}}" class="{{$toolKey == 'custom-invoice' ? 'active' : ''}}" title="Create Custom Invoice">Custom Invoice</a></li>
+            <li><a href="{{route('toollist', 'generate-quote')}}" class="{{$toolKey == 'generate-quote' ? 'active' : ''}}" title="Quote">Generate Quote</a></li>
+            <li><a href="{{route('toollist', 'purchase-order')}}" class="{{$toolKey == 'purchase-order' ? 'active' : ''}}" title="Purchase Order">Purchase Order</a></li>
+        </ul>
+      </li>      
       <li class="{{$toolKey == 'color-picker' ? 'active' : ''}}">
         <a href="{{route('toollist', 'color-picker')}}" title="Create Your Digital Signature in Seconds">
           <i class="fa-solid fa-palette"></i>Color Picker		  
         </a>
       </li>
-	  <li class="has-submenu open">
+	   <li class="has-submenu open">
         <a href="#" class="submenu-toggle" onclick="event.preventDefault();">
           <i class="fas fa-calculator"></i>Calculators
           <i class="fas fa-chevron-right arrow"></i>

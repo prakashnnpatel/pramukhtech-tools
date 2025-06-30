@@ -93,7 +93,7 @@ table.table tfoot td.label-cell {
 
 </style>
 
-<h1 class="font-weight-bold">Create Free Invoice</h1>
+<h1 class="font-weight-bold">Create Free Purchase Order</h1>
 <h3 class="font-size-18 font-weight-bold">Make Branded Invoices with one click! trusted by millions of people!</h3>
 <p>Create and download professional invoices in seconds with ToolHubSpot's Free Custom Invoice Generator. Whether you're a freelancer, small business owner, or entrepreneur, our tool offers a simple yet powerful way to design invoices that reflect your brand. You have full control over every field - add your logo, company details, customer information, items, taxes, and more.</p>
 <p>With a 100% customizable template and no sign-up required, you can generate invoices and download them in high-quality PDF format - completely free. Start invoicing smarter and faster with ToolHubSpot today!</p>
