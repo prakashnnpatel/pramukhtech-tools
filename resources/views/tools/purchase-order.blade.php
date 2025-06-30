@@ -138,17 +138,12 @@ table.table tfoot td.label-cell {
                             <input type="text" name="invoice_number" class="form-control" id="invoice_number" value="" placeholder="701"/>
                         </div>
                     </div>
-					{{--<div class="col-lg-4">
+					<div class="col-lg-4">
                         <div class="form-group">
                             <label for="status">Status</label>
-							<select name="status" id="status" class="form-control">
-								<option value="PAID">Paid</option>
-								<option value="UNPAID">Unpaid</option>
-								<option value="DUE">Due</option>
-                                <option value="">None</option>
-							</select>
+                            <input type="text" name="status" class="form-control" id="status" value="" placeholder="Order Status"/>
                         </div>
-                    </div>--}}
+                    </div>
                 </div>
             </div>            
         </div>
