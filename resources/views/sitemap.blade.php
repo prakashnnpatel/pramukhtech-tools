@@ -42,6 +42,7 @@ $urlList = [
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist',['timezone','EST-to-GST'])],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist',['timezone','EST-to-AEST'])],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist',['timezone','EST-to-NZST'])],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist',['digital-document'])],
 ];
 ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>

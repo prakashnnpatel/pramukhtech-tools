@@ -76,6 +76,13 @@
 			<meta property="og:description" content="Capture your screen with ease using ToolHubSpot's free online screen recorder and download instantly. No extensions needed. Record, preview, and save your screen in just a few clicks!" />
 		@break
 
+		@case('digital-document')
+			<title>Create Free Digital Document & Downloadable PDF | Print Preview | ToolHubSpot</title>
+			<meta name="description" content="Design and download professional digital documents in seconds with ToolHubSpot's Free Custom Document Generator. Whether you're a freelancer, small business owner, or entrepreneur, our tool provides an easy and powerful way to create documents that reflect your brand identity." />
+			<meta property="og:title" content="Create Free Digital Document & Downloadable PDF | Print Preview | ToolHubSpot" />
+			<meta property="og:description" content="Design and download professional digital documents in seconds with ToolHubSpot's Free Custom Document Generator. Whether you're a freelancer, small business owner, or entrepreneur, our tool provides an easy and powerful way to create documents that reflect your brand identity." />
+		@break
+
 		@case('custom-invoice')
 			<title>Free Custom Invoice Generator - 100% Editable & Downloadable PDF | Print Preview | ToolHubSpot</title>
 			<meta name="description" content="Create professional, branded invoices in minutes with our free custom invoice generator. Fully editable templates with multi-line items, tax options, and your own logo. No login needed, download in PDF format instantly, 100% free and easy to use!" />

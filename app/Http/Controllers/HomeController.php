@@ -55,6 +55,37 @@ class HomeController extends Controller
         }
     }
 
+    public function digitalDocument(Request $request)
+    {
+        $param = $request->all();
+        /* Create PDF */
+        ini_set('memory_limit', '-1');
+        ini_set('max_execution_time', 0);
+
+        $path = "uploads/documents/";
+        $this->checkDir($path);
+
+        $fileName = "digitaldocument_".time().".pdf";
+        $pdfName = $path."/".$fileName;
+
+        /* Write PDF */
+        try
+        {
+            if($param['flag'] == "pdf")
+            {
+                $content = PDF::loadView('digital-document-print', ['param' => $param])->output();
+                file_put_contents($pdfName, $content);
+                return url("uploads/documents/".$fileName);
+            }
+            else {
+                 return view('digital-document-print', ['param'=>$param]);
+            }           
+        }
+        catch(Exception $e) {
+            echo 'Message: ' .$e->getMessage();
+        }
+    }
+
     public function checkDir($path)
 	{
 		if(!is_dir($path)) {

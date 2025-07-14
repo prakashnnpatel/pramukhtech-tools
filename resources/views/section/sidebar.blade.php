@@ -30,6 +30,11 @@
           <i class="fa-solid fa-palette"></i>Color Picker		  
         </a>
       </li>
+      <li class="{{$toolKey == 'digital-document' ? 'active' : ''}}">
+        <a href="{{route('toollist', 'digital-document')}}" title="Create Free Digital Document & Downloadable">
+          <i class="fa-solid fa-file"></i>Digital Document		  
+        </a>
+      </li>
       <li class="has-submenu open">
         <a href="#" class="submenu-toggle" onclick="event.preventDefault();">
           <i class="fas fa-file-pdf"></i>Invoices
