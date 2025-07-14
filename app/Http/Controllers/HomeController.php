@@ -7,9 +7,14 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index($toolkey = "toollist")
+    public function index($toolkey = "toollist", $subpart = "")
     {
-        return view("home", ["toolKey" => $toolkey]);
+		$extraParams = [];
+		if(!empty($subpart) && $toolkey == "timezone")
+		{
+			$extraParams = explode("-to-",$subpart);
+		}
+        return view("home", ["toolKey" => $toolkey, "extraParams" => $extraParams]);
     }
 
 	public function sitemap() {

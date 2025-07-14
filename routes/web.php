@@ -8,5 +8,5 @@ use App\Http\Controllers\{
 };
 
 Route::get('/sitemap.xml', [HomeController::class, 'sitemap']);
-Route::get('/{toolkey?}',[HomeController::class, 'index'])->name("toollist");
+Route::get('/{toolkey?}/{subpart?}',[HomeController::class, 'index'])->name("toollist");
 Route::post('/generate-invoice',[HomeController::class, 'generateInvoice'])->name("generate-invoice");

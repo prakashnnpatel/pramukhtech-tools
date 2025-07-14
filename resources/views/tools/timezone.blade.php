@@ -2,28 +2,36 @@
 $timezones = timezone_identifiers_list(); // Get all timezone identifiers
 $now = new DateTime('now', new DateTimeZone('UTC')); // Current UTC time
 //Default
-$fromtz = !empty($_GET['fromtz']) ? $_GET['fromtz'] : "Asia/Kolkata";
-$totz = !empty($_GET['totz']) ? $_GET['totz'] : "America/New_York";
-
-$fromtz = str_replace("-","/", $fromtz);
-$totz = str_replace("-","/", $totz);
-
 $customArr = [
 	"UTC" => "UTC",
-	"IST" => "Asia-Kolkata",
-	"EST" => "America-New_York",
-	"CST" => "America-Chicago",
-	"PST" => "America-Los_Angeles",
-	"PDT" => "America-Los_Angeles",
-	"GMT" => "Europe-London",
-	"BST" => "Europe-London",
-	"EDT" => "America-New_York",
-	"JST" => "Asia-Tokyo",
-	"AEST" => "Australia-Sydney"	
-]; 
+	"IST" => "Asia/Kolkata",
+	"EST" => "America/New_York",
+	"CST" => "America/Chicago",
+	"PST" => "America/Los_Angeles",
+	"PDT" => "America/Los_Angeles",
+	"GMT" => "Europe/London",
+	"BST" => "Europe/London",
+	"EDT" => "America/New_York",
+	"JST" => "Asia/Tokyo",
+	"AEST" => "Australia/Sydney",
+	"CET" => "Europe/Berlin",
+	"GST" => "Asia/Dubai",
+	"SGT" => "Asia/Singapore",
+	"HKT" => "Asia/Hong_Kong",
+	"ICT" => "Asia/Bangkok",
+	"ECT" => "Europe/Paris",
+	"MSK" => "Europe/Moscow",
+	"NZST" => "Pacific/Auckland",
+];
+$fromtz = !empty($extraParams['0']) ? $customArr[$extraParams['0']] : "Asia/Kolkata";
+$totz = !empty($extraParams['1']) ? $customArr[$extraParams['1']] : "America/New_York";
+
+if(!empty($extraParams)) {
+	$timezone_title = $fromtz. ' to '. $totz;
+}
 @endphp
-<h1 class="font-size-18 font-weight-bold">Timezone Converter</h1>
-<p>The timezone converter tool is powerful & accurate time management, the tool converts the datetime from one timezone to another time zone, which is designed to simplify time management across different regions.</p>
+<h1 class="font-size-18 font-weight-bold">{{$timezone_title??''}} Timezone Converter</h1>
+<p>The {{$timezone_title??''}} timezone converter tool is powerful & accurate time management, the tool converts the datetime from one timezone to another time zone, which is designed to simplify time management across different regions.</p>
 <div class="card">
   <div class="card-body">
 	 <form id="timezone-converter-form">
@@ -93,7 +101,7 @@ $customArr = [
 			  <table class="font-weight-bold" id="timezone_table">
 				<thead>
 					<tr>
-					   <th colspan="4">
+					   <th colspan="5">
 						   <div class="row">
 							<div class="col-lg-6"><h4 class="font-size-18 font-weight-bold">Popular Timezone Converters</h4></div>
 							<div class="col-lg-6"><input type="text" id="timezone-search" class="form-control" placeholder="Search timezone converters..."></div>
@@ -104,64 +112,90 @@ $customArr = [
 				 <tbody>					
 					<tr class="text-center">
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=UTC&totz=Asia-Kolkata">UTC to IST</a>
+						  <a href="{{route('toollist', ['timezone', 'UTC-to-IST'])}}">UTC to IST</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=UTC&totz=America-New_York">UTC to EST</a>
+						  <a href="{{route('toollist', ['timezone', 'UTC-to-EST'])}}">UTC to EST</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=UTC&totz=America-Chicago">UTC to CST</a>
+						  <a href="{{route('toollist', ['timezone', 'UTC-to-CST'])}}">UTC to CST</a>
 					   </td>
-					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=UTC&totz=America-Los_Angeles">UTC to PST</a></td>
+					   <td><a href="{{route('toollist', ['timezone', 'UTC-to-PST'])}}">UTC to PST</a></td>
+					   <td><a href="{{route('toollist', ['timezone','EST-to-ECT'])}}">EST to ECT</a></td>
 					</tr>
 					<tr class="text-center fw-bold">
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=Asia-Kolkata&totz=America-New_York">IST to EST</a>
+						  <a href="{{route('toollist', ['timezone', 'IST-to-EST'])}}">IST to EST</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=Asia-Kolkata&totz=UTC">IST to UTC</a>
+						  <a href="{{route('toollist', ['timezone', 'IST-to-UTC'])}}">IST to UTC</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=Asia-Kolkata&totz=America-Los_Angeles">IST to PDT</a>
+						  <a href="{{route('toollist', ['timezone', 'IST-to-PDT'])}}">IST to PDT</a>
 					   </td>
-					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=America-New_York&totz=Europe-London">EST to GMT</a></td>
+					   <td><a href="{{route('toollist', ['timezone', 'EST-to-GMT'])}}">EST to GMT</a></td>
+					   <td>
+						  <a href="{{route('toollist', ['timezone','EST-to-ICT'])}}">EST to ICT </a>
+						</td>
 					</tr>
 					<tr class="text-center fw-bold">
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=Europe-London&totz=America-Los_Angeles">GMT to PST</a>
+						  <a href="{{route('toollist', ['timezone', 'GMT-to-PST'])}}">GMT to PST</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=America-New_York&totz=Asia-Kolkata">EST to IST</a>
+						  <a href="{{route('toollist', ['timezone','EST-to-IST'])}}">EST to IST</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=Europe-London&totz=America-New_York">BST to EDT</a>
+						  <a href="{{route('toollist', ['timezone','BST-to-EDT'])}}">BST to EDT</a>
 					   </td>
-					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=Asia-Kolkata&totz=Europe-London">IST to GMT</a></td>
+					   <td><a href="{{route('toollist', ['timezone','IST-to-GMT'])}}">IST to GMT</a></td>
+					   <td>
+						  <a href="{{route('toollist', ['timezone','EST-to-MSK'])}}">EST to MSK</a>
+						</td>
 					</tr>
 					<tr class="text-center fw-bold">
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=Europe-London&totz=America-Chicago">BST to CST</a>
+						  <a href="{{route('toollist', ['timezone','BST-to-CST'])}}">BST to CST</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=America-Chicago&totz=Europe-London">CST to BST</a>
+						  <a href="{{route('toollist', ['timezone','CST-to-BST'])}}">CST to BST</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=UTC&totz=America-Los_Angeles">UTC to PDT</a>
+						  <a href="{{route('toollist', ['timezone','UTC-to-PDT'])}}">UTC to PDT</a>
 					   </td>
-					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=Asia-Tokyo&totz=America-New_York">JST to EST</a></td>
+					   <td><a href="{{route('toollist', ['timezone','JST-to-EST'])}}">JST to EST</a></td>
+					   <td>
+						  <a href="{{route('toollist', ['timezone','EST-to-HKT'])}}">EST to HKT</a>
+						</td>
 					</tr>
 					<tr class="text-center fw-bold">
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=America-New_York&totz=America-Los_Angeles">EST to PST</a>
+						  <a href="{{route('toollist', ['timezone','EST-to-PST'])}}">EST to PST</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=America-Chicago&totz=America-New_York">CST to EST</a>
+						  <a href="{{route('toollist', ['timezone','CST-to-EST'])}}">CST to EST</a>
 					   </td>
 					   <td>
-						  <a href="{{route('toollist', 'timezone')}}?fromtz=America-Los_Angeles&totz=America-Chicago">PDT to CST</a>
+						  <a href="{{route('toollist', ['timezone','PDT-to-CST'])}}">PDT to CST</a>
 					   </td>
-					   <td><a href="{{route('toollist', 'timezone')}}?fromtz=Australia-Sydney&totz=Asia-Kolkata">AEST to IST</a></td>
+					   <td><a href="{{route('toollist', ['timezone','AEST-to-IST'])}}">AEST to IST</a></td>
+					   <td>
+						  <a href="{{route('toollist', ['timezone','EST-to-SGT'])}}">EST to SGT</a>
+						</td>
 					</tr>
+					<tr class="text-center fw-bold">
+					   <td>
+						  <a href="{{route('toollist', ['timezone','EST-to-JST'])}}">EST to JST</a>
+					   </td>
+					   <td>
+						  <a href="{{route('toollist', ['timezone','EST-to-CET'])}}">EST to CET</a>
+					   </td>
+					   <td>
+						  <a href="{{route('toollist', ['timezone','EST-to-GST'])}}">EST to GST </a>
+					   </td>
+					   <td><a href="{{route('toollist', ['timezone','EST-to-AEST'])}}">EST to AEST</a></td>
+					   <td><a href="{{route('toollist', ['timezone','EST-to-NZST'])}}">EST to NZST</a></td>
+					</tr>					
 				 </tbody>
 			  </table>
 		   </div>
