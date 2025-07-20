@@ -9,6 +9,10 @@ class HomeController extends Controller
 {
     public function index($toolkey = "toollist", $subpart = "")
     {
+		if($toolkey == "invoice-generator") {
+			$toolkey = "custom-invoice";
+		}
+
 		$extraParams = [];
 		if(!empty($subpart) && $toolkey == "timezone")
 		{
