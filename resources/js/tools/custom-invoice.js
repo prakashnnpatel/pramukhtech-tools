@@ -34,7 +34,7 @@ var customInvoice = function()
                 <td class="text-right label-cell">Grand Total</td>
                 <td>
                     <input type="text" id="tr_grand_total" name="itemSummery[grand_total]" class="form-control" value="0.00">
-                    <a href="javascript:void(0);" onClick="customInvoice.showDiscount(this);">+ Add Discount</a>
+                    <a href="javascript:void(0);" role="button" title="Add Discount" onClick="customInvoice.showDiscount(this);">+ Add Discount</a>
                 </td>
             </tr>            
         `);
@@ -117,7 +117,7 @@ var customInvoice = function()
                         <input style="width:50px;" type="text" name="itemdetail[{row_index}][id]" id="tr_id_{row_index}" class="form-control">
                     </div>    
                     <div>
-                        <a href="javascript:void(0);" title="Delete Row" onClick="customInvoice.deleteSuggestedRow({row_index});"><i class="fa-solid fa-trash mt-2"></i></a>                 
+                        <a href="javascript:void(0);" role="button" title="Delete Row" onClick="customInvoice.deleteSuggestedRow({row_index});"><i class="fa-solid fa-trash mt-2"></i></a>                 
                     </div>                
                 </div>
             </td>
@@ -196,6 +196,7 @@ var customInvoice = function()
                         uploadedInvoiceLogo = e.target.result;  
                         $("#invoice_logo_preview").attr("src", uploadedInvoiceLogo).show();  
                         $("#uploadsection").attr("class", "col-lg-8");   
+                        $("#uploadsection").attr("alt", "Invoice Logo"); 
                         $("#logosection").attr("class", "col-lg-4").show();                                       
                     };
                     reader.readAsDataURL(file);

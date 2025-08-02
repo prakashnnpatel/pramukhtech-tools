@@ -114,7 +114,7 @@ table.table tfoot td.label-cell {
                     </div>
                     <div class="col-lg-4" id="logosection" style="display:none;">
                         <div class="form-group mt-4">                       
-                            <img src="" style="display:none;width: 85px;height: auto;" id="invoice_logo_preview"/>
+                            <img src="" style="display:none;width: 85px;height: auto;" alt="Invoice Logo" id="invoice_logo_preview"/>
                         </div>
                     </div>
                     <div class="col-lg-12">
