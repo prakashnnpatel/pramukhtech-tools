@@ -92,7 +92,7 @@ table.table tfoot td.label-cell {
 }
 </style>
 <h1 class="font-weight-bold">Create Free Invoice - Fully Customizable & Downloadable</h1>
-<h3 class="font-size-18 font-weight-bold">Make Branded Invoices with one click! trusted by millions of people!</h3>
+<h2 class="font-size-18 font-weight-bold">Make Branded Invoices with one click! trusted by millions of people!</h2>
 <p>Create and download professional invoices in seconds with ToolHubSpot's Free Custom Invoice Generator. Whether you're a freelancer, small business owner, or entrepreneur, our tool offers a simple yet powerful way to design invoices that reflect your brand. You have full control over every field - add your logo, company details, customer information, items, taxes, and more.</p>
 <p>With a 100% customizable template and no sign-up required, you can generate invoices and download them in high-quality PDF format - completely free. Start invoicing smarter and faster with ToolHubSpot today!</p>
 <form action="javascript:void(0)" id="custominvoicefrm" method="post">
@@ -101,7 +101,7 @@ table.table tfoot td.label-cell {
     <div class="col-lg-6">
         <div class="card pb-0">
             <div class="card-header card-header-2">
-                <h1 class="font-size-18 font-weight-bold">Add Your Branding</h1>
+                <h3 class="font-size-18 font-weight-bold">Add Your Branding</h3>
             </div>
             <div class="card-body p-0 pt-2">
                 <div class="row">
@@ -154,7 +154,7 @@ table.table tfoot td.label-cell {
     <div class="col-lg-6">
         <div class="card pb-0">
             <div class="card-header card-header-2">
-                <h1 class="font-size-18 font-weight-bold">Billing & Shipping Address</h1>
+                <h3 class="font-size-18 font-weight-bold">Billing & Shipping Address</h3>
             </div>
             <div class="card-body p-0 pt-2">
                 <div class="row">    
@@ -187,7 +187,7 @@ Email: receixxxx@gmail.com</textarea>
             <div class="card-hader card-header-2">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="font-size-18 font-weight-bold">Invoice Items</h1>
+                        <h3 class="font-size-18 font-weight-bold">Invoice Items</h3>
                     </div>
                     <div class="col-lg-6">
                         <div class="d-flex justify-content-end" style="gap: 14px;">
