@@ -126,7 +126,7 @@
                 </tr>
 				@if(!empty($param['itemSummery']['discount']))
 				<tr>
-                    <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['discount'] ?? 'Sub Total'}}</td>
+                    <td  style="border:1px solid #d4d8d6;padding: 10px; text-align:right;" colspan="4">{{$param['itemSummeryHeader']['discount'] ?? 'Discount'}}</td>
                     <td style="border:1px solid #d4d8d6;padding: 10px; text-align:right;">{{$currencySymbol}}{{number_format($param['itemSummery']['discount'],2)}}</td>
                 </tr>
 				@endif
@@ -154,14 +154,6 @@
 			<strong>Note:</strong><br/> {!! $param['notes'] !!}
 		</div>			
 		@endif
-
-		<div style="text-align:center; margin-top:15px;">
-			Thank you for your business :)
-		</div>
-
-		<div style="text-align:center; margin-top:15px; color:#696969; font-size:11px;">
-			<p>The {{strtolower($param['tool_name'])}} has been generated through <a href="https://www.toolhubspot.com/" title="ToolHubSpot">ToolHubSpot.com</a></p>
-		</div>
     @endif       
 </div>
 </body>

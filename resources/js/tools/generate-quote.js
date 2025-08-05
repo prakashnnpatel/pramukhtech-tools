@@ -15,26 +15,34 @@ var customInvoice = function()
         $("#tr_id_"+suggectionAddedCnt).val(($(".cnt_invoice_custome_row").length));
         $("#tr_item_"+suggectionAddedCnt).trigger('focus');
         $("#invoice_item_section tfoot").html(`
-            <tr class="summary-row">                
-                <td  colspan="4" class="text-right label-cell">Sub Total</td>
+            <tr class="summary-row">                            
+                <td  colspan="4" class="text-right label-cell">
+                    <input type="text" style="font-weight: bold;display: inherit;width: auto; text-align: right;" class="form-control" Placeholder="Sub Total" name="itemSummeryHeader[subtotal]" value="Sub Total"/> 
+                </td>
                 <td><input type="text" id="tr_subtotal" name="itemSummery[subtotal]" class="form-control" value="0" onBlur="customInvoice.invoiceItemTotalCalculation();"></td>
             </tr>
             <tr id="tr_total_descount_section" class="summary-row" style="display:none;">
-                <td colspan="4" class="text-right label-cell">Discount</td>
+                <td colspan="4" class="text-right label-cell"> 
+                    <input type="text" style="font-weight: bold;display: inherit;width: auto; text-align: right;" class="form-control" Placeholder="Discount" name="itemSummeryHeader[discount]" value="Discount"/>
+                </td>
                 <td><input type="text" id="tr_discount" name="itemSummery[discount]" class="form-control" value="0" onBlur="customInvoice.invoiceItemTotalCalculation();"></td>
             </tr>
             <tr class="summary-row">
-                <td colspan="4" class="text-right label-cell">Tax</td>
+                <td colspan="4" class="text-right label-cell">                
+                    <input type="text" style="font-weight: bold;display: inherit;width: auto; text-align: right;" class="form-control" Placeholder="Tax" name="itemSummeryHeader[tax]" value="Tax"/>
+                </td>
                 <td><input type="text" id="tr_tax" name="itemSummery[tax]" class="form-control" value="0" onBlur="customInvoice.invoiceItemTotalCalculation();"></td>
             </tr>
             <tr class="summary-row">
                 <td  colspan="3" class="text-right label-cell">
                     <textarea name="notes" class="form-control" placeholder="Notes"></textarea>
                 </td>
-                <td class="text-right label-cell">Grand Total</td>
+                <td class="text-right label-cell">
+                    <input type="text" style="font-weight: bold;display: inherit;width: auto; text-align: right;" class="form-control" Placeholder="Grand Total" name="itemSummeryHeader[grand_total]" value="Grand Total"/>                 
+                </td>
                 <td>
                     <input type="text" id="tr_grand_total" name="itemSummery[grand_total]" class="form-control" value="0.00">
-                    <a href="javascript:void(0);" onClick="customInvoice.showDiscount(this);">+ Add Discount</a>
+                    <a href="javascript:void(0);" role="button" title="Add Discount" onClick="customInvoice.showDiscount(this);">+ Add Discount</a>
                 </td>
             </tr>            
         `);
