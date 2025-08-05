@@ -3,6 +3,7 @@
         background-color: #fff;
         padding: 0;
     }
+    .kbw-signature { width: 100%; height: 200px; border:1px solid #000;}   
     @media (max-width: 768px) {
         #invoice-action-buttons {
             flex-direction: column;
@@ -55,7 +56,23 @@
                 <h1 class="font-size-18 font-weight-bold">Your Document Content</h1>
             </div>
             <div class="card-body p-0 pt-2 pb-3">
-                <textarea rows="20" class="form-control" id="document_content" name="document_content"></textarea>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <textarea rows="20" class="form-control" id="document_content" name="document_content"></textarea>
+                    </div>
+                     <div class="col-lg-4">
+                        <div class="form-group">
+                            <div>
+                                <label>Signature</label>
+                                <div id="sig"></div>	
+                                <div class="text-right mt-2 m-auto">						
+                                    <button id="clear" class="btn  btn-sm" style="background: #E2E8FA;color: #000;">Clear Signature</button>
+                                </div>
+                                <textarea id="signature64" name="contact_agreement_sign" style="display: none"></textarea>
+                            </div>
+                        </div>
+                    </div>                       
+                </div>
             </div>
             <div class="card-footer card-header-2 mb-3" style="border:none;">
                 <div class="d-flex flex-wrap justify-content-end gap-2 w-100" id="invoice-action-buttons">

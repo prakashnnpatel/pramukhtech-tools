@@ -49,6 +49,22 @@
         <div style="width:100%; margin-top:10px;"">
             {!!$documentContent!!}
         </div>
+		@if(!empty($param['contact_agreement_sign']))
+			<table cellspadding="0" style="width:100%; font-family: arial;" cellspacing="0">
+				<tbody>
+					<tr>                    
+						<td style="text-align:right;padding-right: 15%;">
+							<label>Signature</label>                        
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align:right;"> 
+							<img src="{{$param['contact_agreement_sign']}}" style="width: 300px;"/>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		@endif
     @endif       
 </div>
 </body>

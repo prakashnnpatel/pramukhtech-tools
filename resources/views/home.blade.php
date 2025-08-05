@@ -16,7 +16,7 @@
 
 @push('page_scripts')
 @vite("resources/js/jquery-ui.min.js")
-@if($toolKey == "signature")
+@if($toolKey == "signature" || $toolKey == "digital-document")
 	@vite("resources/js/jquery.signature.js")
 @endif
 @vite("resources/js/jqueryUiTouch.js")

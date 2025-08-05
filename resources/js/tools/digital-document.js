@@ -51,9 +51,19 @@ var digitaldocument = function()
         });       
     }
 
+    var initializeContractSignature = function(){
+		var sig = $('#sig').signature({syncField: '#signature64', syncFormat: 'PNG'});				
+		$('#clear').on('click', function(e) {
+			e.preventDefault();
+			sig.signature('clear');
+			$("#signature64").val('');		
+		});
+	}
+
   return{
         init:function()
         {  
+            initializeContractSignature();	
              $('#document_content').summernote({
                 height: 500,
                 toolbar: [
