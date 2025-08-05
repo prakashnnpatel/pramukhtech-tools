@@ -7,8 +7,10 @@
 
 	@if (View::exists($viewPath))
 		@include($viewPath)
-	@else
+	@elseif(View::exists($toolKey))
 		@include($toolKey)
+	@else
+		@include("errors.404")
 	@endif
 @endsection
 

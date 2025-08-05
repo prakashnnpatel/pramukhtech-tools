@@ -97,6 +97,7 @@ table.table tfoot td.label-cell {
 <h3 class="font-size-18 font-weight-bold">Make Branded Purchase Orders with one click! trusted by millions of people!</h3>
 <p>Generate accurate, branded purchase orders in minutes with ToolHubSpot's Free Purchase Order Generator. Whether you're managing inventory, placing supplier requests, or running a growing business, our tool provides a quick and easy way to create professional POs. Customize every detail - from supplier info and shipping terms to product line items, quantities, pricing, and tax.</p>
 <p>No design skills or registration required. Just enter your information, preview your purchase order, and download it as a high-quality PDF - completely free. With unlimited usage and full customization, ToolHubSpot helps you streamline procurement and present polished documents that build trust with vendors.</p>
+<p>Check the video for quick help: <a href="https://www.youtube.com/watch?v=fKOlLUcIJZA" target="_blank" title="Quick Help">Watch on YouTube</a></p>
 <form action="javascript:void(0)" id="custominvoicefrm" method="post">
 <input type="hidden" name="tool_name" id="tool_name" value="Purchase Order" />
 <div class="row">

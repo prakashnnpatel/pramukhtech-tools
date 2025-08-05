@@ -74,6 +74,7 @@
 			<meta name="description" content="Record your screen with system & mic audio online. No software needed. Free, easy, and secure screen recorder with instant HD download - no watermark!" />
 			<meta property="og:title" content="Free Screen Recording Tool - Record Your Screen & Download Instantly | ToolHubSpot" />
 			<meta property="og:description" content="Capture your screen with ease using ToolHubSpot's free online screen recorder and download instantly. No extensions needed. Record, preview, and save your screen in just a few clicks!" />
+			<meta name="keywords" content="free screen recorder, online screen recording, screen capture tool, screen recording website, no download screen recorder, browser screen recorder, record screen free, screen recording for tutorials, toolhubspot screen recorder">
 		@break
 
 		@case('digital-document')
@@ -88,6 +89,7 @@
 			<meta name="description" content="Create professional, branded invoices in minutes with our free custom invoice generator. Fully editable templates with multi-line items, tax options, and your own logo. No login needed, download in PDF format instantly, 100% free and easy to use!" />
 			<meta property="og:title" content="Free Custom Invoice Generator - Create & Download Branded Invoices | ToolHubSpot" />
 			<meta property="og:description" content="Generate branded invoices quickly with ToolHubSpot's free invoice generator. Fully editable templates. Add logo, items, taxes, and download in PDF - no sign-up required!" />
+			<meta name="keywords" content="custom invoice generator, free invoice maker, online invoice tool, invoice template, invoice creator, create invoice online, professional invoice tool, no sign up invoice maker, ToolHubSpot invoice">
 		@break
 
 		@case('generate-quote')
@@ -95,6 +97,7 @@
 			<meta name="description" content="Generate professional, branded quotes for your clients with ToolHubSpot's free quote generator. 100% customizable, no sign-up required. Download as PDF instantly!" />
 			<meta property="og:title" content="Free Quote Generator - Create Client Quotes Online | ToolHubSpot" />
 			<meta property="og:description" content="Easily create and download professional quotes with ToolHubSpot's free quote generator. Fully customizable for your business - fast, simple, and free to use!" />
+			<meta name="keywords" content="custom quote generator, free quote maker, online quote tool, quote template, quote creator, create quote online, professional quote tool, no sign up quote maker, ToolHubSpot quote">
 		@break
 
 		@case('purchase-order')
@@ -102,6 +105,7 @@
 			<meta name="description" content="Generate professional purchase orders for free with ToolHubSpot's online PO generator. Fully customizable templates. No sign-up required. Download as PDF instantly!" />
 			<meta property="og:title" content="Free Purchase Order Generator - Create Custom POs | ToolHubSpot" />
 			<meta property="og:description" content="Generate professional purchase orders instantly with ToolHubSpot's free PO generator. Customize supplier info, items, pricing, and download in PDF format - no login needed!" />
+			<meta name="keywords" content="custom purchase order generator, free purchase order maker, online purchase order tool, purchase order template, purchase order creator, create purchase order online, professional purchase order tool, no sign up purchase order maker, ToolHubSpot purchase order">
 		@break
 
 		@case('signature')

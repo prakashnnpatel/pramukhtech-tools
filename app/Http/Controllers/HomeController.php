@@ -18,7 +18,12 @@ class HomeController extends Controller
 		{
 			$extraParams = explode("-to-",$subpart);
 		}
-        return view("home", ["toolKey" => $toolkey, "extraParams" => $extraParams]);
+		try {
+			return view("home", ["toolKey" => $toolkey, "extraParams" => $extraParams]);
+		}
+		catch(Exception $e) {
+			return response()->view('errors.404', [], 404);
+		}
     }
 
 	public function sitemap() {

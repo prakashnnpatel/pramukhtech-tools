@@ -97,6 +97,7 @@ table.table tfoot td.label-cell {
 <h3 class="font-size-18 font-weight-bold">Make Branded Quote with one click! trusted by millions of people!</h3>
 <p>Create and download professional client quotes in seconds with ToolHubSpot's Free Custom Quote Generator. Whether you're a freelancer, small business owner, consultant, or agency, our tool helps you generate polished, branded quotes that impress your clients. Easily add your logo, business information, client details, itemized services, taxes, and more - all from a clean, user-friendly interface.</p>
 <p>With fully customizable templates, no login required, and unlimited access, generating high-quality PDF quotes has never been easier. Print or send your quotes instantly - completely free. Trusted by thousands, ToolHubSpot lets you streamline your sales process and present your offers with confidence and professionalism.</p>
+<p>Check the video for quick help: <a href="https://www.youtube.com/watch?v=fKOlLUcIJZA" target="_blank" title="Quick Help">Watch on YouTube</a></p>
 <form action="javascript:void(0)" id="custominvoicefrm" method="post">
 <input type="hidden" name="tool_name" id="tool_name" value="Quotation" />
 <div class="row">
