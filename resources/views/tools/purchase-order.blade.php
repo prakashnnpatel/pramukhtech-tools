@@ -94,7 +94,7 @@ table.table tfoot td.label-cell {
 </style>
 
 <h1 class="font-weight-bold">Create Professional Purchase Orders - Free, Customizable & Ready to Download</h1>
-<h3 class="font-size-18 font-weight-bold">Make Branded Purchase Orders with one click! trusted by millions of people!</h3>
+<h2 class="font-size-18 font-weight-bold">Make Branded Purchase Orders with one click! trusted by millions of people!</h2>
 <p>Generate accurate, branded purchase orders in minutes with ToolHubSpot's Free Purchase Order Generator. Whether you're managing inventory, placing supplier requests, or running a growing business, our tool provides a quick and easy way to create professional POs. Customize every detail - from supplier info and shipping terms to product line items, quantities, pricing, and tax.</p>
 <p>No design skills or registration required. Just enter your information, preview your purchase order, and download it as a high-quality PDF - completely free. With unlimited usage and full customization, ToolHubSpot helps you streamline procurement and present polished documents that build trust with vendors.</p>
 <p>Check the video for quick help: <a href="https://www.youtube.com/watch?v=fKOlLUcIJZA" target="_blank" title="Quick Help">Watch on YouTube</a></p>
@@ -104,7 +104,7 @@ table.table tfoot td.label-cell {
     <div class="col-lg-6">
         <div class="card pb-0">
             <div class="card-header card-header-2">
-                <h1 class="font-size-18 font-weight-bold">Add Your Branding</h1>
+                <h3 class="font-size-18 font-weight-bold">Add Your Branding</h3>
             </div>
             <div class="card-body p-0 pt-2">
                 <div class="row">
@@ -152,7 +152,7 @@ table.table tfoot td.label-cell {
     <div class="col-lg-6">
         <div class="card pb-0">
             <div class="card-header card-header-2">
-                <h1 class="font-size-18 font-weight-bold">Billing & Shipping Address</h1>
+                <h3 class="font-size-18 font-weight-bold">Billing & Shipping Address</h3>
             </div>
             <div class="card-body p-0 pt-2">
                 <div class="row">    
@@ -185,7 +185,7 @@ Email: receixxxx@gmail.com</textarea>
             <div class="card-hader card-header-2">
                 <div class="row">
                     <div class="col-lg-6">
-                        <h1 class="font-size-18 font-weight-bold">Order Items</h1>
+                        <h3 class="font-size-18 font-weight-bold">Order Items</h3>
                     </div>
                     <div class="col-lg-6">
                         <div class="d-flex justify-content-end" style="gap: 14px;">

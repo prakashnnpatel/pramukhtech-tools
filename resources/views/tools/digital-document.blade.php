@@ -16,7 +16,7 @@
     }
 </style>
 <h1 class="font-weight-bold">Create Free Digital Document & Downloadable</h1>
-<h3 class="font-size-18 font-weight-bold">Create Branded Digital Documents Instantly – Trusted by Millions!</h3>
+<h2 class="font-size-18 font-weight-bold">Create Branded Digital Documents Instantly – Trusted by Millions!</h2>
 <p>Design and download professional digital documents in seconds with ToolHubSpot's Free Custom Document Generator. Whether you're a freelancer, small business owner, or entrepreneur, our tool provides an easy and powerful way to create documents that reflect your brand identity.</p>
 <p>Take full control of every element — add your logo, Company name more.</p>
 <p>With a 100% customizable template and no sign-up required, you can generate and download high-quality PDFs — completely free. Start creating smarter, branded digital documents today with ToolHubSpot!</p>
@@ -25,7 +25,7 @@
     <div class="col-lg-12">
         <div class="card pb-0">
             <div class="card-header card-header-2">
-                <h1 class="font-size-18 font-weight-bold">Add Your Branding</h1>
+                <h3 class="font-size-18 font-weight-bold">Add Your Branding</h3>
             </div>
             <div class="card-body p-0 pt-2">
                 <div class="row">
@@ -53,7 +53,7 @@
         </div>
         <div class="card pb-0">
             <div class="card-header card-header-2">
-                <h1 class="font-size-18 font-weight-bold">Your Document Content</h1>
+                <h3 class="font-size-18 font-weight-bold">Your Document Content</h3>
             </div>
             <div class="card-body p-0 pt-2 pb-3">
                 <div class="row">
