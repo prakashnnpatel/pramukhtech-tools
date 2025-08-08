@@ -7,6 +7,21 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function home()
+    {
+        return view("home", ["toolKey" => "toollist"]);
+    }
+
+    public function aboutUs()
+    {
+        return view("about-us");
+    }
+
+    public function contactUs()
+    {
+        return view("contact-us");
+    }
+
     public function index($toolkey = "toollist", $subpart = "")
     {
 		if($toolkey == "invoice-generator") {

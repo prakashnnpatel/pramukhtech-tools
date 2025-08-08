@@ -1,3 +1,88 @@
-<div class="header d-flex align-items-center">
-    <div class="logo fs-4 fw-bold"><img src="/images/logo.png" alt="{{ config('app.name') }}"></div>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+        <div class="logo fs-4 fw-bold">
+            <img src="/images/logo.png" alt="{{ config('app.name') }}">
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
+                </li>
+                
+                <!-- Financial Tools Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-calculator"></i> Calculators
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('toollist', 'fd-calculator')}}" title="FD Calculator">
+                            <i class="fas fa-piggy-bank"></i> FD Calculator
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'sip-calculator')}}" title="SIP Calculator">
+                            <i class="fas fa-hand-holding-water"></i> SIP Calculator
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'emi-calculator')}}" title="EMI Calculator">
+                            <i class="fas fa-calculator"></i> EMI Calculator
+                        </a></li>
+                    </ul>
+                </li>
+                
+                <!-- Document Tools Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-file-pdf"></i> Documents
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('toollist', 'custom-invoice')}}" title="Create Custom Invoice">
+                            <i class="fas fa-file-invoice"></i> Custom Invoice
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'generate-quote')}}" title="Quote">
+                            <i class="fas fa-file-contract"></i> Generate Quote
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'purchase-order')}}" title="Purchase Order">
+                            <i class="fas fa-shopping-cart"></i> Purchase Order
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'digital-document')}}" title="Create Free Digital Document & Downloadable">
+                            <i class="fas fa-file"></i> Digital Document
+                        </a></li>
+                    </ul>
+                </li>
+                
+                <!-- Utility Tools Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-tools"></i> Utilities
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('toollist', 'timezone')}}" title="Timezone Converter">
+                            <i class="fas fa-clock"></i> Timezone Converter
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'signature')}}" title="Create Your Digital Signature in Seconds">
+                            <i class="fa-solid fa-pen"></i> Digital Signature
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'screen-recording')}}" title="Online Free Screen Recorder with Audio - Download FREE">
+                            <i class="fa-solid fa-desktop"></i> Screen Recorder
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'color-picker')}}" title="Color Picker">
+                            <i class="fa-solid fa-palette"></i> Color Picker
+                        </a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}" href="{{ route('about-us') }}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('contact-us') ? 'active' : '' }}" href="{{ route('contact-us') }}">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

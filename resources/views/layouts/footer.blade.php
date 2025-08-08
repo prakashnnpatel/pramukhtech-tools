@@ -1,11 +1,90 @@
-<div class="row">
-	<div class="col-lg-6">
-		&copy; {{date("Y")}} {{ config('app.name') }}, All Rights Reserved.
-	</div>
-	<div class="col-lg-6 text-right">
-		<a href="{{route('toollist','terms-of-use')}}" title="Terms of Use">Terms of Use</a> <small>|</small> 
-		<a href="{{route('toollist','privacy-policy')}}" title="Privacy Policy">Privacy Policy</a> <small>|</small>
-		<a href="{{route('toollist','contact-us')}}" title="Contact Us">Contact Us</a>
-		</ul>
-	</div>
-</div>
+<footer class="footer-modern">
+    <div class="footer-content">
+        <div class="footer-main">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <img src="/images/logo.png" alt="{{ config('app.name') }}" class="footer-logo">
+                    <h3>{{ config('app.name') }}</h3>
+                    <p>Your one-stop destination for free online tools. Boost productivity with our comprehensive suite of utilities designed for professionals and everyday users.</p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('about-us') }}">About Us</a></li>
+                    <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
+                    <li><a href="{{ route('toollist') }}">All Tools</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Popular Tools</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ route('toollist', 'emi-calculator') }}">EMI Calculator</a></li>
+                    <li><a href="{{ route('toollist', 'custom-invoice') }}">Invoice Generator</a></li>
+                    <li><a href="{{ route('toollist', 'signature') }}">Digital Signature</a></li>
+                    <li><a href="{{ route('toollist', 'timezone') }}">Timezone Converter</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com/pramukhtech" target="_blank" class="social-link" title="Follow us on Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/pramukhtech" target="_blank" class="social-link" title="Follow us on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/pramukhtech" target="_blank" class="social-link" title="Connect on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://instagram.com/pramukhtech" target="_blank" class="social-link" title="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/pramukhtech" target="_blank" class="social-link" title="Subscribe on YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://github.com/pramukhtech" target="_blank" class="social-link" title="View on GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="newsletter-signup">
+                    <h5>Stay Updated</h5>
+                    <p>Get notified about new tools and features</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="copyright">
+                    <p>&copy; {{ date('Y') }} {{ config('app.name') }}. All Rights Reserved.</p>
+                    <p class="copyright-sub">Made with <i class="fas fa-heart"></i> for the community</p>
+                </div>
+                
+                <div class="footer-legal">
+                    <a href="{{ route('toollist', 'terms-of-use') }}" class="legal-link">Terms of Use</a>
+                    <span class="separator">•</span>
+                    <a href="{{ route('toollist', 'privacy-policy') }}" class="legal-link">Privacy Policy</a>
+                    <span class="separator">•</span>
+                    <a href="{{ route('toollist', 'sitemap') }}" class="legal-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+</footer>
