@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
         <div class="logo fs-4 fw-bold">
-            <img src="/images/logo.png" alt="{{ config('app.name') }}">
+            <a href="{{ route('home') }}" title="ToolHubSpot">
+                <img src="/images/logo.png" alt="{{ config('app.name') }}">
+            </a>
         </div>
         
         <!-- Mobile Menu Toggle -->

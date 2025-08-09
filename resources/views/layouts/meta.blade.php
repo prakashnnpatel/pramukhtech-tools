@@ -9,13 +9,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{url()->current()}}" />
 <meta property="og:site_name" content="{{ config('app.name') }}" />
-<meta property="og:image" content="{{ url('/') }}/images/tools/{{$toolKey}}.png" />
+<meta property="og:image" content="{{ url('/') }}/images/tools/{{$toolKey??request()->segment(1)}}.png" />
 @if(config('app.env') == 'production')
 	<meta name="robots" content="index, follow" />
 @else
 	<meta name="robots" content="noindex, nofollow" />
 @endif
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7987011474307455" crossorigin="anonymous"></script>
 @if(request()->segment(1) !== NULL)
 	@switch(request()->segment(1))
