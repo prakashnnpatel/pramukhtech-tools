@@ -12,6 +12,7 @@
 	@if(config('app.env') == 'production')
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7987011474307455" crossorigin="anonymous"></script>
 	@endif
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=689822e0e700c1c978e64e88&product=sop' async='async'></script>
 </head>
 <body>
     @include('layouts.header')
