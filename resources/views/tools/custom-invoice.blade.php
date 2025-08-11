@@ -99,6 +99,7 @@ table.table tfoot td.label-cell {
             </div>
             <div class="header-text">
                 <h1 class="calculator-title">Free Invoice Generator</h1>
+				<p><i class="fas fa-star"></i> Trusted by millions of people!</p>
             </div>
         </div>
     </div>	
