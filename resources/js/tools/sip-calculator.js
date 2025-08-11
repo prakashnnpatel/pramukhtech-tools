@@ -5,11 +5,25 @@ var calculateLoadAmount = function()
 	const annualRate = parseFloat($('#rate').val());
 	const years = parseFloat($('#years').val());
 
-	 if (isNaN(P) || isNaN(annualRate) || isNaN(years) || P <= 0 || annualRate <= 0 || years <= 0) {
-         $('#error_msg').html(`<div class="alert alert-danger" role="alert">Please enter valid values for all fields.</div>`);
-         $('#result').html("");
-		 return;
-     }
+
+      // Validate inputs
+    if (isNaN(P) || P <= 0) {
+       $('#error_msg').html(`<div class="alert alert-danger" role="alert"><i class="fas fa-exclamation-triangle"></i> Please enter a valid principal amount</div>`);
+	   $('#result').html("");
+      return;
+    }
+
+    if (isNaN(annualRate) || annualRate <= 0) {
+		$('#error_msg').html(`<div class="alert alert-danger" role="alert"><i class="fas fa-exclamation-triangle"></i> Please enter a valid return rate</div>`);
+		$('#result').html("");
+		return;
+    }
+
+    if (isNaN(years) || years <= 0) {
+	  $('#error_msg').html(`<div class="alert alert-danger" role="alert"><i class="fas fa-exclamation-triangle"></i> Please enter a valid time period</div>`);   
+	  $('#result').html("");
+      return;
+    }	
 
 	 $('#error_msg').html("");
 	 $('#result').html("");
@@ -28,35 +42,48 @@ var calculateLoadAmount = function()
 
 	const totalReturn = (FV - totalInstment);
 
-	// Display results
+    // Display results with modern card layout
 	$('#result').html(`
-		<div class="row">
-			<div class="col-lg-6">
-				<table>
-					<tr>
-						<th colspan="2">SIP Summary</th>
-					</tr>
-					<tr>
-						<th>Invested Amount </th>
-						<th class="text-theme">${Math.round(totalInstment).toLocaleString()}</th>
-					</tr>
-					<tr>
-						<th>Est. Returns </th>
-						<th class="text-theme">${Math.round(totalReturn).toLocaleString()}</th>
-					</tr>			
-					<tr>
-						<th>Total Amount </th>
-						<th class="text-theme">${Math.round(FV).toLocaleString()}</th>
-					</tr>			
-				</table>
-			</div>
-			<div class="col-lg-1"></div>
-			<div class="col-lg-5">
-			<div style="width:300px;">
-				<canvas id="myDoughnutChart"></canvas>
-			</div>
-			</div>
-		</div>
+    <div class="result-card">
+        <div class="result-header">
+            <h3><i class="fas fa-chart-pie"></i> SIP Summary</h3>
+        </div>
+        <div class="result-content">
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="summary-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="summary-label">Invested Amount</div>
+                    <div class="summary-value">₹${Math.round(totalInstment).toLocaleString()}</div>
+                    <div class="summary-currency">Principal</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="summary-label">Est. Returns</div>
+                    <div class="summary-value">₹${Math.round(totalReturn).toLocaleString()}</div>
+                    <div class="summary-currency">Returns</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <div class="summary-label">Total Amount</div>
+                    <div class="summary-value">₹${Math.round(FV).toLocaleString()}</div>
+                    <div class="summary-currency">Total</div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <div class="chart-title">Investment Breakdown</div>
+                <div style="width: 100%; max-width: 400px; margin: 0 auto;">
+                    <canvas id="myDoughnutChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
 	`);
 
 	const ctx = document.getElementById('myDoughnutChart').getContext('2d');

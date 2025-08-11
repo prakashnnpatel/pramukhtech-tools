@@ -14,12 +14,25 @@ var calculateLoadAmount = function()
 	var annualInterestRate = parseFloat($('#annual_interest_rate').val());
 	var loanTerm = parseInt($('#loan_term').val());
 	
-	// Validate inputs
-	if (isNaN(loanAmount) || isNaN(annualInterestRate) || isNaN(loanTerm) || loanAmount <= 0 || annualInterestRate <= 0 || loanTerm <= 0) {
-		$('#error_msg').html(`<div class="alert alert-danger" role="alert">Please enter valid values for all fields.</div>`);
+	 // Validate inputs
+    if (isNaN(loanAmount) || loanAmount <= 0) {
+       $('#error_msg').html(`<div class="alert alert-danger" role="alert"><i class="fas fa-exclamation-triangle"></i> Please enter a valid loan amount</div>`);
+	   $('#result').html("");
+      return;
+    }
+
+    if (isNaN(annualInterestRate) || annualInterestRate <= 0) {
+		$('#error_msg').html(`<div class="alert alert-danger" role="alert"><i class="fas fa-exclamation-triangle"></i> Please enter a valid interest rate</div>`);
 		$('#result').html("");
 		return;
-	}
+    }
+
+    if (isNaN(loanTerm) || loanTerm <= 0) {
+	  $('#error_msg').html(`<div class="alert alert-danger" role="alert"><i class="fas fa-exclamation-triangle"></i> Please enter a valid loan tenure</div>`);   
+	  $('#result').html("");
+      return;
+    }
+
 	$('#error_msg').html("");
 	$('#result').html("");
 	 // Calculate monthly interest rate
@@ -40,39 +53,56 @@ var calculateLoadAmount = function()
 	var totalPayment = monthlyPayment * numberOfPayments;
 	var totalInterest = totalPayment - loanAmount;
 
-	// Display results
+	 // Display results with modern card layout
 	$('#result').html(`
-		<div class="row">
-			<div class="col-lg-6">
-		<table>
-			<tr>
-				<th colspan="2">Loan Summary</th>
-			</tr>
-			<tr>
-				<th>Loan Amount </th>
-				<th>${loanAmount.toLocaleString()}</th>
-			</tr>
-			<tr>
-				<th>Total Interest </th>
-				<th class="text-theme">${Math.round(totalInterest).toLocaleString()}</th>
-			</tr>
-			<tr>
-				<th>Total Payment </th>
-				<th class="text-theme">${Math.round(totalPayment).toLocaleString()}</th>
-			</tr>			
-			<tr>
-				<th>Monthly EMI </th>
-				<th class="text-theme">${Math.round(monthlyPayment).toLocaleString()}</th>
-			</tr>
-		</table>
-		</div>
-			<div class="col-lg-1"></div>
-			<div class="col-lg-5">
-			<div style="width:300px;">
-				<canvas id="myDoughnutChart"></canvas>
-			</div>
-			</div>
-		</div>
+    <div class="result-card">
+        <div class="result-header">
+            <h3><i class="fas fa-chart-pie"></i> Loan Summary</h3>
+        </div>
+        <div class="result-content">
+            <div class="summary-grid">				
+                <div class="summary-item">
+                    <div class="summary-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="summary-label">Loan Amount</div>
+                    <div class="summary-value">₹${Math.round(totalInterest).toLocaleString()}</div>
+                    <div class="summary-currency">Principal</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="summary-label">Total Interest</div>
+                    <div class="summary-value">₹${Math.round(totalPayment).toLocaleString()}</div>
+                    <div class="summary-currency">Returns</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <div class="summary-label">Total Payment</div>
+                    <div class="summary-value">₹${Math.round(totalPayment).toLocaleString()}</div>
+                    <div class="summary-currency">Total</div>
+                </div>
+				<div class="summary-item">
+                    <div class="summary-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="summary-label">Monthly EMI</div>
+                    <div class="summary-value">₹${Math.round(monthlyPayment).toLocaleString()}</div>
+                    <div class="summary-currency">Total</div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <div class="chart-title">Investment Breakdown</div>
+                <div style="width: 100%; max-width: 400px; margin: 0 auto;">
+                    <canvas id="myDoughnutChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
 	`);
 
 	const ctx = document.getElementById('myDoughnutChart').getContext('2d');
