@@ -8,6 +8,8 @@ export default defineConfig({
             input: [
                 'resources/sass/app.scss',
                 'resources/sass/frontend.scss',
+                'resources/css/fd-calculator.css',
+                'resources/css/invoice-builder.css',
                 'resources/js/app.js',
                 'resources/js/frontend.js',
                 'resources/js/home.js',

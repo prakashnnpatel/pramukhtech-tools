@@ -111,3 +111,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Dropdown hover fix for menu (desktop only)
+document.addEventListener('DOMContentLoaded', function() {
+    // Dropdown hover fix
+    const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
+    dropdowns.forEach(function(dropdown) {
+        let timeout;
+        const menu = dropdown.querySelector('.dropdown-menu');
+        if (!menu) return;
+
+        // Open on mouseenter
+        dropdown.addEventListener('mouseenter', function() {
+            clearTimeout(timeout);
+            dropdown.classList.add('show');
+            menu.classList.add('show');
+        });
+        // Keep open when moving to submenu
+        menu.addEventListener('mouseenter', function() {
+            clearTimeout(timeout);
+            dropdown.classList.add('show');
+            menu.classList.add('show');
+        });
+        // Close on mouseleave (with small delay)
+        dropdown.addEventListener('mouseleave', function() {
+            timeout = setTimeout(function() {
+                dropdown.classList.remove('show');
+                menu.classList.remove('show');
+            }, 150);
+        });
+        menu.addEventListener('mouseleave', function() {
+            timeout = setTimeout(function() {
+                dropdown.classList.remove('show');
+                menu.classList.remove('show');
+            }, 150);
+        });
+    });
+});

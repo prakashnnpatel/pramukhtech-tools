@@ -8,6 +8,8 @@
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     @vite('resources/sass/frontend.scss')
+    @vite('resources/css/fd-calculator.css')
+    @vite('resources/css/invoice-builder.css')
     @stack('page_css')
 	@if(config('app.env') == 'production')
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7987011474307455" crossorigin="anonymous"></script>
