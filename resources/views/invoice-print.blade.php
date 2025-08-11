@@ -4,12 +4,43 @@
 	<meta charset="utf-8">
     <link rel="stylesheet" href="{{ public_path('resources/css/invoice-builder.css') }}">
 	<style type="text/css">
+		@page {
+			margin: 20px;
+		}
+		body {
+			font-family: DejaVu Sans, sans-serif;
+			font-size: 14px;
+		}
 		.print-invoice-container {
-			width: 100%; max-width: 900px; margin: 32px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.09); border: 1.5px solid #e3e3e3; padding: 32px 24px;
+			width: 100%;
+			max-width: 760px; /* safe inside A4 */
+			margin: 0 auto;
+			background: #fff;
+			border-radius: 10px;
+			#border: 1.5px solid #e3e3e3;
+			padding: 5px;
+			box-sizing: border-box;
 		}
-		@media print {
-			.print-invoice-container { box-shadow: none !important; border: 1px solid #d4d8d6 !important; }
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			table-layout: fixed; /* prevent overflow */
+			word-wrap: break-word; /* wrap long text */
 		}
+		.print-table th, .print-table td {
+			border: 1px solid #e3e3e3 !important;
+			padding: 8px !important;
+			font-size: 13px;
+		}
+		.print-table th {
+			background: #f7f8fa !important;
+			color: #2d3748 !important;
+			font-weight: 700 !important;
+			font-size: 1em !important;
+		}
+		.text-center { text-align: center !important; }
+		.text-left { text-align: left !important; }
+		.text-right { text-align: right !important; }
 	</style>
 </head>
 <body @if(isset($param['flag']) && $param['flag'] == "print") onload="window.print()" @endif>

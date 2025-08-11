@@ -66,7 +66,7 @@ class HomeController extends Controller
         {
             if($param['flag'] == "pdf")
             {
-                $content = PDF::loadView('invoice-print', ['param' => $param])->output();
+				$content = PDF::loadView('invoice-print', ['param' => $param])->setPaper('A4', 'portrait')->output();
                 file_put_contents($pdfName, $content);
                 return url("uploads/pdf/".$fileName);
             }
