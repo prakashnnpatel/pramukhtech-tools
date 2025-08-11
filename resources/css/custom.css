@@ -144,6 +144,13 @@ html, body {
     padding: 2rem;
 }
 
+/* Home Content Container for standard width sections */
+.home-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .content h1 {
     margin-bottom: 1rem;
 }
@@ -238,7 +245,6 @@ td, th {
     margin: 0 0 3rem 0;
     position: relative;
     overflow: hidden;
-    border-radius: 2rem;
     box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
 }
 
@@ -1185,7 +1191,6 @@ td, th {
     color: white;
     position: relative;
     overflow: hidden;
-    border-radius: 2rem;
     box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
 }
 
