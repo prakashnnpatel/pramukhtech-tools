@@ -172,7 +172,7 @@ var customInvoice = function()
                 $("#btn_create_print, #btn_create_invoice").attr("disabled", true)
             },
             complete: function() {
-                $("#btn_create_invoice").text(`Create Invoice PDF`);
+                $("#btn_create_invoice").text(`Download PDF`);
                 $("#btn_create_print").text(`Preview`);
                 $("#btn_create_print, #btn_create_invoice").attr("disabled", false)
             },

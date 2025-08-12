@@ -90,142 +90,216 @@ table.table tfoot td.label-cell {
         margin-bottom:5px;
     }
 }
-
 </style>
-
-<h1 class="font-weight-bold">Create Professional Purchase Orders - Free, Customizable & Ready to Download</h1>
-<h2 class="font-size-18 font-weight-bold">Make Branded Purchase Orders with one click! trusted by millions of people!</h2>
-<p>Generate accurate, branded purchase orders in minutes with ToolHubSpot's Free Purchase Order Generator. Whether you're managing inventory, placing supplier requests, or running a growing business, our tool provides a quick and easy way to create professional POs. Customize every detail - from supplier info and shipping terms to product line items, quantities, pricing, and tax.</p>
-<p>No design skills or registration required. Just enter your information, preview your purchase order, and download it as a high-quality PDF - completely free. With unlimited usage and full customization, ToolHubSpot helps you streamline procurement and present polished documents that build trust with vendors.</p>
-<p>Check the video for quick help: <a href="https://www.youtube.com/watch?v=fKOlLUcIJZA" target="_blank" title="Quick Help">Watch on YouTube</a></p>
-<form action="javascript:void(0)" id="custominvoicefrm" method="post">
-<input type="hidden" name="tool_name" id="tool_name" value="Purchase Order" />
-<div class="row">
-    <div class="col-lg-6">
-        <div class="card pb-0">
-            <div class="card-header card-header-2">
-                <h3 class="font-size-18 font-weight-bold">Add Your Branding</h3>
+<div class="fd-calculator-container">
+    <div class="calculator-header mb-4">
+        <div class="header-content">
+            <div class="header-icon">
+                <i class="fas fa-file-invoice"></i>
             </div>
-            <div class="card-body p-0 pt-2">
-                <div class="row">
-                    <div class="col-lg-12" id="uploadsection">
-                        <div class="form-group">
-                            <label for="invoice_logo">Upload your logo if any</label>
-                            <input class="form-control" id="invoice_logo" name="invoice_logo" type="file"/>
-                            <small style="font-size: 11px;">Logo size should be 75 X 75</small>
+            <div class="header-text">
+                <h1 class="calculator-title">Generate Free Purchase Orders</h1>
+				<p><i class="fas fa-star"></i> Trusted by millions of people!</p>
+            </div>
+        </div>
+    </div>	
+
+    <form action="javascript:void(0)" id="custominvoicefrm" method="post">
+        <input type="hidden" name="tool_name" id="tool_name" value="Purchase Order" />
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="invoice-section-card">
+                    <h3><i class="fas fa-building"></i> Add Your Branding</h3>
+                    <div class="row">
+                        <div class="col-lg-12" id="uploadsection">
+                            <div class="form-group">
+                                <label for="invoice_logo" class="invoice-form-label"><i class="fas fa-image"></i> Upload your logo if any</label>
+                                <input class="invoice-form-control" id="invoice_logo" name="invoice_logo" type="file"/>
+                                <small style="font-size: 11px;">Logo size should be 75 X 75</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4" id="logosection" style="display:none;">
-                        <div class="form-group mt-4">                       
-                            <img src="" style="display:none;width: 85px;height: auto;" id="invoice_logo_preview"/>
+                        <div class="col-lg-4" id="logosection" style="display:none;">
+                            <div class="form-group mt-4">
+                                <img src="" style="display:none;width: 85px;height: auto;" alt="Invoice Logo" id="invoice_logo_preview"/>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <label for="invoice_heading">Company Name</label>
-                            <input type="text" name="invoice_heading" maxlength="50" class="form-control" id="invoice_heading" value="" placeholder="Company or Your Full Name"/>
-                            <small style="font-size: 11px;">If the logo does not exist, then this will be displayed in the header.</small>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="invoice_heading" class="invoice-form-label"><i class="fas fa-user-tie"></i> Company Name</label>
+                                <input type="text" name="invoice_heading" maxlength="50" class="invoice-form-control" id="invoice_heading" value="" placeholder="Company or Your Full Name"/>
+                                <small style="font-size: 11px;">If the logo does not exist, then this will be displayed in the header.</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="form-group">
-                            <label for="invoice_create_date">Order Date</label>
-                            <input type="text" name="invoice_create_date" class="form-control" id="invoice_create_date" value="{{date('d/m/Y')}}" placeholder="Any Formate" />
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="invoice_create_date" class="invoice-form-label"><i class="fas fa-calendar"></i> Order Date</label>
+                                <input type="text" name="invoice_create_date" class="invoice-form-control" id="invoice_create_date" value="{{date('d/m/Y')}}" placeholder="Any Format" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="form-group">
-                            <label for="invoice_number">Order #</label>
-                            <input type="text" name="invoice_number" class="form-control" id="invoice_number" value="" placeholder="701"/>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="invoice_number" class="invoice-form-label"><i class="fas fa-hashtag"></i> Order #</label>
+                                <input type="text" name="invoice_number" class="invoice-form-control" id="invoice_number" value="" placeholder="701"/>
+                            </div>
                         </div>
-                    </div>
-					<div class="col-lg-4">
-                        <div class="form-group">
-                            <label for="status">Status</label>
-                            <input type="text" name="status" class="form-control" id="status" value="" placeholder="Order Status"/>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="status" class="invoice-form-label"><i class="fas fa-flag"></i> Status</label>
+                                <input type="text" name="status" class="invoice-form-control" id="status" value="" placeholder="Order Status"/>                                
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>            
-        </div>
-    </div>
-    <div class="col-lg-6">
-        <div class="card pb-0">
-            <div class="card-header card-header-2">
-                <h3 class="font-size-18 font-weight-bold">Billing & Shipping Address</h3>
             </div>
-            <div class="card-body p-0 pt-2">
-                <div class="row">    
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <label>From Address</label>
-							<textarea class="form-control" rows="4" name="invoice_from_address" id="invoice_from_address" placeholder="Billing Address">ABC Company Ltd.
+            <div class="col-lg-6">
+                <div class="invoice-section-card">
+                    <h3><i class="fas fa-address-card"></i> Billing & Shipping Address</h3>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="invoice-form-label"><i class="fas fa-user"></i> From Address</label>
+                                <textarea class="invoice-form-control" rows="4" name="invoice_from_address" id="invoice_from_address" placeholder="Billing Address">ABC Company Ltd.
 Full Address...
 Phone: 792X-XXX-XXX
 Email: abcxxxx@gmail.com</textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="form-group">
-                            <label>To Address</label>
-                            <textarea class="form-control" placeholder="Shipping Address" rows="4" name="invoice_to_address" id="invoice_to_address">Receiver Name
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="invoice-form-label"><i class="fas fa-user"></i> To Address</label>
+                                <textarea class="invoice-form-control" placeholder="Shipping Address" rows="4" name="invoice_to_address" id="invoice_to_address">Receiver Name
 Full Address...
 Phone: 987X-XXX-XXX
 Email: receixxxx@gmail.com</textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
-    </div>
-</div>
-<div class="row mb-5">
-    <div class="col-lg-12">   
-        <div class="card">
-            <div class="card-hader card-header-2">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h3 class="font-size-18 font-weight-bold">Order Items</h3>
+        <div class="row mb-5">
+            <div class="col-lg-12">
+                <div class="invoice-section-card">
+                    <div class="row align-items-center mb-3">
+                        <div class="col-lg-6">
+                            <h3><i class="fas fa-list"></i> Order Items</h3>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="d-flex justify-content-end" style="gap: 14px;">
+                                <select name="currency" id="currency" class="invoice-form-control" style="max-width: 180px;">
+                                    <option value="">Select Currency</option>
+                                    @foreach (config('constants.currencies') as $code => $symbol)
+                                        <option value="{{ $code }}" {{ old('currency') == $code ? 'selected' : '' }}>
+                                            {{ $code }} ({{ $symbol }})
+                                        </option>
+                                    @endforeach
+                                </select>
+                                <button type="button" id="btn_add_row" class="invoice-action-btn" onClick="customInvoice.addCustomeOption();"><i class="fas fa-plus"></i> Add New Item</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="d-flex justify-content-end" style="gap: 14px;">
-                            <select name="currency" id="currency" style="padding-left: 6px;">
-                                <option value="">Select Currency</option>
-                                @foreach (config('constants.currencies') as $code => $symbol)
-                                    <option value="{{ $code }}" {{ old('currency') == $code ? 'selected' : '' }}>
-                                        {{ $code }} ({{ $symbol }})
-                                    </option>
-                                @endforeach
-						    </select>
-                            <button type="button" id="btn_add_row" class="th-btn btn-md" onClick="customInvoice.addCustomeOption();">Add New Item</button>
-                        </div>						
-					</div>					
-                </div>                
-            </div>
-            <div class="card-body p-0 pt-2">
-                <table class="table" id="invoice_item_section">
-                    <thead class="text-center">
-                        <tr>
-                            <th><input style="width:52px;font-weight: bold;" Placeholder="#" class="form-control" type="text" name="tableHeader[sr]" value="#"/></th>
-                            <th><input type="text" style="font-weight: bold;" class="form-control" Placeholder="Item" name="tableHeader[item]" value="Item"/></th>
-                            <th><input type="text" style="font-weight: bold;" class="form-control" Placeholder="Qty" name="tableHeader[qty]" value="Qty"/></th>
-                            <th><input type="text"  style="font-weight: bold;" class="form-control" Placeholder="Price" name="tableHeader[price]" value="Price"/></th>
-                            <th><input type="text" style="font-weight: bold;" class="form-control" Placeholder="Total" name="tableHeader[total]" value="Total"/></th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                    <tfoot></tfoot>
-                </table>  
-            </div>
-            
-            <div class="card-footer card-header-2" style="border:none;">
-                <div class="d-flex flex-wrap justify-content-end gap-2 w-100" id="invoice-action-buttons">
-                    <button type="button" id="btn_create_invoice" class="th-btn btn-md" onClick="customInvoice.generateInvoice('pdf');">Download PDF</button>
-                    <button type="button" id="btn_create_print" class="th-btn btn-md" onClick="customInvoice.generateInvoice('print');">Print Preview</button>
+                    <div class="table-responsive">
+                        <table class="invoice-table" id="invoice_item_section">
+                            <thead class="text-center">
+                                <tr>
+                                    <th><input style="width:52px;font-weight: bold;" Placeholder="#" class="invoice-form-control" type="text" name="tableHeader[sr]" value="#"/></th>
+                                    <th><input type="text" style="font-weight: bold;" class="invoice-form-control" Placeholder="Item" name="tableHeader[item]" value="Item"/></th>
+                                    <th><input type="text" style="font-weight: bold;" class="invoice-form-control" Placeholder="Qty" name="tableHeader[qty]" value="Qty"/></th>
+                                    <th><input type="text"  style="font-weight: bold;" class="invoice-form-control" Placeholder="Price" name="tableHeader[price]" value="Price"/></th>
+                                    <th><input type="text" style="font-weight: bold;" class="invoice-form-control" Placeholder="Total" name="tableHeader[total]" value="Total"/></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            <tfoot></tfoot>
+                        </table>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-end gap-2 w-100 mt-4" id="invoice-action-buttons">
+                        <button type="button" id="btn_create_invoice" class="invoice-action-btn" onClick="customInvoice.generateInvoice('pdf');"><i class="fas fa-file-pdf"></i> Download PDF</button>
+                        <button type="button" id="btn_create_print" class="invoice-action-btn" onClick="customInvoice.generateInvoice('print');"><i class="fas fa-print"></i> Print Preview</button>
+                    </div>
                 </div>
             </div>
+        </div>
+    </form>
 
+	<!-- Information Section -->
+    <div class="info-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="info-content-card">
+                    <div class="content-header">
+                        <h3><i class="fas fa-book-open"></i> About Purchase Orders </h3>
+                    </div>
+                    <div class="content-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="content-block">
+                                    <h4><i class="fas fa-calculator"></i> Create an Purchase Orders in Minutes</h4>
+                                    <p>Make Branded Purchase Orders with one click! Trusted by millions of people!</p>
+									<p>Create and download professional purchase orders in seconds with ToolHubSpot's Free Custom Purchase Orders. Whether you're a freelancer, small business owner, or entrepreneur, our tool offers a simple yet powerful way to design orders that reflect your brand. You have full control over every field - add your logo, company details, customer information, items, taxes, and more.</p>
+									<p>With a 100% customizable template and no sign-up required, you can generate orders and download them in high-quality PDF format - completely free. Start orders smarter and faster with ToolHubSpot today!</p>
+									<p>Check the video for quick help: <a href="https://www.youtube.com/watch?v=fKOlLUcIJZA" target="_blank" title="Quick Help">Watch on YouTube</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="content-block">
+                                    <h4><i class="fas fa-star"></i> Key Features</h4>
+                                    <ul class="feature-list">
+                                        <li><strong>Multiple Currencies:</strong> Support for global currencies to bill clients anywhere.
+										</li>
+                                        <li><strong>Tax & Discount Options:</strong> Easily add GST, VAT, or custom taxes or discounts.</li>
+                                        <li><strong>PDF Download & Print:</strong> Download professional purchase orders as PDFs or print directly.</li>
+                                        <li><strong>Mobile Friendly:</strong> Works perfectly on all devices</li>
+                                    </ul>
+                                </div>
+                                <div class="content-block">
+                                    <h4><i class="fas fa-lightbulb"></i> Benefits</h4>
+                                    <ul class="feature-list">
+                                        <li><strong>100%</strong> FREE!</li>
+										<li>Unlimited transactions</li>
+                                        <li>Generate professional quotes online</li>
+										<li>Fully Customizable & Downloadable</li>
+										<li>Trusted by millions of people!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- Step-by-step guide -->
+    <div class="info-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="info-content-card">
+                    <div class="content-header">
+                        <h3><i class="fas fa-book-open"></i> How to create an purchase orders with the online generator </h3>
+                    </div>
+                    <div class="content-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4><i class="fas fa-star"></i> Step-by-step guide</h4>
+								<ol style="line-height:30px;">
+									<li>Enter your branding details, such as your logo or company name.</li>
+									<li>Fill in the order date, order number, and status.</li>
+									<li>Enter your details (name, address, and contact information) in the <strong>From Address</strong> section.</li>
+									<li>Enter the client's details (name, address, and contact information) in the <strong>To Address</strong> section.</li>
+									<li>Add product or service details, including quantities and prices. You can also edit the titles/labels as needed.</li>
+									<li>Include any applicable taxes or discounts.</li>
+									<li>Add notes if you want to provide additional context or a message for your client.</li>
+									<li>Review the total amount. You can edit taxes, prices, or any other details if necessary.</li>
+									<li>Click the <strong>Preview</strong> button to see how your order looks before printing.</li>
+									<li>Click the <strong>Download</strong> button to save your order as a PDF.</li>
+									<li>For quick help: <a href="https://www.youtube.com/watch?v=fKOlLUcIJZA" target="_blank" title="Quick Help">Watch on YouTube</a></li>
+								</ol>                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-</form>

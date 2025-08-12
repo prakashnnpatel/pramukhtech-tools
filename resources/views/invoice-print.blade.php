@@ -155,8 +155,10 @@
   background: #fafbfc !important;
 }
 .print-table-summary td {
-  background: #f3f4f6 !important;
-  font-weight: 600 !important;
+   background: #f3f4f6 !important;
+   font-weight: 650 !important;
+   font-size: 1.08em !important;
+   color: #000 !important;
 }
 .print-table-grand td {
   background: #667eea !important;
