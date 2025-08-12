@@ -2629,3 +2629,20 @@ td, th {
     0%, 100% { opacity: 0; transform: translateX(-50%) scaleX(0); }
     50% { opacity: 1; transform: translateX(-50%) scaleX(1); }
 }
+
+/* Completely hide cursor trail effect globally */
+.cursor-trail {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Hide any circular cursor elements */
+div[style*="border-radius: 50%"],
+div[style*="cursor"],
+div[class*="cursor"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
