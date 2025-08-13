@@ -35,33 +35,10 @@ $(document).ready(function ($) {
 
 	/* Search on table td*/
 	$('#timezone-search').on('keyup', function() {
-		var searchTerm = $(this).val().toLowerCase().trim();
-		if (searchTerm === '') {
-			// Show all rows and all cells when search box is empty
-			$('#timezone_table tbody tr').show();
-			$('#timezone_table tbody td').show();
-			return;
-		}
-
-		// Otherwise, filter based on search term
-		$('#timezone_table tbody td').each(function() {
-		  var cellText = $(this).text().toLowerCase();
-
-		  if (cellText.indexOf(searchTerm) > -1) {
-			$(this).show();
-		  } else {
-			$(this).hide();
-		  }
-		});
-
-		// Hide rows where all <td> are hidden
-		$('#timezone_table tbody tr').each(function() {
-		  var visibleTds = $(this).find('td:visible').length;
-		  if (visibleTds === 0) {
-			$(this).hide();
-		  } else {
-			$(this).show();
-		  }
+		let filter = this.value.toLowerCase();
+		document.querySelectorAll('#timezoneList li').forEach(li => {
+			let text = li.textContent.toLowerCase();
+			li.style.display = text.includes(filter) ? '' : 'none';
 		});
 	});
 
@@ -107,6 +84,4 @@ $(document).ready(function ($) {
 			//console.log('Timezone not found in the dropdown');
 		}
 	}
-
-
 });
