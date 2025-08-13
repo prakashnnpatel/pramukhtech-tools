@@ -99,7 +99,7 @@ table.table tfoot td.label-cell {
             </div>
             <div class="header-text">
                 <h1 class="calculator-title">Free Client Quotes Generator</h1>
-				<p><i class="fas fa-star"></i> Trusted by millions of people!</p>
+				<p><i class="fas fa-star"></i> Trusted by millions worldwide!</p>
             </div>
         </div>
     </div>	
@@ -232,7 +232,7 @@ Email: receixxxx@gmail.com</textarea>
                     </div>
                     <div class="content-body">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <div class="content-block">
                                     <h4><i class="fas fa-calculator"></i> Create an Quotes in Minutes</h4>
                                     <p>Make Branded Quotes with one click! Trusted by millions of people!</p>
@@ -242,26 +242,24 @@ Email: receixxxx@gmail.com</textarea>
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="content-block">
-                                    <h4><i class="fas fa-star"></i> Key Features</h4>
-                                    <ul class="feature-list">
-                                        <li><strong>Multiple Currencies:</strong> Support for global currencies to bill clients anywhere.
-										</li>
-                                        <li><strong>Tax & Discount Options:</strong> Easily add GST, VAT, or custom taxes or discounts.</li>
-                                        <li><strong>PDF Download & Print:</strong> Download professional quotes as PDFs or print directly.</li>
-                                        <li><strong>Mobile Friendly:</strong> Works perfectly on all devices</li>
-                                    </ul>
-                                </div>
-                                <div class="content-block">
-                                    <h4><i class="fas fa-lightbulb"></i> Benefits</h4>
-                                    <ul class="feature-list">
-                                        <li><strong>100%</strong> FREE!</li>
-										<li>Unlimited transactions</li>
-                                        <li>Generate professional quotes online</li>
-										<li>Fully Customizable & Downloadable</li>
-										<li>Trusted by millions of people!</li>
-                                    </ul>
-                                </div>
+                                <h4><i class="fas fa-star"></i> Key Features</h4>
+                                <ul class="feature-list">
+                                    <li><strong>Multiple Currencies:</strong> Support for global currencies to bill clients anywhere.
+                                    </li>
+                                    <li><strong>Tax & Discount Options:</strong> Easily add GST, VAT, or custom taxes or discounts.</li>
+                                    <li><strong>PDF Download & Print:</strong> Download professional quotes as PDFs or print directly.</li>
+                                    <li><strong>Mobile Friendly:</strong> Works perfectly on all devices</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <h4><i class="fas fa-lightbulb"></i> Benefits</h4>
+                                <ul class="feature-list">
+                                    <li><strong>100%</strong> FREE!</li>
+                                    <li>Unlimited transactions</li>
+                                    <li>Generate professional quotes online</li>
+                                    <li>Fully Customizable & Downloadable</li>
+                                    <li>Trusted by millions of people!</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
