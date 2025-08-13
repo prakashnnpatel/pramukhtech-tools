@@ -60,7 +60,7 @@
                                         <div id="slider_range_annual_interest_rate" class="custom-slider"></div>
                                         <div class="slider-labels">
                                             <span>1%</span>
-                                            <span>75%</span>
+                                            <span>45%</span>
                                         </div>
                                     </div>
                                 </div>
