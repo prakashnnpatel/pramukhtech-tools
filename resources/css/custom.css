@@ -2646,3 +2646,58 @@ div[class*="cursor"] {
     opacity: 0 !important;
     visibility: hidden !important;
 }
+
+/* Disable all card hover effects for specific tool pages */
+.tool-page-container .tool-card:hover {
+    transform: none !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    border-color: #e2e8f0 !important;
+}
+
+.tool-page-container .tool-card:hover .tool-icon {
+    transform: none !important;
+    box-shadow: 0 5px 15px rgba(104, 77, 244, 0.2) !important;
+}
+
+.tool-page-container .tool-card:hover .tool-content h3 {
+    color: #1a202c !important;
+}
+
+.tool-page-container .tool-card:hover .tool-hover-effect {
+    opacity: 0 !important;
+}
+
+/* Completely disable all hover effects for tool cards */
+.tool-page-container .tool-card {
+    transition: none !important;
+}
+
+.tool-page-container .tool-card:hover {
+    transform: none !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    border-color: #e2e8f0 !important;
+}
+
+.tool-page-container .tool-card:hover::before {
+    left: -100% !important;
+}
+
+.tool-page-container .tool-card .tool-icon {
+    transition: none !important;
+}
+
+.tool-page-container .tool-card .tool-icon::before {
+    transition: none !important;
+}
+
+.tool-page-container .tool-card:hover .tool-icon::before {
+    transform: translateX(-100%) !important;
+}
+
+.tool-page-container .tool-card .tool-content h3 {
+    transition: none !important;
+}
+
+.tool-page-container .tool-card .tool-hover-effect {
+    transition: none !important;
+}

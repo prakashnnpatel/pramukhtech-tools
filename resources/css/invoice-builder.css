@@ -203,7 +203,7 @@ textarea.invoice-form-control {
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px 16px;
-  background: #f7f8fa;
+  background: transparent;
   box-sizing: border-box;
 }
 .tool-header {
