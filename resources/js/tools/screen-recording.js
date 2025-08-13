@@ -11,8 +11,9 @@ startRecordingButton.on("click", () => {
 		.then((audioStream) => {
 			navigator.mediaDevices.getDisplayMedia({ video: true })
 				.then((screenStream) => {
+					$("#startRecording").hide();
 					$("#stopRecording").show();
-					$("#downloadRecording").show();
+					//$("#downloadRecording").show();
 					// Combine audio and screen streams
 					const combinedStream = new MediaStream([...audioStream.getTracks(), ...screenStream.getTracks()]);
 
@@ -26,11 +27,11 @@ startRecordingButton.on("click", () => {
 					stopRecordingButton.prop("disabled", false);
 				})
 				.catch((error) => {
-					console.error("Error accessing screen:", error);
+					//console.error("Error accessing screen:", error);
 				});
 		})
 		.catch((error) => {
-			console.error("Error accessing microphone:", error);
+			//console.error("Error accessing microphone:", error);
 		});
 });
 
@@ -43,6 +44,9 @@ stopRecordingButton.on("click", () => {
 			recordedVideo.src = videoURL;
 			recordedVideo.style.display = "block";
 			downloadRecordingButton.prop("disabled", false);
+			$("#startRecording").show();
+			$("#stopRecording").hide();
+			$("#downloadRecording").show();
 		});
 		startRecordingButton.prop("disabled", false);
 		stopRecordingButton.prop("disabled", true);
