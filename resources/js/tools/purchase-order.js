@@ -1,7 +1,7 @@
 var uploadedInvoiceLogo = "";
 var customInvoice = function()
 {
-    function addCustomeOption()
+    function addCustomeOption(flag = '')
     {
         var suggectionAddedCnt = $(".cnt_invoice_custome_row").length;        
         if($("#custom_row_-"+suggectionAddedCnt).length == 0) {
@@ -13,9 +13,11 @@ var customInvoice = function()
         }
         $("#invoice_item_section tbody").append(preparHtml);
         $("#tr_id_"+suggectionAddedCnt).val(($(".cnt_invoice_custome_row").length));
-        $("#tr_item_"+suggectionAddedCnt).trigger('focus');
+        if(flag != "init") {
+            $("#tr_item_"+suggectionAddedCnt).trigger('focus');
+        }
         $("#invoice_item_section tfoot").html(`
-            <tr class="summary-row">                            
+            <tr class="summary-row">
                 <td  colspan="4" class="text-right label-cell">
                     <input type="text" style="font-weight: bold;display: inherit;width: auto; text-align: right;" class="form-control" Placeholder="Sub Total" name="itemSummeryHeader[subtotal]" value="Sub Total"/> 
                 </td>
@@ -194,7 +196,7 @@ var customInvoice = function()
 
     return{
 		init:function(){
-            addCustomeOption("");
+            addCustomeOption("init");
 
             $('#invoice_logo').on('change', function (e) {
                 const file = e.target.files[0];

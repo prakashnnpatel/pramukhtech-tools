@@ -1,7 +1,7 @@
 var uploadedInvoiceLogo = "";
 var customInvoice = function()
 {
-    function addCustomeOption()
+    function addCustomeOption(flag = '')
     {
         var suggectionAddedCnt = $(".cnt_invoice_custome_row").length;        
         if($("#custom_row_-"+suggectionAddedCnt).length == 0) {
@@ -13,7 +13,9 @@ var customInvoice = function()
         }
         $("#invoice_item_section tbody").append(preparHtml);
         $("#tr_id_"+suggectionAddedCnt).val(($(".cnt_invoice_custome_row").length));
-        $("#tr_item_"+suggectionAddedCnt).trigger('focus');
+        if(flag != "init") {
+            $("#tr_item_"+suggectionAddedCnt).trigger('focus');
+        }        
         $("#invoice_item_section tfoot").html(`
             <tr class="summary-row">                            
                 <td  colspan="4" class="text-right label-cell">
@@ -194,7 +196,7 @@ var customInvoice = function()
 
     return{
 		init:function(){
-            addCustomeOption("");
+            addCustomeOption("init");
 
             $('#invoice_logo').on('change', function (e) {
                 const file = e.target.files[0];

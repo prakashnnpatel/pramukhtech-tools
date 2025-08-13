@@ -89,7 +89,7 @@
 <div class="tool-page-container">
     <div class="tool-header mb-4">
         <div class="header-icon"><i class="fas fa-file-signature"></i></div>
-        <div class="header-title">Create Free Digital Document & Downloadable</div>
+        <div class="header-title">Create Free Digital Document & Download</div>
         <div class="header-desc">Create Branded Digital Documents Instantly – Trusted by Millions!</div>
     </div>
     <div class="tool-card">
@@ -132,7 +132,7 @@
                     <div class="mb-4">
                         <h3 class="font-size-18 font-weight-bold">Digital Signature</h3>
                         <div class="row">
-                            <div class="col-lg-6 mb-3">
+                            <div class="col-lg-12 mb-3">
                                 <div class="form-group">                                    
                                     <div id="sig"></div>
                                     <div class="text-right mt-2 m-auto">
@@ -174,7 +174,7 @@
                                     <p>With a 100% customizable template and no sign-up required, you can generate and download high-quality PDFs — completely free. Start creating smarter, branded digital documents today with ToolHubSpot!</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <div class="content-block">
                                     <h4><i class="fas fa-star"></i> Key Features</h4>
                                     <ul class="feature-list">
@@ -185,6 +185,33 @@
                                         <li><strong>Digital Signature:</strong> Add your digital signature</li>
                                     </ul>
                                 </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step-by-step guide -->
+    <div class="info-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="info-content-card">
+                    <div class="content-header">
+                        <h3><i class="fas fa-book-open"></i> How to create digital document?</h3>
+                    </div>
+                    <div class="content-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4><i class="fas fa-star"></i> Step-by-step guide</h4>
+								<ol style="line-height:30px;">
+                                    <li>Add your logo or company name for branding.</li>
+                                    <li>Enter the document content you want to include. You can style it as you like using the editor options.</li>
+                                    <li>Provide your signature in the <strong>Digital Signature</strong> field.</li>
+                                    <li>Click the <strong>Preview Document</strong> button to review how your document looks before printing.</li>
+                                    <li>Click the <strong>Download Document</strong> button to generate a PDF.</li>
+                                </ol>
                             </div>
                         </div>
                     </div>

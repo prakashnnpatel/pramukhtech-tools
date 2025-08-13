@@ -53,7 +53,7 @@
 			<table cellspadding="0" style="width:100%; font-family: arial;" cellspacing="0">
 				<tbody>
 					<tr>                    
-						<td style="text-align:right;padding-right: 15%;">
+						<td colspan="2" style="text-align:right;padding-right: 15%;">
 							<label>Signature</label>                        
 						</td>
 					</tr>

@@ -160,7 +160,8 @@
                             <div class="col-lg-6">
                                 <div class="content-block">
                                     <h4><i class="fas fa-calculator"></i> What is FD Calculator?</h4>
-                                    <p>The <strong>FD Calculator</strong> (Fixed Deposit Calculator) is a tool designed to calculate the maturity amount and interest earned on a fixed deposit investment. It uses compound interest principles to provide accurate results.</p>
+                                    <p>The <strong>FD Calculator</strong> (Fixed Deposit Calculator) is a tool designed to calculate the maturity amount and interest earned on a fixed deposit investment. It uses compound interest principles to provide accurate results. </p>
+                                    <p>It is a free online tool that allows you to calculate the maturity amount and interest earned on a fixed deposit investment. It is a very useful tool for investors to plan their investments and make informed decisions.</p>
                                 </div>
                                 <div class="content-block">
                                     <h4><i class="fas fa-cogs"></i> Key Parameters</h4>

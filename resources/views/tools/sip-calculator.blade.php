@@ -176,13 +176,15 @@
 		   							<p>A SIP calculator online is a beneficial tool, which shows the estimated returns you will earn after the investment tenure.</p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">                                
+                            <div class="col-lg-12">                                
                                 <div class="content-block">
                                     <h4><i class="fas fa-lightbulb"></i> Key benefits of SIP calculators include</h4>
                                     <ul class="feature-list">
                                         <li>Assists you to determine the amount you want to invest in.</li>
 										<li>Tells you the total amount you have invested.</li>
 										<li>Gives an estimated value of the returns.</li>
+										<li>It is a free online tool that allows you to calculate the maturity amount and interest earned on a SIP investment.</li>
+										<li>It is a very useful tool for investors to plan their investments and make informed decisions.</li>
                                     </ul>
                                 </div>
                             </div>

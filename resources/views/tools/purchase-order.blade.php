@@ -98,7 +98,7 @@ table.table tfoot td.label-cell {
                 <i class="fas fa-file-invoice"></i>
             </div>
             <div class="header-text">
-                <h1 class="calculator-title">Generate Free Purchase Orders</h1>
+                <h1 class="calculator-title">Generate Purchase Orders Free</h1>
 				<p><i class="fas fa-star"></i> Trusted by millions of people!</p>
             </div>
         </div>

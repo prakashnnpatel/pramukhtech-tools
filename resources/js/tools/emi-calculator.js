@@ -66,7 +66,7 @@ var calculateLoadAmount = function()
                         <i class="fas fa-coins"></i>
                     </div>
                     <div class="summary-label">Loan Amount</div>
-                    <div class="summary-value">₹${Math.round(totalInterest).toLocaleString()}</div>
+                    <div class="summary-value">₹${Math.round(loanAmount).toLocaleString()}</div>
                     <div class="summary-currency">Principal</div>
                 </div>
                 <div class="summary-item">
@@ -74,7 +74,7 @@ var calculateLoadAmount = function()
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="summary-label">Total Interest</div>
-                    <div class="summary-value">₹${Math.round(totalPayment).toLocaleString()}</div>
+                    <div class="summary-value">₹${Math.round(totalInterest).toLocaleString()}</div>
                     <div class="summary-currency">Returns</div>
                 </div>
                 <div class="summary-item">
