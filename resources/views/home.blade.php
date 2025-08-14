@@ -30,7 +30,7 @@
         <div class="hero-visual">
             <div class="ai-robot-scene">
                 <div>
-                    <img src="/images/robot-thinking.gif" style="max-height:60vh;"/>
+                    <img src="/images/robot-thinking.gif" style="max-height:60vh;" alt="Robot Thinking"/>
                 </div>
             </div>
         </div>

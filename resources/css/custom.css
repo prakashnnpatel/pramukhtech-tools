@@ -1055,6 +1055,7 @@ td, th {
 .tool-link:hover {
     color: #5a3fd8;
     transform: translateX(8px);
+    text-decoration: none;
 }
 
 .tool-hover-effect {
