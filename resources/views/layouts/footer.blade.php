@@ -32,13 +32,13 @@
             <div class="footer-section">
                 <h4>Connect With Us</h4>
                 <div class="social-links">
-                    <a href="https://facebook.com/pramukhtech" target="_blank" class="social-link" title="Follow us on Facebook">
+                    <a href="https://www.facebook.com/profile.php?id=61569624677812" target="_blank" class="social-link" title="Follow us on Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://linkedin.com/company/pramukhtech" target="_blank" class="social-link" title="Connect on LinkedIn">
+                    {{--<a href="https://linkedin.com/company/pramukhtech" target="_blank" class="social-link" title="Connect on LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://youtube.com/pramukhtech" target="_blank" class="social-link" title="Subscribe on YouTube">
+                    </a>--}}
+                    <a href="https://www.youtube.com/@Pramukh-Tech" target="_blank" class="social-link" title="Subscribe on YouTube">
                         <i class="fab fa-youtube"></i>
                     </a>
                     <a href="https://www.pramukhtech.com" target="_blank" class="social-link" title="Website">
@@ -82,7 +82,7 @@
                     <span class="separator">•</span>
                     <a href="{{ route('toollist', 'privacy-policy') }}" class="legal-link">Privacy Policy</a>
                     <span class="separator">•</span>
-                    <a href="{{ route('toollist', 'sitemap') }}" class="legal-link">Sitemap</a>
+                    <a href="{{ route('toollist', 'sitemap.xml') }}" class="legal-link">Sitemap</a>
                 </div>
             </div>
         </div>
