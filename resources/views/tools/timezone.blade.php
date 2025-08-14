@@ -39,7 +39,7 @@ if(!empty($extraParams)) {
 
     <div class="calculator-main">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 mb-4">
                 <div class="calculator-card">
                     <div class="card-header">
                         <h3><i class="far fa-clock"></i> Timezone Converter</h3>
@@ -108,7 +108,7 @@ if(!empty($extraParams)) {
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 mb-4">
                 <div class="info-card">
                     <div class="info-header">
                         <h4><i class="fas fa-globe"></i> Quick Timezone Links</h4>

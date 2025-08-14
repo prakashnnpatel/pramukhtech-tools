@@ -1,22 +1,30 @@
-<style>
-    .kbw-signature { width: 100%; height: 200px; border:1px solid #000;}
-</style>
 <div class="tool-page-container">
     <div class="tool-header mb-4">
         <div class="header-icon"><i class="fas fa-signature"></i></div>
         <div class="header-title">Create Your Digital Signature in Seconds</div>
         <div class="header-desc">Easily create your digital signature online in seconds!</div>
     </div>
-    <div class="tool-card">
-        <div class="form-group mb-4">
-            <h3 class="font-size-18 font-weight-bold">Draw Your Digital Signature</h3>            
-            <div id="sig"></div>
-            <textarea id="signature64" name="contact_agreement_sign" style="display: none"></textarea>
+    <div class="calculator-card">
+        <div class="card-header">
+            <h3><i class="fas fa-signature"></i> Draw Your Digital Signature</h3>
+            <p>Instantly generate your e-signature without registration or downloads.  <strong>FREE!</strong></p>
         </div>
-        <div class="text-right mt-2 m-auto mb-4">
-            <button id="doanload_signature" class="invoice-action-btn">Download Signature</button>
-            <button id="clear" class="invoice-defaul-btn">Clear Signature</button>
-        </div>        
+        <div class="card-body">
+            <div class="row">
+                <div class="col-lg-12">                            
+                    <div id="sig"></div>
+                    <textarea id="signature64" name="contact_agreement_sign" style="display: none"></textarea>
+                </div>
+            </div>            
+        </div>
+        <div class="card-footer"> 
+            <div class="row">
+                <div class="col-lg-12 text-right">
+                    <button id="doanload_signature" class="invoice-action-btn">Download Signature</button>
+                    <button id="clear" class="invoice-defaul-btn">Clear Signature</button>
+                </div> 
+            </div>
+        </div>            
     </div>
     <!-- Information Section -->
     <div class="info-section">

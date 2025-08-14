@@ -2701,3 +2701,27 @@ div[class*="cursor"] {
 .tool-page-container .tool-card .tool-hover-effect {
     transition: none !important;
 }
+
+.color-preview {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.recent-colors {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+.recent-color {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.kbw-signature { width: 100%; height: 200px; border:1px solid #000;}
