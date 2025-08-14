@@ -124,8 +124,8 @@
                 <td class="text-right">{{$currencySymbol}}{{number_format($param['itemSummery']['tax'],2)}}</td>
             </tr>
             <tr class="print-table-grand" style="background: #667eea !important;">
-                <td colspan="4" class="text-right font-weight-bold">{{$param['itemSummeryHeader']['grand_total'] ?? 'Grand Total'}}</td>
-                <td class="text-right font-weight-bold">{{$currencySymbol}}{{number_format($param['itemSummery']['grand_total'],2)}}</td>
+                <td colspan="4" style="background: #667eea !important;" class="text-right font-weight-bold">{{$param['itemSummeryHeader']['grand_total'] ?? 'Grand Total'}}</td>
+                <td class="text-right font-weight-bold" style="background: #667eea !important;">{{$currencySymbol}}{{number_format($param['itemSummery']['grand_total'],2)}}</td>
             </tr>
         </tfoot>
     </table>
