@@ -22,8 +22,8 @@
                     <span class="stat-label">% Free</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number" data-target="24">0</span>
-                    <span class="stat-label">/7 Support</span>
+                    <span class="cta-stat-number">1.5M+</span>
+                    <span class="stat-label">Tools Used</span>
                 </div>
             </div>
         </div>
@@ -273,14 +273,14 @@
         <div class="cta-content">
             <div class="cta-text">
                 <h2 class="animate-on-scroll">Ready to Boost Your Productivity?</h2>
-                <p class="animate-on-scroll">Start using our tools today and experience the difference. Join thousands of users who trust our platform for their daily tasks.</p>
+                <p class="animate-on-scroll">Start using our tools today and experience the difference. Join millions of users who trust our platform for their daily tasks.</p>
                 <div class="cta-stats">
                     <div class="cta-stat">
-                        <span class="cta-stat-number">10K+</span>
+                        <span class="cta-stat-number">75K+</span>
                         <span class="cta-stat-label">Happy Users</span>
                     </div>
                     <div class="cta-stat">
-                        <span class="cta-stat-number">50K+</span>
+                        <span class="cta-stat-number">1.5M+</span>
                         <span class="cta-stat-label">Tools Used</span>
                     </div>
                     <div class="cta-stat">
