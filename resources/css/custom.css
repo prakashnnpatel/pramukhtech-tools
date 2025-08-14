@@ -18,7 +18,7 @@ html, body {
 }
 
 .navbar .logo img {
-    max-height: 40px;
+    max-height: 50px;
     width: auto;
 }
 
@@ -1606,7 +1606,7 @@ td, th {
 }
 
 .footer-logo {
-    max-height: 40px;
+    max-height: 50px;
     margin-bottom: 1rem;
 }
 
