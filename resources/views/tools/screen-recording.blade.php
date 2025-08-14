@@ -32,7 +32,7 @@
 									<button type="button" id="downloadRecording" class="calculate-btn" style="display:none;" disabled ><i class="fa-solid fa-arrow-down mr-2"></i> Download Video</button>
 								</div>
                             </div>
-							<div class="col-lg-12">
+							<div class="col-lg-12 mt-3">
 								<video id="recordedVideo" style="width:100%; display:none;" controls></video>
 							</div>
 							<div class="col-lg-12 text-center mt-3">
