@@ -29,8 +29,7 @@ var ContactUs = function(){
                         window.location.reload();
 					});
 				},
-				error: function (data) {
-                    console.log(data);
+				error: function (data) {                    
 					Swal.fire({icon:"error",title:"oops",text:JSON.parse(data.responseText).message});
 				}
 			});

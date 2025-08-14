@@ -6,6 +6,10 @@ var digitaldocument = function()
 {
     var generateDocument= function(flag)
     {   
+        if($("#document_content").val() == "") {
+            Swal.fire({icon:"error",title:"oops",text:"Please add valid content for document!"});
+            return false;
+        }
         var invoiceData = {};
         invoiceData['flag'] = flag;
         invoiceData['invoice_logo'] = uploadedInvoiceLogo;

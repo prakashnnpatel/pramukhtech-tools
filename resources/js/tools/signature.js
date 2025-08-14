@@ -13,7 +13,7 @@ var digitalSignature = function()
            $("#download_a_signture").remove();
         }
         else {
-            alert("Please sign your signture before the download!");
+            Swal.fire({icon:"error",title:"oops",text:"Please sign your signture before the download!"});
         }
     });
 }
