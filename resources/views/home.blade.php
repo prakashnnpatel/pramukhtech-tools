@@ -55,7 +55,7 @@
                     <div class="tool-content">
                         <h3>FD Calculator</h3>
                         <p>Calculate Fixed Deposit returns with ease</p>
-                        <a href="{{route('toollist', 'fd-calculator')}}" class="tool-link">
+                        <a href="{{route('toollist', 'fd-calculator')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -69,7 +69,7 @@
                     <div class="tool-content">
                         <h3>SIP Calculator</h3>
                         <p>Plan your Systematic Investment Plan</p>
-                        <a href="{{route('toollist', 'sip-calculator')}}" class="tool-link">
+                        <a href="{{route('toollist', 'sip-calculator')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -83,7 +83,7 @@
                     <div class="tool-content">
                         <h3>EMI Calculator</h3>
                         <p>Calculate Equated Monthly Installments</p>
-                        <a href="{{route('toollist', 'emi-calculator')}}" class="tool-link">
+                        <a href="{{route('toollist', 'emi-calculator')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -106,7 +106,7 @@
                     <div class="tool-content">
                         <h3>Custom Invoice</h3>
                         <p>Create professional invoices instantly</p>
-                        <a href="{{route('toollist', 'custom-invoice')}}" class="tool-link">
+                        <a href="{{route('toollist', 'custom-invoice')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -120,7 +120,7 @@
                     <div class="tool-content">
                         <h3>Generate Quote</h3>
                         <p>Create detailed quotes for your business</p>
-                        <a href="{{route('toollist', 'generate-quote')}}" class="tool-link">
+                        <a href="{{route('toollist', 'generate-quote')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -134,7 +134,7 @@
                     <div class="tool-content">
                         <h3>Purchase Order</h3>
                         <p>Generate purchase orders quickly</p>
-                        <a href="{{route('toollist', 'purchase-order')}}" class="tool-link">
+                        <a href="{{route('toollist', 'purchase-order')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -148,7 +148,7 @@
                     <div class="tool-content">
                         <h3>Digital Document</h3>
                         <p>Create and manage digital documents</p>
-                        <a href="{{route('toollist', 'digital-document')}}" class="tool-link">
+                        <a href="{{route('toollist', 'digital-document')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -171,7 +171,7 @@
                     <div class="tool-content">
                         <h3>Timezone Converter</h3>
                         <p>Convert time between different timezones</p>
-                        <a href="{{route('toollist', 'timezone')}}" class="tool-link">
+                        <a href="{{route('toollist', 'timezone')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -185,7 +185,7 @@
                     <div class="tool-content">
                         <h3>Digital Signature</h3>
                         <p>Create your digital signature in seconds</p>
-                        <a href="{{route('toollist', 'signature')}}" class="tool-link">
+                        <a href="{{route('toollist', 'signature')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -199,7 +199,7 @@
                     <div class="tool-content">
                         <h3>Screen Recorder</h3>
                         <p>Record your screen with audio</p>
-                        <a href="{{route('toollist', 'screen-recording')}}" class="tool-link">
+                        <a href="{{route('toollist', 'screen-recording')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -213,7 +213,7 @@
                     <div class="tool-content">
                         <h3>Color Picker</h3>
                         <p>Pick and convert colors easily</p>
-                        <a href="{{route('toollist', 'color-picker')}}" class="tool-link">
+                        <a href="{{route('toollist', 'color-picker')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -273,10 +273,10 @@
         <div class="cta-content">
             <div class="cta-text">
                 <h2 class="animate-on-scroll">Ready to Boost Your Productivity?</h2>
-                <p class="animate-on-scroll">Start using our tools today and experience the difference. Join millions of users who trust our platform for their daily tasks.</p>
+                <p class="animate-on-scroll">Start using our tools today and experience the difference. Join millions of worldwide users who trust our platform for their daily tasks.</p>
                 <div class="cta-stats">
                     <div class="cta-stat">
-                        <span class="cta-stat-number">75K+</span>
+                        <span class="cta-stat-number">74K+</span>
                         <span class="cta-stat-label">Happy Users</span>
                     </div>
                     <div class="cta-stat">
@@ -290,11 +290,11 @@
                 </div>
             </div>
             <div class="cta-buttons animate-on-scroll">
-                <a href="#tools" class="btn btn-primary btn-lg cta-btn-primary">
+                <a href="{{route('toollist', 'custom-invoice')}}" class="btn btn-primary btn-lg cta-btn-primary" title="Get Started Now">
                     <i class="fas fa-play"></i>
                     Get Started Now
                 </a>
-                <a href="{{route('about-us')}}" class="btn btn-outline-light btn-lg cta-btn-secondary">
+                <a href="{{route('about-us')}}" class="btn btn-outline-light btn-lg cta-btn-secondary" title="Learn More">
                     <i class="fas fa-info-circle"></i>
                     Learn More
                 </a>

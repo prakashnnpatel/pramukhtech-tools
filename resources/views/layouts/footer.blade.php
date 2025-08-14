@@ -35,23 +35,28 @@
                     <a href="https://facebook.com/pramukhtech" target="_blank" class="social-link" title="Follow us on Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://twitter.com/pramukhtech" target="_blank" class="social-link" title="Follow us on Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
                     <a href="https://linkedin.com/company/pramukhtech" target="_blank" class="social-link" title="Connect on LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://instagram.com/pramukhtech" target="_blank" class="social-link" title="Follow us on Instagram">
-                        <i class="fab fa-instagram"></i>
                     </a>
                     <a href="https://youtube.com/pramukhtech" target="_blank" class="social-link" title="Subscribe on YouTube">
                         <i class="fab fa-youtube"></i>
                     </a>
+                    <a href="https://www.pramukhtech.com" target="_blank" class="social-link" title="Website">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    {{--
+                    <a href="https://twitter.com/pramukhtech" target="_blank" class="social-link" title="Follow us on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>                   
+                    <a href="https://instagram.com/pramukhtech" target="_blank" class="social-link" title="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                     <a href="https://github.com/pramukhtech" target="_blank" class="social-link" title="View on GitHub">
                         <i class="fab fa-github"></i>
                     </a>
+                    --}}
                 </div>
-                
+                {{--
                 <div class="newsletter-signup">
                     <h5>Stay Updated</h5>
                     <p>Get notified about new tools and features</p>
@@ -61,7 +66,7 @@
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
-                </div>
+                </div>--}}
             </div>
         </div>
         
