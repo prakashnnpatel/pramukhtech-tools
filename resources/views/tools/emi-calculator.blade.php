@@ -16,7 +16,7 @@
     <div class="calculator-main">
         <div class="row">
             <!-- Input Form Section -->
-            <div class="col-lg-8">
+            <div class="col-lg-8 mb-4">
                 <div class="calculator-card">
                     <div class="card-header">
                         <h3><i class="fas fa-edit"></i> EMI Calculator for Loans</h3>
@@ -88,15 +88,10 @@
 										</div>
 									</div>
                                     <div class="input-wrapper">
-                                        <input class="form-control custom-input" onKeyup="calculateLoadAmount()" value="5" id="loan_term" type="number" placeholder="Enter investment period">
-                                        <span class="input-suffix">Years</span>
+                                        <input class="form-control custom-input" onKeyup="calculateLoadAmount()" value="5" id="loan_term" type="number" placeholder="Enter investment period">                                        
                                     </div>
                                     <div class="slider-container">
-                                        <div id="slider_range_loan_term" class="custom-slider"></div>
-                                        <div class="slider-labels">
-                                            <span>1 Year</span>
-                                            <span>40 Years</span>
-                                        </div>
+                                        <div id="slider_range_loan_term" class="custom-slider"></div>                                       
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +111,7 @@
             </div>
 
             <!-- Quick Info Section -->
-            <div class="col-lg-4">
+            <div class="col-lg-4 mb-4">
                 <div class="info-card">
                     <div class="info-header">
                         <h4><i class="fas fa-info-circle"></i> How it Works</h4>

@@ -16,7 +16,7 @@
     <div class="calculator-main">
         <div class="row">
             <!-- Input Form Section -->
-            <div class="col-lg-8">
+            <div class="col-lg-8 mb-4">
                 <div class="calculator-card">
                     <div class="card-header">
                         <h3><i class="fas fa-edit"></i> Systematic Investment Plan Calculator</h3>
@@ -104,7 +104,7 @@
             </div>
 
             <!-- Quick Info Section -->
-            <div class="col-lg-4">
+            <div class="col-lg-4 mb-4">
                 <div class="info-card">
                     <div class="info-header">
                         <h4><i class="fas fa-info-circle"></i> How it Works</h4>
