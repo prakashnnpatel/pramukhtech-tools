@@ -123,7 +123,7 @@
                 <td colspan="4" class="text-right">{{$param['itemSummeryHeader']['tax'] ?? 'Tax'}}</td>
                 <td class="text-right">{{$currencySymbol}}{{number_format($param['itemSummery']['tax'],2)}}</td>
             </tr>
-            <tr class="print-table-grand">
+            <tr class="print-table-grand" style="background: #667eea !important;">
                 <td colspan="4" class="text-right font-weight-bold">{{$param['itemSummeryHeader']['grand_total'] ?? 'Grand Total'}}</td>
                 <td class="text-right font-weight-bold">{{$currencySymbol}}{{number_format($param['itemSummery']['grand_total'],2)}}</td>
             </tr>
