@@ -3,7 +3,7 @@
         <div class="footer-main">
             <div class="footer-section">
                 <div class="footer-brand">
-                    <img src="/images/logo.png" alt="{{ config('app.name') }}" class="footer-logo">
+                    <img src="/images/logo_white.png" alt="{{ config('app.name') }}" class="footer-logo">
                     <h3>{{ config('app.name') }}</h3>
                     <p>Your one-stop destination for free online tools. Boost productivity with our comprehensive suite of utilities designed for professionals and everyday users.</p>
                 </div>
