@@ -1,96 +1,3 @@
-<style>
-    .card-header-2 {
-        background-color: #fff;
-        padding: 0;
-    }
-</style>
-
-<style>
-/* Desktop defaults */
-table.table tfoot td.label-cell {
-    text-align: right;
-    font-weight: bold;
-    vertical-align: middle;
-}
-#invoice-action-buttons button {
-    min-width: 150px;
-    margin-left:5px;
-}
-@media (max-width: 768px) {
-    table.table thead {
-        display: none;
-    }
-
-    table.table, table.table tbody, table.table tfoot, table.table tr, table.table td {
-        display: block;
-        width: 100%;
-    }
-
-    table.table tr {
-        margin-bottom: 1rem;
-        border: 1px solid #ddd;
-        padding: 0.5rem;
-        border-radius: 6px;
-        background: #fff;
-    }
-
-    table.table td {
-        padding: 8px 10px;
-        position: relative;
-    }
-
-    table.table td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 6px;
-        color: #555;
-    }
-
-    table.table tfoot tr {
-        display: block;
-        margin-bottom: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        padding: 10px;
-        background: #fff;
-    }
-
-    table.table tfoot td {
-        display: block;
-        width: 100% !important;
-        text-align: left !important;
-        padding: 6px 10px;
-    }
-
-    table.table tfoot td.label-cell::before {
-        content: attr(class); /* This avoids displaying anything extra */
-        display: none;
-    }
-
-    table.table tfoot td:not(.label-cell)::before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 4px;
-    }
-
-    table.table tfoot input.form-control {
-        width: 100%;
-        
-    }
-
-    #invoice-action-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #invoice-action-buttons button {
-        width: 100%;
-        margin-bottom:5px;
-    }
-}
-</style>
 <div class="fd-calculator-container">
     <div class="calculator-header mb-4">
         <div class="header-content">
@@ -163,19 +70,13 @@ table.table tfoot td.label-cell {
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="invoice-form-label"><i class="fas fa-user"></i> From Address</label>
-                                <textarea class="invoice-form-control" rows="4" name="invoice_from_address" id="invoice_from_address" placeholder="Billing Address">ABC Company Ltd.
-Full Address...
-Phone: 792X-XXX-XXX
-Email: abcxxxx@gmail.com</textarea>
+                                <textarea class="invoice-form-control" rows="4" name="invoice_from_address" id="invoice_from_address" placeholder="Enter your details (name, address, email, and phone)"></textarea>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="invoice-form-label"><i class="fas fa-user"></i> To Address</label>
-                                <textarea class="invoice-form-control" placeholder="Shipping Address" rows="4" name="invoice_to_address" id="invoice_to_address">Receiver Name
-Full Address...
-Phone: 987X-XXX-XXX
-Email: receixxxx@gmail.com</textarea>
+                                <textarea class="invoice-form-control" placeholder="Enter your client's details (name, address, email, and phone)" rows="4" name="invoice_to_address" id="invoice_to_address"></textarea>
                             </div>
                         </div>
                     </div>

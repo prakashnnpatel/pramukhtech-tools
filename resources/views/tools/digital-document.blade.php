@@ -1,91 +1,3 @@
-<style>
-    .card-header-2 {
-        background-color: #fff;
-        padding: 0;
-    }
-    .kbw-signature { width: 100%; height: 200px; border:1px solid #000;}   
-    
-    /* Apply invoice-style card effects to digital document page */
-    .tool-page-container .tool-card {
-        background: #fff !important;
-        border-radius: 18px !important;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.07) !important;
-        margin-bottom: 32px !important;
-        padding: 32px 24px !important;
-        border: 1px solid #ececec !important;
-        box-sizing: border-box !important;
-        overflow-x: auto !important;
-        transform: none !important;
-        transition: none !important;
-    }
-    
-    .tool-page-container .tool-card:hover,
-    .tool-page-container .tool-card:focus,
-    .tool-page-container .tool-card:active {
-        transform: none !important;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.07) !important;
-        border: 1px solid #ececec !important;
-        background: #fff !important;
-    }
-    
-    /* Remove tool icon hover effects */
-    .tool-page-container .tool-card .tool-icon,
-    .tool-page-container .tool-card:hover .tool-icon,
-    .tool-page-container .tool-card:focus .tool-icon {
-        transform: none !important;
-        box-shadow: none !important;
-        transition: none !important;
-    }
-    
-    /* Remove pseudo-element hover effects */
-    .tool-page-container .tool-card::before,
-    .tool-page-container .tool-card:hover::before,
-    .tool-page-container .tool-card .tool-icon::before,
-    .tool-page-container .tool-card:hover .tool-icon::before {
-        display: none !important;
-    }
-    
-    /* Remove background from tool page container */
-    .tool-page-container {
-        background: none !important;
-    }
-    
-    /* Invoice-style button styling */
-    .document-action-btn {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-        color: #fff;
-        border: none;
-        border-radius: 30px;
-        padding: 12px 32px;
-        font-size: 1rem;
-        font-weight: 600;
-        margin: 0 8px 8px 0;
-        box-shadow: 0 2px 8px rgba(102,126,234,0.12);
-        transition: background 0.2s, box-shadow 0.2s;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-    }
-    
-    .document-action-btn:hover {
-        background: linear-gradient(90deg, #5a6fd8 0%, #6a4190 100%);
-        box-shadow: 0 4px 16px rgba(102,126,234,0.18);
-        color: #fff;
-        text-decoration: none;
-    }
-    
-    @media (max-width: 768px) {
-        #document-action-buttons {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        #document-action-buttons button {
-            width: 100%;
-            margin-bottom: 8px;
-            justify-content: center;
-        }
-    }
-</style>
 <div class="tool-page-container">
     <div class="tool-header mb-4">
         <div class="header-icon"><i class="fas fa-file-signature"></i></div>
@@ -144,10 +56,10 @@
                         </div>
                     </div>
                     <div class="d-flex flex-wrap justify-content-end gap-2 w-100 mb-3" id="document-action-buttons">
-                        <button type="button" id="btn_create_invoice" class="document-action-btn" onClick="digitaldocument.generateDocument('pdf');">
+                        <button type="button" id="btn_create_invoice" class="invoice-action-btn" onClick="digitaldocument.generateDocument('pdf');">
                             <i class="fas fa-download"></i> Download Document
                         </button>
-                        <button type="button" id="btn_create_print" class="document-action-btn" onClick="digitaldocument.generateDocument('print');">
+                        <button type="button" id="btn_create_print" class="invoice-action-btn" onClick="digitaldocument.generateDocument('print');">
                             <i class="fas fa-eye"></i> Preview Document
                         </button>
                     </div>
