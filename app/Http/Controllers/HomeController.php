@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use PDF;
+use App\Models\Lead;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -117,4 +118,21 @@ class HomeController extends Controller
 			chmod($path, 0775);
 		}
 	}
+
+    /***Contactus Form Submited */
+    public function contactUsSubmit(Request $request)
+    {
+        $request->validate([
+			'name' => ['required','string'],
+			"email" => ["required","email"],
+            "subject" => ["required","string"],
+            "message" => ["required"],
+		]);
+
+        $savelead = Lead::create($request->all());
+        if($savelead) {
+            return response()->json(['data' => 1], 200);
+        }
+        return response()->json(["message" => "Please insert valid data"], 403);
+    }
 }

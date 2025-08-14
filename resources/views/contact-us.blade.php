@@ -25,7 +25,8 @@
                         <h3><i class="fas fa-envelope-open-text"></i> We're Just a Message Away </h3>                        
                     </div>
                     <div class="card-body">                    
-                        <form>
+                        <form id="contactUsFrm" method="post" action="javascript:void(0);">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-12 mb-3">
                                     <p>Have an idea for a new tool? Let's bring it to life, send us a message! We'll build and publish it here for public use.</p>
@@ -60,7 +61,7 @@
                                 <!-- Button -->
                                 <div class="col-lg-12">
                                     <div class="calculate-section">
-                                        <button type="submit" class="calculate-btn">
+                                        <button type="type" onClick="ContactUs.sendInquiry();" id="contactusbtn" class="calculate-btn">
                                             <i class="fas fa-paper-plane"></i>
                                             Send Message
                                         </button>
@@ -214,3 +215,6 @@
     </div>
 </div>
 @endsection
+@push('page_scripts')
+    @vite("resources/js/contactus.js")
+@endpush
