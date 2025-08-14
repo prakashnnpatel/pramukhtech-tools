@@ -12,6 +12,7 @@ export default defineConfig({
                 'resources/css/invoice-builder.css',
                 'resources/js/app.js',
                 'resources/js/frontend.js',
+                'resources/js/contactus.js',
                 'resources/js/home.js',
                 'resources/js/jquery-ui.min.js',
                 'resources/js/jqueryUiTouch.js',
