@@ -132,7 +132,7 @@
                     <div class="mb-4">
                         <h3 class="font-size-18 font-weight-bold">Digital Signature</h3>
                         <div class="row">
-                            <div class="col-lg-12 mb-3">
+                            <div class="col-lg-5 mb-3">
                                 <div class="form-group">                                    
                                     <div id="sig"></div>
                                     <div class="text-right mt-2 m-auto">

@@ -89,7 +89,7 @@ html, body {
 .dropdown-item i {
     width: 16px;
     text-align: center;
-    color: white;
+    color: #764ba2;
 }
 
 /* Ensure dropdowns work on hover for desktop */
