@@ -13,4 +13,4 @@ Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-u
 Route::get('/sitemap.xml', [HomeController::class, 'sitemap']);
 Route::post('/generate-invoice',[HomeController::class, 'generateInvoice'])->name("generate-invoice");
 Route::post('/digital-document',[HomeController::class, 'digitalDocument'])->name("digital-document");
-Route::get('/{toolkey?}/{subpart?}',[HomeController::class, 'index'])->name("toollist");
+Route::get('/{toolkey?}/{subpart?}',[HomeController::class, 'tools'])->name("toollist");

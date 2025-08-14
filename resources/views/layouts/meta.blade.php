@@ -84,28 +84,20 @@
 		@break
 
 		@case('digital-document')
-			<title>Create Free Digital Document & Download PDF | ToolHubSpot</title>
-			<meta name="description" content="Create and download professional digital documents in seconds with ToolHubSpot's free custom document generator - perfect for freelancers and businesses." />
+			<title>Create Digital Document | Free & Download PDF | ToolHubSpot</title>
+			<meta name="description" content="Create and download professional digital documents in seconds with ToolHubSpot's free document generator - perfect for freelancers and businesses." />
 			<meta property="og:title" content="Create Free Digital Document & Download PDF | ToolHubSpot" />
-			<meta property="og:description" content="Create and download professional digital documents in seconds with ToolHubSpot's free custom document generator - perfect for freelancers and businesses.." />
+			<meta property="og:description" content="Create and download professional digital documents in seconds with ToolHubSpot's free document generator - perfect for freelancers and businesses.." />
 			<link rel="canonical" href="{{url('/digital-document')}}"/>
 		@break
 
-		@case('custom-invoice')
-			<title>Free Custom Invoice Generator - 100% Editable | ToolHubSpot</title>
-			<meta name="description" content="Generate branded invoices in minutes with our free tool. Add logo, tax, items & download PDF instantly. No login needed - fast, easy, and 100% free!" />
-			<meta property="og:title" content="Free Custom Invoice Generator - 100% Editable | ToolHubSpot" />
-			<meta property="og:description" content="Generate branded invoices in minutes with our free tool. Add logo, tax, items & download PDF instantly. No login needed - fast, easy, and 100% free!" />
-			<meta name="keywords" content="custom invoice generator, free invoice maker, online invoice tool, invoice template, invoice creator, create invoice online, professional invoice tool, no sign up invoice maker, ToolHubSpot invoice">
-			<link rel="canonical" href="{{url('/custom-invoice')}}"/>
-		@break
-
 		@case('invoice-generator')
-			<title>Free Custom Invoice Generator - 100% Editable | ToolHubSpot</title>
+		@case('custom-invoice')
+			<title>Free Invoice Generator - 100% Editable | ToolHubSpot</title>
 			<meta name="description" content="Generate branded invoices in minutes with our free tool. Add logo, tax, items & download PDF instantly. No login needed - fast, easy, and 100% free!" />
-			<meta property="og:title" content="Free Custom Invoice Generator - 100% Editable | ToolHubSpot" />
+			<meta property="og:title" content="Free Invoice Generator - 100% Editable | ToolHubSpot" />
 			<meta property="og:description" content="Generate branded invoices in minutes with our free tool. Add logo, tax, items & download PDF instantly. No login needed - fast, easy, and 100% free!" />
-			<meta name="keywords" content="custom invoice generator, free invoice maker, online invoice tool, invoice template, invoice creator, create invoice online, professional invoice tool, no sign up invoice maker, ToolHubSpot invoice">
+			<meta name="keywords" content="Invoice generator, free invoice maker, online invoice tool, invoice template, invoice creator, create invoice online, professional invoice tool, no sign up invoice maker, ToolHubSpot invoice">
 			<link rel="canonical" href="{{url('/custom-invoice')}}"/>
 		@break
 
@@ -114,7 +106,7 @@
 			<meta name="description" content="Generate professional, branded quotes for your clients with ToolHubSpot's free quote generator. 100% customizable, Download as PDF instantly!" />
 			<meta property="og:title" content="Create Free Quote for Your Clients | ToolHubSpot" />
 			<meta property="og:description" content="Generate professional, branded quotes for your clients with ToolHubSpot's free quote generator. 100% customizable, Download as PDF instantly!" />
-			<meta name="keywords" content="custom quote generator, free quote maker, online quote tool, quote template, quote creator, create quote online, professional quote tool, no sign up quote maker, ToolHubSpot quote">
+			<meta name="keywords" content=Quote generator, free quote maker, online quote tool, quote template, quote creator, create quote online, professional quote tool, no sign up quote maker, ToolHubSpot quote">
 			<link rel="canonical" href="{{url('/generate-quote')}}"/>
 		@break
 
@@ -123,7 +115,7 @@
 			<meta name="description" content="Generate professional purchase orders for free with ToolHubSpot's online PO generator. Fully customizable templates. Download as PDF instantly!" />
 			<meta property="og:title" content="Create and Download Free Purchase Order | ToolHubSpot" />
 			<meta property="og:description" content="Generate professional purchase orders for free with ToolHubSpot's online PO generator. Fully customizable templates. Download as PDF instantly!" />
-			<meta name="keywords" content="custom purchase order generator, free purchase order maker, online purchase order tool, purchase order template, purchase order creator, create purchase order online, professional purchase order tool, no sign up purchase order maker, ToolHubSpot purchase order">
+			<meta name="keywords" content="customizable purchase order generator, free purchase order maker, online purchase order tool, purchase order template, purchase order creator, create purchase order online, professional purchase order tool, no sign up purchase order maker, ToolHubSpot purchase order">
 			<link rel="canonical" href="{{url('/purchase-order')}}"/>
 		@break
 

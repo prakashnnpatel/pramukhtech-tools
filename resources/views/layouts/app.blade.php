@@ -30,6 +30,8 @@
     
     @vite('resources/js/frontend.js')
 	@vite('resources/js/home.js')
+    @vite("resources/js/jquery-ui.min.js")
+	@vite("resources/js/jqueryUiTouch.js")
 	@stack('page_scripts')
     @include('layouts.third-party-code')
 </body>

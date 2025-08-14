@@ -22,7 +22,7 @@ class HomeController extends Controller
         return view("contact-us");
     }
 
-    public function index($toolkey = "toollist", $subpart = "")
+    public function tools($toolkey = "toollist", $subpart = "")
     {
 		if($toolkey == "invoice-generator") {
 			$toolkey = "custom-invoice";
@@ -34,7 +34,7 @@ class HomeController extends Controller
 			$extraParams = explode("-to-",$subpart);
 		}
 		try {
-			return view("home", ["toolKey" => $toolkey, "extraParams" => $extraParams]);
+			return view("tools.index", ["toolKey" => $toolkey, "extraParams" => $extraParams]);
 		}
 		catch(Exception $e) {
 			return response()->view('errors.404', [], 404);
