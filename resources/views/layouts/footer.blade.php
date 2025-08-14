@@ -81,7 +81,9 @@
                     <span class="separator">•</span>
                     <a href="{{ route('toollist', 'privacy-policy') }}" class="legal-link" title="Privacy Policy">Privacy Policy</a>
                     <span class="separator">•</span>
-                    <a href="{{ route('toollist', 'sitemap.xml') }}" class="legal-link" title="Sitemap">Sitemap</a>
+                    <a href="{{ route('toollist', 'disclaimer') }}" class="legal-link" title="Disclaimer">Disclaimer</a>
+                    <span class="separator">•</span>
+                    <a href="/sitemap.xml" class="legal-link" title="Sitemap">Sitemap</a>
                 </div>
             </div>
         </div>

@@ -122,7 +122,7 @@
         <p class="mt-4">
             Your feedback helps us improve! Please share your thoughts through our 
             <a href="{{ route('contact-us') }}" title="Contact Us">Contact Us</a> form or email us directly at 
-            <a href="mailto:pramukhtech.services@gmail.com">pramukhtech.services@gmail.com</a>.
+            <a href="mailto:pramukhtech.services@gmail.com" title="Email Now">pramukhtech.services@gmail.com</a>.
         </p>
     </div>
 </div>
