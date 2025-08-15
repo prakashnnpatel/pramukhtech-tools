@@ -26,6 +26,7 @@
                     <li><a href="{{ route('toollist', 'custom-invoice') }}" title="Invoice Generator">Invoice Generator</a></li>
                     <li><a href="{{ route('toollist', 'signature') }}" title="Digital Signature">Digital Signature</a></li>
                     <li><a href="{{ route('toollist', 'timezone') }}" title="Timezone Converter">Timezone Converter</a></li>
+                    <li><a href="{{ route('toollist', 'currency-converter') }}" title="Currency Converter">Currency Converter</a></li>
                 </ul>
             </div>
             

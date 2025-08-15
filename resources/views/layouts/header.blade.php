@@ -63,6 +63,9 @@
                         <i class="fas fa-tools"></i> Utilities
                     </a>
                     <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('toollist', 'currency-converter')}}" title="Currency Converter">
+                            <i class="fas fa-exchange-alt"></i> Currency Converter
+                        </a></li>
                         <li><a class="dropdown-item" href="{{route('toollist', 'timezone')}}" title="Timezone Converter">
                             <i class="fas fa-clock"></i> Timezone Converter
                         </a></li>
