@@ -14,7 +14,7 @@
             </p>
             <div class="hero-stats animate-fade-in-delay-2">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="12">0</span>
+                    <span class="stat-number" data-target="13">0</span>
                     <span class="stat-label">Tools Available</span>
                 </div>
                 <div class="stat-item">
@@ -154,6 +154,21 @@
                     </div>
                     <div class="tool-hover-effect"></div>
                 </div>
+
+                <div class="tool-card animate-on-scroll" data-delay="0.5">
+                    <div class="tool-icon">
+                        <i class="fa-solid fa-font"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Word Counter</h3>
+                        <p>Count words, characters, sentences & paragraphs, spaces and more.</p>
+                        <a href="{{route('toollist', 'word-counter')}}" class="tool-link" title="Try Now">
+                            Try Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tool-hover-effect"></div>
+                </div>
+
             </div>
         </div>
 
@@ -214,6 +229,20 @@
                         <h3>Color Picker</h3>
                         <p>Pick and convert colors easily</p>
                         <a href="{{route('toollist', 'color-picker')}}" class="tool-link" title="Try Now">
+                            Try Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tool-hover-effect"></div>
+                </div>
+
+                <div class="tool-card animate-on-scroll" data-delay="0.4">
+                    <div class="tool-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Currency Converter</h3>
+                        <p>Support for 160+ global currencies with real-time exchange rates.</p>
+                        <a href="{{route('toollist', 'currency-converter')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>

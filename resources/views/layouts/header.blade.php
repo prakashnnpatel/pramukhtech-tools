@@ -54,6 +54,9 @@
                         <li><a class="dropdown-item" href="{{route('toollist', 'digital-document')}}" title="Create Free Digital Document & Downloadable">
                             <i class="fas fa-file"></i> Digital Document
                         </a></li>
+                         <li><a class="dropdown-item" href="{{route('toollist', 'word-counter')}}" title="Word Counter">
+                            <i class="fa-solid fa-font"></i> Word Counter
+                        </a></li>
                     </ul>
                 </li>
                 
