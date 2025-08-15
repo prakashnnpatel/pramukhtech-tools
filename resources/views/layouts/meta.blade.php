@@ -133,11 +133,20 @@
 			<meta property="og:title" content="Free Online Color Picker Tool - Get HEX & RGB Instantly" />
 			<meta property="og:description" content="Use our free online Color Picker tool to select and copy any color on your screen. Instantly get HEX, RGB, or HSL codes. Perfect for designers and developers." />
 			<link rel="canonical" href="{{url('/color-picker')}}"/>
-		@break		
+		@break
+
+		@case('currency-converter')
+			<title>Currency Converter Tool | Real-Time Exchange Rates</title>
+			<meta name="description" content="Convert currencies instantly with our free Currency Converter Tool. Get real-time exchange rates for USD, EUR, INR, and more. Fast, accurate, and easy to use.">
+			<meta name="keywords" content="currency converter, exchange rates, forex rates, USD to INR, EUR to USD, currency exchange, money converter, forex calculator">
+			<meta property="og:title" content="Currency Converter Tool | Real-Time Exchange Rates" />
+			<meta property="og:description" content="Convert currencies instantly with our free Currency Converter Tool. Get real-time exchange rates for USD, EUR, INR, and more. Fast, accurate, and easy to use." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
 
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
-			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />
+			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			
 			<meta property="og:title" content="Free Online Tools for Everyday Work | ToolHubSpot" />
 			<meta property="og:description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />
 			<link rel="canonical" href="{{url('/')}}"/>
