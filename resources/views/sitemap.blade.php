@@ -2,6 +2,11 @@
 $baseURL = config('app.url');
 $urlList = [
 	["priority" =>"1.00", "frequency"=> "daily", "loc" => $baseURL],
+	["priority" =>"0.75", "frequency"=> "weekly", "loc" => route('about-us')],
+	["priority" =>"0.75", "frequency"=> "weekly", "loc" => route('contact-us')],
+	["priority" =>"0.75", "frequency"=> "weekly", "loc" => route('toollist', 'terms-of-use')],
+	["priority" =>"0.75", "frequency"=> "weekly", "loc" => route('toollist', 'privacy-policy')],
+	["priority" =>"0.75", "frequency"=> "weekly", "loc" => route('toollist', 'disclaimer')],
 	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist','fd-calculator')],
 	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist','sip-calculator')],
 	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist','emi-calculator')],
@@ -43,6 +48,7 @@ $urlList = [
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist',['timezone','EST-to-AEST'])],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist',['timezone','EST-to-NZST'])],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist',['digital-document'])],
+	["priority" =>"0.90", "frequency"=> "daily", "loc" => route('toollist','currency-converter')],
 ];
 ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
