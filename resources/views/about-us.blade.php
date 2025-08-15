@@ -12,8 +12,8 @@
     </div>
 
     <div class="tool-card">
-        <div class="row mb-5">
-            <div class="col-md-12 mb-4 mb-md-0">
+        <div class="row mb-3">
+            <div class="col-md-12">
                 <h3>About {{ config('app.name') }}</h3>
                 <p class="text-muted">
                     Hello and welcome to {{ config('app.name') }}! We're thrilled that you're here to learn more about our platform.
@@ -126,5 +126,4 @@
         </p>
     </div>
 </div>
-
 @endsection

@@ -294,7 +294,7 @@
                     <i class="fas fa-play"></i>
                     Get Started Now
                 </a>
-                <a href="{{route('about-us')}}" class="btn btn-outline-light btn-lg cta-btn-secondary" title="Learn More">
+                <a href="{{route('about-us')}}" class="btn btn-outline-light btn-lg cta-btn-secondary" title="Learn More About Us">
                     <i class="fas fa-info-circle"></i>
                     Learn More
                 </a>
