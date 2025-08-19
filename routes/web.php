@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 #### For Frontside
 use App\Http\Controllers\{
 	HomeController,
+	PDFController,
 };
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -14,4 +15,6 @@ Route::post('/contact-us', [HomeController::class, 'contactUsSubmit']);
 Route::get('/sitemap.xml', [HomeController::class, 'sitemap']);
 Route::post('/generate-invoice',[HomeController::class, 'generateInvoice'])->name("generate-invoice");
 Route::post('/digital-document',[HomeController::class, 'digitalDocument'])->name("digital-document");
+Route::post('/merge-images-to-pdf', [PDFController::class, 'mergeImagesToPdf'])->name('merge.images.pdf');
+### Always keep This router at last
 Route::get('/{toolkey?}/{subpart?}',[HomeController::class, 'tools'])->name("toollist");

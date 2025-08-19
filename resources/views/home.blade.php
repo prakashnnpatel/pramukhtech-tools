@@ -14,7 +14,7 @@
             </p>
             <div class="hero-stats animate-fade-in-delay-2">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="13">0</span>
+                    <span class="stat-number" data-target="14">0</span>
                     <span class="stat-label">Tools Available</span>
                 </div>
                 <div class="stat-item">
@@ -163,6 +163,21 @@
                         <h3>Word Counter</h3>
                         <p>Count words, characters, sentences & paragraphs, spaces and more.</p>
                         <a href="{{route('toollist', 'word-counter')}}" class="tool-link" title="Try Now">
+                            Try Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tool-hover-effect"></div>
+                </div>
+
+                <div class="tool-card animate-on-scroll" data-delay="0.5">
+                    <div class="tool-icon">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Merge Images Into PDF</h3>
+                        <p>Turn multiple photos or images in any format into a polished, professional PDF.
+                        </p>
+                        <a href="{{route('toollist', 'merge-images-to-pdf')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>

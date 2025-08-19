@@ -170,6 +170,15 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('merge-images-to-pdf')
+			<title>Merge Images to PDF Online | Free Combine Multiple Images into One PDF Tool | ToolHubSpot</title>
+			<meta name="description" content="Easily merge images into a single PDF online. Free tool to combine JPEG, PNG, JPG, GIF, SVG, WEBP, BMP & TIFF into one PDF. Fast, secure & no installation.">
+			<meta name="keywords" content="merge images to pdf, combine images into one pdf, image to pdf converter, convert images to pdf online, join multiple images into pdf, jpg to pdf, png to pdf, free pdf tool, online image to pdf, photo to pdf maker">
+			<meta property="og:title" content="Merge Images to PDF Online | Free Combine Multiple Images into One PDF Tool | ToolHubSpot" />
+			<meta property="og:description" content="Easily merge images into a single PDF online. Free tool to combine JPEG, PNG, JPG, GIF, SVG, WEBP, BMP & TIFF into one PDF. Fast, secure & no installation." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			

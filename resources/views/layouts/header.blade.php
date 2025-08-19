@@ -57,6 +57,8 @@
                          <li><a class="dropdown-item" href="{{route('toollist', 'word-counter')}}" title="Word Counter">
                             <i class="fa-solid fa-font"></i> Word Counter
                         </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'merge-images-to-pdf')}}" title="Word Counter">
+                            <i class="fa-solid fa-file-pdf"></i> Merge Images Into PDF</a></li>
                     </ul>
                 </li>
                 

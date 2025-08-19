@@ -1,7 +1,7 @@
 <div class="tool-page-container">
     <div class="tool-header mb-4">
         <div class="header-icon"><i class="fas fa-file-signature"></i></div>
-        <div class="header-title">Create Free Digital Document & Download</div>
+        <div class="header-title">Add an electronic signature to your PDF</div>
         <div class="header-desc">Create Branded Digital Documents Instantly – Trusted by Millions!</div>
     </div>
     <div class="tool-card">

@@ -50,6 +50,7 @@ $urlList = [
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist',['digital-document']), 'lastmod'=> 2],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','currency-converter'), 'lastmod'=> 3],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','word-counter'), 'lastmod'=> 4],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','merge-images-to-pdf'), 'lastmod'=> 5],
 ];
 ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
