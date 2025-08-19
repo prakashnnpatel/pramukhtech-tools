@@ -12,6 +12,8 @@
 <meta property="og:image" content="{{ url('/') }}/images/tools/{{$toolKey??request()->segment(1)}}.png" />
 @if(config('app.env') == 'production')
 	<meta name="robots" content="index, follow" />
+	{{-- Bing meta tag for the verification --}}
+	<meta name="msvalidate.01" content="150CCE9A088451AAB0C850E9917A68EB" />
 @else
 	<meta name="robots" content="noindex, nofollow" />
 @endif
