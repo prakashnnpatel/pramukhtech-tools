@@ -48,12 +48,12 @@
                 <div class="col-lg-12">                    
                     <label class="form-label"><strong>Layout Option:</strong></label><br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="layout" id="layout1" value="new_page" checked>
-                        <label class="form-check-label" for="layout1">Each image in new page</label>
+                        <input class="form-check-input" type="radio" name="layout" id="layout2" value="next_by_next" checked>
+                        <label class="form-check-label" for="layout2">Images side by side</label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="layout" id="layout2" value="next_by_next">
-                        <label class="form-check-label" for="layout2">Images next by next</label>
+					<div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="layout" id="layout1" value="new_page">
+                        <label class="form-check-label" for="layout1">Each image in new page</label>
                     </div>
                 </div>
 
