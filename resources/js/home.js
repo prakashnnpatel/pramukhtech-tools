@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add scroll progress indicator
-    function initScrollProgress() {
+    /*function initScrollProgress() {
         const progressBar = document.createElement('div');
         progressBar.className = 'scroll-progress';
         progressBar.style.cssText = `
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    initScrollProgress();
+    initScrollProgress();*/
     
     // Add cursor trail effect
     function initCursorTrail() {

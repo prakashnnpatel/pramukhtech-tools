@@ -45,17 +45,28 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-12">                    
-                    <label class="form-label"><strong>Layout Option:</strong></label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="layout" id="layout2" value="next_by_next" checked>
-                        <label class="form-check-label" for="layout2">Images side by side</label>
-                    </div>
-					<div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="layout" id="layout1" value="new_page">
-                        <label class="form-check-label" for="layout1">Each image in new page</label>
-                    </div>
-                </div>
+				<div class="col-lg-12">
+					<label class="form-label"><strong>Layout Option:</strong></label><br>
+					<label style="display:inline-flex; align-items:center; margin-right:20px; cursor:pointer;">
+					  <input type="radio" name="layout" id="layout1" value="next_by_next" checked>
+					  <div style="width:40px; height:40px; border:1px solid #333; margin-left:8px; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:2px; padding:2px;">
+						<div style="background:#ddd;"></div>
+						<div style="background:#bbb;"></div>
+						<div style="background:#ccc;"></div>
+						<div style="background:#aaa;"></div>
+					  </div>
+					  <span style="margin-left:6px;">Images side by side</span>
+					</label>
+
+					<label style="display:inline-flex; align-items:center; margin-right:20px; cursor:pointer;">
+					  <input type="radio" name="layout" id="layout2" value="new_page">
+					  <div style="width:40px; height:40px; border:1px solid #333; margin-left:8px; display:flex; flex-direction:column; justify-content:space-evenly; padding:2px;">
+						<div style="width:90%; height:35%; background:#ddd; margin:auto;"></div>
+						<div style="width:90%; height:35%; background:#bbb; margin:auto;"></div>
+					  </div>
+					  <span style="margin-left:6px;">Each image in new page</span>
+					</label>
+				</div>
 
                 <div class="col-lg-12">
                     <div class="calculate-section">
