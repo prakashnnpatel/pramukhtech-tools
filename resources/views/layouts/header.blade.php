@@ -83,6 +83,9 @@
                         <li><a class="dropdown-item" href="{{route('toollist', 'color-picker')}}" title="Color Picker">
                             <i class="fa-solid fa-palette"></i> Color Picker
                         </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'qr-code-generator')}}" title="QR Code Generator">
+                            <i class="fa-solid fa-qrcode"></i> QR Code Generator
+                        </a></li>
                     </ul>
                 </li>
                 

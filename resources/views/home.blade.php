@@ -252,6 +252,20 @@
 
                 <div class="tool-card animate-on-scroll" data-delay="0.4">
                     <div class="tool-icon">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>QR Code Generator</h3>
+                        <p>Create customizable QR codes and download as PNG/SVG.</p>
+                        <a href="{{route('toollist', 'qr-code-generator')}}" class="tool-link" title="Try Now">
+                            Try Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tool-hover-effect"></div>
+                </div>
+
+                <div class="tool-card animate-on-scroll" data-delay="0.4">
+                    <div class="tool-icon">
                         <i class="fas fa-exchange-alt"></i>
                     </div>
                     <div class="tool-content">
