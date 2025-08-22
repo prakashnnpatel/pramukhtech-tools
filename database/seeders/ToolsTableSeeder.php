@@ -165,6 +165,15 @@ class ToolsTableSeeder extends Seeder
                 'image' => "barcode-sticker-generator.png",
                 'category' => 'Codes, Labels, Stickers',
             ],
+            [
+                'title' => "Unicode Text Converter",
+                'description' => "Unicode text converter that works in Facebook, WhatsApp, Twitter(X), LinkedIn and lots more.",
+                'keywords' => "Unicode converter, text converter, text Unicode converter, unicode text converter, fancy text converter, font style, unicode text transformer, text transformer",
+                'slug' => "unicode-text-converter",
+                'icon' => "fas fa-language",
+                'image' => "unicode-text-converter.png",
+                'category' => 'Codes, Utilities, Stickers',
+            ],
         ];
 
         foreach ($tools as $index => $tool) {

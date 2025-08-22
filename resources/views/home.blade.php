@@ -48,7 +48,7 @@
             </h2>
             <div class="section-description d-flex align-items-center justify-content-between w-100" style="max-width:100%;">
                 <span>Smart calculators for your financial planning needs</span>
-                <a href="{{ route('tools', 'calculators') }}" class="tool-link" title="View all Financial Tools">
+                <a href="{{ route('tools', 'Finance') }}" class="tool-link" title="View all Financial Tools">
                     View all <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -104,7 +104,7 @@
             </h2>
             <div class="section-description d-flex align-items-center justify-content-between w-100" style="max-width:100%;">
                 <span>Professional document generation and management</span>
-                <a href="{{ route('tools', 'documents') }}" class="tool-link" title="View all Document Tools">
+                <a href="{{ route('tools', 'Documents') }}" class="tool-link" title="View all Document Tools">
                     View all <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -204,7 +204,7 @@
             </h2>
             <div class="section-description d-flex align-items-center justify-content-between w-100" style="max-width:100%;">
                 <span>Essential utilities for everyday tasks</span>
-                <a href="{{ route('tools', 'utilities') }}" class="tool-link" title="View all Utility Tools">
+                <a href="{{ route('tools', 'Utilities') }}" class="tool-link" title="View all Utility Tools">
                     View all <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
