@@ -14,7 +14,7 @@
             </p>
             <div class="hero-stats animate-fade-in-delay-2">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="14">0</span>
+                    <span class="stat-number" data-target="15">0</span>
                     <span class="stat-label">Tools Available</span>
                 </div>
                 <div class="stat-item">

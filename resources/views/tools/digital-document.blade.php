@@ -67,6 +67,34 @@
             </div>
         </form>
     </div>
+
+     <!-- Step-by-step guide -->
+     <div class="info-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="info-content-card">
+                    <div class="content-header">
+                        <h3><i class="fas fa-book-open"></i> How to create digital document?</h3>
+                    </div>
+                    <div class="content-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4><i class="fas fa-star"></i> Step-by-step guide</h4>
+								<ol style="line-height:30px;">
+                                    <li>Add your logo or company name for branding.</li>
+                                    <li>Enter the document content you want to include. You can style it as you like using the editor options.</li>
+                                    <li>Provide your signature in the <strong>Digital Signature</strong> field.</li>
+                                    <li>Click the <strong>Preview Document</strong> button to review how your document looks before printing.</li>
+                                    <li>Click the <strong>Download Document</strong> button to generate a PDF.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Information Section -->
     <div class="info-section">
         <div class="row">
@@ -103,32 +131,5 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Step-by-step guide -->
-    <div class="info-section">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="info-content-card">
-                    <div class="content-header">
-                        <h3><i class="fas fa-book-open"></i> How to create digital document?</h3>
-                    </div>
-                    <div class="content-body">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4><i class="fas fa-star"></i> Step-by-step guide</h4>
-								<ol style="line-height:30px;">
-                                    <li>Add your logo or company name for branding.</li>
-                                    <li>Enter the document content you want to include. You can style it as you like using the editor options.</li>
-                                    <li>Provide your signature in the <strong>Digital Signature</strong> field.</li>
-                                    <li>Click the <strong>Preview Document</strong> button to review how your document looks before printing.</li>
-                                    <li>Click the <strong>Download Document</strong> button to generate a PDF.</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>   
 </div>

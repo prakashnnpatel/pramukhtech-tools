@@ -179,6 +179,15 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('qr-code-generator')
+			<title>Free Online QR Code Generator | Create QR Codes - ToolHubSpot</title>
+			<meta name="description" content="Create free custom QR codes instantly with ToolHubSpot's QR Code Generator. Generate QR codes for URLs, text, Wi-Fi, vCards, and more.">
+			<meta name="keywords" content="QR Code Generator, Free QR Code Generator, Online QR Code Maker, Custom QR Code, Create QR Code Online, Download QR Code, QR Code for URL, QR Code for WiFi, QR Code Generator Tool">
+			<meta property="og:title" content="Free Online QR Code Generator | Create QR Codes - ToolHubSpot" />
+			<meta property="og:description" content="Create free custom QR codes instantly with ToolHubSpot's QR Code Generator. Generate QR codes for URLs, text, Wi-Fi, vCards, and more." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			

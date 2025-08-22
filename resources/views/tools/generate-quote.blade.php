@@ -123,6 +123,40 @@
         </div>
     </form>
 
+    <!-- Step-by-step guide -->
+    <div class="info-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="info-content-card">
+                    <div class="content-header">
+                        <h3><i class="fas fa-book-open"></i> How to create an quote with the online generator </h3>
+                    </div>
+                    <div class="content-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4><i class="fas fa-star"></i> Step-by-step guide</h4>
+								<ol style="line-height:30px;">
+									<li>Enter your branding details, such as your logo or company name.</li>
+									<li>Fill in the quotes date, quotes number, and status.</li>
+									<li>Enter your details (name, address, and contact information) in the <strong>From Address</strong> section.</li>
+									<li>Enter the client's details (name, address, and contact information) in the <strong>To Address</strong> section.</li>
+									<li>Add product or service details, including quantities and prices. You can also edit the titles/labels as needed.</li>
+									<li>Include any applicable taxes or discounts.</li>
+									<li>Add notes if you want to provide additional context or a message for your client.</li>
+									<li>Review the total amount. You can edit taxes, prices, or any other details if necessary.</li>
+									<li>Click the <strong>Preview</strong> button to see how your quote looks before printing.</li>
+									<li>Click the <strong>Download</strong> button to save your quote as a PDF.</li>
+									<li>For quick help: <a href="https://www.youtube.com/watch?v=fKOlLUcIJZA" target="_blank" title="Quick Help">Watch on YouTube</a></li>
+								</ol>
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 	<!-- Information Section -->
     <div class="info-section">
         <div class="row">
@@ -167,39 +201,5 @@
                 </div>
             </div>
         </div>
-    </div>
-
-	<!-- Step-by-step guide -->
-    <div class="info-section">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="info-content-card">
-                    <div class="content-header">
-                        <h3><i class="fas fa-book-open"></i> How to create an quote with the online generator </h3>
-                    </div>
-                    <div class="content-body">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <h4><i class="fas fa-star"></i> Step-by-step guide</h4>
-								<ol style="line-height:30px;">
-									<li>Enter your branding details, such as your logo or company name.</li>
-									<li>Fill in the quotes date, quotes number, and status.</li>
-									<li>Enter your details (name, address, and contact information) in the <strong>From Address</strong> section.</li>
-									<li>Enter the client's details (name, address, and contact information) in the <strong>To Address</strong> section.</li>
-									<li>Add product or service details, including quantities and prices. You can also edit the titles/labels as needed.</li>
-									<li>Include any applicable taxes or discounts.</li>
-									<li>Add notes if you want to provide additional context or a message for your client.</li>
-									<li>Review the total amount. You can edit taxes, prices, or any other details if necessary.</li>
-									<li>Click the <strong>Preview</strong> button to see how your quote looks before printing.</li>
-									<li>Click the <strong>Download</strong> button to save your quote as a PDF.</li>
-									<li>For quick help: <a href="https://www.youtube.com/watch?v=fKOlLUcIJZA" target="_blank" title="Quick Help">Watch on YouTube</a></li>
-								</ol>
-                             
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>	
 </div>
