@@ -82,25 +82,25 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "digital-document",
                 'icon' => "fa-solid fa-file",
                 'image' => "digital-document.png",
-                'category' => 'Document, PDF',
+                'category' => 'Documents, PDF',
             ],
             [
-                'title' => "Words, characters, sentences, etc Counter",
+                'title' => "Words Counter",
                 'description' => "Count words, characters, sentences, space and paragraphs instantly with our free Word Counter Tool. Perfect for author, writers, students, and professionals.",
                 'keywords' => "word counter, character counter, sentence counter, paragraph counter, text analyzer, space counter, word count tool, character count, text statistics",
                 'slug' => "word-counter",
                 'icon' => "fa-solid fa-font",
                 'image' => "word-counter.png",
-                'category' => 'Document, Utilities, Productivity',
+                'category' => 'Documents, Utilities, Productivity',
             ],
             [
-                'title' => "Merge Multiple Images Into One PDF",
+                'title' => "Merge Images Into One PDF",
                 'description' => "The Combine Images Into One PDF tool makes it simple to convert multiple images into a single, shareable document. Instead of sending separate image files, you can merge them seamlessly into a compact PDF that's easy to view, print, or share across devices. With just a few clicks, your photos, scanned documents, or design files are organized in the exact order you want. This tool supports popular image formats like JPEG, PNG, JPG, GIF, SVG, WEBP, BMP, and TIFF, and allows uploads of up to 50MB per image. You can choose whether each image appears on a new page or side-by-side in a grid layout, giving you flexibility for personal, professional, or business use. Whether you're creating a photo album, submitting documents online, or preparing reports, the tool ensures your images are combined efficiently into a high-quality, ready-to-use PDF without requiring any software installation. Everything works directly in your browser, keeping the process quick and secure.",
                 'keywords' => "merge images to pdf, combine images into one pdf, image to pdf converter, convert images to pdf online, join multiple images into pdf, jpg to pdf, png to pdf, free pdf tool, online image to pdf, photo to pdf maker",
                 'slug' => "merge-images-to-pdf",
                 'icon' => "fa-solid fa-file-pdf",
                 'image' => "merge-images-to-pdf.png",
-                'category' => 'Document, PDF',
+                'category' => 'Documents, PDF',
             ],
             [
                 'title' => "Currency Converter",
@@ -127,7 +127,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "signature",
                 'icon' => "fa-solid fa-pen",
                 'image' => "signature.png",
-                'category' => 'Document, PDF',
+                'category' => 'Documents, PDF',
             ],
             [
                 'title' => "Screen Recorder",
@@ -154,7 +154,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "qr-code-generator",
                 'icon' => "fa-solid fa-qrcode",
                 'image' => "qr-code-generator.png",
-                'category' => 'Code, Label, Sticker',
+                'category' => 'Codes, Labels, Stickers',
             ],
             [
                 'title' => "Barcode Sticker Generator",
@@ -163,7 +163,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "barcode-sticker-generator",
                 'icon' => "fas fa-barcode",
                 'image' => "barcode-sticker-generator.png",
-                'category' => 'Code, Label, Sticker',
+                'category' => 'Codes, Labels, Stickers',
             ],
         ];
 

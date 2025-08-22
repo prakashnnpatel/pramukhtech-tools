@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use PDF;
 use App\Models\Lead;
 use Illuminate\Http\Request;
+use App\Models\Tools;
 
 class HomeController extends Controller
 {
@@ -18,34 +19,26 @@ class HomeController extends Controller
         return view("about-us");
     }
 
-    public function toolList($category = null)
+    public function toolList(Request $request, $category = null)
     {
-        $tools = [
-            ['key' => 'fd-calculator', 'icon' => 'fas fa-piggy-bank', 'title' => 'FD Calculator', 'desc' => 'Calculate Fixed Deposit returns with ease', 'category' => 'calculators'],
-            ['key' => 'sip-calculator', 'icon' => 'fas fa-hand-holding-water', 'title' => 'SIP Calculator', 'desc' => 'Plan your Systematic Investment Plan', 'category' => 'calculators'],
-            ['key' => 'emi-calculator', 'icon' => 'fas fa-calculator', 'title' => 'EMI Calculator', 'desc' => 'Calculate Equated Monthly Installments', 'category' => 'calculators'],
-            ['key' => 'custom-invoice', 'icon' => 'fas fa-file-invoice', 'title' => 'Custom Invoice', 'desc' => 'Create professional invoices and download as PDF', 'category' => 'documents'],
-            ['key' => 'generate-quote', 'icon' => 'fas fa-file-contract', 'title' => 'Generate Quote', 'desc' => 'Create branded quotes and download as PDF', 'category' => 'documents'],
-            ['key' => 'purchase-order', 'icon' => 'fas fa-shopping-cart', 'title' => 'Purchase Order', 'desc' => 'Generate purchase orders and download as PDF', 'category' => 'documents'],
-            ['key' => 'digital-document', 'icon' => 'fas fa-file', 'title' => 'Digital Document', 'desc' => 'Create documents and download as PDF', 'category' => 'documents'],
-            ['key' => 'word-counter', 'icon' => 'fa-solid fa-font', 'title' => 'Word Counter', 'desc' => 'Count words, characters, sentences & paragraphs', 'category' => 'documents'],
-            ['key' => 'merge-images-to-pdf', 'icon' => 'fa-solid fa-file-pdf', 'title' => 'Merge Images Into PDF', 'desc' => 'Combine images into a single PDF', 'category' => 'documents'],
-            ['key' => 'currency-converter', 'icon' => 'fas fa-exchange-alt', 'title' => 'Currency Converter', 'desc' => 'Real-time exchange rates and conversions', 'category' => 'utilities'],
-            ['key' => 'timezone', 'icon' => 'fas fa-clock', 'title' => 'Timezone Converter', 'desc' => 'Convert between timezones quickly', 'category' => 'utilities'],
-            ['key' => 'signature', 'icon' => 'fa-solid fa-pen', 'title' => 'Digital Signature', 'desc' => 'Create your digital signature in seconds', 'category' => 'utilities'],
-            ['key' => 'screen-recording', 'icon' => 'fa-solid fa-desktop', 'title' => 'Screen Recorder', 'desc' => 'Record your screen with audio', 'category' => 'utilities'],
-            ['key' => 'color-picker', 'icon' => 'fa-solid fa-palette', 'title' => 'Color Picker', 'desc' => 'Pick and convert colors easily', 'category' => 'utilities'],
-            ['key' => 'qr-code-generator', 'icon' => 'fa-solid fa-qrcode', 'title' => 'QR Code Generator', 'desc' => 'Create customizable QR codes', 'category' => 'utilities'],
-            ['key' => 'barcode-sticker-generator', 'icon' => 'fas fa-barcode', 'title' => 'Barcode Sticker Generator', 'desc' => 'Generate up to 50 barcode stickers and download PDF', 'category' => 'utilities'],
-            ['key' => 'unicode-text-converter', 'icon' => 'fa-solid fa-language', 'title' => 'Unicode Text Converter', 'desc' => 'Generate fancy Unicode styles and copy easily', 'category' => 'utilities'],
-        ];
-        if (!empty($category)) {
-            $category = strtolower($category);
-            $tools = array_values(array_filter($tools, function($t) use ($category) {
-                return isset($t['category']) && $t['category'] === $category;
-            }));
+        $tools = Tools::where("status","Active");
+        if ($request->has('search') && !empty($request->search)) {
+            $search = $request->search;
+            $tools->where(function($q) use ($search) {
+                $q->where('title', 'LIKE', "%{$search}%")
+                  ->orWhere('description', 'LIKE', "%{$search}%")
+                  ->orWhere('keywords', 'LIKE', "%{$search}%");
+            });
         }
-        return view('tools.list', compact('tools', 'category'));
+
+        if ($request->has('category') && !empty($request->category))
+            $category = $request->search;
+
+        if(!empty($category)) {
+            $tools = $tools->where("category","LIKE", "%".$category."%");
+        }
+        $tools = $tools->paginate(10)->appends($request->all());
+        return view('tools.list', ['tools' => $tools, "category" => $category, "param" => $request->all()]);
     }
 
     public function contactUs()
