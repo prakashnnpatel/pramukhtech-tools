@@ -331,11 +331,6 @@ $(document).ready(function() {
             alert.alert('close');
         }, 5000);
     }
-
-    // Add sample data button
-    $('<button type="button" class="btn btn-outline-secondary btn-sm ms-2" id="addSampleData">Add Sample</button>')
-        .insertAfter('#barcodeData');
-    
     $('#addSampleData').on('click', function() {
         const sampleData = `1234567890123
 9876543210987
