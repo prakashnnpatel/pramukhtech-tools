@@ -246,6 +246,7 @@ $(document).ready(function() {
         if (previewData && previewData.length > 0) {
             const container = $('<div class="row g-2"></div>');
             
+            $('#barcodepreviewlbl').append(`<label>Your Sample Preview</label>`);
             previewData.slice(0, 6).forEach(function(barcode) {
                 const col = $('<div class="col-4"></div>');
                 const barcodeDiv = $('<div class="text-center p-2 border rounded"></div>');

@@ -146,15 +146,16 @@
                         <p>Preview of your barcode stickers will appear here.</p>
                     </div>
                     <div class="card-body">
-                        <div id="barcodePreview" style="min-height:320px; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:12px;">
-                            <span class="text-muted">No barcodes yet. Click Generate Stickers.</span>
-                        </div>
                         <div id="barcodeStats" class="mt-3" style="display:none;">
                             <div class="alert alert-info">
                                 <strong>Generated:</strong> <span id="barcodeCount">0</span> barcodes<br>
                                 <strong>Pages:</strong> <span id="pageCount">0</span> pages
                             </div>
                         </div>
+                        <div id="barcodepreviewlbl"></div>                        
+                        <div id="barcodePreview" style="min-height:220px; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:12px;">
+                            <span class="text-muted">No barcodes yet. Click Generate Stickers.</span>
+                        </div>                        
                         <div class="mt-3 d-flex justify-content-end">
                             <button id="downloadBarcodes" class="invoice-action-btn" disabled>
                                 <i class="fas fa-download"></i> Download PDF
