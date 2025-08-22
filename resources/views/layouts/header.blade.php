@@ -86,9 +86,15 @@
                         <li><a class="dropdown-item" href="{{route('toollist', 'qr-code-generator')}}" title="QR Code Generator">
                             <i class="fa-solid fa-qrcode"></i> QR Code Generator
                         </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'barcode-sticker-generator')}}" title="Barcode Sticker Generator">
+                            <i class="fas fa-barcode"></i> Barcode Sticker Generator
+                        </a></li>
                     </ul>
                 </li>
                 
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('tools*') ? 'active' : '' }}" href="{{ route('tools') }}" title="Tool List">Tool List</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}" href="{{ route('about-us') }}" title="About Us">About Us</a>
                 </li>

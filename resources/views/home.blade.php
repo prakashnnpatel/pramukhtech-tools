@@ -46,7 +46,12 @@
                 <i class="fas fa-calculator"></i>
                 Financial Tools
             </h2>
-            <p class="section-description">Smart calculators for your financial planning needs</p>
+            <div class="section-description d-flex align-items-center justify-content-between w-100" style="max-width:100%;">
+                <span>Smart calculators for your financial planning needs</span>
+                <a href="{{ route('tools', 'calculators') }}" class="tool-link" title="View all Financial Tools">
+                    View all <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
             <div class="tools-grid">
                 <div class="tool-card animate-on-scroll" data-delay="0.1">
                     <div class="tool-icon">
@@ -97,7 +102,12 @@
                 <i class="fas fa-file-invoice"></i>
                 Document Tools
             </h2>
-            <p class="section-description">Professional document generation and management</p>
+            <div class="section-description d-flex align-items-center justify-content-between w-100" style="max-width:100%;">
+                <span>Professional document generation and management</span>
+                <a href="{{ route('tools', 'documents') }}" class="tool-link" title="View all Document Tools">
+                    View all <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
             <div class="tools-grid">
                 <div class="tool-card animate-on-scroll" data-delay="0.1">
                     <div class="tool-icon">
@@ -192,7 +202,12 @@
                 <i class="fas fa-tools"></i>
                 Utility Tools
             </h2>
-            <p class="section-description">Essential utilities for everyday tasks</p>
+            <div class="section-description d-flex align-items-center justify-content-between w-100" style="max-width:100%;">
+                <span>Essential utilities for everyday tasks</span>
+                <a href="{{ route('tools', 'utilities') }}" class="tool-link" title="View all Utility Tools">
+                    View all <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
             <div class="tools-grid">
                 <div class="tool-card animate-on-scroll" data-delay="0.1">
                     <div class="tool-icon">
@@ -258,6 +273,20 @@
                         <h3>QR Code Generator</h3>
                         <p>Create customizable QR codes and download as PNG/SVG.</p>
                         <a href="{{route('toollist', 'qr-code-generator')}}" class="tool-link" title="Try Now">
+                            Try Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tool-hover-effect"></div>
+                </div>
+
+                <div class="tool-card animate-on-scroll" data-delay="0.4">
+                    <div class="tool-icon">
+                        <i class="fas fa-barcode"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Barcode Sticker Generator</h3>
+                        <p>Generate up to 50 barcode stickers at once and download as PDF.</p>
+                        <a href="{{route('toollist', 'barcode-sticker-generator')}}" class="tool-link" title="Try Now">
                             Try Now <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
