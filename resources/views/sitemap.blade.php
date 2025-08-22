@@ -51,7 +51,8 @@ $urlList = [
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','currency-converter'), 'lastmod'=> 3],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','word-counter'), 'lastmod'=> 4],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','merge-images-to-pdf'), 'lastmod'=> 5],
-	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','qr-code-generator'), 'lastmod'=> 6],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','qr-code-generator'), 'lastmod'=> 1],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','barcode-sticker-generator'), 'lastmod'=> 2],
 ];
 ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>

@@ -26,7 +26,7 @@
                             $globalIndex = $pairIdx * 2 + $idx; // 0-based
                             $isOdd = ($globalIndex % 2) === 0; // 1st, 3rd, 5th... entries
                         @endphp
-                        <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="col-lg-6 mb-4">
                             <div class="calculator-card h-100">
                                 <div class="card-header d-flex align-items-center gap-2">
                                     <i class="{{ $tool['icon'] }}"></i>
@@ -41,7 +41,7 @@
                                             <p class="mb-3">{{ $tool['desc'] }}</p>
                                             <div class="mt-auto">
                                                 <a href="{{ route('toollist', $tool['key']) }}" class="invoice-action-btn" title="Open {{ $tool['title'] }}">
-                                                    Open <i class="fas fa-arrow-right ms-1"></i>
+                                                    Try Now <i class="fas fa-arrow-right ms-1"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -51,7 +51,7 @@
                         </div>
                     @endforeach
                     @if(count($pair) === 1)
-                        <div class="col-lg-6 col-md-6 mb-4"></div>
+                        <div class="col-lg-6 mb-4"></div>
                     @endif
                 </div>
             @endforeach

@@ -188,6 +188,15 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('barcode-sticker-generator')
+			<title>Free Online Barcode Generator | Create Barcode Stickers</title>
+			<meta name="description" content="Generate barcodes instantly in Code128, EAN, UPC & more. Create, customize & download barcode stickers in PDF for easy printing.">
+			<meta name="keywords" content="barcode generator, barcode stickers, online barcode creator, code128 barcode, EAN barcode, UPC barcode, barcode PDF download, printable barcodes, barcode tool">
+			<meta property="og:title" content="Free Online Barcode Generator | Create Barcode Stickers" />
+			<meta property="og:description" content="Generate barcodes instantly in Code128, EAN, UPC & more. Create, customize & download barcode stickers in PDF for easy printing." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			

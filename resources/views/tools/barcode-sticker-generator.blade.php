@@ -167,38 +167,100 @@
         </div>
     </div>
 
+    <!-- Step-by-step guide -->
+	<div class="row mt-3">
+		<div class="col-lg-12">
+			<div class="info-card">
+				<div class="info-header">
+					<h4><i class="fas fa-book-open"></i> How to create Barcode </h4>
+				</div>
+				<div class="content-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<h4>👉 Step-by-step guide</h4>
+							<ol style="line-height:30px;">
+								<li><strong>Sheet Preset:</strong> keep Custom or choose a preset (if you use a standard sticker sheet).</li>
+                                <li><strong>Barcode Type:</strong> pick the format you need</li>
+                                <li><strong>Size:</strong> set <strong>Width (mm)</strong> and <strong>Height (mm)</strong>.</li>
+                                <li><strong>Sticker Size:</strong> choose a quick size (e.g., Medium 40×25 mm) or keep custom.</li>
+                                <li><strong>Show Text:</strong> choose <strong>Yes/No</strong> and set <strong>Text Size (pt)</strong> if you want human-readable text under the code.</li>
+                                <li><strong>Input Mode:</strong> keep <strong>Manual list (one per line)</strong>.</li>
+                                <li><strong>Barcode Data:</strong> paste or type up to <strong>50 values</strong> - one per line. (Example: product SKUs or numeric EANs.)</li>
+                                <li><strong>Layout:</strong> set <strong>Rows per page</strong> and <strong>Columns per page</strong> to match your sticker sheet (e.g., 10 × 3 = 30 stickers per page).</li>
+                                <li>Click <strong>Generate Stickers</strong> to build your sheet and preview.</li>
+                                <li><strong>Download PDF</strong> and print at <strong>100% scale</strong> on sticker paper (no “Fit to page”).</li>
+                                <li>Test-scan a printed label with a phone or handheld scanner; if it’s finicky, slightly increase width/height or reprint darker</li>
+							</ol>
+						</div>
+
+                        <div class="col-lg-12">
+							<h4>✨ Quick tips & data rules</h4>
+							<ol style="line-height:30px;">
+								<li><strong>Code 128/39:</strong> use for letters + numbers; avoid very long strings on tiny stickers.</li>
+                                <li><strong>EAN-13:</strong> 13 digits (numbers only). <strong>EAN-8:</strong> 8 digits. <strong>UPC-A:</strong> 12 digits. <strong>UPC-E:</strong> compressed UPC (numbers only).</li>
+                                <li>For reliable scans: keep clean margins (quiet zone), print at high quality (300 DPI+), avoid glossy surfaces, and don't shrink the PDF.</li>
+                                <li>If text overlaps the bars, reduce <strong>Text Size</strong> or increase <strong>Height</strong> a bit.</li>                                
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
     <div class="info-section">
         <div class="row">
             <div class="col-lg-12">
                 <div class="info-content-card">
                     <div class="content-header">
-                        <h4><i class="fas fa-info-circle"></i> About Barcode Sticker Generator</h4>
+                        <h3><i class="fas fa-info-circle"></i> About Barcode Sticker Generator</h3>
                     </div>
                     <div class="content-body">
-                        <p>Create professional barcode stickers for inventory, retail, or labeling purposes. Generate up to 50 barcodes at once with customizable sizes and formats. Download as PDF for easy printing on sticker sheets.</p>
-                        <div class="row mt-3">
-                            <div class="col-md-6">
-                                <h6>Supported Barcode Types:</h6>
-                                <ul>
-                                    <li><strong>Code 128:</strong> Alphanumeric, high density</li>
-                                    <li><strong>Code 39:</strong> Alphanumeric, industrial use</li>
-                                    <li><strong>EAN-13:</strong> 13-digit retail barcodes</li>
-                                    <li><strong>EAN-8:</strong> 8-digit retail barcodes</li>
-                                    <li><strong>UPC:</strong> 12-digit product codes</li>
-                                    <li><strong>UPC-E:</strong> Compressed UPC codes</li>
-                                </ul>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="content-block">
+                                    <p>Create professional barcode stickers for inventory, retail, or labeling purposes. <strong>Generate up to 50 barcodes at once</strong> with customizable sizes and formats. Download as PDF for easy printing on sticker sheets.</p>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <h6>Features:</h6>
-                                <ul>
-                                    <li>Generate up to 50 barcodes at once</li>
-                                    <li>Customizable sticker sizes</li>
-                                    <li>PDF download for printing</li>
-                                    <li>Multiple barcode formats</li>
-                                    <li>Text display options</li>
-                                    <li>Grid layout control</li>
-                                </ul>
+                            <div class="col-lg-12">
+                                <div class="content-block">
+                                    <p>Easily create professional barcode stickers for all your business needs, including <strong>inventory tracking, retail product labeling, and warehouse management. With flexible customization options</strong>, you can generate up to 50 barcodes at once and select from popular formats like Code <strong>128, Code 39, EAN-13, EAN-8, UPC, and UPC-E</strong>. Adjust sticker sizes, choose whether to display text, and fine-tune grid layouts to perfectly match your printing requirements.</p>
+                                </div>
                             </div>
+                            <div class="col-lg-12">
+                                <div class="content-block">
+                                    <p>Once your barcodes are ready, download them instantly as a <strong>high-quality PDF</strong> for seamless printing on sticker sheets. This tool gives you complete control over width, height, text size, and layout, ensuring every label fits your business workflow. Whether you're a store owner, manufacturer, or logistics manager, this barcode generator saves time, improves accuracy, and makes labeling more efficient.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="content-block">
+                                    <h4>👉 Supported Barcode Types</h4>
+                                    <ul class="feature-list">
+                                        <li><strong>Code 128:</strong> Alphanumeric, high density</li>
+                                        <li><strong>Code 39:</strong> Alphanumeric, industrial use</li>
+                                        <li><strong>EAN-13:</strong> 13-digit retail barcodes</li>
+                                        <li><strong>EAN-8:</strong> 8-digit retail barcodes</li>
+                                        <li><strong>UPC:</strong> 12-digit product codes</li>
+                                        <li><strong>UPC-E:</strong> Compressed UPC codes</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="content-block">
+                                    <h4><i class="fas fa-lightbulb"></i> Key Features & Benefits</h4>
+                                    <ul class="feature-list">
+                                        <li>Generate up to 50 barcodes at once</li>
+                                        <li>Customizable sticker sizes</li>
+                                        <li>PDF download for printing</li>
+                                        <li>Multiple barcode formats</li>
+                                        <li>Text display options</li>
+                                        <li>Grid layout control</li>
+                                    </ul>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>
