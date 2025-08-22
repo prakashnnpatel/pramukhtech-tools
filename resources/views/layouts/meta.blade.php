@@ -197,6 +197,15 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('unicode-text-converter')
+			<title>Free Text Converter | Unicode Text Converter</title>
+			<meta name="description" content="Unicode text converter that works in Facebook, WhatsApp, Twitter(X), LinkedIn and lots more.">
+			<meta name="keywords" content="Unicode converter, text converter, text Unicode converter, unicode text converter, fancy text converter, font style, unicode text transformer, text transformer">			
+			<meta property="og:title" content="Free Text Converter | Unicode Text Converter" />
+			<meta property="og:description" content="Unicode text converter that works in Facebook, WhatsApp, Twitter(X), LinkedIn and lots more." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			

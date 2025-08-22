@@ -54,19 +54,38 @@
 			<div class="col-lg-12">
 				<div class="info-content-card">
 					<div class="content-header">
-						<h3><i class="fas fa-info-circle"></i> About</h3>
+						<h3><i class="fas fa-info-circle"></i> About Unicode Text Converter</h3>
 					</div>
 					<div class="content-body">
 						<p>Create stylish Unicode text compatible with most platforms like Facebook, WhatsApp, X, LinkedIn and more.</p>
-						<div class="content-block">
-							<h4><i class="fas fa-lightbulb"></i> Benefits</h4>
-							<ul class="feature-list">
-								<li><b>Instant styles</b> – Preview dozens of fancy variants in real time.</li>
-								<li><b>One‑click copy</b> – Grab individual lines or copy all results at once.</li>
-								<li><b>Broad compatibility</b> – Works across social, chats, and documents.</li>
-								<li><b>No upload needed</b> – All conversions run in your browser.</li>
-								<li><b>Mobile friendly</b> – Optimized layout for any screen size.</li>
-							</ul>
+						<strong>What is the purpose of this Unicode text conversion web app?</strong>
+						<p>The web app is designed to transform regular text into Unicode characters, providing users a creative and visually appealing way to express themselves on various platforms. Whether you're crafting a social media post, designing a website, or adding a personal touch to your messages.</p>
+						<strong>How does the Unicode text conversion work?</strong>
+						<p>The app employs algorithms to map standard characters to their corresponding Unicode counterparts. These Unicode characters often have unique styles, making the converted text appear fancier and more distinctive.</p>
+						<div class="row">							
+							<div class="col-lg-6">
+								<div class="content-block">									
+									<h4>👉 Key Features</h4>
+									<ul class="feature-list">
+										<li><b>Wide Range of Characters</b> – Choose from an extensive collection of Unicode characters an symbols to personalize your text</li>
+										<li><b>Easy-to-Use Interface</b> – This mobile friendly interface ensures a seamless and hassle-free text conversion experience, even for beginners.</li>
+										<li><b>Instant Preview</b> – See the transformation in real-time with our instant preview feature, allowing you to fine-tune your fancy text before sharing it with the world.</li>
+										<li><b>Copy and Paste Convenience</b> – Copy your converted text with a single click and paste it directly into your favorite platforms, saving you time and effort.</li>								
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="content-block">
+									<h4><i class="fas fa-lightbulb"></i> Benefits</h4>
+									<ul class="feature-list">
+										<li><b>Instant styles</b> – Preview dozens of fancy variants in real time.</li>
+										<li><b>One‑click copy</b> – Grab individual lines or copy all results at once.</li>
+										<li><b>Broad compatibility</b> – Works across social, chats, and documents.</li>
+										<li><b>No upload needed</b> – All conversions run in your browser.</li>
+										<li><b>Mobile friendly</b> – Optimized layout for any screen size.</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
