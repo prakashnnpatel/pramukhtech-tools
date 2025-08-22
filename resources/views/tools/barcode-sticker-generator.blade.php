@@ -13,16 +13,15 @@
 
     <div class="calculator-main">
         <div class="row">
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-12 mb-4">
                 <div class="calculator-card">
                     <div class="card-header">
                         <h3><i class="fas fa-sliders"></i> Barcode Settings</h3>
                         <p>Configure barcode type, size, and content for your stickers.</p>
                     </div>
                     <div class="card-body">
-                        <div class="row g-3">
-                            
-                            <div class="col-12">
+                        <div class="row g-3">                            
+                            <div class="col-5">
                                 <label for="sheetPreset" class="form-label">Sheet Preset</label>
                                 <select id="sheetPreset" class="form-select">
                                     <option value="custom" selected>Custom</option>
@@ -32,7 +31,7 @@
                                 </select>
                                 <div class="form-text">Choose a preset or keep Custom to set your own sizes.</div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-3">
                                 <label for="barcodeType" class="form-label">Barcode Type</label>
                                 <select id="barcodeType" class="form-select">
                                     <option value="CODE128" selected>Code 128</option>
@@ -43,15 +42,15 @@
                                     <option value="UPCE">UPC-E</option>
                                 </select>
                             </div>
-                            <div class="col-6">
+                            <div class="col-2">
                                 <label for="barcodeWidth" class="form-label">Width (mm)</label>
                                 <input type="number" class="form-control" id="barcodeWidth" min="20" max="100" value="40">
                             </div>
-                            <div class="col-6">
+                            <div class="col-2">
                                 <label for="barcodeHeight" class="form-label">Height (mm)</label>
                                 <input type="number" class="form-control" id="barcodeHeight" min="10" max="50" value="20">
                             </div>
-                            <div class="col-6">
+                            <div class="col-3">
                                 <label for="stickerSize" class="form-label">Sticker Size</label>
                                 <select id="stickerSize" class="form-select">
                                     <option value="small">Small (25x15mm)</option>
@@ -60,18 +59,18 @@
                                     <option value="custom">Custom</option>
                                 </select>
                             </div>
-                            <div class="col-6">
+                            <div class="col-2">
                                 <label for="showText" class="form-label">Show Text</label>
                                 <select id="showText" class="form-select">
                                     <option value="1" selected>Yes</option>
                                     <option value="0">No</option>
                                 </select>
                             </div>
-                            <div class="col-6">
+                            <div class="col-2">
                                 <label for="textSize" class="form-label">Text Size (pt)</label>
                                 <input type="number" class="form-control" id="textSize" min="6" max="20" value="10">
                             </div>
-                            <div class="col-12">
+                            <div class="col-5">
                                 <label for="inputMode" class="form-label">Input Mode</label>
                                 <select id="inputMode" class="form-select">
                                     <option value="manual" selected>Manual list (one per line)</option>
@@ -88,24 +87,24 @@
 
                             <div class="col-12 input-mode input-mode-range" style="display:none;">
                                 <div class="row g-3">
-                                    <div class="col-6">
+                                    <div class="col-2">
                                         <label for="rangeStart" class="form-label">Start Number</label>
                                         <input type="number" class="form-control" id="rangeStart" value="10001">
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-2">
                                         <label for="rangeEnd" class="form-label">End Number</label>
                                         <input type="number" class="form-control" id="rangeEnd" value="10050">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-2">
                                         <label for="padLength" class="form-label">Pad Length</label>
                                         <input type="number" class="form-control" id="padLength" min="0" max="20" value="0">
                                         <div class="form-text">Pad with leading zeros (e.g., 00001)</div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-3">
                                         <label for="prefix" class="form-label">Prefix</label>
                                         <input type="text" class="form-control" id="prefix" placeholder="Optional">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-3">
                                         <label for="suffix" class="form-label">Suffix</label>
                                         <input type="text" class="form-control" id="suffix" placeholder="Optional">
                                     </div>
@@ -134,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-12 mb-4">
                 <div class="calculator-card">
                     <div class="card-header">
                         <h3><i class="fas fa-eye"></i> Preview</h3>
@@ -151,7 +150,7 @@
                             </div>
                         </div>
                         <div class="mt-3 d-flex justify-content-end">
-                            <button id="downloadBarcodes" class="invoice-defaul-btn" disabled>
+                            <button id="downloadBarcodes" class="invoice-action-btn" disabled>
                                 <i class="fas fa-download"></i> Download PDF
                             </button>
                         </div>
