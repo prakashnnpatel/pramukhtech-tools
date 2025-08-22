@@ -28,7 +28,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "fd-calculator",
                 'icon' => "fas fa-piggy-bank",
                 'image' => 'fd-calculator.png',
-                'category' => 'Finance',
+                'category' => 'Finance, Business',
             ],
             [
                 'title' => "SIP Calculator",
@@ -37,7 +37,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "sip-calculator",
                 'icon' => "fas fa-hand-holding-water",
                 'image' => 'sip-calculator.png',
-                'category' => 'Finance',
+                'category' => 'Finance, Business',
             ],
             [
                 'title' => "EMI Calculator",
@@ -46,7 +46,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "emi-calculator",
                 'icon' => "fas fa-calculator",
                 'image' => 'emi-calculator.png',
-                'category' => 'Finance',
+                'category' => 'Finance, Business',
             ],
             [
                 'title' => "Custom Invoice Generator",
@@ -55,7 +55,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "custom-invoice",
                 'icon' => "fa-solid fa-file-pdf",
                 'image' => 'custom-invoice.png',
-                'category' => 'Finance',
+                'category' => 'Finance, Business',
             ],
             [
                 'title' => "Generate Quote",
@@ -64,7 +64,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "generate-quote",
                 'icon' => "fa-solid fa-file-pdf",
                 'image' => 'generate-quote.png',
-                'category' => 'Finance',
+                'category' => 'Finance, Business',
             ],
             [
                 'title' => "Purchase Order",
@@ -73,7 +73,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "purchase-order",
                 'icon' => "fa-solid fa-file-pdf",
                 'image' => 'purchase-order.png',
-                'category' => 'Finance',
+                'category' => 'Finance, Business',
             ],
             [
                 'title' => "Digital Document",
@@ -82,7 +82,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "digital-document",
                 'icon' => "fa-solid fa-file",
                 'image' => "digital-document.png",
-                'category' => 'Finance',
+                'category' => 'Document, PDF',
             ],
             [
                 'title' => "Words, characters, sentences, etc Counter",
@@ -91,7 +91,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "word-counter",
                 'icon' => "fa-solid fa-font",
                 'image' => "word-counter.png",
-                'category' => 'Finance',
+                'category' => 'Document, Utilities, Productivity',
             ],
             [
                 'title' => "Merge Multiple Images Into One PDF",
@@ -100,7 +100,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "merge-images-to-pdf",
                 'icon' => "fa-solid fa-file-pdf",
                 'image' => "merge-images-to-pdf.png",
-                'category' => 'Finance',
+                'category' => 'Document, PDF',
             ],
             [
                 'title' => "Currency Converter",
@@ -109,7 +109,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "currency-converter",
                 'icon' => "fas fa-exchange-alt",
                 'image' => "currency-converter.png",
-                'category' => 'Finance',
+                'category' => 'Finance, Business',
             ],
             [
                 'title' => "Timezone Converter",
@@ -118,7 +118,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "timezone",
                 'icon' => "fas fa-clock",
                 'image' => "timezone.png",
-                'category' => 'Finance',
+                'category' => 'Utilities, Productivity',
             ],
             [
                 'title' => "Digital Signature",
@@ -127,7 +127,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "signature",
                 'icon' => "fa-solid fa-pen",
                 'image' => "signature.png",
-                'category' => 'Finance',
+                'category' => 'Document, PDF',
             ],
             [
                 'title' => "Screen Recorder",
@@ -136,7 +136,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "screen-recording",
                 'icon' => "fa-solid fa-desktop",
                 'image' => "screen-recording.png",
-                'category' => 'Finance',
+                'category' => 'Utilities, Productivity',
             ],
             [
                 'title' => "Color Picker",
@@ -145,7 +145,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "color-picker",
                 'icon' => "fa-solid fa-palette",
                 'image' => "color-picker.png",
-                'category' => 'Finance',
+                'category' => 'Utilities, Productivity',
             ],
             [
                 'title' => "QR Code Generator",
@@ -154,7 +154,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "qr-code-generator",
                 'icon' => "fa-solid fa-qrcode",
                 'image' => "qr-code-generator.png",
-                'category' => 'Finance',
+                'category' => 'Code, Label, Sticker',
             ],
             [
                 'title' => "Barcode Sticker Generator",
@@ -163,7 +163,7 @@ class ToolsTableSeeder extends Seeder
                 'slug' => "barcode-sticker-generator",
                 'icon' => "fas fa-barcode",
                 'image' => "barcode-sticker-generator.png",
-                'category' => 'Finance',
+                'category' => 'Code, Label, Sticker',
             ],
         ];
 
