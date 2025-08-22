@@ -306,6 +306,20 @@
                     </div>
                     <div class="tool-hover-effect"></div>
                 </div>
+
+                <div class="tool-card animate-on-scroll" data-delay="0.4">
+                    <div class="tool-icon">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Unicode Text Converter</h3>
+                        <p>Generate fancy Unicode styles and copy anywhere.</p>
+                        <a href="{{route('toollist', 'unicode-text-converter')}}" class="tool-link" title="Try Now">
+                            Try Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tool-hover-effect"></div>
+                </div>
             </div>
         </div>
     </div>

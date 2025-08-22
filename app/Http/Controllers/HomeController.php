@@ -37,6 +37,7 @@ class HomeController extends Controller
             ['key' => 'color-picker', 'icon' => 'fa-solid fa-palette', 'title' => 'Color Picker', 'desc' => 'Pick and convert colors easily', 'category' => 'utilities'],
             ['key' => 'qr-code-generator', 'icon' => 'fa-solid fa-qrcode', 'title' => 'QR Code Generator', 'desc' => 'Create customizable QR codes', 'category' => 'utilities'],
             ['key' => 'barcode-sticker-generator', 'icon' => 'fas fa-barcode', 'title' => 'Barcode Sticker Generator', 'desc' => 'Generate up to 50 barcode stickers and download PDF', 'category' => 'utilities'],
+            ['key' => 'unicode-text-converter', 'icon' => 'fa-solid fa-language', 'title' => 'Unicode Text Converter', 'desc' => 'Generate fancy Unicode styles and copy easily', 'category' => 'utilities'],
         ];
         if (!empty($category)) {
             $category = strtolower($category);

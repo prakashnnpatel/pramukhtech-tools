@@ -89,6 +89,9 @@
                         <li><a class="dropdown-item" href="{{route('toollist', 'barcode-sticker-generator')}}" title="Barcode Sticker Generator">
                             <i class="fas fa-barcode"></i> Barcode Sticker Generator
                         </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'unicode-text-converter')}}" title="Unicode Text Converter">
+                            <i class="fa-solid fa-language"></i> Unicode Text Converter
+                        </a></li>
                     </ul>
                 </li>
                 
