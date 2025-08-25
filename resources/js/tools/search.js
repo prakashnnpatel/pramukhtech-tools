@@ -1,7 +1,7 @@
 var Search = function() {    
     function formSubmit() {
-        var search = $("#toolSearchFrm").find("#search").val();
-        var category = $("#toolSearchFrm").find("#category").val();
+        var search = $.trim($("#toolSearchFrm").find("#search").val());
+        var category = $.trim($("#toolSearchFrm").find("#category").val());
         var searchURL = '/tools';
         
         if (category != "") {

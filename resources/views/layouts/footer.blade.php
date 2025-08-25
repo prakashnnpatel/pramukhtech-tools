@@ -15,7 +15,7 @@
                     <li><a href="{{ route('home') }}" title="Home">Home</a></li>
                     <li><a href="{{ route('about-us') }}" title="About Us">About Us</a></li>
                     <li><a href="{{ route('contact-us') }}" title="Contact Us">Contact Us</a></li>
-                    <li><a href="{{ route('toollist') }}" title="All Tools">All Tools</a></li>
+                    <li><a href="{{ route('tools') }}" title="Search & Explore Free Online Tools">All Tools</a></li>
                 </ul>
             </div>
             
@@ -23,10 +23,10 @@
                 <h4>Popular Tools</h4>
                 <ul class="footer-links">
                     <li><a href="{{ route('toollist', 'emi-calculator') }}" title="EMI Calculator">EMI Calculator</a></li>
-                    <li><a href="{{ route('toollist', 'custom-invoice') }}" title="Invoice Generator">Invoice Generator</a></li>
-                    <li><a href="{{ route('toollist', 'signature') }}" title="Digital Signature">Digital Signature</a></li>
-                    <li><a href="{{ route('toollist', 'timezone') }}" title="Timezone Converter">Timezone Converter</a></li>
-                    <li><a href="{{ route('toollist', 'currency-converter') }}" title="Currency Converter">Currency Converter</a></li>
+                    <li><a href="{{ route('toollist', 'custom-invoice') }}" title="Create Free Custom Invoice Online">Invoice Generator</a></li>
+                    <li><a href="{{ route('toollist', 'signature') }}" title="Create Your Free Digital Signature Online in Seconds">Digital Signature</a></li>
+                    <li><a href="{{ route('toollist', 'timezone') }}" title="Free Online Timezone Converter">Timezone Converter</a></li>
+                    <li><a href="{{ route('toollist', 'currency-converter') }}" title="Free Online Currency Converter Tool">Currency Converter</a></li>
                 </ul>
             </div>
             

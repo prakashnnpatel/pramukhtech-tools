@@ -7,16 +7,17 @@
                 <div class="col-lg-12 mb-4">
                     <div class="calculator-card">
                         <div class="card-header">
-                            <h3><i class="fas fa-search"></i> Search</h3>
-                            <p class="calculator-subtitle">Browse all available tools in one place.</p>
+                            <h3><i class="fas fa-search"></i> Search & Explore Free Online Tools</h3>
+                            {{--<p class="calculator-subtitle">Browse all available tools in one place.</p>--}}
                         </div>
                         <div class="card-body">
                             <form method="GET" action="javascript:void(0);" id="toolSearchFrm" name="toolSearchFrm">
-                                <div class="row g-3">                            
-                                    <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-10">
                                         <label for="search" class="form-label">Search</label>
-                                        <input type="text" class="form-control" id="search" name="search" value="{{$param['search']??''}}" placeholder="Search keywords..." />
+                                        <input type="text" class="form-control" id="search" name="search" value="{{$param['search']??''}}" placeholder="Browse all available tools in one place." />
                                     </div>
+									{{--
                                     <div class="col-lg-3">
                                         <label for="category" class="form-label">Categories</label>
                                         <select id="category" name="category" class="form-select">
@@ -25,13 +26,29 @@
                                                 <option value="{{$category_val}}" @if(!empty($category) && $category == $category_val) selected @endif>{{$category_val}}</option>
                                             @endforeach
                                         </select>
-                                    </div>  
-                                    <div class="col-lg-3">
+                                    </div>
+									--}}
+                                    <div class="col-lg-2">
                                         <button type="button" class="invoice-action-btn mt-4" id="toolSearchBtn">
                                             <i class="fas fa-search"></i> Search
                                         </button>
                                     </div>
                                 </div>
+								<hr/>
+								{{-- Display Category buttons --}}
+								<div class="row">
+                                    <div class="col-lg-12">
+										<input type="hidden" id="category" name="category" value="@if(!empty($category)){{$category}}@endif"/>
+										<a href="{{ route('tools') }}" type="button" class="@if(!empty($category)) invoice-defaul-btn @else invoice-action-btn  @endif" title="Explore All Free Tools Online | Easy to Use" style="padding: 7px 18px;">
+											All Tools
+										</a>
+                                        @foreach(config('constants.tools_category') as $cat_key=>$category_val)
+											<a href="{{ route('tools',$category_val) }}" type="button" class="@if(!empty($category) && $category == $category_val) invoice-action-btn @else invoice-defaul-btn @endif" title="Explore All {{$category_val}} Tools Online | Free & Easy to Use" style="padding: 7px 20px;">
+												{{$category_val}}
+											</a>
+                                        @endforeach
+                                    </div>
+								</div>
                             </form>
                         </div>
                     </div>

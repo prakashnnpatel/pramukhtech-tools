@@ -90,6 +90,8 @@ textarea.invoice-form-control {
 .invoice-action-btn:hover {
   background: linear-gradient(90deg, #5a6fd8 0%, #6a4190 100%);
   box-shadow: 0 4px 16px rgba(102,126,234,0.18);
+  color: #fff;
+  text-decoration: none;
 }
 
 .invoice-defaul-btn {
@@ -110,6 +112,7 @@ textarea.invoice-form-control {
 .invoice-defaul-btn:hover {
   background: linear-gradient(90deg, #5a6fd8 0%, #6a4190 100%);
   box-shadow: 0 4px 16px rgba(102,126,234,0.18);
+  color: #fff;
 }
 
 .invoice-table {
