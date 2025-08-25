@@ -207,19 +207,19 @@
 		@break
 
 		@case('code-minifier')
-			<title>Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly</title>
+			<title>Free Code Minifier - Minify JavaScript, CSS & HTML Online</title>
 			<meta name="description" content="Minify JavaScript, CSS & HTML online instantly. Boost website speed, reduce file size, and improve SEO with our free code minifier tool.">
 			<meta name="keywords" content="online code minifier, code minifier tool, minify JavaScript online, minify CSS online, minify HTML online, compress code online, free code minifier">			
-			<meta property="og:title" content="Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly" />
+			<meta property="og:title" content="Free Code Minifier - Minify JavaScript, CSS & HTML Online" />
 			<meta property="og:description" content="Minify JavaScript, CSS & HTML online instantly. Boost website speed, reduce file size, and improve SEO with our free code minifier tool." />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
-		@case('code-beautifier')			
-			<title>Free Online Code Beautifier | Format & Beautify JavaScript, CSS & HTML</title>
+		@case('code-beautifier')
+			<title>Free Code Beautifier - Format & Beautify JavaScript, CSS, HTML</title>
 			<meta name="description" content="Beautify JavaScript, CSS & HTML online. Free code beautifier tool to format, clean, and organize minified or messy code instantly.">
 			<meta name="keywords" content="online code beautifier, code beautifier tool, beautify JavaScript online, beautify CSS online, beautify HTML online, code formatter online, free code beautifier">			
-			<meta property="og:title" content="Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly" />
+			<meta property="og:title" content="Free Code Beautifier - Format & Beautify JavaScript, CSS, HTML" />
 			<meta property="og:description" content="Beautify JavaScript, CSS & HTML online. Free code beautifier tool to format, clean, and organize minified or messy code instantly." />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
