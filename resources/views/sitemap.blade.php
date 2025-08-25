@@ -54,6 +54,8 @@ $urlList = [
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','qr-code-generator'), 'lastmod'=> 1],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','barcode-sticker-generator'), 'lastmod'=> 2],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','unicode-text-converter'), 'lastmod'=> 2],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','code-minifier'), 'lastmod'=> 2],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','code-beautifier'), 'lastmod'=> 2],
 ];
 ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
