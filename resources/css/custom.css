@@ -1576,7 +1576,7 @@ td, th {
 
 .footer-main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 3rem;
     padding: 3rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1880,17 +1880,24 @@ td, th {
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 2rem 0;
+		text-align:center;
     }
     
     .footer-bottom-content {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
+		text-align:center;
+    }
+
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .footer-legal {
         justify-content: center;
-    }
+    }	
     
     .newsletter-form {
         max-width: 100%;
@@ -1915,7 +1922,7 @@ td, th {
     
     .footer-section h4 {
         font-size: 1.1rem;
-    }
+    }	
     
     .footer-brand h3 {
         font-size: 1.3rem;

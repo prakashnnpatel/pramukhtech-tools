@@ -11,7 +11,8 @@ class HomeController extends Controller
 {
     public function home()
     {
-        return view("home", ["toolKey" => "toollist"]);
+		$totalTools = Tools::count();
+		return view("home", ["toolKey" => "toollist", "totalTools"=>$totalTools]);
     }
 
     public function aboutUs()

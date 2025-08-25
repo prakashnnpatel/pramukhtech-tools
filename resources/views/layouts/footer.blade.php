@@ -7,31 +7,8 @@
                     <h3>{{ config('app.name') }}</h3>
                     <p>Your one-stop destination for free online tools. Boost productivity with our comprehensive suite of utilities designed for professionals and everyday users.</p>
                 </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="{{ route('home') }}" title="Home">Home</a></li>
-                    <li><a href="{{ route('about-us') }}" title="About Us">About Us</a></li>
-                    <li><a href="{{ route('contact-us') }}" title="Contact Us">Contact Us</a></li>
-                    <li><a href="{{ route('tools') }}" title="Search & Explore Free Online Tools">All Tools</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Popular Tools</h4>
-                <ul class="footer-links">
-                    <li><a href="{{ route('toollist', 'emi-calculator') }}" title="EMI Calculator">EMI Calculator</a></li>
-                    <li><a href="{{ route('toollist', 'custom-invoice') }}" title="Create Free Custom Invoice Online">Invoice Generator</a></li>
-                    <li><a href="{{ route('toollist', 'signature') }}" title="Create Your Free Digital Signature Online in Seconds">Digital Signature</a></li>
-                    <li><a href="{{ route('toollist', 'timezone') }}" title="Free Online Timezone Converter">Timezone Converter</a></li>
-                    <li><a href="{{ route('toollist', 'currency-converter') }}" title="Free Online Currency Converter Tool">Currency Converter</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Connect With Us</h4>
+
+				<h4>Connect With Us</h4>
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=61569624677812" target="_blank" class="social-link" title="Follow us on Facebook">
                         <i class="fab fa-facebook-f"></i>
@@ -57,7 +34,45 @@
                     </a>
                     --}}
                 </div>
-                {{--
+
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ route('home') }}" title="Home">Home</a></li>
+                    <li><a href="{{ route('about-us') }}" title="About Us">About Us</a></li>
+                    <li><a href="{{ route('contact-us') }}" title="Contact Us">Contact Us</a></li>
+                    <li><a href="{{ route('tools') }}" title="Search & Explore Free Online Tools">All Tools</a></li>
+                </ul>
+            </div>
+
+			<div class="footer-section">
+                <h4>Categories</h4>
+                <ul class="footer-links">
+                    @foreach(config('constants.tools_category') as $cat_key=>$category_val)
+						<li><a href="{{ route('tools',$category_val) }}" title="Explore All {{$category_val}} Tools Online | Free & Easy to Use">{{$category_val}}</a></li>
+					@endforeach
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Popular Tools</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ route('toollist', 'emi-calculator') }}" title="Free EMI Calculator, Calculate Loan EMIs Instantly">EMI Calculator</a></li>
+                    <li><a href="{{ route('toollist', 'custom-invoice') }}" title="Create Free Custom Invoice Online">Invoice Generator</a></li>
+                    <li><a href="{{ route('toollist', 'signature') }}" title="Create Your Free Digital Signature Online in Seconds">Digital Signature</a></li>
+                    <li><a href="{{ route('toollist', 'timezone') }}" title="Free Online Timezone Converter">Timezone Converter</a></li>
+                    <li><a href="{{ route('toollist', 'currency-converter') }}" title="Free Online Currency Converter Tool">Currency Converter</a></li>
+					<li><a href="{{route('toollist', 'word-counter')}}" title="Free Online Word Counter Tool">Word Counter</a></li>
+					<li><a href="{{ route('toollist', 'unicode-text-converter') }}" title="Free Online Unicode Text Converter Tool">Unicode Text Converter</a></li>
+					<li><a href="{{ route('toollist', 'qr-code-generator') }}" title="Free QR Code Generator Online">QR Code Generator</a></li>
+					<li><a href="{{ route('toollist', 'barcode-sticker-generator') }}" title="Create Barcode Stickers Online for Free">Barcode Sticker Generator</a></li>
+                </ul>
+            </div>
+            
+			{{--
+            <div class="footer-section">
                 <div class="newsletter-signup">
                     <h5>Stay Updated</h5>
                     <p>Get notified about new tools and features</p>
@@ -67,8 +82,9 @@
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
-                </div>--}}
+                </div>
             </div>
+			--}}
         </div>
         
         <div class="footer-bottom">
