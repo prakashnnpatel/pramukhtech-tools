@@ -68,7 +68,7 @@
 				</div>
 				<div class="content-body">
 					<p>Use this tool to compress JavaScript, CSS, and HTML for faster websites. Everything runs in your browser.</p>
-					<p>Using a code minifier helps compress your HTML, CSS, JavaScript, or other front-end code by removing unnecessary spaces, line breaks, comments, and other extraneous characters. This reduction in file size directly contributes to faster page load times—an important ranking factor for search engines like Google. Every millisecond saved in load time can improve user engagement, lower bounce rates, and boost overall search visibility.</p>
+					<p>Using a code minifier helps compress your HTML, CSS, JavaScript, or other front-end code by removing unnecessary spaces, line breaks, comments, and other extraneous characters. This reduction in file size directly contributes to faster page load times-an important ranking factor for search engines like Google. Every millisecond saved in load time can improve user engagement, lower bounce rates, and boost overall search visibility.</p>
 					<p>Beyond speed, optimized code can improve crawl efficiency. Search engine bots can download and process minified files quicker, meaning they can index more of your pages in less time. This improved crawl budget usage can be especially beneficial for larger websites, ensuring that updates and new content are discovered and indexed sooner.</p>
 					<div class="row">
 						<div class="col-lg-6">
@@ -86,7 +86,7 @@
 							<div class="content-block">
 								<h4><i class="fas fa-lightbulb"></i> Benefits</h4>
 								<ul class="feature-list">
-									<li><b>Smaller payloads</b> – Smaller code files load more quickly, improving your site’s performance and user satisfaction—factors that positively influence SEO.</li>
+									<li><b>Smaller payloads</b> – Smaller code files load more quickly, improving your site's performance and user satisfaction-factors that positively influence SEO.</li>
 									<li><b>Faster page loads</b> – Minified files use less data, which is great for both your server hosting costs and visitors with slower connections or data caps.</li>
 									<li><b>Lower bandwidth</b> – Save data for users and servers.</li>
 									<li><b>Efficient workflow</b> – Search engine crawlers process minified files faster, making your site easier to index and potentially elevating your search ranking.</li>

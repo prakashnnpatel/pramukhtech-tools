@@ -76,7 +76,7 @@
 				</div>
 				<div class="content-body">					
 					<p>Format messy code for readability. Supports HTML, JavaScript, and CSS. Everything runs in your browser.</p>
-					<p>A code beautifier, also known as a formatter, automatically restructures your source code—like HTML, CSS, JavaScript—into a clean, consistent, and readable format. It standardizes indentation, spacing, line breaks, and alignment, helping your code appear neat and organized. These tools save developers time by automating formatting tasks, minimizing manual adjustments.</p>
+					<p>A code beautifier, also known as a formatter, automatically restructures your source code-like HTML, CSS, JavaScript-into a clean, consistent, and readable format. It standardizes indentation, spacing, line breaks, and alignment, helping your code appear neat and organized. These tools save developers time by automating formatting tasks, minimizing manual adjustments.</p>
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="content-block">
@@ -85,7 +85,7 @@
 									<li><b>Language support</b> HTML, JavaScript, CSS</li>
 									<li><b>Indentation</b> Choose 2, 4, or 8 spaces</li>
 									<li><b>One-click</b> – Paste code, select options, Beautify</li>
-									<li><b>Local</b> – Runs in-browser — no uploads.</li>
+									<li><b>Local</b> – Runs in-browser - no uploads.</li>
 									<li><b>Copy-ready</b> – Quickly copy formatted output</li>
 								</ul>
 							</div>
@@ -94,7 +94,7 @@
 							<div class="content-block">
 								<h4><i class="fas fa-lightbulb"></i> Benefits</h4>
 								<ul class="feature-list">
-									<li><b>Easier Collaboration</b> – When code follows a consistent style, teamwork becomes smoother—there’s less confusion about formatting, and code reviews become more efficient.</li>
+									<li><b>Easier Collaboration</b> – When code follows a consistent style, teamwork becomes smoother-there's less confusion about formatting, and code reviews become more efficient.</li>
 									<li><b>Faster Bug Detection</b> – Well-formatted code makes it easier to spot syntax errors, missing braces, or improperly nested elements.</li>
 									<li><b>Simplified Refactoring</b> – Clean, structured code is more straightforward to modify, upgrade, or expand over time.</li>
 									<li><b>Automated Formatting</b> – Many beautifiers integrate with editors or IDEs to format code automatically on save, eliminating manual indentation hassles.</li>
