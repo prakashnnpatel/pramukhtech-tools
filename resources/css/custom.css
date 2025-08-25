@@ -1566,6 +1566,23 @@ td, th {
     .feature-card {
         padding: 1.5rem;
     }
+    /* Tools list page tweaks */
+    .category-chip-wrap a {
+        padding: 6px 14px !important;
+    }
+    .tool-list-thumb {
+        max-height: 160px !important;
+    }
+}
+
+/* Tools list CTA button responsive width */
+.tool-cta-btn {
+    width: auto;
+}
+@media (max-width: 576px) {
+    .tool-cta-btn {
+        width: 100%;
+    }
 }
 
 /* Modern Footer Styles */

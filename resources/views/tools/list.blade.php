@@ -12,8 +12,8 @@
                         </div>
                         <div class="card-body">
                             <form method="GET" action="javascript:void(0);" id="toolSearchFrm" name="toolSearchFrm">
-                                <div class="row">
-                                    <div class="col-lg-10">
+                                <div class="row g-3 align-items-end">
+                                    <div class="col-12 col-lg-10">
                                         <label for="search" class="form-label">Search</label>
                                         <input type="text" class="form-control" id="search" name="search" value="{{$param['search']??''}}" placeholder="Browse all available tools in one place." />
                                     </div>
@@ -28,8 +28,8 @@
                                         </select>
                                     </div>
 									--}}
-                                    <div class="col-lg-2">
-                                        <button type="button" class="invoice-action-btn mt-4" id="toolSearchBtn">
+                                    <div class="col-12 col-lg-2">
+                                        <button type="button" class="invoice-action-btn w-100 mt-2 mt-lg-4" id="toolSearchBtn">
                                             <i class="fas fa-search"></i> Search
                                         </button>
                                     </div>
@@ -39,6 +39,7 @@
 								<div class="row">
                                     <div class="col-lg-12">
 										<input type="hidden" id="category" name="category" value="@if(!empty($category)){{$category}}@endif"/>
+										<div class="d-flex flex-wrap gap-2 category-chip-wrap">
 										<a href="{{ route('tools') }}" type="button" class="@if(!empty($category)) invoice-defaul-btn @else invoice-action-btn  @endif" title="Explore All Free Tools Online | Easy to Use" style="padding: 7px 18px;">
 											All Tools
 										</a>
@@ -47,6 +48,7 @@
 												{{$category_val}}
 											</a>
                                         @endforeach
+										</div>
                                     </div>
 								</div>
                             </form>
@@ -70,7 +72,7 @@
                     @php
                         $isOdd = ($idx % 2) === 0; // 1st, 3rd, 5th... entries
                     @endphp
-                    <div class="col-lg-6 mb-4">
+                    <div class="col-12 col-md-6 mb-4">
                         <div class="calculator-card h-100">
                             <div class="card-header d-flex align-items-center gap-2">
                                 <i class="{{ $tool->icon }}"></i>
@@ -78,13 +80,13 @@
                             </div>
                             <div class="card-body" style="padding:20px;">
                                 <div class="row align-items-center g-3">
-                                    <div class="col-5 {{ $isOdd ? 'order-1' : 'order-2' }} text-center">
-                                        <img src="/images/tools/{{$tool->image}}" alt="{{ $tool->title }}" style="max-height:215px;" class="img-fluid">
+                                    <div class="col-12 col-sm-5 {{ $isOdd ? 'order-1' : 'order-2' }} text-center">
+                                        <img src="/images/tools/{{$tool->image}}" alt="{{ $tool->title }}" style="max-height:215px;" class="img-fluid tool-list-thumb">
                                     </div>
-                                    <div class="col-7 {{ $isOdd ? 'order-2' : 'order-1' }} d-flex flex-column">
+                                    <div class="col-12 col-sm-7 {{ $isOdd ? 'order-2' : 'order-1' }} d-flex flex-column">
                                         <p class="mb-3">{!! \Illuminate\Support\Str::limit(strip_tags($tool->description), 200, '...') !!}</p>
                                         <div class="mt-auto">
-                                            <a href="{{ route('toollist', $tool->slug) }}" class="invoice-action-btn" title="Open {{ $tool->title }}">
+                                            <a href="{{ route('toollist', $tool->slug) }}" class="invoice-action-btn tool-cta-btn" title="Open {{ $tool->title }}">
                                                 Try Now <i class="fas fa-arrow-right ms-1"></i>
                                             </a>
                                         </div>

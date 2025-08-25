@@ -82,11 +82,11 @@
 							<div class="content-block">
 								<h4>👉 Key Features</h4>
 								<ul class="feature-list">
-									<li><b>Language support</b> HTML, JavaScript, CSS</li>
-									<li><b>Indentation</b> Choose 2, 4, or 8 spaces</li>
-									<li><b>One-click</b> – Paste code, select options, Beautify</li>
-									<li><b>Local</b> – Runs in-browser - no uploads.</li>
-									<li><b>Copy-ready</b> – Quickly copy formatted output</li>
+									<li><b>Multi-language support</b> Beautifies HTML, JavaScript, and CSS—covering most front - end development needs.</li>
+									<li><b>Flexible indentation</b> Allows developers to choose between 2, 4, or 8 spaces for indentation, adapting to different coding standards.</li>
+									<li><b>One-click workflow</b> – Straightforward process: paste your code → pick your settings → click “Beautify” → get instant, formatted output.</li>
+									<li><b>Local, in-browser processing</b> – Runs completely in your browser - ensuring your code never leaves your machine, preserving privacy and enabling offline use.</li>
+									<li><b>Copy - ready formatting</b> – Once beautified, the code is instantly available for copying - streamlining your workflow.</li>
 								</ul>
 							</div>
 						</div>

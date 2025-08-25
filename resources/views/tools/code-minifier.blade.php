@@ -75,10 +75,14 @@
 							<div class="content-block">
 								<h4>👉 Key Features</h4>
 								<ul class="feature-list">
-									<li><b>Language support</b> – Minify JavaScript, CSS, and HTML.</li>
-									<li><b>In‑browser processing</b> – No uploads; your code stays local.</li>
-									<li><b>Simple controls</b> – Choose language, paste code, click Minify.</li>
-									<li><b>Quick actions</b> – Clear input and copy minified output in one click.</li>
+									<li><b>Multi-language support</b> Handles HTML, CSS, and JavaScript—perfect for front-end workflows.</li>
+									<li><b>Whitespace & comment removal</b> Strips unnecessary characters to shrink file size while preserving functionality</li>
+									<li><b>Variable & syntax optimization</b> – May shorten variable names or syntax to compact the code further</li>
+									<li><b>Local, offline processing</b> – Runs entirely in the browser—your code never leaves your system (no uploads).</li>
+
+									<li><b>One-click operation</b> – Typically a simple “Paste → Minify → Copy” workflow for fast usage.</li>
+									<li><b>Live preview or instant result</b> – Shows results immediately after processing, often with size reduction feedback.</li>
+									
 								</ul>
 							</div>
 						</div>
