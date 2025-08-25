@@ -28,8 +28,8 @@
                                         </select>
                                     </div>
 									--}}
-                                    <div class="col-12 col-lg-2">
-                                        <button type="button" class="invoice-action-btn w-100 mt-2 mt-lg-4" id="toolSearchBtn">
+                                    <div class="col-12 col-lg-2 text-center text-lg-start">
+                                        <button type="button" class="invoice-action-btn mt-2 mt-lg-4 tool-search-btn" id="toolSearchBtn">
                                             <i class="fas fa-search"></i> Search
                                         </button>
                                     </div>
@@ -85,7 +85,7 @@
                                     </div>
                                     <div class="col-12 col-sm-7 {{ $isOdd ? 'order-2' : 'order-1' }} d-flex flex-column">
                                         <p class="mb-3">{!! \Illuminate\Support\Str::limit(strip_tags($tool->description), 200, '...') !!}</p>
-                                        <div class="mt-auto">
+                                        <div class="mt-auto d-flex justify-content-center justify-content-sm-start">
                                             <a href="{{ route('toollist', $tool->slug) }}" class="invoice-action-btn tool-cta-btn" title="Open {{ $tool->title }}">
                                                 Try Now <i class="fas fa-arrow-right ms-1"></i>
                                             </a>

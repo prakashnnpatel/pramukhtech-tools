@@ -1575,14 +1575,18 @@ td, th {
     }
 }
 
-/* Tools list CTA button responsive width */
+/* Tools list CTA button sizing - always auto width */
 .tool-cta-btn {
-    width: auto;
+    width: auto !important;
+    padding: 10px 16px !important;
+    display: inline-flex;
 }
-@media (max-width: 576px) {
-    .tool-cta-btn {
-        width: 100%;
-    }
+
+/* Tools list Search button sizing - always auto width */
+.tool-search-btn {
+    width: auto !important;
+    padding: 10px 16px !important;
+    display: inline-flex;
 }
 
 /* Modern Footer Styles */
