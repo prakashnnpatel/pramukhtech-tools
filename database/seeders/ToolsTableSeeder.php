@@ -208,8 +208,8 @@ class ToolsTableSeeder extends Seeder
 		];
 
         foreach ($tools as $index => $tool) {
-            $tool['created_at'] = Carbon::now()->subDays(count($tools) - $index);
-            $tool['updated_at'] = Carbon::now()->subDays(count($tools) - $index);
+            $tool['created_at'] = Carbon::now();
+            $tool['updated_at'] = Carbon::now();
             DB::table('tools')->insert(
                 $tool
             );
