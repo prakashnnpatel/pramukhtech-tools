@@ -1,9 +1,31 @@
-var Home = (function () {    
+var Home = (function () {  
+	function redirectToSearch(query) {
+		if(query !== '') {
+			window.location.href = '/tools?search=' + encodeURIComponent(query);
+		}
+	}
+
     return {
         init: function () {
             // Initialize Bootstrap dropdowns
             this.initDropdowns();
+
+			// Trigger on Enter key
+			$('.searchBox').on('keypress', function(e) {
+				if (e.which == 13) {
+					var query = $(this).val().trim(); 
+					redirectToSearch(query);
+				}
+			});
+
+			// Trigger on search button click
+			$('.searchBtn').on('click', function() {
+				var query = $(this).siblings('.searchBox').val().trim();
+				redirectToSearch(query);
+			});
         },
+
+		
         
         initDropdowns: function() {
             // Ensure dropdowns work properly

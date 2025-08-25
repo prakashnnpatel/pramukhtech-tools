@@ -20,6 +20,12 @@ var Search = function() {
             $('#toolSearchBtn').click(function () {
                 formSubmit();
             });
+
+			$('#search').on('keypress', function(e) {
+				if (e.which == 13) {
+					formSubmit();
+				}
+			});
 		},
 	}
 }();

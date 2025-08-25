@@ -5,6 +5,13 @@
                 <img src="/images/logo.png" alt="{{ config('app.name') }}">
             </a>
         </div>
+
+		<div class="header-search mobile-search">
+			<input type="text" class="search-input searchBox" placeholder="Search tools...">
+			<button class="search-btn searchBtn">
+				<i class="fas fa-search"></i>
+			</button>
+		</div>
         
         <!-- Mobile Menu Toggle -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,14 +112,24 @@
                             <i class="fa-solid fa-code"></i> Code Minifiers
                         </a></li>
                     </ul>
-                </li>				
-
+                </li>
+				<li class="nav-item">
+					<div class="header-search">
+					    <input type="text" class="search-input searchBox" placeholder="Search tools...">
+						<button class="search-btn searchBtn">
+							<i class="fas fa-search"></i>
+						</button>
+					</div>
+				</li>
+				
+				{{--
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}" href="{{ route('about-us') }}" title="About Us">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('contact-us') ? 'active' : '' }}" href="{{ route('contact-us') }}" title="Contact Us">Contact Us</a>
                 </li>
+				--}}
             </ul>
         </div>
     </div>
