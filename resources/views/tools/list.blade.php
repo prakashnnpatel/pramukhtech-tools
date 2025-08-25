@@ -70,7 +70,7 @@
                 </div>
                 @foreach($tools as $idx => $tool)
                     @php
-                        $isOdd = ($idx % 2) === 0; // 1st, 3rd, 5th... entries
+                        $isOdd = 1; //($idx % 2) === 0; // 1st, 3rd, 5th... entries
                     @endphp
                     <div class="col-12 col-md-6 mb-4">
                         <div class="calculator-card h-100">

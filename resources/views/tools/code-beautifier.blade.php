@@ -1,3 +1,8 @@
+@push('page_scripts')
+<script src="https://cdn.jsdelivr.net/npm/js-beautify@1.15.1/js/lib/beautify.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-beautify@1.15.1/js/lib/beautify-css.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-beautify@1.15.1/js/lib/beautify-html.js"></script>
+@endpush
 <div class="fd-calculator-container">
 	<div class="calculator-header">
 		<div class="header-content">
@@ -35,6 +40,7 @@
 									<option value="2">2 spaces</option>
 									<option value="4">4 spaces</option>
 									<option value="8">8 spaces</option>
+									<option value="tab">Tab</option>
 								</select>
 							</div>
 							<div class="col-lg-12">
@@ -83,7 +89,7 @@
 								<h4>👉 Key Features</h4>
 								<ul class="feature-list">
 									<li><b>Multi-language support</b> Beautifies HTML, JavaScript, and CSS—covering most front - end development needs.</li>
-									<li><b>Flexible indentation</b> Allows developers to choose between 2, 4, or 8 spaces for indentation, adapting to different coding standards.</li>
+									<li><b>Flexible indentation</b> Allows developers to choose between 2, 4, 8 spaces, or Tabs, adapting to different coding standards.</li>
 									<li><b>One-click workflow</b> – Straightforward process: paste your code → pick your settings → click “Beautify” → get instant, formatted output.</li>
 									<li><b>Local, in-browser processing</b> – Runs completely in your browser - ensuring your code never leaves your machine, preserving privacy and enabling offline use.</li>
 									<li><b>Copy - ready formatting</b> – Once beautified, the code is instantly available for copying - streamlining your workflow.</li>

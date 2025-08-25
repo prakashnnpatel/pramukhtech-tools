@@ -14,22 +14,28 @@ var CodeBeautifier = function () {
 
 	function beautifyJS(code) {
 		try {
-			var size = parseInt($('#cb-indent').val() || '2', 10);
-			return window.js_beautify ? window.js_beautify(code, { indent_size: size }) : code;
+			var indentVal = $('#cb-indent').val() || '2';
+			var useTabs = indentVal === 'tab';
+			var size = useTabs ? 1 : parseInt(indentVal, 10);
+			return window.js_beautify ? window.js_beautify(code, { indent_size: size, indent_with_tabs: useTabs }) : code;
 		} catch (e) { return code; }
 	}
 
 	function beautifyCSS(code) {
 		try {
-			var size = parseInt($('#cb-indent').val() || '2', 10);
-			return window.css_beautify ? window.css_beautify(code, { indent_size: size }) : code;
+			var indentVal = $('#cb-indent').val() || '2';
+			var useTabs = indentVal === 'tab';
+			var size = useTabs ? 1 : parseInt(indentVal, 10);
+			return window.css_beautify ? window.css_beautify(code, { indent_size: size, indent_with_tabs: useTabs }) : code;
 		} catch (e) { return code; }
 	}
 
 	function beautifyHTML(code) {
 		try {
-			var size = parseInt($('#cb-indent').val() || '2', 10);
-			return window.html_beautify ? window.html_beautify(code, { indent_size: size }) : code;
+			var indentVal = $('#cb-indent').val() || '2';
+			var useTabs = indentVal === 'tab';
+			var size = useTabs ? 1 : parseInt(indentVal, 10);
+			return window.html_beautify ? window.html_beautify(code, { indent_size: size, indent_with_tabs: useTabs }) : code;
 		} catch (e) { return code; }
 	}
 
