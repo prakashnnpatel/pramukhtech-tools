@@ -174,6 +174,24 @@ class ToolsTableSeeder extends Seeder
                 'image' => "unicode-text-converter.png",
                 'category' => 'Codes, Utilities, Stickers',
             ],
+            [
+                'title' => "Code Minifiers",
+                'description' => "Minify and beautify JavaScript, CSS, and HTML instantly. Clean, compress, and format your code in the browser with one click.",
+                'keywords' => "code minifier, js minify, css minify, html minify, code formatter, beautify code, compress javascript, compress css, online minifier, code beautifier",
+                'slug' => "code-minifier",
+                'icon' => "fa-solid fa-code",
+                'image' => "code-minifier.png",
+                'category' => 'Utilities, Productivity, Codes',
+            ],
+            [
+                'title' => "Code Beautifier",
+                'description' => "Beautify and format HTML, JavaScript, and CSS for readability. Optionally minify for performance — all in your browser.",
+                'keywords' => "code beautifier, html formatter, css formatter, js formatter, code prettify, code formatter online, beautify html, beautify css, beautify javascript, code minify",
+                'slug' => "code-beautifier",
+                'icon' => "fa-solid fa-code",
+                'image' => "code-beautifier.png",
+                'category' => 'Utilities, Productivity, Codes',
+            ],
         ];
 
         foreach ($tools as $index => $tool) {

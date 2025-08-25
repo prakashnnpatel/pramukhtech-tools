@@ -320,6 +320,20 @@
                     </div>
                     <div class="tool-hover-effect"></div>
                 </div>
+
+                <div class="tool-card animate-on-scroll" data-delay="0.4">
+                    <div class="tool-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="tool-content">
+                        <h3>Code Beautifier</h3>
+                        <p>Format HTML, JavaScript, and CSS for better readability.</p>
+                        <a href="{{route('toollist', 'code-beautifier')}}" class="tool-link" title="Free Online Code Beautifier | Format & Beautify JavaScript, CSS & HTML">
+                            Try Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="tool-hover-effect"></div>
+                </div>
             </div>
         </div>
     </div>

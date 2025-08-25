@@ -24,7 +24,7 @@
                 <!-- Financial Tools Dropdown -->
 				{{--
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Free Online FD Calculator – Calculate Fixed Deposit Returns">
+                    <a class="nav-link dropdown-toggle" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Free Online FD Calculator ï¿½ Calculate Fixed Deposit Returns">
                         <i class="fas fa-calculator"></i> Calculators
                     </a>
                     <ul class="dropdown-menu">
@@ -97,6 +97,12 @@
                         </a></li>
                         <li><a class="dropdown-item" href="{{route('toollist', 'unicode-text-converter')}}" title="Free Online Unicode Text Converter Tool">
                             <i class="fa-solid fa-language"></i> Unicode Text Converter
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'code-beautifier')}}" title="Free Online Code Beautifier | Format & Beautify JavaScript, CSS & HTML">
+                            <i class="fa-solid fa-code"></i> Code Beautifier
+                        </a></li>
+                        <li><a class="dropdown-item" href="{{route('toollist', 'code-minifier')}}" title="Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly">
+                            <i class="fa-solid fa-code"></i> Code Minifiers
                         </a></li>
                     </ul>
                 </li>				

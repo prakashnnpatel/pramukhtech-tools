@@ -206,6 +206,24 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('code-minifier')
+			<title>Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly</title>
+			<meta name="description" content="Minify JavaScript, CSS & HTML online instantly. Boost website speed, reduce file size, and improve SEO with our free code minifier tool.">
+			<meta name="keywords" content="online code minifier, code minifier tool, minify JavaScript online, minify CSS online, minify HTML online, compress code online, free code minifier">			
+			<meta property="og:title" content="Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly" />
+			<meta property="og:description" content="Minify JavaScript, CSS & HTML online instantly. Boost website speed, reduce file size, and improve SEO with our free code minifier tool." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
+		@case('code-beautifier')			
+			<title>Free Online Code Beautifier | Format & Beautify JavaScript, CSS & HTML</title>
+			<meta name="description" content="Beautify JavaScript, CSS & HTML online. Free code beautifier tool to format, clean, and organize minified or messy code instantly.">
+			<meta name="keywords" content="online code beautifier, code beautifier tool, beautify JavaScript online, beautify CSS online, beautify HTML online, code formatter online, free code beautifier">			
+			<meta property="og:title" content="Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly" />
+			<meta property="og:description" content="Beautify JavaScript, CSS & HTML online. Free code beautifier tool to format, clean, and organize minified or messy code instantly." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			
