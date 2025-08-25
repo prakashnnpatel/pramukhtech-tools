@@ -19,7 +19,7 @@ class ToolsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        Tools::truncate();
+        /*Tools::truncate();
         $tools = [
             [
                 'title' => "FD Calculator",
@@ -192,7 +192,20 @@ class ToolsTableSeeder extends Seeder
                 'image' => "code-beautifier.png",
                 'category' => 'Utilities, Productivity, Codes',
             ],
-        ];
+        ];*/
+
+		### New Tools
+		$tools = [
+			[
+                'title' => "",
+                'description' => "",
+                'keywords' => "",
+                'slug' => "",
+                'icon' => "",
+                'image' => "",
+                'category' => '',
+            ],
+		];
 
         foreach ($tools as $index => $tool) {
             $tool['created_at'] = Carbon::now()->subDays(count($tools) - $index);
