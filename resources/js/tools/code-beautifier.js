@@ -56,8 +56,14 @@ var CodeBeautifier = function () {
 				$('#cb-output').val('');
 			});
 			$('#cb-beautify').on('click', runBeautify);
-			$('#cb-copy-output').on('click', function () {
+			$('#cb-copy-output').on('click', function () 
+			{
 				copyToClipboard($('#cb-output').val());
+				const originalText = $(this).html();
+				$(this).html('<i class="fas fa-check"></i> Copied!');
+				setTimeout(() => {
+					$(this).html(originalText);
+				}, 2000);
 			});
 		}
 	};
