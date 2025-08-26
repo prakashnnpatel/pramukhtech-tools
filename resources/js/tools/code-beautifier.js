@@ -58,8 +58,8 @@ var CodeBeautifier = function () {
 			$('#cb-beautify').on('click', runBeautify);
 			$('#cb-copy-output').on('click', function () 
 			{
-				copyToClipboard($('#cb-output').val());
 				const originalText = $(this).html();
+				copyToClipboard($('#cb-output').val());
 				$(this).html('<i class="fas fa-check"></i> Copied!');
 				setTimeout(() => {
 					$(this).html(originalText);

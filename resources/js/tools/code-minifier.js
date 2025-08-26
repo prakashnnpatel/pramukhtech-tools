@@ -60,8 +60,13 @@ var CodeMinifier = function () {
                 $('#cm-output').val('');
             });
             $('#cm-minify').on('click', runMinify);
-            $('#cm-copy-output').on('click', function () {
-                copyToClipboard($('#cm-output').val());
+            $('#cm-copy-output').on('click', function () {                
+				const originalText = $(this).html();
+				$(this).html('<i class="fas fa-check"></i> Copied!');
+				copyToClipboard($('#cm-output').val());
+				setTimeout(() => {
+					$(this).html(originalText);
+				}, 2000);
             });
         }
     };
