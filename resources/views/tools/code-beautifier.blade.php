@@ -29,9 +29,9 @@
 							<div class="col-lg-6">
 								<label for="cb-language" class="form-label">Language</label>
 								<select id="cb-language" class="form-control">
-									<option value="javascript">JavaScript</option>
-									<option value="css">CSS</option>
 									<option value="html">HTML</option>
+									<option value="javascript">JavaScript</option>
+									<option value="css">CSS</option>									
 								</select>
 							</div>
 							<div class="col-lg-6">
