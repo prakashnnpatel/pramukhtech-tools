@@ -6,6 +6,8 @@ use PDF;
 use App\Models\Lead;
 use Illuminate\Http\Request;
 use App\Models\Tools;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 
 class HomeController extends Controller
 {
@@ -67,7 +69,45 @@ class HomeController extends Controller
     }
 
 	public function sitemap() {
-		return response()->view('sitemap')->header('Content-Type', 'text/xml');
+
+        // Add home page
+        $sitemap = Sitemap::create()
+            ->add(
+                Url::create('/')
+                    ->setPriority(1.0)
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+            );
+
+        // Add static pages (not in DB)
+        $staticPages = [
+            route('about-us'),
+            route('contact-us'),
+            route('toollist', 'terms-of-use'),
+            route('toollist', 'privacy-policy'),
+            route('toollist', 'disclaimer'),
+        ];
+        foreach ($staticPages as $page) {
+            $sitemap->add(
+                Url::create($page)
+                    ->setPriority(0.6)
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
+            );
+        }
+
+        // Fetch Tools data from DB in chunks
+        Tools::select('id', 'slug', 'updated_at')->chunkById(500, function ($tools) use ($sitemap) {
+            foreach ($tools as $tool) {
+                $sitemap->add(
+                    Url::create(route('toollist', $tool->slug))
+                        ->setLastModificationDate($tool->updated_at)
+                        ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+                        ->setPriority(0.8)
+                );
+            }
+        });
+
+        return response($sitemap->render(), 200)->header('Content-Type', 'application/xml');
+		//return response()->view('sitemap')->header('Content-Type', 'text/xml');
 	}
 
     public function generateInvoice(Request $request)
