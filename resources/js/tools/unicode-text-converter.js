@@ -92,7 +92,14 @@ function buildResultRow(label, value) {
 	const action = document.createElement('button');
 	action.className = 'invoice-action-btn';
 	action.innerHTML = '<i class="fas fa-copy"></i> Copy';
-	action.addEventListener('click', () => navigator.clipboard.writeText(value));
+	action.addEventListener('click', () => {
+		let originalText = $(action).html();
+		$(action).html('<i class="fas fa-check"></i> Copied!');
+		navigator.clipboard.writeText(value)
+		setTimeout(() => {
+			$(action).html(originalText);
+		}, 2000);
+	});
 	row.appendChild(labelEl);
 	row.appendChild(valueEl);
 	row.appendChild(action);
@@ -123,6 +130,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	btnCopyAll && btnCopyAll.addEventListener('click', function() {
 		const items = Array.from(document.querySelectorAll('#utc-results .summary-item .summary-value')).map(e => e.textContent);
 		navigator.clipboard.writeText(items.join('\n'));
+		const originalText = $("#utc-copy-all").html();
+		$("#utc-copy-all").html('<i class="fas fa-check"></i> Copied All !');
+		setTimeout(() => {
+			$("#utc-copy-all").html(originalText);
+		}, 2000);		
 	});
 
 	update();

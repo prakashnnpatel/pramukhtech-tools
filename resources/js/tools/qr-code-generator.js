@@ -32,8 +32,10 @@ const qrTool = function() {
 
     async function generate() {
         const fd = buildFormData();
-        $preview.html('<span class="text-muted">Generating...</span>');
+        $preview.html('<span class="text-muted">Generating...</span>');        
+        const originalText = $generate.html();
         $download.prop('disabled', true);
+        $generate.prop('disabled', true).html('<i class="fas fa-spinner fa-spin"></i> Generating...');
         try {
             const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
             const res = await fetch('/qr-code-generator/generate', {
@@ -58,8 +60,11 @@ const qrTool = function() {
                 $preview.empty().append(img);
             }
             $download.prop('disabled', false);
+            $generate.prop('disabled', false).html(originalText);
+            
         } catch (e) {
             $preview.html('<span class="text-danger">Error generating QR code.</span>');
+            $generate.prop('disabled', false).html(originalText);
         }
     }
 
