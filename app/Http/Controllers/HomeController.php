@@ -85,6 +85,12 @@ class HomeController extends Controller
             route('toollist', 'terms-of-use'),
             route('toollist', 'privacy-policy'),
             route('toollist', 'disclaimer'),
+			route('toollist', ['image-converter','jpg-to-png']),
+			route('toollist', ['image-converter','jpg-to-webp']),
+			route('toollist', ['image-converter','png-to-webp']),
+			route('toollist', ['image-converter','png-to-jpg']),
+			route('toollist', ['image-converter','webp-to-jpg']),
+			route('toollist', ['image-converter','webp-to-png']),
         ];
         foreach ($staticPages as $page) {
             $sitemap->add(
