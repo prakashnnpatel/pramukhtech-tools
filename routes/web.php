@@ -24,5 +24,11 @@ Route::get('/tools/{category?}', [HomeController::class, 'toolList'])->name('too
 // Barcode sticker generator routes
 Route::get('/barcode-sticker-generator', function() { return app(HomeController::class)->tools('barcode-sticker-generator'); })->name('barcode-sticker-generator');
 Route::post('/barcode-sticker-generator/generate', [HomeController::class, 'generateBarcodeStickers'])->name('barcode-sticker.generate');
+
+// Image converter routes
+Route::get('/image-converter', function() { return app(HomeController::class)->tools('image-converter'); })->name('image-converter');
+Route::get('/image-converter/{fromFormat}-to-{toFormat}', function($fromFormat, $toFormat) { 
+    return app(HomeController::class)->tools('image-converter'); 
+})->name('image-converter.format');
 ### Always keep This router at last
 Route::get('/{toolkey?}/{subpart?}',[HomeController::class, 'tools'])->name("toollist");

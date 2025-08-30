@@ -224,6 +224,15 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('image-converter')
+			<title>Free Online Image Converter - Convert JPG to PNG & More</title>
+			<meta name="description" content="Convert images between formats instantly with our free online Image Converter. Transform JPG to PNG, PNG to JPG, WEBP to JPG, and more.">
+			<meta name="keywords" content="image converter, free image converter, online image converter, jpg to png converter, png to jpg converter, webp to jpg, image format converter, convert image online, photo converter, image optimization tool, free online image converter, convert jpg to png, convert png to jpg, webp converter, image format conversion, online photo converter, free image format converter, convert images online, image converter tool, jpg converter, png converter, webp to jpg converter, image optimization, photo format converter, convert image format online, free image converter tool, online image format converter, image conversion tool, convert photos online, image converter free, online image optimization tool">			
+			<meta property="og:title" content="Free Online Image Converter - Convert JPG to PNG & More" />
+			<meta property="og:description" content="Convert images between formats instantly with our free online Image Converter. Transform JPG to PNG, PNG to JPG, WEBP to JPG, and more." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			

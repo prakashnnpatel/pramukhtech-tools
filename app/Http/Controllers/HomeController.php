@@ -56,7 +56,7 @@ class HomeController extends Controller
 		}
 
 		$extraParams = [];
-		if(!empty($subpart) && $toolkey == "timezone")
+		if(!empty($subpart) && ($toolkey == "timezone" || $toolkey == "image-converter"))
 		{
 			$extraParams = explode("-to-",$subpart);
 		}

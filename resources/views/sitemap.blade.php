@@ -56,6 +56,12 @@ $urlList = [
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','unicode-text-converter'), 'lastmod'=> 2],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','code-minifier'), 'lastmod'=> 2],
 	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','code-beautifier'), 'lastmod'=> 2],
+	["priority" =>"0.90", "frequency"=> "weekly", "loc" => route('toollist','image-converter'), 'lastmod'=> 2],
+	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist',['image-converter','jpg-to-png']), 'lastmod'=> 2],
+	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist',['image-converter','jpg-to-webp']), 'lastmod'=> 2],
+	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist',['image-converter','png-to-webp']), 'lastmod'=> 2],
+	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist',['image-converter','webp-to-jpg']), 'lastmod'=> 2],
+	["priority" =>"0.80", "frequency"=> "weekly", "loc" => route('toollist',['image-converter','webp-to-png']), 'lastmod'=> 2],
 ];
 ?>
 <?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>

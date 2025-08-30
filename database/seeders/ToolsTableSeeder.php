@@ -197,13 +197,13 @@ class ToolsTableSeeder extends Seeder
 		### New Tools
 		$tools = [
 			[
-                'title' => "",
-                'description' => "",
-                'keywords' => "",
-                'slug' => "",
-                'icon' => "",
-                'image' => "",
-                'category' => '',
+                'title' => "Free Online Image Converter - Convert JPG to PNG & More",
+                'description' => "Convert images between formats instantly with our free online Image Converter. Transform JPG to PNG, PNG to JPG, WEBP to JPG, and more. High-quality conversion with customizable settings, drag & drop support, and no registration required. Perfect for web developers, designers, and photographers. Convert images online free with our secure browser-based tool.",
+                'keywords' => "image converter, free image converter, online image converter, jpg to png converter, png to jpg converter, webp to jpg, image format converter, convert image online, photo converter, image optimization tool, free online image converter, convert jpg to png, convert png to jpg, webp converter, image format conversion, online photo converter, free image format converter, convert images online, image converter tool, jpg converter, png converter, webp to jpg converter, image optimization, photo format converter, convert image format online, free image converter tool, online image format converter, image conversion tool, convert photos online, image converter free, online image optimization tool",
+                'slug' => "image-converter",
+                'icon' => "fas fa-image",
+                'image' => "image-converter.png",
+                'category' => 'Images, Utilities, Productivity',
             ],
 		];
 

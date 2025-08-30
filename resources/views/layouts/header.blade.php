@@ -105,6 +105,9 @@
                         <li><a class="dropdown-item" href="{{route('toollist', 'unicode-text-converter')}}" title="Free Online Unicode Text Converter Tool">
                             <i class="fa-solid fa-language"></i> Unicode Text Converter
                         </a></li>
+						<li><a class="dropdown-item" href="{{route('toollist', 'image-converter')}}" title="Free Online Image Converter - Convert JPG to PNG & More">
+                            <i class="fa-solid fas fa-image"></i> Image Converter
+                        </a></li>
                         <li><a class="dropdown-item" href="{{route('toollist', 'code-beautifier')}}" title="Free Online Code Beautifier | Format & Beautify JavaScript, CSS & HTML">
                             <i class="fa-solid fa-code"></i> Code Beautifier
                         </a></li>
