@@ -39,7 +39,7 @@ var currencyConverter = function() {
             EUR: 0.85,
             GBP: 0.75,
             JPY: 110.42,
-            INR: 74.5
+            INR: 85.7
         });
     }
 
@@ -77,8 +77,8 @@ var currencyConverter = function() {
         });
 
         // Set default values
-        $fromCurrency.val('USD');
-        $toCurrency.val('INR');
+        $fromCurrency.val(def_from_currency);
+        $toCurrency.val(def_to_currency);
         
         // Initialize Select2 on currency dropdowns
         $fromCurrency.select2({

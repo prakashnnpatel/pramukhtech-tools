@@ -17,10 +17,21 @@
 }
 </style>
 @endpush
+
+@php
+$currencyData = \App\Models\Currency::where('status', 'Active')->get();
+$def_from_currency = !empty($extraParams['0']) ? strtoupper($extraParams['0']) : "USD";
+$def_to_currency = !empty($extraParams['1']) ? strtoupper($extraParams['1']) : "INR";
+
+if(!empty($extraParams)) {
+	$converter_title = strtoupper($extraParams['0']). ' to '. strtoupper($extraParams['1']);
+}
+@endphp
+
 <div class="tool-page-container">
     <div class="tool-header mb-4">
         <div class="header-icon"><i class="fas fa-exchange-alt"></i></div>
-        <div class="header-title">Currency Converter Tool</div>
+        <div class="header-title">{{ !empty($converter_title) ? $converter_title . ' ' : '' }} Currency Converter</div>
         <div class="header-desc">Support for 160+ global currencies with real-time exchange rates.</div>
     </div>
     <div class="calculator-card">
@@ -66,6 +77,22 @@
                             </div>
                             <div class="summary-label">Rate</div>
                             <div class="summary-value" id="conversionRate"></div>
+                        </div>
+
+                        <div class="summary-item">
+                            <label>Quick Links</label>
+                            <div class="row">
+                                @php
+                                    $quickLinkData = \App\Models\Currency::where('status', 'Active')->where('code', '!=', $def_from_currency)->where('code', '!=', $def_to_currency)->inRandomOrder()->take(12)->get();
+                                @endphp
+                                @foreach($quickLinkData as $key => $currObj)
+                                    <div class="col-lg-6">
+                                        <a href="" class="tool-link" title="Convert {{$def_from_currency}} to {{$currObj->code}}">
+                                            {{$def_from_currency}} to {{$currObj->code}}
+                                        </a>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,6 +158,8 @@
 
 @push('page_scripts')
 <script>
-var currencyData = @json(\App\Models\Currency::where('status', 'Active')->get());
+var def_from_currency = '{{$def_from_currency}}';
+var def_to_currency = '{{$def_to_currency}}';
+var currencyData = @json($currencyData);
 </script>
 @endpush

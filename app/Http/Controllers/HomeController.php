@@ -80,63 +80,76 @@ class HomeController extends Controller
 
         // Add static pages (not in DB)
         $staticPages = [
-            route('about-us'),
-            route('contact-us'),
-            route('toollist', 'terms-of-use'),
-            route('toollist', 'privacy-policy'),
-            route('toollist', 'disclaimer'),
-			route('toollist', ['image-converter','jpg-to-png']),
-			route('toollist', ['image-converter','jpg-to-webp']),
-			route('toollist', ['image-converter','png-to-webp']),
-			route('toollist', ['image-converter','png-to-jpg']),
-			route('toollist', ['image-converter','webp-to-jpg']),
-			route('toollist', ['image-converter','webp-to-png']),
-            route('toollist',['timezone','UTC-to-IST']),
-            route('toollist',['timezone','UTC-to-EST']),
-            route('toollist',['timezone','UTC-to-CST']),
-            route('toollist',['timezone','UTC-to-PST']),
-            route('toollist',['timezone','EST-to-ECT']),
-            route('toollist',['timezone','IST-to-EST']),
-            route('toollist',['timezone','IST-to-UTC']),
-            route('toollist',['timezone','IST-to-PDT']),
-            route('toollist',['timezone','EST-to-GMT']),
-            route('toollist',['timezone','EST-to-ICT']),
-            route('toollist',['timezone','GMT-to-PST']),
-            route('toollist',['timezone','EST-to-IST']),
-            route('toollist',['timezone','BST-to-EDT']),
-            route('toollist',['timezone','IST-to-GMT']),
-            route('toollist',['timezone','EST-to-MSK']),
-            route('toollist',['timezone','BST-to-CST']),
-            route('toollist',['timezone','CST-to-BST']),
-            route('toollist',['timezone','UTC-to-PDT']),
-            route('toollist',['timezone','JST-to-EST']),
-            route('toollist',['timezone','EST-to-HKT']),
-            route('toollist',['timezone','EST-to-PST']),
-            route('toollist',['timezone','CST-to-EST']),
-            route('toollist',['timezone','PDT-to-CST']),
-            route('toollist',['timezone','AEST-to-IST']),
-            route('toollist',['timezone','EST-to-SGT']),
-            route('toollist',['timezone','EST-to-JST']),
-            route('toollist',['timezone','EST-to-CET']),
-            route('toollist',['timezone','EST-to-GST']),
-            route('toollist',['timezone','EST-to-AEST']),
-            route('toollist',['timezone','EST-to-NZST']),
+            ["url" => route('about-us'), "changeFreq" => Url::CHANGE_FREQUENCY_MONTHLY],
+            ["url" => route('contact-us'), "changeFreq" => Url::CHANGE_FREQUENCY_MONTHLY],
+            ["url" => route('toollist', 'terms-of-use'), "changeFreq" => Url::CHANGE_FREQUENCY_MONTHLY],
+            ["url" => route('toollist', 'privacy-policy'), "changeFreq" => Url::CHANGE_FREQUENCY_MONTHLY],
+            ["url" => route('toollist', 'disclaimer'), "changeFreq" => Url::CHANGE_FREQUENCY_MONTHLY],
+            ["url" => route('toollist', ['image-converter','jpg-to-png']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist', ['image-converter','jpg-to-webp']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist', ['image-converter','png-to-webp']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist', ['image-converter','png-to-jpg']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist', ['image-converter','webp-to-jpg']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist', ['image-converter','webp-to-png']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','UTC-to-IST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','UTC-to-EST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','UTC-to-CST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','UTC-to-PST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-ECT']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','IST-to-EST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','IST-to-UTC']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','IST-to-PDT']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-GMT']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-ICT']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','GMT-to-PST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-IST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','BST-to-EDT']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','IST-to-GMT']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-MSK']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','BST-to-CST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','CST-to-BST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','UTC-to-PDT']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','JST-to-EST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-HKT']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-PST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','CST-to-EST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','PDT-to-CST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','AEST-to-IST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-SGT']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-JST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-CET']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-GST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-AEST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['timezone','EST-to-NZST']), "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY],
+            ["url" => route('toollist',['currency-converter','usd-to-inr']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','eur-to-inr']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','usd-to-eur']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','usd-to-gbp']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','usd-to-jpy']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','usd-to-cad']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','usd-to-aud']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','inr-to-aed']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','usd-to-cny']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','eur-to-gbp']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
+            ["url" => route('toollist',['currency-converter','cad-to-inr']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
         ];
-        foreach ($staticPages as $page) {
+        //echo "<pre>"; print_r($staticPages);exit;
+        foreach ($staticPages as $key => $page) {
             $sitemap->add(
-                Url::create($page)
+                Url::create($page['url'])
                     ->setPriority(0.6)
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
+                    ->setChangeFrequency($page['changeFreq'])
             );
         }
 
         // Fetch Tools data from DB in chunks
         Tools::select('id', 'slug', 'updated_at')->chunkById(500, function ($tools) use ($sitemap) {
             foreach ($tools as $tool) {
+                $changeFreq = ($tool->slug == "currency-converter") ? Url::CHANGE_FREQUENCY_DAILY : Url::CHANGE_FREQUENCY_WEEKLY;
                 $sitemap->add(
                     Url::create(route('toollist', $tool->slug))
                         ->setLastModificationDate($tool->updated_at)
-                        ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+                        ->setChangeFrequency($changeFreq)
                         ->setPriority(0.8)
                 );
             }

@@ -129,8 +129,8 @@ if(!empty($extraParams)) {
                                     'EST-to-SGT', 'EST-to-JST', 'EST-to-CET', 'EST-to-GST', 'EST-to-AEST', 'EST-to-NZST'
                                 ] as $tz)
                                 <li class="list-group-item">
-                                    <a href="{{ route('toollist', ['timezone', $tz]) }}" class="text-decoration-none d-flex align-items-center" title="Convert {{ str_replace('-', ' ', $tz) }}">
-                                        <i class="fas fa-clock text-primary me-2"></i> {{ str_replace('-', ' → ', $tz) }}
+                                    <a href="{{ route('toollist', ['timezone', $tz]) }}" class="tool-link" title="Convert {{ str_replace('-', ' ', $tz) }}">
+                                        <i class="fas fa-clock me-2"></i> {{ str_replace('-', ' → ', $tz) }}
                                     </a>
                                 </li>
                                 @endforeach
