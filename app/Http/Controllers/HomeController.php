@@ -56,7 +56,7 @@ class HomeController extends Controller
 		}
 
 		$extraParams = [];
-		if(!empty($subpart) && ($toolkey == "timezone" || $toolkey == "image-converter"))
+		if(!empty($subpart) && (in_array($toolkey, ['timezone', 'image-converter','currency-converter'])))
 		{
 			$extraParams = explode("-to-",$subpart);
 		}
@@ -91,6 +91,36 @@ class HomeController extends Controller
 			route('toollist', ['image-converter','png-to-jpg']),
 			route('toollist', ['image-converter','webp-to-jpg']),
 			route('toollist', ['image-converter','webp-to-png']),
+            route('toollist',['timezone','UTC-to-IST']),
+            route('toollist',['timezone','UTC-to-EST']),
+            route('toollist',['timezone','UTC-to-CST']),
+            route('toollist',['timezone','UTC-to-PST']),
+            route('toollist',['timezone','EST-to-ECT']),
+            route('toollist',['timezone','IST-to-EST']),
+            route('toollist',['timezone','IST-to-UTC']),
+            route('toollist',['timezone','IST-to-PDT']),
+            route('toollist',['timezone','EST-to-GMT']),
+            route('toollist',['timezone','EST-to-ICT']),
+            route('toollist',['timezone','GMT-to-PST']),
+            route('toollist',['timezone','EST-to-IST']),
+            route('toollist',['timezone','BST-to-EDT']),
+            route('toollist',['timezone','IST-to-GMT']),
+            route('toollist',['timezone','EST-to-MSK']),
+            route('toollist',['timezone','BST-to-CST']),
+            route('toollist',['timezone','CST-to-BST']),
+            route('toollist',['timezone','UTC-to-PDT']),
+            route('toollist',['timezone','JST-to-EST']),
+            route('toollist',['timezone','EST-to-HKT']),
+            route('toollist',['timezone','EST-to-PST']),
+            route('toollist',['timezone','CST-to-EST']),
+            route('toollist',['timezone','PDT-to-CST']),
+            route('toollist',['timezone','AEST-to-IST']),
+            route('toollist',['timezone','EST-to-SGT']),
+            route('toollist',['timezone','EST-to-JST']),
+            route('toollist',['timezone','EST-to-CET']),
+            route('toollist',['timezone','EST-to-GST']),
+            route('toollist',['timezone','EST-to-AEST']),
+            route('toollist',['timezone','EST-to-NZST']),
         ];
         foreach ($staticPages as $page) {
             $sitemap->add(
