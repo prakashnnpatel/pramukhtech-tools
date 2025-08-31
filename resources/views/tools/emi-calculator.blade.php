@@ -38,8 +38,8 @@
                                     <div class="slider-container">										
                                         <div id="slider_range_loan_amount" class="custom-slider"></div>
                                         <div class="slider-labels">
-                                            <span>₹100</span>
-                                            <span>₹10,00,000</span>
+                                            <span>100</span>
+                                            <span> 1,00,00,000</span>
                                         </div>
                                     </div>
                                 </div>
