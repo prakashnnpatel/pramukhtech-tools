@@ -87,7 +87,7 @@ if(!empty($extraParams)) {
                                 @endphp
                                 @foreach($quickLinkData as $key => $currObj)
                                     <div class="col-lg-6">
-                                        <a href="" class="tool-link" title="Convert {{$def_from_currency}} to {{$currObj->code}}">
+                                        <a href="{{route('toollist',['currency-converter',$def_from_currency.'-to-'.$currObj->code])}}" class="tool-link" title="Convert {{$def_from_currency}} to {{$currObj->code}}">
                                             {{$def_from_currency}} to {{$currObj->code}}
                                         </a>
                                     </div>
