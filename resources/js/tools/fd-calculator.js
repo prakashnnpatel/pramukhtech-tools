@@ -50,15 +50,7 @@ var calculateLoadAmount = function()
             <h3><i class="fas fa-chart-pie"></i> FD Summary</h3>
         </div>
         <div class="result-content">
-            <div class="summary-grid">
-                <div class="summary-item">
-                    <div class="summary-icon">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                    <div class="summary-label">Invested Amount</div>
-                    <div class="summary-value">₹${Math.round(principal).toLocaleString()}</div>
-                    <div class="summary-currency">Principal</div>
-                </div>
+            <div class="summary-grid">                
                 <div class="summary-item">
                     <div class="summary-icon">
                         <i class="fas fa-chart-line"></i>

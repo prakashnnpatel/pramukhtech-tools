@@ -192,6 +192,15 @@ class ToolsTableSeeder extends Seeder
                 'image' => "code-beautifier.png",
                 'category' => 'Utilities, Productivity, Codes',
             ],
+            [
+                'title' => "Free Online Image Converter - Convert JPG to PNG & More",
+                'description' => "Convert images between formats instantly with our free online Image Converter. Transform JPG to PNG, PNG to JPG, WEBP to JPG, and more. High-quality conversion with customizable settings, drag & drop support, and no registration required. Perfect for web developers, designers, and photographers. Convert images online free with our secure browser-based tool.",
+                'keywords' => "code beautifier, html formatter, css formatter, js formatter, code prettify, code formatter online, beautify html, beautify css, beautify javascript, code minify",",
+                'slug' => "image-converter",
+                'icon' => "fas fa-image",
+                'image' => "image-converter.png",
+                'category' => 'Images, Utilities, Productivity',
+            ],
         ];*/
 
 		### New Tools

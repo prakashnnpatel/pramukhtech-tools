@@ -47,13 +47,9 @@ $seoKeywords = 'image converter, free image converter, online image converter, j
                                     <option value="png">✅ PNG (Portable Network Graphics) - Recommended</option>
                                     <option value="jpg">✅ JPG (JPEG) - Good for photos</option>
                                     <option value="webp">✅ WEBP (Web Picture) - Modern format</option>
-                                    <option value="gif" disabled>❌ GIF (Graphics Interchange Format) - Not supported</option>
-                                    <option value="bmp" disabled>❌ BMP (Bitmap) - Not supported</option>
-                                    <option value="tiff" disabled>❌ TIFF (Tagged Image File Format) - Not supported</option>
                                 </select>
                                 <small class="form-text text-muted">
-                                    <strong>Supported formats:</strong> PNG, JPG, WEBP | 
-                                    <strong>Limited support:</strong> GIF, BMP, TIFF (browser limitations)
+                                    <strong>Supported formats:</strong> PNG, JPG, WEBP
                                 </small>
                             </div>
                             <div class="col-6">
@@ -188,15 +184,14 @@ $seoKeywords = 'image converter, free image converter, online image converter, j
                                 </div>
                             </div>
 
-                                                         <div class="col-lg-12">
+                             <div class="col-lg-12">
                                  <div class="content-block">
                                      <h4><i class="fas fa-question-circle"></i> Common Use Cases</h4>
                                      <ul class="feature-list">
                                          <li><strong>Web Optimization</strong> - Convert images to WEBP for better web performance.</li>
                                          <li><strong>Transparency Support</strong> - Convert to PNG when you need transparent backgrounds.</li>
                                          <li><strong>File Size Reduction</strong> - Convert to JPG for smaller file sizes with good quality.</li>
-                                         <li><strong>Animation Preservation</strong> - Use GIF format for animated images (viewing only, conversion limited).</li>
-                                         <li><strong>Print Quality</strong> - Convert to TIFF for high-quality printing requirements (viewing only, conversion limited).</li>
+                                         <li><strong>Animation Preservation</strong> - Use GIF format for animated images (viewing only, conversion limited).</li>                                        
                                          <li><strong>Compatibility</strong> - Ensure images work across different platforms and applications.</li>
                                      </ul>
                                  </div>
