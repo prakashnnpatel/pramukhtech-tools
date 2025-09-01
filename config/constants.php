@@ -13,6 +13,6 @@ return [
         'ZAR' => 'R',
     ],
     "tools_category" => [
-		"Audio", "Business", "Codes", "Documents", "Finance", "Labels", "PDF", "Productivity", "Stickers", "Utilities"
+		"Audio", "Business", "Codes", "Documents", "Finance", "Images", "Labels", "PDF", "Productivity", "Stickers", "Utilities"
 	],
 ];
