@@ -33,12 +33,18 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-8">                            
+                <div class="col-lg-12">
+                    <div class="alert alert-primary" role="alert">
+                    <strong>Note:</strong>
+                    This tool uses your browser's built-in text-to-speech capabilities, Language & Voice options may vary based on your operating system and browser.
+                    </div>
+                </div>
+                <div class="col-lg-8">
                     <div class="form-group">
                         <label for="textInput">Enter Text to Convert:</label>
                          <button id="sampleTextBtn" class="btn btn-sm float-right" style="background: #E2E8FA;color: #000;">Sample Text</button>
                         <textarea id="textInput" class="form-control" rows="8" placeholder="Type or paste your text here (e.g. a paragraph, sentence, or script)"></textarea>
-                        <span class="ml-auto text-muted float-right mt-1" id="textLength">Length: 0</span>                       
+                        <span class="ml-auto text-muted float-right mt-1" id="textLength">Length: 0</span>
                     </div>
                 </div>
                  <div class="col-lg-4">
