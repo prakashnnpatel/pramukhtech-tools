@@ -36,7 +36,9 @@
                 <div class="col-lg-8">                            
                     <div class="form-group">
                         <label for="textInput">Enter Text to Convert:</label>
+                         <button id="sampleTextBtn" class="btn btn-sm float-right" style="background: #E2E8FA;color: #000;">Sample Text</button>
                         <textarea id="textInput" class="form-control" rows="8" placeholder="Type or paste your text here (e.g. a paragraph, sentence, or script)"></textarea>
+                        <span class="ml-auto text-muted float-right mt-1" id="textLength">Length: 0</span>                       
                     </div>
                 </div>
                  <div class="col-lg-4">
@@ -66,6 +68,8 @@
                 <div class="col-lg-12 text-center">
                     <button id="previewBtn" class="invoice-action-btn"><i class="fas fa-volume-up mr-1"></i> Play Speech</button>
                     <button id="stopBtn" class="invoice-defaul-btn" style="display:none;"><i class="fas fa-stop mr-1"></i> Stop</button>
+                    <button id="clearTextBtn" type="button" class="invoice-defaul-btn">Clear</button>
+
                 </div>
             </div>
         </div>            

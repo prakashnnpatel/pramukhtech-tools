@@ -16,7 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
             placeholder: 'Select a language',
             allowClear: false
         });
-        // After select2 init, ensure voices are loaded and dropdowns populated
+        $('#voiceSelect').select2({
+            width: '100%',
+            placeholder: 'Select a voice',
+            allowClear: false,
+            templateResult: function(state) {
+                if (!state.id) return state.text;
+                var data = $(state.element).data();
+                var info = [];
+                if (data.gender) info.push(data.gender);
+                if (data.accent) info.push(data.accent);
+                return $('<span>' + state.text + (info.length ? ' <span class="text-muted">(' + info.join(', ') + ')</span>' : '') + '</span>');
+            }
+        });
         ensureVoicesLoaded(loadVoicesAndLanguages);
     } else {
         ensureVoicesLoaded(loadVoicesAndLanguages);
@@ -98,9 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function populateVoices(selectedLang) {
-        // Always get the latest voices
         let voices = speechSynthesis.getVoices();
-        // If voices are not loaded yet, try again shortly
         if (!voices || voices.length === 0) {
             setTimeout(function() { populateVoices(selectedLang); }, 100);
             return;
@@ -110,12 +120,47 @@ document.addEventListener('DOMContentLoaded', function () {
         voices.forEach(voice => {
             const option = document.createElement('option');
             option.value = voice.name;
-            option.textContent = voice.name;
+            // Try to show gender and accent (not all browsers support gender)
+            let info = [];
+            if (voice.gender) info.push(voice.gender);
+            if (voice.localService) info.push('Local');
+            if (voice.lang) info.push(voice.lang);
+            option.textContent = voice.name + (info.length ? ' (' + info.join(', ') + ')' : '');
+            // For select2 template
+            option.dataset.gender = voice.gender || '';
+            option.dataset.accent = voice.lang || '';
             voiceSelect.appendChild(option);
         });
-        // Set default voice
+        if (window.$ && $.fn.select2) {
+            $('#voiceSelect').trigger('change.select2');
+        }
         if (voices.length > 0) voiceSelect.value = voices[0].name;
     }
+    // Sample text button
+    const sampleTextBtn = document.getElementById('sampleTextBtn');
+    if (sampleTextBtn) {
+        sampleTextBtn.addEventListener('click', function() {
+            textInput.value = "Welcome to ToolHubSpot's Text to Speech tool! Instantly convert any text to natural-sounding speech in multiple languages and voices.";
+            updateTextLength();
+        });
+    }
+
+    // Clear text button
+    const clearTextBtn = document.getElementById('clearTextBtn');
+    if (clearTextBtn) {
+        clearTextBtn.addEventListener('click', function() {
+            textInput.value = '';
+            updateTextLength();
+        });
+    }
+
+    // Text length display
+    const textLengthSpan = document.getElementById('textLength');
+    function updateTextLength() {
+        if (textLengthSpan) textLengthSpan.textContent = 'Length: ' + textInput.value.length;
+    }
+    textInput.addEventListener('input', updateTextLength);
+    updateTextLength();
 
     // Always reload voices when browser fires onvoiceschanged
     if (speechSynthesis.onvoiceschanged !== undefined) {
@@ -145,7 +190,11 @@ document.addEventListener('DOMContentLoaded', function () {
     previewBtn.addEventListener('click', () => {
         const text = textInput.value.trim();
         if (!text) {
-            alert("Please enter text to convert to speech.");
+            Swal.fire({icon:"error",title:"Oops!",text:"Please enter text to convert to speech!"});
+            return;
+        }
+        if (!voiceSelect.value) {
+            Swal.fire({icon:"error",title:"No Voice Available",text:"No voice is available for the selected language. Please try another language."});
             return;
         }
         speechSynthesis.cancel();
@@ -167,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function () {
         speechSynthesisUtterance.onerror = () => {
             previewBtn.style.display = 'inline-block';
             stopBtn.style.display = 'none';
-            alert("Error in speech synthesis.");
+            //Swal.fire({icon:"error",title:"Oops!",text:"Error in speech synthesis."});
         };
         speechSynthesis.speak(speechSynthesisUtterance);
     });
