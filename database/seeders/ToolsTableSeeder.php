@@ -193,7 +193,7 @@ class ToolsTableSeeder extends Seeder
                 'category' => 'Utilities, Productivity, Codes',
             ],
             [
-                'title' => "Free Online Image Converter - Convert JPG to PNG & More",
+                'title' => "Image Converter - Convert JPG to PNG & More",
                 'description' => "Convert images between formats instantly with our free online Image Converter. Transform JPG to PNG, PNG to JPG, WEBP to JPG, and more. High-quality conversion with customizable settings, drag & drop support, and no registration required. Perfect for web developers, designers, and photographers. Convert images online free with our secure browser-based tool.",
                 'keywords' => "code beautifier, html formatter, css formatter, js formatter, code prettify, code formatter online, beautify html, beautify css, beautify javascript, code minify",",
                 'slug' => "image-converter",
@@ -201,18 +201,27 @@ class ToolsTableSeeder extends Seeder
                 'image' => "image-converter.png",
                 'category' => 'Images, Utilities, Productivity',
             ],
-        ];*/
-
-		### New Tools
-		$tools = [
-			[
-                'title' => "Text to Speech Converter - Free Online TTS Tool",
+            [
+                'title' => "Text to Speech Converter",
                 'description' => "Convert text to speech in multiple languages with different voices. Preview audio in your browser. Support for English, Hindi, Gujarati, and many more languages. Perfect for creating audio content, accessibility features, language learning, and more. Free online text-to-speech converter with customizable speed, pitch, and volume settings.",
                 'keywords' => "text to speech, TTS converter, free text to speech, online TTS tool, text to audio converter, speech synthesis, voice generator, text to speech online, free TTS converter, text to speech Hindi, text to speech Gujarati, text to speech English, voice converter, speech generator, text to speech tool, online voice generator, text to speech free, text to speech converter online, TTS tool, text to speech software, voice synthesis, text to speech API, text to speech browser, text to speech multiple languages, text to speech voice options, text to speech speed control, text to speech pitch control, text to speech volume control",
                 'slug' => "text-to-speech",
                 'icon' => "fas fa-microphone",
                 'image' => "text-to-speech.png",
                 'category' => 'Audio, Utilities, Productivity',
+            ],
+        ];*/
+
+		### New Tools
+		$tools = [
+			[
+                'title' => "Split PDF Instantly",
+                'description' => "Split PDF files online for free. Extract, save, or download selected pages instantly. Fast, secure, and easy to use for students and professionals.",
+                'keywords' => "split pdf, pdf splitter, extract pdf pages, split pdf online, free pdf splitter, pdf page extractor, save pdf pages, split pdf tool, pdf organizer, pdf utilities, pdf to pages, pdf page split, pdf document splitter, online pdf split, pdf tools, pdf management, pdf editor, pdf download, pdf for students, pdf for business, pdf for teachers",
+                'slug' => "split-pdf",
+                'icon' => "fas fa-file-pdf",
+                'image' => "split-pdf.png",
+                'category' => 'PDF, Documents, Utilities, Productivity',
             ],
 		];
 

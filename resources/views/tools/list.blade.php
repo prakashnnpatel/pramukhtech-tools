@@ -76,7 +76,7 @@
                         <div class="calculator-card h-100">
                             <div class="card-header d-flex align-items-center gap-2">
                                 <i class="{{ $tool->icon }}"></i>
-                                <h3 class="m-0">{{ $tool->title }}</h3>
+                                <h3 class="m-0" style="font-size:22px;">{{ $tool->title }}</h3>
                             </div>
                             <div class="card-body" style="padding:20px;">
                                 <div class="row align-items-center g-3">
@@ -84,7 +84,7 @@
                                         <img src="/images/tools/{{$tool->image}}" alt="{{ $tool->title }}" style="max-height:215px;" class="img-fluid tool-list-thumb">
                                     </div>
                                     <div class="col-12 col-sm-7 {{ $isOdd ? 'order-2' : 'order-1' }} d-flex flex-column">
-                                        <p class="mb-3">{!! \Illuminate\Support\Str::limit(strip_tags($tool->description), 200, '...') !!}</p>
+                                        <p class="mb-3">{!! \Illuminate\Support\Str::limit(strip_tags($tool->description), 150, '...') !!}</p>
                                         <div class="mt-auto d-flex justify-content-center justify-content-sm-start">
                                             <a href="{{ route('toollist', $tool->slug) }}" class="invoice-action-btn tool-cta-btn" title="Open {{ $tool->title }}">
                                                 Try Now <i class="fas fa-arrow-right ms-1"></i>

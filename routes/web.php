@@ -25,5 +25,8 @@ Route::get('/tools/{category?}', [HomeController::class, 'toolList'])->name('too
 Route::get('/barcode-sticker-generator', function() { return app(HomeController::class)->tools('barcode-sticker-generator'); })->name('barcode-sticker-generator');
 Route::post('/barcode-sticker-generator/generate', [HomeController::class, 'generateBarcodeStickers'])->name('barcode-sticker.generate');
 
+// Split PDF Tool
+Route::post('/split-pdf/split', [App\Http\Controllers\SplitPdfController::class, 'split'])->name('tools.split-pdf.split');
+
 ### Always keep This router at last
 Route::get('/{toolkey?}/{subpart?}',[HomeController::class, 'tools'])->name("toollist");

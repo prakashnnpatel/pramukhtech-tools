@@ -242,6 +242,15 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('split-pdf')
+			<title>Online Split PDF Tool | Extract & Save PDF Pages Instantly</title>
+			<meta name="description" content="Split PDF files online for free. Extract, save, or download selected pages instantly. Fast, secure, and easy to use for students and professionals." />
+			<meta name="keywords" content="split pdf, pdf splitter, extract pdf pages, split pdf online, free pdf splitter, pdf page extractor, save pdf pages, split pdf tool, pdf organizer, pdf utilities, pdf to pages, pdf page split, pdf document splitter, online pdf split, pdf tools, pdf management, pdf editor, pdf download, pdf for students, pdf for business, pdf for teachers" />
+			<meta property="og:title" content="Online Split PDF Tool | Extract & Save PDF Pages Instantly" />
+			<meta property="og:description" content="Split PDF files online for free. Extract, save, or download selected pages instantly. Fast, secure, and easy to use for students and professionals" />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			

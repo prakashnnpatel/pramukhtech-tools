@@ -40,7 +40,7 @@ class HomeController extends Controller
         if(!empty($category)) {
             $tools = $tools->where("category","LIKE", "%".$category."%");
         }
-        $tools = $tools->paginate(10)->appends($request->all());
+        $tools = $tools->latest()->paginate(10)->appends($request->all());
         return view('tools.list', ['tools' => $tools, "category" => $category, "param" => $request->all()]);
     }
 
