@@ -206,13 +206,13 @@ class ToolsTableSeeder extends Seeder
 		### New Tools
 		$tools = [
 			[
-                'title' => "Free Online Image Converter - Convert JPG to PNG & More",
-                'description' => "Convert images between formats instantly with our free online Image Converter. Transform JPG to PNG, PNG to JPG, WEBP to JPG, and more. High-quality conversion with customizable settings, drag & drop support, and no registration required. Perfect for web developers, designers, and photographers. Convert images online free with our secure browser-based tool.",
-                'keywords' => "image converter, free image converter, online image converter, jpg to png converter, png to jpg converter, webp to jpg, image format converter, convert image online, photo converter, image optimization tool, free online image converter, convert jpg to png, convert png to jpg, webp converter, image format conversion, online photo converter, free image format converter, convert images online, image converter tool, jpg converter, png converter, webp to jpg converter, image optimization, photo format converter, convert image format online, free image converter tool, online image format converter, image conversion tool, convert photos online, image converter free, online image optimization tool",
-                'slug' => "image-converter",
-                'icon' => "fas fa-image",
-                'image' => "image-converter.png",
-                'category' => 'Images, Utilities, Productivity',
+                'title' => "Text to Speech Converter - Free Online TTS Tool",
+                'description' => "Convert text to speech in multiple languages with different voices. Preview audio in your browser. Support for English, Hindi, Gujarati, and many more languages. Perfect for creating audio content, accessibility features, language learning, and more. Free online text-to-speech converter with customizable speed, pitch, and volume settings.",
+                'keywords' => "text to speech, TTS converter, free text to speech, online TTS tool, text to audio converter, speech synthesis, voice generator, text to speech online, free TTS converter, text to speech Hindi, text to speech Gujarati, text to speech English, voice converter, speech generator, text to speech tool, online voice generator, text to speech free, text to speech converter online, TTS tool, text to speech software, voice synthesis, text to speech API, text to speech browser, text to speech multiple languages, text to speech voice options, text to speech speed control, text to speech pitch control, text to speech volume control",
+                'slug' => "text-to-speech",
+                'icon' => "fas fa-microphone",
+                'image' => "text-to-speech.png",
+                'category' => 'Audio, Utilities, Productivity',
             ],
 		];
 

@@ -233,6 +233,15 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('text-to-speech')
+			<title>Free Online Text to Speech Converter | Listen to Text Instantly</title>
+			<meta name="description" content="Convert text to natural-sounding speech online for free. Instantly listen to any text in multiple languages and voices. Perfect for students, creators and more" />
+			<meta name="keywords" content="text to speech, online text to speech, free text to speech, tts converter, listen to text, speech synthesis, text reader, voice generator, text to audio, text to mp3, text to voice, multi-language tts, accessibility tool, speech tool, convert text to speech, browser tts, instant text to speech, educational tts, youtube voiceover, language learning tool, read aloud, online voice generator, speech for students, speech for creators, speech for youtubers, speech for teachers" />
+			<meta property="og:title" content="Free Online Text to Speech Converter | Listen to Text Instantly" />
+			<meta property="og:description" content="Convert text to natural-sounding speech online for free. Instantly listen to any text in multiple languages and voices. Perfect for students, creators, accessibility, and more!" />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			
