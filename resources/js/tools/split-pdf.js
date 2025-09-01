@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			e.preventDefault();
 			resultDiv.innerHTML = '';
 
+			// Show loading effect on button
+			const submitBtn = form.querySelector('button[type="submit"]');
+			const originalBtnHtml = submitBtn.innerHTML;
+			submitBtn.disabled = true;
+			submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span> Splitting...';
+
 			const formData = new FormData(form);
 
 			fetch('/split-pdf/split', {
@@ -40,10 +46,16 @@ document.addEventListener('DOMContentLoaded', function () {
 				setTimeout(() => {
 					const alert = document.getElementById('splitPdfSuccessAlert');
 					if (alert) alert.remove();
-				}, 4000);
+				}, 2500);
+				// Restore button
+				submitBtn.disabled = false;
+				submitBtn.innerHTML = originalBtnHtml;
 			})
 			.catch(error => {
 				resultDiv.innerHTML = `<div class="alert alert-danger">Error: ${error.message}</div>`;
+				// Restore button
+				submitBtn.disabled = false;
+				submitBtn.innerHTML = originalBtnHtml;
 			});
 		});
 	}
