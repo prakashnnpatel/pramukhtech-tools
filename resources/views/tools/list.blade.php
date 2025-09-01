@@ -75,13 +75,15 @@
                     <div class="col-12 col-md-6 mb-4">
                         <div class="calculator-card h-100">
                             <div class="card-header d-flex align-items-center gap-2">
-                                <i class="{{ $tool->icon }}"></i>
-                                <h3 class="m-0" style="font-size:22px;">{{ $tool->title }}</h3>
+                                <i class="{{ $tool->icon }}" style="color:#667eea;"></i>
+                                <h3 class="m-0" style="font-size:22px;"><a href="{{ route('toollist', $tool->slug) }}" title="{{ $tool->title }}" style="color:#667eea;">{{ $tool->title }}</a></h3>
                             </div>
                             <div class="card-body" style="padding:20px;">
                                 <div class="row align-items-center g-3">
                                     <div class="col-12 col-sm-5 {{ $isOdd ? 'order-1' : 'order-2' }} text-center">
-                                        <img src="/images/tools/{{$tool->image}}" alt="{{ $tool->title }}" style="max-height:215px;" class="img-fluid tool-list-thumb">
+                                        <a href="{{ route('toollist', $tool->slug) }}" title="{{ $tool->title }}">
+                                            <img src="/images/tools/{{$tool->image}}" alt="{{ $tool->title }}" style="max-height:215px;" class="img-fluid tool-list-thumb" />
+                                        </a>
                                     </div>
                                     <div class="col-12 col-sm-7 {{ $isOdd ? 'order-2' : 'order-1' }} d-flex flex-column">
                                         <p class="mb-3">{!! \Illuminate\Support\Str::limit(strip_tags($tool->description), 150, '...') !!}</p>
