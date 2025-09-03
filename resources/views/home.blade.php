@@ -53,48 +53,48 @@
                 </a>
             </div>
             <div class="tools-grid">
-                <div class="tool-card animate-on-scroll" data-delay="0.1">
+                <a href="{{route('toollist', 'fd-calculator')}}" class="tool-card animate-on-scroll" data-delay="0.1" title="Free Online FD Calculator, Calculate Fixed Deposit Returns" style="text-decoration:none;color:inherit;display:block;">
                     <div class="tool-icon">
                         <i class="fas fa-piggy-bank"></i>
                     </div>
                     <div class="tool-content">
                         <h3>FD Calculator</h3>
                         <p>Calculate Fixed Deposit returns with ease</p>
-                        <a href="{{route('toollist', 'fd-calculator')}}" class="tool-link" title="Free Online FD Calculator, Calculate Fixed Deposit Returns">
+                        <span class="tool-link" style="pointer-events:none;">
                             Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </span>
                     </div>
                     <div class="tool-hover-effect"></div>
-                </div>
+                </a>
                 
-                <div class="tool-card animate-on-scroll" data-delay="0.2">
+                <a href="{{route('toollist', 'sip-calculator')}}" class="tool-card animate-on-scroll" data-delay="0.1"  title="Free SIP Calculator, Plan Your Systematic Investment Easily" style="text-decoration:none;color:inherit;display:block;">
                     <div class="tool-icon">
                         <i class="fas fa-hand-holding-water"></i>
                     </div>
                     <div class="tool-content">
                         <h3>SIP Calculator</h3>
                         <p>Plan your Systematic Investment Plan</p>
-                        <a href="{{route('toollist', 'sip-calculator')}}" class="tool-link" title="Free SIP Calculator, Plan Your Systematic Investment Easily">
+                        <span class="tool-link" style="pointer-events:none;">
                             Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </span>
                     </div>
                     <div class="tool-hover-effect"></div>
-                </div>
+                </a>
                 
-                <div class="tool-card animate-on-scroll" data-delay="0.3">
+                <a href="{{route('toollist', 'emi-calculator')}}" class="tool-card animate-on-scroll" data-delay="0.1"  title="Free EMI Calculator, Calculate Loan EMIs Instantly" style="text-decoration:none;color:inherit;display:block;">
                     <div class="tool-icon">
                         <i class="fas fa-calculator"></i>
                     </div>
                     <div class="tool-content">
                         <h3>EMI Calculator</h3>
                         <p>Calculate Equated Monthly Installments</p>
-                        <a href="{{route('toollist', 'emi-calculator')}}" class="tool-link" title="Free EMI Calculator, Calculate Loan EMIs Instantly">
+                        <span class="tool-link" style="pointer-events:none;">
                             Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
+                        </span>
                     </div>
                     <div class="tool-hover-effect"></div>
-                </div>
-            </div>
+                </a>
+            </div>             
         </div>
 
         <div class="category-section">
