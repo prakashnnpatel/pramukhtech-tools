@@ -8,13 +8,162 @@ use Illuminate\Http\Request;
 use App\Models\Tools;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
+use Illuminate\Support\Arr;
 
 class HomeController extends Controller
 {
     public function home()
     {
 		$totalTools = Tools::count();
-		return view("home", ["toolKey" => "toollist", "totalTools"=>$totalTools]);
+        $feactureToolListArr = [
+            "financial" => [
+                [
+                    "title" => "FD Calculator",
+                    "seo_title" => "Free Online FD Calculator, Calculate Fixed Deposit Returns",
+                    "description" => "Calculate Fixed Deposit returns with ease",
+                    "icon" => "fas fa-piggy-bank",
+                    "link" => route('toollist', 'fd-calculator')
+                ],
+                [
+                    "title" => "SIP Calculator",
+                    "seo_title" => "Free SIP Calculator, Plan Your Systematic Investment Easily",
+                    "description" => "Plan your Systematic Investment Plan",
+                    "icon" => "fas fa-hand-holding-water",
+                    "link" => route('toollist', 'sip-calculator')
+                ],
+                [
+                    "title" => "EMI Calculator",
+                    "seo_title" => "Free EMI Calculator, Calculate Loan EMIs Instantly",
+                    "description" => "Calculate Equated Monthly Installments",
+                    "icon" => "fas fa-calculator",
+                    "link" => route('toollist', 'emi-calculator')
+                ],
+            ],
+            "documents" => [
+                [
+                    "title" => "Custom Invoice",
+                    "seo_title" => "Create Free Custom Invoice Online",
+                    "description" => "Create professional invoices instantly",
+                    "icon" => "fa-solid fa-file-pdf",
+                    "link" => route('toollist', 'custom-invoice')
+                ],               
+                [
+                    "title" => "Generate Quote",
+                    "seo_title" => "Generate Free Online Quotes Easily",
+                    "description" => "Create detailed quotes for your business",
+                    "icon" => "fa-solid fa-file-pdf",
+                    "link" => route('toollist', 'generate-quote')
+                ],
+                [
+                    "title" => "Purchase Order",
+                    "seo_title" => "Create Free Purchase Orders Online",
+                    "description" => "Generate purchase orders quickly",
+                    "icon" => "fa-solid fa-file-pdf",
+                    "link" => route('toollist', 'purchase-order')
+                ],
+                [
+                    "title" => "Digital Document",
+                    "seo_title" => "Create Free Digital Documents & Download Online",
+                    "description" => "Create and manage digital documents",
+                    "icon" => "fa-solid fa-file",
+                    "link" => route('toollist', 'digital-document')
+                ],
+                [
+                    "title" => "Word Counter",
+                    "seo_title" => "Free Online Word Counter Tool",
+                    "description" => "Count words, characters, sentences & paragraphs, spaces and more.",
+                    "icon" => "fa-solid fa-font",
+                    "link" => route('toollist', 'word-counter')
+                ],
+                [
+                    "title" => "Merge Images Into PDF",
+                    "seo_title" => "Merge Images Into PDF Online for Free",
+                    "description" => "Turn multiple photos or images in any format into a polished, professional PDF.",
+                    "icon" => "fa-solid fa-file-pdf",
+                    "link" => route('toollist', 'merge-images-to-pdf')
+                ],
+            ],
+            "utilities" => [
+                [
+                    "title" => "Timezone Converter",
+                    "seo_title" => "Free Online Timezone Converter",
+                    "description" => "Convert time between different timezones",
+                    "icon" => "fas fa-clock",
+                    "link" => route('toollist', 'timezone')
+                ],
+                [
+                    "title" => "Digital Signature",
+                    "seo_title" => "Create Your Free Digital Signature Online in Seconds",
+                    "description" => "Create your digital signature in seconds",
+                    "icon" => "fa-solid fa-pen",
+                    "link" => route('toollist', 'signature')                    
+                ],
+                [
+                    "title" => "Screen Recorder",
+                    "seo_title" => "Online Free Screen Recorder with Audio, Download FREE",
+                    "description" => "Record your screen with audio",
+                    "icon" => "fa-solid fa-desktop",
+                    "link" => route('toollist', 'screen-recording')                    
+                ],
+                [
+                    "title" => "Color Picker",
+                    "seo_title" => "Free Online Color Picker Tool",
+                    "description" => "Pick and convert colors easily",
+                    "icon" => "fa-solid fa-palette",
+                    "link" => route('toollist', 'color-picker')                    
+                ],
+                [
+                    "title" => "Image Converter",
+                    "seo_title" => "Free Online Image Converter Tool",
+                    "description" => "Convert images to different formats easily",
+                    "icon" => "fa-solid fa-image",
+                    "link" => route('toollist', 'image-converter')                    
+                ],
+                [
+                    "title" => "Currency Converter",
+                    "seo_title" => "Free Online Currency Converter Tool",
+                    "description" => "Support for 160+ global currencies with real-time exchange rates.",
+                    "icon" => "fas fa-exchange-alt",
+                    "link" => route('toollist', 'currency-converter')                    
+                ],
+                [
+                    "title" => "QR Code Generator",
+                    "seo_title" => "Free QR Code Generator Online",
+                    "description" => "Create customizable QR codes and download as PNG/SVG.",
+                    "icon" => "fa-solid fa-qrcode",
+                    "link" => route('toollist', 'qr-code-generator')                    
+                ],
+                [
+                    "title" => "Barcode Sticker Generator",
+                    "seo_title" => "Create Barcode Stickers Online for Free",
+                    "description" => "Generate up to 50 barcode stickers at once and download as PDF.",
+                    "icon" => "fas fa-barcode",
+                    "link" => route('toollist', 'barcode-sticker-generator')
+                ],
+                [
+                    "title" => "Unicode Text Converter",
+                    "seo_title" => "Free Online Unicode Text Converter Tool",
+                    "description" => "Generate fancy Unicode styles and copy anywhere.",
+                    "icon" => "fa-solid fa-language",
+                    "link" => route('toollist', 'code-text-converter')
+                ],
+                [
+                    "title" => "Code Beautifier",
+                    "seo_title" => "Free Online Code Beautifier | Format & Beautify JavaScript, CSS & HTML",
+                    "description" => "Format HTML, JavaScript, and CSS for better readability.",
+                    "icon" => "fa-solid fa-code",
+                    "link" => route('toollist', 'code-beautifier')
+                ],
+                [
+                    "title" => "Code Minifiers",
+                    "seo_title" => "Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly",
+                    "description" => "Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly",
+                    "icon" => "fa-solid fa-code",
+                    "link" => route('toollist', 'code-minifier')
+                ]
+            ],
+        ];               
+		return view("home", ["toolKey" => "toollist", "totalTools"=>$totalTools, "feactureToolListArr" => $feactureToolListArr]);
     }
 
     public function aboutUs()

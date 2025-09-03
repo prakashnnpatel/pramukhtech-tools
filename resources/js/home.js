@@ -1,3 +1,6 @@
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import 'owl.carousel';
 var Home = (function () {  
 	function redirectToSearch(query) {
 		if(query !== '') {
@@ -23,6 +26,20 @@ var Home = (function () {
 				var query = $(this).siblings('.searchBox').val().trim();
 				redirectToSearch(query);
 			});
+
+            $('.owl-carousel').owlCarousel({
+                items:3,
+                loop: true,   // keep repeating
+                margin: 20,
+                autoplay: true,
+                nav: false,
+                dots: false,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                    1200: { items: 3 }
+                }
+            });
         },
 
 		

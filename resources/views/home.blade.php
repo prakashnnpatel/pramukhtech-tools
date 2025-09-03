@@ -52,48 +52,22 @@
                     View all <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div class="tools-grid">
-                <a href="{{route('toollist', 'fd-calculator')}}" class="tool-card animate-on-scroll" data-delay="0.1" title="Free Online FD Calculator, Calculate Fixed Deposit Returns" style="text-decoration:none;color:inherit;display:block;">
-                    <div class="tool-icon">
-                        <i class="fas fa-piggy-bank"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>FD Calculator</h3>
-                        <p>Calculate Fixed Deposit returns with ease</p>
-                        <span class="tool-link" style="pointer-events:none;">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </a>
-                
-                <a href="{{route('toollist', 'sip-calculator')}}" class="tool-card animate-on-scroll" data-delay="0.1"  title="Free SIP Calculator, Plan Your Systematic Investment Easily" style="text-decoration:none;color:inherit;display:block;">
-                    <div class="tool-icon">
-                        <i class="fas fa-hand-holding-water"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>SIP Calculator</h3>
-                        <p>Plan your Systematic Investment Plan</p>
-                        <span class="tool-link" style="pointer-events:none;">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </a>
-                
-                <a href="{{route('toollist', 'emi-calculator')}}" class="tool-card animate-on-scroll" data-delay="0.1"  title="Free EMI Calculator, Calculate Loan EMIs Instantly" style="text-decoration:none;color:inherit;display:block;">
-                    <div class="tool-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>EMI Calculator</h3>
-                        <p>Calculate Equated Monthly Installments</p>
-                        <span class="tool-link" style="pointer-events:none;">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </span>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </a>
+            <div class="tools-grid owl-carousel">
+                @foreach(\Illuminate\Support\Arr::shuffle($feactureToolListArr['financial']) as $tool)
+                    <a href="{{ $tool['link'] }}" class="tool-card" title="{{ $tool['seo_title'] }}" style="text-decoration:none;color:inherit;display:block;">
+                        <div class="tool-icon">
+                            <i class="{{ $tool['icon'] }}"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3>{{ $tool['title'] }}</h3>               
+                            <p>{{ $tool['description'] }}</p>
+                            <span class="tool-link" style="pointer-events:none;">
+                                Try Now <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                        <div class="tool-hover-effect"></div>
+                    </a>
+                @endforeach
             </div>             
         </div>
 
@@ -108,92 +82,22 @@
                     View all <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div class="tools-grid">
-                <div class="tool-card animate-on-scroll" data-delay="0.1">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-file-pdf"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Custom Invoice</h3>
-                        <p>Create professional invoices instantly</p>
-                        <a href="{{route('toollist', 'custom-invoice')}}" class="tool-link" title="Create Free Custom Invoice Online">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-                
-                <div class="tool-card animate-on-scroll" data-delay="0.2">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-file-pdf"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Generate Quote</h3>
-                        <p>Create detailed quotes for your business</p>
-                        <a href="{{route('toollist', 'generate-quote')}}" class="tool-link" title="Generate Free Online Quotes Easily">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-                
-                <div class="tool-card animate-on-scroll" data-delay="0.3">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-file-pdf"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Purchase Order</h3>
-                        <p>Generate purchase orders quickly</p>
-                        <a href="{{route('toollist', 'purchase-order')}}" class="tool-link" title="Create Free Purchase Orders Online">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-                
-                <div class="tool-card animate-on-scroll" data-delay="0.4">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-file"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Digital Document</h3>
-                        <p>Create and manage digital documents</p>
-                        <a href="{{route('toollist', 'digital-document')}}" class="tool-link" title="Create Free Digital Documents & Download Online">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-
-                <div class="tool-card animate-on-scroll" data-delay="0.5">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-font"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Word Counter</h3>
-                        <p>Count words, characters, sentences & paragraphs, spaces and more.</p>
-                        <a href="{{route('toollist', 'word-counter')}}" class="tool-link" title="Free Online Word Counter Tool">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-
-                <div class="tool-card animate-on-scroll" data-delay="0.5">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-file-pdf"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Merge Images Into PDF</h3>
-                        <p>Turn multiple photos or images in any format into a polished, professional PDF.
-                        </p>
-                        <a href="{{route('toollist', 'merge-images-to-pdf')}}" class="tool-link" title="Merge Images Into PDF Online for Free">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-
+            <div class="tools-grid owl-carousel">
+              @foreach(\Illuminate\Support\Arr::shuffle($feactureToolListArr['documents']) as $tool)
+                    <a href="{{ $tool['link'] }}" class="tool-card" title="{{ $tool['seo_title'] }}" style="text-decoration:none;color:inherit;display:block;">
+                        <div class="tool-icon">
+                            <i class="{{ $tool['icon'] }}"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3>{{ $tool['title'] }}</h3>               
+                            <p>{{ $tool['description'] }}</p>
+                            <span class="tool-link" style="pointer-events:none;">
+                                Try Now <i class="fas fa-arrow-right"></i>
+                            </span> 
+                            </div>
+                        <div class="tool-hover-effect"></div>
+                    </a>
+                @endforeach 
             </div>
         </div>
 
@@ -208,133 +112,24 @@
                     View all <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div class="tools-grid">
-                <div class="tool-card animate-on-scroll" data-delay="0.1">
-                    <div class="tool-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Timezone Converter</h3>
-                        <p>Convert time between different timezones</p>
-                        <a href="{{route('toollist', 'timezone')}}" class="tool-link" title="Free Online Timezone Converter">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
+            <div class="tools-grid owl-carousel"> 
                 
-                <div class="tool-card animate-on-scroll" data-delay="0.2">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-pen"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Digital Signature</h3>
-                        <p>Create your digital signature in seconds</p>
-                        <a href="{{route('toollist', 'signature')}}" class="tool-link" title="Create Your Free Digital Signature Online in Seconds">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-                
-                <div class="tool-card animate-on-scroll" data-delay="0.3">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-desktop"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Screen Recorder</h3>
-                        <p>Record your screen with audio</p>
-                        <a href="{{route('toollist', 'screen-recording')}}" class="tool-link" title="Online Free Screen Recorder with Audio, Download FREE">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-                
-                <div class="tool-card animate-on-scroll" data-delay="0.4">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-palette"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Color Picker</h3>
-                        <p>Pick and convert colors easily</p>
-                        <a href="{{route('toollist', 'color-picker')}}" class="tool-link" title="Free Online Color Picker Tool">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-
-                <div class="tool-card animate-on-scroll" data-delay="0.4">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-qrcode"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>QR Code Generator</h3>
-                        <p>Create customizable QR codes and download as PNG/SVG.</p>
-                        <a href="{{route('toollist', 'qr-code-generator')}}" class="tool-link" title="Free QR Code Generator Online">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-
-                <div class="tool-card animate-on-scroll" data-delay="0.4">
-                    <div class="tool-icon">
-                        <i class="fas fa-barcode"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Barcode Sticker Generator</h3>
-                        <p>Generate up to 50 barcode stickers at once and download as PDF.</p>
-                        <a href="{{route('toollist', 'barcode-sticker-generator')}}" class="tool-link" title="Create Barcode Stickers Online for Free">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-
-                <div class="tool-card animate-on-scroll" data-delay="0.4">
-                    <div class="tool-icon">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Currency Converter</h3>
-                        <p>Support for 160+ global currencies with real-time exchange rates.</p>
-                        <a href="{{route('toollist', 'currency-converter')}}" class="tool-link" title="Free Online Currency Converter Tool">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-
-                <div class="tool-card animate-on-scroll" data-delay="0.4">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-language"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Unicode Text Converter</h3>
-                        <p>Generate fancy Unicode styles and copy anywhere.</p>
-                        <a href="{{route('toollist', 'unicode-text-converter')}}" class="tool-link" title="Free Online Unicode Text Converter Tool">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-
-                <div class="tool-card animate-on-scroll" data-delay="0.4">
-                    <div class="tool-icon">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <div class="tool-content">
-                        <h3>Code Beautifier</h3>
-                        <p>Format HTML, JavaScript, and CSS for better readability.</p>
-                        <a href="{{route('toollist', 'code-beautifier')}}" class="tool-link" title="Free Online Code Beautifier | Format & Beautify JavaScript, CSS & HTML">
-                            Try Now <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                    <div class="tool-hover-effect"></div>
-                </div>
-            </div>
+                @foreach(\Illuminate\Support\Arr::shuffle($feactureToolListArr['utilities']) as $tool)
+                    <a href="{{ $tool['link'] }}" class="tool-card" title="{{ $tool['seo_title'] }}" style="text-decoration:none;color:inherit;display:block;">
+                        <div class="tool-icon">
+                            <i class="{{ $tool['icon'] }}"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3>{{ $tool['title'] }}</h3>               
+                            <p>{{ $tool['description'] }}</p>
+                            <span class="tool-link" style="pointer-events:none;">
+                                Try Now <i class="fas fa-arrow-right"></i>
+                            </span>
+                        </div>
+                        <div class="tool-hover-effect"></div>
+                    </a>
+                @endforeach
+            </div>  
         </div>
     </div>
 
