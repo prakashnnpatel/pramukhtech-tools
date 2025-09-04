@@ -52,7 +52,7 @@
                     View all <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div class="tools-grid owl-carousel">
+            <div class="tools-grid owl-carousel owl-theme">
                 @foreach(\Illuminate\Support\Arr::shuffle($feactureToolListArr['financial']) as $tool)
                     <a href="{{ $tool['link'] }}" class="tool-card" title="{{ $tool['seo_title'] }}" style="text-decoration:none;color:inherit;display:block;">
                         <div class="tool-icon">
@@ -68,7 +68,8 @@
                         <div class="tool-hover-effect"></div>
                     </a>
                 @endforeach
-            </div>             
+            </div>
+            <div class="owl-custom-nav"></div>
         </div>
 
         <div class="category-section">
@@ -82,7 +83,7 @@
                     View all <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div class="tools-grid owl-carousel">
+            <div class="tools-grid owl-carousel owl-theme">
               @foreach(\Illuminate\Support\Arr::shuffle($feactureToolListArr['documents']) as $tool)
                     <a href="{{ $tool['link'] }}" class="tool-card" title="{{ $tool['seo_title'] }}" style="text-decoration:none;color:inherit;display:block;">
                         <div class="tool-icon">
@@ -99,6 +100,7 @@
                     </a>
                 @endforeach 
             </div>
+            <div class="owl-custom-nav"></div>
         </div>
 
         <div class="category-section">
@@ -112,8 +114,7 @@
                     View all <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
-            <div class="tools-grid owl-carousel"> 
-                
+            <div class="tools-grid owl-carousel owl-theme">
                 @foreach(\Illuminate\Support\Arr::shuffle($feactureToolListArr['utilities']) as $tool)
                     <a href="{{ $tool['link'] }}" class="tool-card" title="{{ $tool['seo_title'] }}" style="text-decoration:none;color:inherit;display:block;">
                         <div class="tool-icon">
@@ -129,7 +130,8 @@
                         <div class="tool-hover-effect"></div>
                     </a>
                 @endforeach
-            </div>  
+            </div>
+            <div class="owl-custom-nav"></div>
         </div>
     </div>
 
@@ -170,6 +172,7 @@
                     <p>No hidden costs, no premium features, everything is absolutely free</p>
                 </div>
             </div>
+            <div class="owl-custom-nav"></div>
         </div>
     </div>
 </div>

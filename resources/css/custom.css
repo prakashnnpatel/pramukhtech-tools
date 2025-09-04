@@ -1,3 +1,49 @@
+.owl-carousel .tool-card:hover {
+    transform: none !important;
+    box-shadow: 0 8px 24px rgba(104, 77, 244, 0.08);
+    border-color: #e0e0e0;
+}
+.owl-carousel .tool-card:hover .tool-icon {
+    transform: none !important;
+    box-shadow: none !important;
+}
+/* Owl Carousel Custom Arrows */
+.owl-custom-nav {
+    position: absolute;
+    right: 16px;
+    bottom: 10px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+}
+.owl-custom-prev, .owl-custom-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: none;
+    color: #684DF4;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    border: none;
+}
+.owl-custom-prev:hover, .owl-custom-next:hover, .owl-custom-prev:focus, .owl-custom-next:focus {
+    background: transparent;
+    color: #684DF4;
+    box-shadow: none;
+    border: 2px solid #684DF4;
+}
+.owl-custom-prev svg path, .owl-custom-next svg path {
+    transition: stroke 0.2s;
+}
+.owl-custom-prev:hover svg path, .owl-custom-next:hover svg path,
+.owl-custom-prev:focus svg path, .owl-custom-next:focus svg path {
+    stroke: #684DF4;
+}
 html, body {
     height: 100%;
     background-color: #ebebf4;
@@ -969,6 +1015,15 @@ td, th {
     transform: translateY(-12px) scale(1.02);
     box-shadow: 0 25px 50px rgba(104, 77, 244, 0.2);
     border-color: #684DF4;
+    border-width: 2px;
+    border-style: solid;
+}
+.owl-carousel .tool-card:hover {
+    transform: none !important;
+    box-shadow: 0 8px 24px rgba(104, 77, 244, 0.08);
+    border-color: #684DF4 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
 }
 
 .tool-icon {

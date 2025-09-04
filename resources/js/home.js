@@ -27,18 +27,42 @@ var Home = (function () {
 				redirectToSearch(query);
 			});
 
-            $('.owl-carousel').owlCarousel({
-                items:3,
-                loop: true,   // keep repeating
-                margin: 20,
-                autoplay: true,
-                nav: false,
-                dots: false,
-                responsive: {
-                    0: { items: 1 },
-                    768: { items: 2 },
-                    1200: { items: 3 }
-                }
+            $('.owl-carousel').each(function(idx, el) {
+                var $carousel = $(el);
+                $carousel.owlCarousel({
+                    items:3,
+                    loop: true,
+                    margin: 20,
+                    autoplay: true,
+                    nav: true,
+                    navText: [
+                        `<span class="owl-custom-prev" aria-label="Previous" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(104,77,244,0.08);color:#684DF4;font-size:22px;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 15L6 9L11.5 3" stroke="#684DF4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`,
+
+                        `<span class="owl-custom-next" aria-label="Next" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(104,77,244,0.08);color:#684DF4;font-size:22px;"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 3L12 9L6.5 15" stroke="#684DF4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`
+                    ],
+                    dots: false,
+                    responsive: {
+                        0: { items: 1 },
+                        768: { items: 2 },
+                        1200: { items: 3 }
+                    }
+                });
+                // Move nav to custom container
+                var $nav = $carousel.find('.owl-nav');
+                var $customNav = $carousel.parent().find('.owl-custom-nav');
+                var $customNavButton = $carousel.parent().find('button');
+                $customNav.append($nav);
+                $customNav.css({
+                    position: 'absolute',
+                    right: '16px',
+                    bottom: '-30px',
+                    zIndex: 10
+                });
+                $customNavButton.css({
+                    border: '0', 
+                    backgroundColor:'#f1f5f9',                
+                });
+                $carousel.parent().css('position', 'relative');
             });
         },
 
