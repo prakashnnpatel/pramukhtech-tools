@@ -53,6 +53,7 @@
         </a>
         <ul class="submenu">
             <li><a href="{{route('toollist', 'fd-calculator')}}" class="{{$toolKey == 'fd-calculator' ? 'active' : ''}}" title="FD Calculator">FD Calculator</a></li>
+            <li><a href="{{route('toollist', 'income-tax-calculator')}}" class="{{$toolKey == 'income-tax-calculator' ? 'active' : ''}}" title="Income Tax Calculator">Income Tax Calculator</a></li>
             <li><a href="{{route('toollist', 'sip-calculator')}}" class="{{$toolKey == 'sip-calculator' ? 'active' : ''}}" title="SIP Calculator">SIP Calculator</a></li>
             <li><a href="{{route('toollist', 'emi-calculator')}}" class="{{$toolKey == 'emi-calculator' ? 'active' : ''}}" title="EMI Calculator">EMI Calculator</a></li>
         </ul>

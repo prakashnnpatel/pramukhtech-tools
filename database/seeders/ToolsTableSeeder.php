@@ -227,12 +227,8 @@ class ToolsTableSeeder extends Seeder
                 'icon' => "fas fa-piggy-bank",
                 'image' => 'rd-calculator.png',
                 'category' => 'Finance, Business',
-            ]
-        ];*/
-
-		### New Tools
-		$tools = [
-			[
+            ],
+            [
                 "title" => "PPF Calculator",
                 "description" => "The PPF Calculator (Public Provident Fund Calculator) is a tool designed to help individuals estimate the maturity amount and interest earned on their PPF investments. It uses the standard PPF formula used by banks and financial institutions in India. This calculator allows users to input their investment amount, tenure, and interest rate to calculate the future value of their PPF account. Plan your long-term savings efficiently with accurate results using the Tool Hubspot PPF Calculator.",
                 "keywords" => "PPF calculator, public provident fund calculator, PPF interest calculator, PPF maturity amount, PPF investment calculator, PPF interest rate, PPF return calculator, calculate PPF maturity value, PPF savings calculator, PPF account calculator",
@@ -240,6 +236,20 @@ class ToolsTableSeeder extends Seeder
                 "icon" => "fas fa-calculator",
                 "image" => "ppf-calculator.png",
                 "category" => "Finance, Business",                
+            ],
+        ];*/
+
+        
+		### New Tools
+		$tools = [
+			[
+                "title" => "Income Tax Calculator",
+                "description" => "Calculate your Indian income tax liability as per latest slabs.",
+                "keywords" => "income tax calculator, tax calculator India, income tax slab, tax calculation, tax liability, tax return calculator, income tax India, tax estimation, tax planning, tax filing",
+                "slug" => "income-tax-calculator",
+                "icon" => "fas fa-calculator",
+                "image" => "income-tax-calculator.png",
+                "category" => "Finance, Business",               
             ],
 		];
 

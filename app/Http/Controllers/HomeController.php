@@ -25,6 +25,13 @@ class HomeController extends Controller
                     "link" => route('toollist', 'fd-calculator')
                 ],
                 [
+                    "title" => "Income Tax Calculator",
+                    "seo_title" => "Free Online Income Tax Calculator India, Calculate Your Tax Instantly",
+                    "description" => "Calculate your Indian income tax liability as per latest slabs.",
+                    "icon" => "fas fa-calculator",
+                    "link" => route('toollist', 'income-tax-calculator')
+                ],
+                [
                     "title" => "SIP Calculator",
                     "seo_title" => "Free SIP Calculator, Plan Your Systematic Investment Easily",
                     "description" => "Plan your Systematic Investment Plan",
