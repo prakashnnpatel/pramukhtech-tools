@@ -251,6 +251,33 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('income-tax-calculator')
+			<title>Income Tax Calculator India 2025 – Free & Accurate Online Tool</title>
+			<meta name="description" content="Calculate your income tax for FY 2024-25 (AY 2025-26) instantly. Compare old vs new regime and plan your savings with our free online tax calculator." />
+			<meta name="keywords" content="Income Tax Calculator India, Online Income Tax Calculator, Income Tax Calculator FY 2024-25, Income Tax Calculator AY 2025-26, Income Tax Slab Calculator, New Regime Tax Calculator, Old vs New Tax Regime, Tax Calculator Online Free, Income Tax Return Calculator, Income Tax Deduction Calculator" />
+			<meta property="og:title" content="Income Tax Calculator India 2025 – Free & Accurate Online Tool" />
+			<meta property="og:description" content="Calculate your income tax for FY 2024-25 (AY 2025-26) instantly. Compare old vs new regime and plan your savings with our free online tax calculator." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
+		@case('rd-calculator')
+			<title>Free RD Calculator – Calculate Recurring Deposit Maturity</title>
+			<meta name="description" content="Use our free RD Calculator to estimate maturity value and interest on Recurring Deposits. Plan your monthly savings with accurate RD calculations." />
+			<meta name="keywords" content="RD Calculator, Recurring Deposit Calculator, Online RD Calculator, RD Interest Calculator, RD Maturity Calculator, Bank RD Calculator, Post Office RD Calculator, Monthly RD Calculator, RD Return Calculator, RD Compound Interest Calculator" />
+			<meta property="og:title" content="Free RD Calculator – Calculate Recurring Deposit Maturity" />
+			<meta property="og:description" content="Use our free RD Calculator to estimate maturity value and interest on Recurring Deposits. Plan your monthly savings with accurate RD calculations." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
+		@case('ppf-calculator')
+			<title>PPF Calculator - Calculate PPF Maturity & Interest Online</title>
+			<meta name="description" content="Estimate your Public Provident Fund maturity and interest with our free PPF Calculator. Plan your long-term savings easily and accurately." />
+			<meta name="keywords" content="PPF calculator, Public Provident Fund calculator, PPF interest calculator, PPF maturity calculator, online PPF calculator, PPF savings calculator, PPF return calculator, PPF investment calculator, calculate PPF interest, PPF maturity value" />
+			<meta property="og:title" content="PPF Calculator - Calculate PPF Maturity & Interest Online" />
+			<meta property="og:description" content="Estimate your Public Provident Fund maturity and interest with our free PPF Calculator. Plan your long-term savings easily and accurately." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			

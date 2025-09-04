@@ -25,7 +25,7 @@
                     <div class="card-body">
                         <div class="row">
                             <!-- Annual Income -->
-                            <div class="col-lg-12 mb-4">
+                            <div class="col-lg-12">
                                 <div class="input-group-custom">
                                     <label for="annual_income">
                                         <i class="fas fa-money-bill-wave"></i>
@@ -45,7 +45,7 @@
                                 </div>
                             </div>
                             <!-- Deductions -->
-                            <div class="col-lg-6 mb-4">
+                            <div class="col-lg-12">
                                 <div class="input-group-custom">
                                     <label for="deductions">
                                         <i class="fas fa-minus-circle"></i>
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <!-- Age Group -->
-                            <div class="col-lg-6 mb-3">
+                            <div class="col-lg-12">
                                 <div class="input-group-custom">
                                     <label for="age_group">
                                         <i class="fas fa-user"></i>New / Old Regime

@@ -28,11 +28,25 @@ var calculateRD = function() {
     // RD maturity calculation (quarterly compounding)
     // Formula: M = P * n + P * n(n+1)/2 * r/(400)
     // Where P = monthly deposit, n = number of months, r = annual interest rate
-    const P = monthlyDeposit;
-    const n = months;
-    const r = rate;
-    const maturity = P * n + (P * n * (n + 1) / 2) * (r / 400);
-    const interest = maturity - (P * n);
+    const P = monthlyDeposit; // Monthly installment
+    const n = 4;         // Total months
+    const r = rate / 100; ;    // Annual interest rate (e.g. 7.5 for 7.5%)
+
+    let maturity = 0;
+
+    // Loop through each monthly deposit
+    for (let i = 1; i <= months; i++) {
+        // Time left for this deposit (in years)
+        const t = (months - i + 1) / 12;
+
+        // Compound interest formula for this deposit
+        const amount = P * Math.pow(1 + r / n, n * t);
+
+        maturity += amount;
+    }
+
+    const invested = P * months;
+    const interest = maturity - invested;
 
     // Calculate maturity date
     const start = new Date();

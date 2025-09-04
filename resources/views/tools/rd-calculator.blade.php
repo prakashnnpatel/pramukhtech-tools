@@ -54,7 +54,7 @@
                                     </label>
                                     <div class="input-wrapper">
                                         <input class="form-control custom-input" onKeyup="calculateRD()" value="7.0" id="rd_rate" type="number" step="0.1" placeholder="Enter interest rate">
-                                        <span class="input-suffix">%</span>
+                                        <span class="input-suffix">p.a</span>
                                     </div>
                                     <div class="slider-container">
                                         <div id="slider-range-rd-rate" class="custom-slider"></div>
