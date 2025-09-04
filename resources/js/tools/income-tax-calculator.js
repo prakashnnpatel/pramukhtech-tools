@@ -21,8 +21,9 @@ var calculateIncomeTax = function() {
     let taxableIncome = income - deductions;
     if (taxableIncome < 0) taxableIncome = 0;
 
-    // Define slabs for FY 2024-25 (Old Regime)
-    let slabs = [];
+    // Define slabs for FY 2024-25 
+    let slabs = [];        
+    //Old Regime
     if (ageGroup === 'normal') {
         slabs = [
             { upto: 250000, rate: 0 },
@@ -43,12 +44,24 @@ var calculateIncomeTax = function() {
             { upto: 1000000, rate: 0.2 },
             { upto: Infinity, rate: 0.3 }
         ];
+    } else {
+        //New Regime
+        slabs = [
+            { upto: 400000, rate: 0 },
+            { upto: 800000, rate: 0.05 },
+            { upto: 1200000, rate: 0.1 },
+            { upto: 1600000, rate: 0.15 },
+            { upto: 2000000, rate: 0.2 },
+            { upto: 2400000, rate: 0.25 },
+            { upto: Infinity, rate: 0.3 }
+        ];
     }
 
     let tax = 0;
     let lastUpto = 0;
     for (let i = 0; i < slabs.length; i++) {
         if (taxableIncome > lastUpto) {
+            //console.log(lastUpto);
             let slabAmount = Math.min(slabs[i].upto, taxableIncome) - lastUpto;
             tax += slabAmount * slabs[i].rate;
             lastUpto = slabs[i].upto;
