@@ -160,6 +160,20 @@ class HomeController extends Controller
                     "description" => "Free Online Code Minifier | Minify JavaScript, CSS & HTML Instantly",
                     "icon" => "fa-solid fa-code",
                     "link" => route('toollist', 'code-minifier')
+                ],
+                [
+                    "title" => "Text to Speech",
+                    "seo_title" => "Open Text to Speech Converter - Free Online TTS Tool",
+                    "description" => "Generate strong, random passwords easily",
+                    "icon" => "fas fa-microphone",
+                    "link" => route('toollist', 'text-to-speech')
+                ],
+                [
+                    "title" => "Split PDF Instantly",
+                    "seo_title" => "Open Split PDF Instantly - Free Online PDF Split Tool",
+                    "description" => "Easily split your PDF into selected pages or individual files",
+                    "icon" => "fas fa-file-pdf",
+                    "link" => route('toollist', 'split-pdf')
                 ]
             ],
         ];               
