@@ -15,4 +15,5 @@ return [
     "tools_category" => [
 		"Audio", "Business", "Codes", "Documents", "Finance", "Images", "Labels", "PDF", "Productivity", "Stickers", "Utilities"
 	],
+    "downloadfile_prefix" => "ToolHubspot",
 ];
