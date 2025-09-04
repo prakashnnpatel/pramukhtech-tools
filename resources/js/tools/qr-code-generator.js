@@ -73,7 +73,7 @@ const qrTool = function() {
         const a = document.createElement('a');
         const ext = $format.val() === 'svg' ? 'svg' : 'png';
         a.href = lastDataUrl;
-        a.download = `qr-code.${ext}`;
+        a.download = `ToolHubspot-qr-code.${ext}`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);

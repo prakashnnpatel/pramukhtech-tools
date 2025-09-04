@@ -284,7 +284,7 @@ $(document).ready(function() {
         if (pdfUrl) {
             const link = document.createElement('a');
             link.href = pdfUrl;
-            link.download = 'barcode-stickers.pdf';
+            link.download = 'ToolHubspot-barcode-stickers.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
