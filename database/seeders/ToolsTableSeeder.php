@@ -218,19 +218,28 @@ class ToolsTableSeeder extends Seeder
                 'icon' => "fas fa-file-pdf",
                 'image' => "split-pdf.png",
                 'category' => 'PDF, Documents, Utilities, Productivity',
+            ],
+            [
+                'title' => "RD Calculator",
+                'description' => "The RD Calculator (Recurring Deposit Calculator) helps you estimate the maturity amount and interest earned on your recurring deposit. It uses the standard RD formula used by banks in India. Plan your savings efficiently with accurate results.",
+                'keywords' => "RD calculator, recurring deposit calculator, bank RD interest calculator, RD maturity amount, recurring deposit interest rate, RD investment calculator, RD interest calculator online, compound interest RD calculator, recurring deposit return calculator, calculate RD maturity value",
+                'slug' => "rd-calculator",
+                'icon' => "fas fa-piggy-bank",
+                'image' => 'rd-calculator.png',
+                'category' => 'Finance, Business',
             ]
         ];*/
 
 		### New Tools
 		$tools = [
 			[
-               'title' => "RD Calculator",
-                'description' => "The RD Calculator (Recurring Deposit Calculator) helps you estimate the maturity amount and interest earned on your recurring deposit. It uses the standard RD formula used by banks in India. Plan your savings efficiently with accurate results.",
-                'keywords' => "RD calculator, recurring deposit calculator, bank RD interest calculator, RD maturity amount, recurring deposit interest rate, RD investment calculator, RD interest calculator online, compound interest RD calculator, recurring deposit return calculator, calculate RD maturity value",
-                'slug' => "rd-calculator",
-                'icon' => "fas fa-piggy-bank",
-                'image' => 'rd-calculator.png',
-                'category' => 'Finance, Business', 
+                "title" => "PPF Calculator",
+                "description" => "The PPF Calculator (Public Provident Fund Calculator) is a tool designed to help individuals estimate the maturity amount and interest earned on their PPF investments. It uses the standard PPF formula used by banks and financial institutions in India. This calculator allows users to input their investment amount, tenure, and interest rate to calculate the future value of their PPF account. Plan your long-term savings efficiently with accurate results using the Tool Hubspot PPF Calculator.",
+                "keywords" => "PPF calculator, public provident fund calculator, PPF interest calculator, PPF maturity amount, PPF investment calculator, PPF interest rate, PPF return calculator, calculate PPF maturity value, PPF savings calculator, PPF account calculator",
+                "slug" => "ppf-calculator",
+                "icon" => "fas fa-calculator",
+                "image" => "ppf-calculator.png",
+                "category" => "Finance, Business",                
             ],
 		];
 

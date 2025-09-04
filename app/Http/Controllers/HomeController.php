@@ -45,6 +45,13 @@ class HomeController extends Controller
                     "icon" => "fas fa-calculator",
                     "link" => route('toollist', 'rd-calculator')
                 ],
+                [
+                    "title" => "PPF Calculator",
+                    "seo_title" => "Free PPF Calculator, Calculate PPF Returns Instantly",
+                    "description" => "PPF Calculator, PPF Returns Instantly",
+                    "icon" => "fas fa-calculator",
+                    "link" => route('toollist', 'ppf-calculator')
+                ]
             ],
             "documents" => [
                 [
