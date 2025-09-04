@@ -60,7 +60,7 @@ downloadRecordingButton.on("click", () => {
 
 	a.href = recordedVideo.src;
 	//a.download = "recorded-video.webm";
-	a.download = "recorded-video.mp4";
+	a.download = "toolHubspot-recorded-video.mp4";
 	a.click();
 
 	document.body.removeChild(a);

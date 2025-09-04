@@ -237,7 +237,7 @@ $(document).ready(function() {
         const targetFormat = $('#targetFormat').val();
         const downloadLink = document.createElement('a');
         downloadLink.href = URL.createObjectURL(convertedImage);
-        downloadLink.download = `${originalFileName}_converted.${targetFormat}`;
+        downloadLink.download = `toolHubspot_.${originalFileName}_converted.${targetFormat}`;
         document.body.appendChild(downloadLink);
         downloadLink.click();
         document.body.removeChild(downloadLink);
