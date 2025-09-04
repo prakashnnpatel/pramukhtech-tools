@@ -70,7 +70,7 @@
                                     <label for="age_group">
                                         <i class="fas fa-user"></i>Age Group
                                     </label>
-                                    <select id="age_group" class="custom-input form-control" style="padding-top: 6px;" onchange="calculateIncomeTax()">
+                                    <select id="age_group" class="custom-input form-control" style="padding: inherit;padding-left: 10px;" onchange="calculateIncomeTax()">
                                         <option value="normal">Below 60 Years</option>
                                         <option value="senior">60 to 80 Years</option>
                                         <option value="super_senior">Above 80 Years</option>
