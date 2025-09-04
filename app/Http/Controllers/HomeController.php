@@ -352,8 +352,8 @@ class HomeController extends Controller
 
         $path = "uploads/pdf/";
         $this->checkDir($path);
-
-        $fileName = "order_invoice_".time().".pdf";
+       
+        $fileName = config('constants.downloadfile_prefix')."_order_invoice_".time().".pdf";
         $pdfName = $path."/".$fileName;
         
 		if(!empty($param['currency']))
@@ -387,7 +387,7 @@ class HomeController extends Controller
         $path = "uploads/documents/";
         $this->checkDir($path);
 
-        $fileName = "digitaldocument_".time().".pdf";
+        $fileName = config('constants.downloadfile_prefix')."_digitaldocument_".time().".pdf";
         $pdfName = $path."/".$fileName;
 
         /* Write PDF */
@@ -576,7 +576,7 @@ class HomeController extends Controller
         $path = "uploads/barcodes/";
         $this->checkDir($path);
 
-        $fileName = "barcode_stickers_" . time() . ".pdf";
+        $fileName = config('constants.downloadfile_prefix')."_barcode_stickers_" . time() . ".pdf";
         $pdfName = $path . "/" . $fileName;
 
         try {

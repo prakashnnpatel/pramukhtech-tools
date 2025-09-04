@@ -9,7 +9,7 @@ var digitalSignature = function()
     $("#doanload_signature").on("click", function(){
         if($("#signature64").val() != "") {           
             var base64Image = $("#signature64").val();
-           $('<a>').attr('id', "download_a_signture").attr('href', base64Image).attr('download', 'signature.png').appendTo('body').get(0).click();
+           $('<a>').attr('id', "download_a_signture").attr('href', base64Image).attr('download', 'toolhubspot_signature.png').appendTo('body').get(0).click();
            $("#download_a_signture").remove();
         }
         else {

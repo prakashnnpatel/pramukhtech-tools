@@ -41,7 +41,8 @@ class SplitPdfController extends Controller
             $outputPdf->useTemplate($tplIdx);
         }
 
-        $outputPath = storage_path('app/split-pdf-' . time() . '.pdf');
+        $fileName = config('constants.downloadfile_prefix').'-split-pdf-' . time() . '.pdf';
+        $outputPath = storage_path('app/'. $fileName);
         $outputPdf->Output($outputPath, 'F');
 
         return response()->download($outputPath)->deleteFileAfterSend(true);

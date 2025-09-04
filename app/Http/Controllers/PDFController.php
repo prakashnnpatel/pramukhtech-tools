@@ -59,6 +59,6 @@ class PDFController extends Controller
 			$html .= '</table>';
 		}
         $pdf = PDF::loadHTML($html)->setPaper('a4', 'portrait');
-        return $pdf->download('merged-images.pdf');
+        return $pdf->download(config('constants.downloadfile_prefix').'-merged-images.pdf');
     }
 }

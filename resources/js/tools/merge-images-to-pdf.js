@@ -114,7 +114,7 @@ var MergeImagesToPDF = function () {
                         let blob = new Blob([data], { type: "application/pdf" });
                         let link = document.createElement("a");
                         link.href = window.URL.createObjectURL(blob);
-                        link.download = "merged-images.pdf";
+                        link.download = "toolhubspot-merged-images.pdf";
                         link.click();
                     },
                     error: function () { 
