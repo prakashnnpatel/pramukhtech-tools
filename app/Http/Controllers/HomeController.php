@@ -38,6 +38,13 @@ class HomeController extends Controller
                     "icon" => "fas fa-calculator",
                     "link" => route('toollist', 'emi-calculator')
                 ],
+                [
+                    "title" => "RD Calculator",
+                    "seo_title" => "Free RD Calculator, Calculate RD Instantly",
+                    "description" => "RD Calculator, Calculate RD Instantly",
+                    "icon" => "fas fa-calculator",
+                    "link" => route('toollist', 'rd-calculator')
+                ],
             ],
             "documents" => [
                 [

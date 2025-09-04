@@ -210,11 +210,7 @@ class ToolsTableSeeder extends Seeder
                 'image' => "text-to-speech.png",
                 'category' => 'Audio, Utilities, Productivity',
             ],
-        ];*/
-
-		### New Tools
-		$tools = [
-			[
+            [
                 'title' => "Split PDF Instantly",
                 'description' => "Split PDF files online for free. Extract, save, or download selected pages instantly. Fast, secure, and easy to use for students and professionals.",
                 'keywords' => "split pdf, pdf splitter, extract pdf pages, split pdf online, free pdf splitter, pdf page extractor, save pdf pages, split pdf tool, pdf organizer, pdf utilities, pdf to pages, pdf page split, pdf document splitter, online pdf split, pdf tools, pdf management, pdf editor, pdf download, pdf for students, pdf for business, pdf for teachers",
@@ -222,6 +218,19 @@ class ToolsTableSeeder extends Seeder
                 'icon' => "fas fa-file-pdf",
                 'image' => "split-pdf.png",
                 'category' => 'PDF, Documents, Utilities, Productivity',
+            ]
+        ];*/
+
+		### New Tools
+		$tools = [
+			[
+               'title' => "RD Calculator",
+                'description' => "The RD Calculator (Recurring Deposit Calculator) helps you estimate the maturity amount and interest earned on your recurring deposit. It uses the standard RD formula used by banks in India. Plan your savings efficiently with accurate results.",
+                'keywords' => "RD calculator, recurring deposit calculator, bank RD interest calculator, RD maturity amount, recurring deposit interest rate, RD investment calculator, RD interest calculator online, compound interest RD calculator, recurring deposit return calculator, calculate RD maturity value",
+                'slug' => "rd-calculator",
+                'icon' => "fas fa-piggy-bank",
+                'image' => 'rd-calculator.png',
+                'category' => 'Finance, Business', 
             ],
 		];
 
