@@ -143,8 +143,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- Quick Info Section -->
+        <div class="col-lg-12">
+            @include('suggestionlist', ['slidertype' => 'H'])
+        </div>
+
         <!-- Results Section -->
-        <div class="row mt-4">
+        <div class="row">
             <div class="col-lg-12" id="error_msg"></div>
             <div class="col-lg-12" id="result"></div>
         </div>

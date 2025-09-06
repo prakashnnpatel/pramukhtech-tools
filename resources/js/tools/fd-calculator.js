@@ -1,3 +1,5 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 var calculateLoadAmount = function()
 {
 	// Get input values

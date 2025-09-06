@@ -4,9 +4,15 @@
         <div class="header-title">Add an electronic signature to your PDF</div>
         <div class="header-desc">Create Branded Digital Documents Instantly – Trusted by Millions!</div>
     </div>
+    <div class="row">
+        <div class="col-lg-12">
+            @include('suggestionlist', ['slidertype' => 'H'])
+        </div>
+    </div>
     <div class="tool-card">
         <form action="javascript:void(0)" id="custominvoicefrm" method="post">
             <div class="row">
+                <!-- Quick Info Section -->
                 <div class="col-lg-12">
                     <div class="tool-card mb-4">
                         <h3 class="font-size-18 font-weight-bold">Add Your Branding</h3>

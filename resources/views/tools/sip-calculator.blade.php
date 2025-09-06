@@ -105,40 +105,7 @@
 
             <!-- Quick Info Section -->
             <div class="col-lg-4 mb-4">
-                <div class="info-card">
-                    <div class="info-header">
-                        <h4><i class="fas fa-info-circle"></i> How it Works</h4>
-                    </div>
-                    <div class="info-content">
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-coins"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Monthly Investment</h5>
-                                <p>The initial amount you sip</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Expected Return</h5>
-                                <p>Interest rate offered by the market</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Tenure</h5>
-                                <p>Duration of your sip period</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @include('suggestionlist')
             </div>
         </div>
 

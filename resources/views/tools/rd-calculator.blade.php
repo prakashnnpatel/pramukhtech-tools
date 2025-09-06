@@ -103,40 +103,7 @@
 
             <!-- Quick Info Section -->
             <div class="col-lg-4 mb-4">
-                <div class="info-card">
-                    <div class="info-header">
-                        <h4><i class="fas fa-info-circle"></i> How it Works</h4>
-                    </div>
-                    <div class="info-content">
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-coins"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Monthly Deposit</h5>
-                                <p>The amount you deposit every month</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Interest Rate</h5>
-                                <p>Annual interest rate offered by the bank</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <div class="info-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Tenure</h5>
-                                <p>Duration of your recurring deposit</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @include('suggestionlist')
             </div>
         </div>
 

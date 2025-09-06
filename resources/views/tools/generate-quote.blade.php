@@ -14,6 +14,10 @@
     <form action="javascript:void(0)" id="custominvoicefrm" method="post">
         <input type="hidden" name="tool_name" id="tool_name" value="Quotation" />
         <div class="row">
+            <!-- Quick Info Section -->
+            <div class="col-lg-12">
+                @include('suggestionlist', ['slidertype' => 'H'])
+            </div>
             <div class="col-lg-6">
                 <div class="invoice-section-card">
                     <h3><i class="fas fa-building"></i> Add Your Branding</h3>

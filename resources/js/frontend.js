@@ -1,5 +1,6 @@
 import './bootstrap';
-
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 // Back to Top Button Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const backToTopBtn = document.getElementById('backToTop');
@@ -146,5 +147,38 @@ document.addEventListener('DOMContentLoaded', function() {
                 menu.classList.remove('show');
             }, 150);
         });
+    });
+
+    const swiper = new Swiper('#swiper-vertical', {
+        direction: "vertical", 
+         slidesPerView: 4,
+        spaceBetween: 30,
+        freeMode: {
+         enabled: true,
+         sticky: false,
+        },        
+        speed: 1500,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+            waitForTransition: false,
+        },
+        loop: true,      
+    });
+
+    new Swiper('#swiper-horizontal', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        freeMode: {
+         enabled: true,
+         sticky: false,
+        },        
+        speed: 1500,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+            waitForTransition: false,
+        },
+        loop: true,      
     });
 });
