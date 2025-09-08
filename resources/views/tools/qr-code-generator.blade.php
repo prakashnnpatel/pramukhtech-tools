@@ -98,6 +98,9 @@
 
 	<!-- Step-by-step guide -->
 	<div class="row mt-3">
+        <div class="col-lg-12">
+            @include('suggestionlist', ['slidertype' => 'H'])
+        </div>
 		<div class="col-lg-12">
 			<div class="info-card">
 				<div class="info-header">

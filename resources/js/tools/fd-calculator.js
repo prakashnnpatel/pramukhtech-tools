@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-var calculateLoadAmount = function()
+var calculateLoadAmount = function(flag='')
 {
 	// Get input values
     const principal = parseFloat($('#investment').val());
@@ -149,6 +149,16 @@ var calculateLoadAmount = function()
             }
         }
     });
+
+    if(flag === 'btn') {
+        $('html, body').stop().animate(
+            { scrollTop: $("#result").offset().top - 100 },
+            {
+                duration: 100,
+                easing: 'swing'
+            }
+        );
+    }
 }
 
   $(function() {	  

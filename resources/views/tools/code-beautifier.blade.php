@@ -18,7 +18,10 @@
 
 	<div class="calculator-main">
 		<div class="row">
-			<div class="col-lg-12 mb-4">
+			<div class="col-lg-12">
+				@include('suggestionlist', ['slidertype' => 'H'])
+			</div>
+			<div class="col-lg-12 mb-2">
 				<div class="calculator-card">
 					<div class="card-header">
 						<h3><i class="fa-solid fa-wand-magic-sparkles"></i> Code Beautifier</h3>
@@ -58,7 +61,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-12">
+			<div class="col-lg-12 mt-2">
 				<div class="info-card">
 					<div class="info-header">
 						<h4><i class="fas fa-code"></i> Output</h4>
@@ -75,37 +78,35 @@
 	</div>
 
 	<div class="info-section">
-		<div class="col-lg-12">
-			<div class="info-content-card">
-				<div class="content-header">
-					<h3><i class="fas fa-info-circle"></i> About Code Beautifier</h3>
-				</div>
-				<div class="content-body">					
-					<p>Format messy code for readability. Supports HTML, JavaScript, and CSS. Everything runs in your browser.</p>
-					<p>A code beautifier, also known as a formatter, automatically restructures your source code-like HTML, CSS, JavaScript-into a clean, consistent, and readable format. It standardizes indentation, spacing, line breaks, and alignment, helping your code appear neat and organized. These tools save developers time by automating formatting tasks, minimizing manual adjustments.</p>
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="content-block">
-								<h4>👉 Key Features</h4>
-								<ul class="feature-list">
-									<li><b>Multi-language support</b> Beautifies HTML, JavaScript, and CSS—covering most front - end development needs.</li>
-									<li><b>Flexible indentation</b> Allows developers to choose between 2, 4, 8 spaces, or Tabs, adapting to different coding standards.</li>
-									<li><b>One-click workflow</b> – Straightforward process: paste your code → pick your settings → click “Beautify” → get instant, formatted output.</li>
-									<li><b>Local, in-browser processing</b> – Runs completely in your browser - ensuring your code never leaves your machine, preserving privacy and enabling offline use.</li>
-									<li><b>Copy - ready formatting</b> – Once beautified, the code is instantly available for copying - streamlining your workflow.</li>
-								</ul>
-							</div>
+		<div class="info-content-card">
+			<div class="content-header">
+				<h3><i class="fas fa-info-circle"></i> About Code Beautifier</h3>
+			</div>
+			<div class="content-body">					
+				<p>Format messy code for readability. Supports HTML, JavaScript, and CSS. Everything runs in your browser.</p>
+				<p>A code beautifier, also known as a formatter, automatically restructures your source code-like HTML, CSS, JavaScript-into a clean, consistent, and readable format. It standardizes indentation, spacing, line breaks, and alignment, helping your code appear neat and organized. These tools save developers time by automating formatting tasks, minimizing manual adjustments.</p>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="content-block">
+							<h4>👉 Key Features</h4>
+							<ul class="feature-list">
+								<li><b>Multi-language support</b> Beautifies HTML, JavaScript, and CSS—covering most front - end development needs.</li>
+								<li><b>Flexible indentation</b> Allows developers to choose between 2, 4, 8 spaces, or Tabs, adapting to different coding standards.</li>
+								<li><b>One-click workflow</b> – Straightforward process: paste your code → pick your settings → click “Beautify” → get instant, formatted output.</li>
+								<li><b>Local, in-browser processing</b> – Runs completely in your browser - ensuring your code never leaves your machine, preserving privacy and enabling offline use.</li>
+								<li><b>Copy - ready formatting</b> – Once beautified, the code is instantly available for copying - streamlining your workflow.</li>
+							</ul>
 						</div>
-						<div class="col-lg-6">
-							<div class="content-block">
-								<h4><i class="fas fa-lightbulb"></i> Benefits</h4>
-								<ul class="feature-list">
-									<li><b>Easier Collaboration</b> – When code follows a consistent style, teamwork becomes smoother-there's less confusion about formatting, and code reviews become more efficient.</li>
-									<li><b>Faster Bug Detection</b> – Well-formatted code makes it easier to spot syntax errors, missing braces, or improperly nested elements.</li>
-									<li><b>Simplified Refactoring</b> – Clean, structured code is more straightforward to modify, upgrade, or expand over time.</li>
-									<li><b>Automated Formatting</b> – Many beautifiers integrate with editors or IDEs to format code automatically on save, eliminating manual indentation hassles.</li>
-								</ul>
-							</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="content-block">
+							<h4><i class="fas fa-lightbulb"></i> Benefits</h4>
+							<ul class="feature-list">
+								<li><b>Easier Collaboration</b> – When code follows a consistent style, teamwork becomes smoother-there's less confusion about formatting, and code reviews become more efficient.</li>
+								<li><b>Faster Bug Detection</b> – Well-formatted code makes it easier to spot syntax errors, missing braces, or improperly nested elements.</li>
+								<li><b>Simplified Refactoring</b> – Clean, structured code is more straightforward to modify, upgrade, or expand over time.</li>
+								<li><b>Automated Formatting</b> – Many beautifiers integrate with editors or IDEs to format code automatically on save, eliminating manual indentation hassles.</li>
+							</ul>
 						</div>
 					</div>
 				</div>

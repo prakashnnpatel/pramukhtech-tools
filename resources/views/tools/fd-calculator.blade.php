@@ -90,7 +90,7 @@
                             <!-- Calculate Button -->
                             <div class="col-lg-12">
                                 <div class="calculate-section">
-                                    <button type="button" onClick="calculateLoadAmount();" class="calculate-btn">
+                                    <button type="button" onClick="calculateLoadAmount('btn');" class="calculate-btn">
                                         <i class="fas fa-calculator"></i>
                                         Calculate Maturity Amount
                                     </button>
@@ -99,68 +99,69 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Quick Info Section -->
-            <div class="col-lg-4 mb-4">
-                @include('suggestionlist')                
-            </div>
-        </div>
 
-        <!-- Results Section -->
-        <div class="row mt-4">
-            <div class="col-lg-12" id="error_msg"></div>
-            <div class="col-lg-12" id="result"></div>
-        </div>
-    </div>
+                <!-- Results Section -->
+                <div class="row mt-4">
+                    <div class="col-lg-12" id="error_msg"></div>
+                    <div class="col-lg-12" id="result"></div>
+                </div>
 
-    <!-- Information Section -->
-    <div class="info-section">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="info-content-card">
-                    <div class="content-header">
-                        <h3><i class="fas fa-book-open"></i> About FD Calculator</h3>
-                    </div>
-                    <div class="content-body">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="content-block">
-                                    <h4><i class="fas fa-calculator"></i> What is FD Calculator?</h4>
-                                    <p>The <strong>FD Calculator</strong> (Fixed Deposit Calculator) is a tool designed to calculate the maturity amount and interest earned on a fixed deposit investment. It uses compound interest principles to provide accurate results. </p>
-                                    <p>It is a free online tool that allows you to calculate the maturity amount and interest earned on a fixed deposit investment. It is a very useful tool for investors to plan their investments and make informed decisions.</p>
+                <!-- Information Section -->
+                <div class="info-section">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="info-content-card">
+                                <div class="content-header">
+                                    <h3><i class="fas fa-book-open"></i> About FD Calculator</h3>
                                 </div>
-                                <div class="content-block">
-                                    <h4><i class="fas fa-cogs"></i> Key Parameters</h4>
-                                    <ul class="feature-list">
-                                        <li><strong>Principal Amount:</strong> The initial amount deposited</li>
-                                        <li><strong>Interest Rate:</strong> The annual interest rate provided by the bank</li>
-                                        <li><strong>Tenure:</strong> The duration for which the amount is deposited</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="content-block">
-                                    <h4><i class="fas fa-star"></i> Key Features</h4>
-                                    <ul class="feature-list">
-                                        <li><strong>Accurate Calculation:</strong> Uses compound interest formula</li>
-                                        <li><strong>Real-time Results:</strong> Instant calculation as you type</li>
-                                        <li><strong>Visual Charts:</strong> Graphical representation of results</li>
-                                        <li><strong>Mobile Friendly:</strong> Works perfectly on all devices</li>
-                                    </ul>
-                                </div>
-                                <div class="content-block">
-                                    <h4><i class="fas fa-lightbulb"></i> Benefits</h4>
-                                    <ul class="feature-list">
-                                        <li>Plan your investments effectively</li>
-                                        <li>Compare different FD schemes</li>
-                                        <li>Understand compound interest growth</li>
-                                        <li>Make informed financial decisions</li>
-                                    </ul>
+                                <div class="content-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-calculator"></i> What is FD Calculator?</h4>
+                                                <p>The <strong>FD Calculator</strong> (Fixed Deposit Calculator) is a tool designed to calculate the maturity amount and interest earned on a fixed deposit investment. It uses compound interest principles to provide accurate results. </p>
+                                                <p>It is a free online tool that allows you to calculate the maturity amount and interest earned on a fixed deposit investment. It is a very useful tool for investors to plan their investments and make informed decisions.</p>
+                                            </div>
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-cogs"></i> Key Parameters</h4>
+                                                <ul class="feature-list">
+                                                    <li><strong>Principal Amount:</strong> The initial amount deposited</li>
+                                                    <li><strong>Interest Rate:</strong> The annual interest rate provided by the bank</li>
+                                                    <li><strong>Tenure:</strong> The duration for which the amount is deposited</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-star"></i> Key Features</h4>
+                                                <ul class="feature-list">
+                                                    <li><strong>Accurate Calculation:</strong> Uses compound interest formula</li>
+                                                    <li><strong>Real-time Results:</strong> Instant calculation as you type</li>
+                                                    <li><strong>Visual Charts:</strong> Graphical representation of results</li>
+                                                    <li><strong>Mobile Friendly:</strong> Works perfectly on all devices</li>
+                                                </ul>
+                                            </div>
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-lightbulb"></i> Benefits</h4>
+                                                <ul class="feature-list">
+                                                    <li>Plan your investments effectively</li>
+                                                    <li>Compare different FD schemes</li>
+                                                    <li>Understand compound interest growth</li>
+                                                    <li>Make informed financial decisions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <!-- Quick Info Section -->
+            <div class="col-lg-4 mb-4">
+                @include('suggestionlist')                
             </div>
         </div>
     </div>

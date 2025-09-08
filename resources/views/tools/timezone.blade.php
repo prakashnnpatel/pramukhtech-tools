@@ -174,6 +174,10 @@ if(!empty($extraParams)) {
     <div class="info-section">
         <div class="row">
             <div class="col-lg-12">
+                @include('suggestionlist', ['slidertype' => 'H'])
+            </div>
+            
+            <div class="col-lg-12">
                 <div class="info-content-card">
                     <div class="content-header">
                         <h3><i class="fas fa-book-open"></i> About World Clock / Converter</h3>

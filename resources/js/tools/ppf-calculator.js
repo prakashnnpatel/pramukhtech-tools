@@ -1,4 +1,4 @@
-var calculatePPF = function() {
+var calculatePPF = function(flag='') {
     const yearlyDeposit = parseFloat($('#ppf_investment').val());
     const rate = parseFloat($('#ppf_rate').val());
     const years = parseInt($('#ppf_years').val());
@@ -138,6 +138,16 @@ var calculatePPF = function() {
             }
         }
     });
+
+    if(flag === 'btn') {
+        $('html, body').stop().animate(
+            { scrollTop: $("#ppf_result").offset().top - 100 },
+            {
+                duration: 100,
+                easing: 'swing'
+            }
+        );
+    }
 }
 $(function() {
     $("#slider-range-ppf-investment").slider({

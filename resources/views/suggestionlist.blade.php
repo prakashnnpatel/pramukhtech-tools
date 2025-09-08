@@ -2,7 +2,7 @@
     <div id="swiper-horizontal" class="info-content swiper" style="padding: 0px 0px;">
         <div class="swiper-wrapper">
             @foreach($suggestedToolListArr as $key => $tooInfo)
-                <a href="{{$tooInfo['link']}}" class="swiper-slide">                            
+                <a href="{{route('toollist', $tooInfo->slug)}}" class="swiper-slide" title="{{$tooInfo['title']}}">
                     <div class="info-item">
                         <div class="info-icon">
                             <i class="{{$tooInfo['icon']}}"></i>
@@ -19,14 +19,14 @@
         </div>                                        
     </div>
 @else
-    <div class="info-card">
+    <div class="info-card" style="height: auto;">
         <div class="info-header">
-            <h4><i class="fas fa-info-circle"></i> Might be you like</h4>
+            <h4><i class="fas fa-info-circle"></i> You may also like</h4>
         </div>
         <div id="swiper-vertical" class="info-content swiper" style="height: 500px; padding: 25px 30px;">
-            <div class="swiper-wrapper" style="padding-bottom: 30px;">
+            <div class="swiper-wrapper" style="padding-bottom: 20px;">
                 @foreach($suggestedToolListArr as $key => $tooInfo)
-                    <a href="{{$tooInfo['link']}}" class="swiper-slide">                            
+                    <a href="{{route('toollist', $tooInfo->slug)}}" class="swiper-slide" title="{{$tooInfo['title']}}">
                         <div class="info-item">
                             <div class="info-icon">
                                 <i class="{{$tooInfo['icon']}}"></i>

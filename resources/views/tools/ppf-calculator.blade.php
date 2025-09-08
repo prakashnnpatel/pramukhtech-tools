@@ -86,7 +86,7 @@
                             <!-- Calculate Button -->
                             <div class="col-lg-12">
                                 <div class="calculate-section">
-                                    <button type="button" onClick="calculatePPF();" class="calculate-btn">
+                                    <button type="button" onClick="calculatePPF('btn');" class="calculate-btn">
                                         <i class="fas fa-calculator"></i>
                                         Calculate Maturity Amount
                                     </button>
@@ -95,64 +95,67 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Quick Info Section -->
-            <div class="col-lg-4 mb-4">
-                @include('suggestionlist')
-            </div>
-        </div>
-        <!-- Results Section -->
-        <div class="row mt-4">
-            <div class="col-lg-12" id="ppf_error_msg"></div>
-            <div class="col-lg-12" id="ppf_result"></div>
-        </div>
-    </div>
-    <!-- Information Section -->
-    <div class="info-section">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="info-content-card">
-                    <div class="content-header">
-                        <h3><i class="fas fa-book-open"></i> About PPF Calculator</h3>
-                    </div>
-                    <div class="content-body">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="content-block">
-                                    <h4><i class="fas fa-calculator"></i> What is PPF Calculator?</h4>
-                                    <p>The <strong>PPF Calculator</strong> helps you estimate the maturity amount and interest earned on your Public Provident Fund investment. It uses the annual compounding formula for PPF.</p>
+
+                <!-- Results Section -->
+                <div class="row mt-4">
+                    <div class="col-lg-12" id="ppf_error_msg"></div>
+                    <div class="col-lg-12" id="ppf_result"></div>
+                </div>
+
+                 <!-- Information Section -->
+                <div class="info-section">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="info-content-card">
+                                <div class="content-header">
+                                    <h3><i class="fas fa-book-open"></i> About PPF Calculator</h3>
                                 </div>
-                                <div class="content-block">
-                                    <h4><i class="fas fa-cogs"></i> Key Parameters</h4>
-                                    <ul class="feature-list">
-                                        <li><strong>Yearly Deposit:</strong> Amount deposited every year</li>
-                                        <li><strong>Interest Rate:</strong> Annual rate set by government</li>
-                                        <li><strong>Tenure:</strong> Number of years (usually 15)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="content-block">
-                                    <h4><i class="fas fa-star"></i> Key Features</h4>
-                                    <ul class="feature-list">
-                                        <li><strong>Accurate Calculation:</strong> Uses annual compounding formula</li>
-                                        <li><strong>Real-time Results:</strong> Instant calculation as you type</li>
-                                        <li><strong>Visual Charts:</strong> Graphical representation of results</li>
-                                        <li><strong>Mobile Friendly:</strong> Works perfectly on all devices</li>
-                                    </ul>
-                                </div>
-                                <div class="content-block">
-                                    <h4><i class="fas fa-lightbulb"></i> Benefits</h4>
-                                    <ul class="feature-list">
-                                        <li>Plan your long-term savings</li>
-                                        <li>Understand PPF growth</li>
-                                        <li>Make informed financial decisions</li>
-                                    </ul>
+                                <div class="content-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-calculator"></i> What is PPF Calculator?</h4>
+                                                <p>The <strong>PPF Calculator</strong> helps you estimate the maturity amount and interest earned on your Public Provident Fund investment. It uses the annual compounding formula for PPF.</p>
+                                            </div>
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-cogs"></i> Key Parameters</h4>
+                                                <ul class="feature-list">
+                                                    <li><strong>Yearly Deposit:</strong> Amount deposited every year</li>
+                                                    <li><strong>Interest Rate:</strong> Annual rate set by government</li>
+                                                    <li><strong>Tenure:</strong> Number of years (usually 15)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-star"></i> Key Features</h4>
+                                                <ul class="feature-list">
+                                                    <li><strong>Accurate Calculation:</strong> Uses annual compounding formula</li>
+                                                    <li><strong>Real-time Results:</strong> Instant calculation as you type</li>
+                                                    <li><strong>Visual Charts:</strong> Graphical representation of results</li>
+                                                    <li><strong>Mobile Friendly:</strong> Works perfectly on all devices</li>
+                                                </ul>
+                                            </div>
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-lightbulb"></i> Benefits</h4>
+                                                <ul class="feature-list">
+                                                    <li>Plan your long-term savings</li>
+                                                    <li>Understand PPF growth</li>
+                                                    <li>Make informed financial decisions</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+            </div>
+            <!-- Quick Info Section -->
+            <div class="col-lg-4 mb-4">
+                @include('suggestionlist')
             </div>
         </div>
     </div>

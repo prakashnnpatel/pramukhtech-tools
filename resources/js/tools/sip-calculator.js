@@ -1,4 +1,4 @@
-var calculateLoadAmount = function()
+var calculateLoadAmount = function(flag='')
 {
 	 // Retrieve input values
 	const P = parseFloat($('#investment').val());
@@ -117,6 +117,16 @@ var calculateLoadAmount = function()
             }
         }
     });
+
+    if(flag === 'btn') {
+        $('html, body').stop().animate(
+            { scrollTop: $("#result").offset().top - 100 },
+            {
+                duration: 100,
+                easing: 'swing'
+            }
+        );
+    }
 }
 
   $(function() {	  

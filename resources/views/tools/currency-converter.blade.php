@@ -107,9 +107,13 @@ if(!empty($extraParams)) {
                 </div>--}}
             </div>
         </div>
-    </div>
+    </div>    
+
     <div class="info-section">
         <div class="row">
+            <div class="col-lg-12">
+                @include('suggestionlist', ['slidertype' => 'H'])
+            </div>
             <div class="col-lg-12">
                 <div class="info-content-card">
                     <div class="content-header">

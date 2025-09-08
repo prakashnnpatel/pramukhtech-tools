@@ -1,4 +1,4 @@
-var calculateRD = function() {
+var calculateRD = function(flag='') {
     // Get input values
     const monthlyDeposit = parseFloat($('#monthly_deposit').val());
     const rate = parseFloat($('#rd_rate').val());
@@ -62,7 +62,7 @@ var calculateRD = function() {
             <h3><i class="fas fa-chart-pie"></i> RD Summary</h3>
         </div>
         <div class="result-content">            
-            <div class="summary-grid" style="grid-template-columns: repeat(4, 1fr); gap: 15px;">
+            <div class="summary-grid">
                 <div class="summary-item">
                     <div class="summary-icon">
                         <i class="fas fa-chart-line"></i>
@@ -166,6 +166,16 @@ var calculateRD = function() {
             }
         }
     });
+
+    if(flag === 'btn') {
+        $('html, body').stop().animate(
+            { scrollTop: $("#result").offset().top - 100 },
+            {
+                duration: 100,
+                easing: 'swing'
+            }
+        );
+    }
 };
 
 // Slider initialization for RD Calculator (like in FD Calculator)

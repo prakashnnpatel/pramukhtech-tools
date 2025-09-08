@@ -83,7 +83,7 @@
 
     <div class="info-section">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-8 mt-4">
                 <div class="info-content-card">
                     <div class="content-header">
                         <h3><i class="fas fa-book-open"></i> About Text to Speech</h3>
@@ -127,6 +127,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-lg-4 mt-4">
+                @include('suggestionlist')
             </div>
         </div>
     </div>

@@ -9,9 +9,6 @@ $seoTitle = $converter_title ? $converter_title . ' Image Converter - Free Onlin
 $seoDescription = 'Convert images between formats instantly with our free online Image Converter. Transform JPG to PNG, PNG to JPG, WEBP to JPG, and more. High-quality conversion with customizable settings, drag & drop support, and no registration required.';
 $seoKeywords = 'image converter, free image converter, online image converter, jpg to png converter, png to jpg converter, webp to jpg, image format converter, convert image online, photo converter, image optimization tool';
 @endphp
-
-
-
 <div class="fd-calculator-container">
     <div class="calculator-header">
         <div class="header-content">
@@ -27,6 +24,9 @@ $seoKeywords = 'image converter, free image converter, online image converter, j
 
     <div class="calculator-main">
         <div class="row">
+            <div class="col-lg-12">
+				@include('suggestionlist', ['slidertype' => 'H'])
+			</div>
             <div class="col-lg-6 mb-4">
                 <div class="calculator-card">
                     <div class="card-header">

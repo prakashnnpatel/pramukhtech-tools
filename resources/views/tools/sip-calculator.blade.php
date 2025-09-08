@@ -92,7 +92,7 @@
                             <!-- Calculate Button -->
                             <div class="col-lg-12">
                                 <div class="calculate-section">
-                                    <button type="button" onClick="calculateLoadAmount();" class="calculate-btn">
+                                    <button type="button" onClick="calculateLoadAmount('btn');" class="calculate-btn">
                                         <i class="fas fa-calculator"></i>
                                         Calculate Your SIP Now
                                     </button>
@@ -101,6 +101,59 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Results Section -->
+                <div class="row mt-4">
+                    <div class="col-lg-12" id="error_msg"></div>
+                    <div class="col-lg-12" id="result"></div>
+                </div>
+
+                <!-- Information Section -->
+                <div class="info-section">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="info-content-card">
+                                <div class="content-header">
+                                    <h3><i class="fas fa-book-open"></i> About SIP Calculator</h3>
+                                </div>
+                                <div class="content-body">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-star"></i> SIP Calculator - Systematic Investment Plan Calculator</h4>
+                                                <p>The <a href="{{route('toollist', 'sip-calculator')}}" title="SIP Calculator">SIP Calculator</a> can help you determine the estimated value of the returns. Prospective investors can think that SIPs and <a href="https://www.mutualfundssahihai.com/" target="_blank" rel="noopener" title="mutual funds">mutual funds</a> are the same. However, SIPs are merely a method of investing in mutual funds, the other method being a lump sum. A Systematic Investment Plan or SIP is a process of investing a fixed sum of money in mutual funds at regular intervals. SIPs usually allow you to invest weekly, quarterly, or monthly.</p>
+                                            </div>
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-calculator"></i> What is a SIP Calculator?</h4>
+                                                <p>A SIP calculator is a simple tool that allows individuals to get an idea of the returns on their mutual fund investments made through SIP. SIP investments in mutual funds have become one of the most popular investment options for millennials lately.</p>
+                                                <p>These mutual fund sip calculators are designed to give potential investors an estimate on their mutual fund investments. However, the actual returns offered by a mutual fund scheme varies depending on various factors. The SIP calculator does not provide clarification for the exit load and expense ratio (if any).</p>
+                                                <p>This calculator will calculate the wealth gain and expected returns for your monthly SIP investment. Indeed, you get a rough estimate on the maturity amount for any of your monthly SIP, based on a projected annual return rate.</p>
+                                            </div>
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-cogs"></i> How can a SIP return calculator help you?</h4>
+                                                <p>SIPs are a more lucrative mode of investing funds compared to a lump sum amount according to several mutual fund experts. It helps you become financially disciplined and create a habit of savings that can benefit you in the future.</p>
+                                                <p>A SIP calculator online is a beneficial tool, which shows the estimated returns you will earn after the investment tenure.</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">                                
+                                            <div class="content-block">
+                                                <h4><i class="fas fa-lightbulb"></i> Key benefits of SIP calculators include</h4>
+                                                <ul class="feature-list">
+                                                    <li>Assists you to determine the amount you want to invest in.</li>
+                                                    <li>Tells you the total amount you have invested.</li>
+                                                    <li>Gives an estimated value of the returns.</li>
+                                                    <li>It is a free online tool that allows you to calculate the maturity amount and interest earned on a SIP investment.</li>
+                                                    <li>It is a very useful tool for investors to plan their investments and make informed decisions.</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Quick Info Section -->
@@ -108,59 +161,7 @@
                 @include('suggestionlist')
             </div>
         </div>
-
-        <!-- Results Section -->
-        <div class="row mt-4">
-            <div class="col-lg-12" id="error_msg"></div>
-            <div class="col-lg-12" id="result"></div>
-        </div>
-    </div>
-
-    <!-- Information Section -->
-    <div class="info-section">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="info-content-card">
-                    <div class="content-header">
-                        <h3><i class="fas fa-book-open"></i> About SIP Calculator</h3>
-                    </div>
-                    <div class="content-body">
-                        <div class="row">
-                            <div class="col-lg-12">
-								<div class="content-block">
-                                    <h4><i class="fas fa-star"></i> SIP Calculator - Systematic Investment Plan Calculator</h4>
-                                    <p>The <a href="{{route('toollist', 'sip-calculator')}}" title="SIP Calculator">SIP Calculator</a> can help you determine the estimated value of the returns. Prospective investors can think that SIPs and <a href="https://www.mutualfundssahihai.com/" target="_blank" rel="noopener" title="mutual funds">mutual funds</a> are the same. However, SIPs are merely a method of investing in mutual funds, the other method being a lump sum. A Systematic Investment Plan or SIP is a process of investing a fixed sum of money in mutual funds at regular intervals. SIPs usually allow you to invest weekly, quarterly, or monthly.</p>
-                                </div>
-                                <div class="content-block">
-                                    <h4><i class="fas fa-calculator"></i> What is a SIP Calculator?</h4>
-                                    <p>A SIP calculator is a simple tool that allows individuals to get an idea of the returns on their mutual fund investments made through SIP. SIP investments in mutual funds have become one of the most popular investment options for millennials lately.</p>
-									<p>These mutual fund sip calculators are designed to give potential investors an estimate on their mutual fund investments. However, the actual returns offered by a mutual fund scheme varies depending on various factors. The SIP calculator does not provide clarification for the exit load and expense ratio (if any).</p>
-									<p>This calculator will calculate the wealth gain and expected returns for your monthly SIP investment. Indeed, you get a rough estimate on the maturity amount for any of your monthly SIP, based on a projected annual return rate.</p>
-                                </div>
-                                <div class="content-block">
-                                    <h4><i class="fas fa-cogs"></i> How can a SIP return calculator help you?</h4>
-                                    <p>SIPs are a more lucrative mode of investing funds compared to a lump sum amount according to several mutual fund experts. It helps you become financially disciplined and create a habit of savings that can benefit you in the future.</p>
-		   							<p>A SIP calculator online is a beneficial tool, which shows the estimated returns you will earn after the investment tenure.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">                                
-                                <div class="content-block">
-                                    <h4><i class="fas fa-lightbulb"></i> Key benefits of SIP calculators include</h4>
-                                    <ul class="feature-list">
-                                        <li>Assists you to determine the amount you want to invest in.</li>
-										<li>Tells you the total amount you have invested.</li>
-										<li>Gives an estimated value of the returns.</li>
-										<li>It is a free online tool that allows you to calculate the maturity amount and interest earned on a SIP investment.</li>
-										<li>It is a very useful tool for investors to plan their investments and make informed decisions.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>    
 </div>
 @push('page_scripts')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

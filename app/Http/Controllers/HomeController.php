@@ -245,26 +245,22 @@ class HomeController extends Controller
 			$extraParams = explode("-to-",$subpart);
 		}
 
+        Tools::where("slug", $toolkey)->increment("use_count");
         $currentTool = Tools::select(["id", "category"])->where("slug", "=", $toolkey)->first();
-        $suggestedToolListArr = [];
+        $similarTools = [];
         if(!empty($currentTool))
         {
-            $toolInfo = Tools::where("status","Active")->where("id", "!=", $currentTool->id)->where("category", "LIKE", "%".$currentTool->category."%")->get();
-            if(!empty($toolInfo))
-            {
-                foreach($toolInfo as $key => $toolInfo) 
-                {
-                    $suggestedToolListArr[] = [
-                        "title" => $toolInfo->title,
-                        "icon" => $toolInfo->icon,
-                        "link" => route('toollist', $toolInfo->slug)
-                    ];
+            $categories = explode(',', $currentTool->category);
+            $similarTools = Tools::where("status", "Active")->where("id", "!=", $currentTool->id)
+            ->where(function($query) use ($categories) {
+                foreach ($categories as $category) {
+                    $query->orWhere("category", "LIKE", "%" . trim($category) . "%");
                 }
-            }
+            })->get();
         }
         
 		try {
-			return view("tools.index", ["toolKey" => $toolkey, "extraParams" => $extraParams, "suggestedToolListArr" => $suggestedToolListArr]);
+			return view("tools.index", ["toolKey" => $toolkey, "extraParams" => $extraParams, "suggestedToolListArr" => $similarTools]);
 		}
 		catch(Exception $e) {
 			return response()->view('errors.404', [], 404);

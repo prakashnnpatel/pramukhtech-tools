@@ -90,7 +90,7 @@
                             <!-- Calculate Button -->
                             <div class="col-lg-12">
                                 <div class="calculate-section">
-                                    <button type="button" onClick="calculateRD();" class="calculate-btn">
+                                    <button type="button" onClick="calculateRD('btn');" class="calculate-btn">
                                         <i class="fas fa-calculator"></i>
                                         Calculate Maturity Amount
                                     </button>
@@ -106,12 +106,12 @@
                 @include('suggestionlist')
             </div>
         </div>
+    </div>
 
-        <!-- Results Section -->
-        <div class="row mt-4">
-            <div class="col-lg-12" id="error_msg"></div>
-            <div class="col-lg-12" id="result"></div>
-        </div>
+    <!-- Results Section -->
+    <div class="row mt-4">
+        <div class="col-lg-12" id="error_msg"></div>
+        <div class="col-lg-12" id="result"></div>
     </div>
 
     <!-- Information Section -->
@@ -124,7 +124,7 @@
                     </div>
                     <div class="content-body">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <div class="content-block">
                                     <h4><i class="fas fa-calculator"></i> What is RD Calculator?</h4>
                                     <p>The <strong>RD Calculator</strong> (Recurring Deposit Calculator) helps you estimate the maturity amount and interest earned on your recurring deposit. It uses the standard RD formula used by banks in India.</p>
@@ -138,7 +138,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <div class="content-block">
                                     <h4><i class="fas fa-star"></i> Key Features</h4>
                                     <ul class="feature-list">
@@ -166,5 +166,4 @@
 </div>
 @push('page_scripts')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="/js/tools/rd-calculator.js"></script>
 @endpush

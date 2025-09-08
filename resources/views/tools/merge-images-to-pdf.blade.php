@@ -78,6 +78,8 @@
         </form>
     </div>
 
+   @include('suggestionlist', ['slidertype' => 'H'])
+
     <!-- Step-by-step guide -->
     <div class="info-section">
         <div class="row">
@@ -115,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>            
         </div>
     </div>
 

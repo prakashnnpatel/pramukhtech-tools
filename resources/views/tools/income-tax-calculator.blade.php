@@ -81,7 +81,7 @@
                             <!-- Calculate Button -->
                             <div class="col-lg-12">
                                 <div class="calculate-section">
-                                    <button type="button" onClick="calculateIncomeTax();" class="calculate-btn">
+                                    <button type="button" onClick="calculateIncomeTax('btn');" class="calculate-btn">
                                         <i class="fas fa-calculator"></i>
                                         Calculate Tax
                                     </button>

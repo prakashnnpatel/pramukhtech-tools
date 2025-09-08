@@ -1,4 +1,4 @@
-var calculateIncomeTax = function() {
+var calculateIncomeTax = function(flag='') {
     const income = parseFloat($('#annual_income').val());
     const deductions = parseFloat($('#deductions').val());
     const ageGroup = $('#age_group').val();
@@ -86,7 +86,7 @@ var calculateIncomeTax = function() {
             <h3><i class="fas fa-chart-pie"></i> Tax Summary</h3>
         </div>
         <div class="result-content">
-            <div class="summary-grid" style="grid-template-columns: repeat(4, 1fr); gap: 15px;">
+            <div class="summary-grid">
                 <div class="summary-item">
                     <div class="summary-icon">
                         <i class="fas fa-rupee-sign"></i>
@@ -188,6 +188,16 @@ var calculateIncomeTax = function() {
             }
         }
     });
+
+    if(flag === 'btn') {
+        $('html, body').stop().animate(
+            { scrollTop: $("#result").offset().top - 100 },
+            {
+                duration: 100,
+                easing: 'swing'
+            }
+        );
+    }
 };
 
 $(function() {

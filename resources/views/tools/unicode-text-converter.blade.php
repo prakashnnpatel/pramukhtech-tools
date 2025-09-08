@@ -13,10 +13,13 @@
 
 	<div class="calculator-main">
 		<div class="row">
+			<div class="col-lg-12">
+				@include('suggestionlist', ['slidertype' => 'H'])
+			</div>
 			<div class="col-lg-12 mb-4">
 				<div class="calculator-card">
 					<div class="card-header">
-						<h3><i class="fas fa-magic"></i> Convert Your Text</h3>
+						<h3><i class="fas fa-sliders"></i> Convert Your Text</h3>
 						<p>Type or paste your text and see multiple Unicode styles instantly. Click copy to use anywhere.</p>
 					</div>
 					<div class="card-body">
