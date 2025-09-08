@@ -1,3 +1,4 @@
+{{-- Suggestion List: Horizontal Slider --}}
 @if(!empty($slidertype) && $slidertype == "H")
     <div id="swiper-horizontal" class="info-content swiper" style="padding: 0px 0px;">
         <div class="swiper-wrapper">
@@ -19,6 +20,7 @@
         </div>                                        
     </div>
 @else
+    {{-- Suggestion List: Vertical Slider --}}
     <div class="info-card" style="height: auto;">
         <div class="info-header">
             <h4><i class="fas fa-info-circle"></i> You may also like</h4>

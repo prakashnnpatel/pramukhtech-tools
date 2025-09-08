@@ -170,15 +170,26 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 3,
         spaceBetween: 30,
         freeMode: {
-         enabled: true,
-         sticky: false,
-        },        
+            enabled: true,
+            sticky: false,
+        },
         speed: 1500,
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,
             waitForTransition: false,
         },
-        loop: true,      
+        loop: true,
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            576: {
+                slidesPerView: 2
+            },
+            992: {
+                slidesPerView: 3
+            }
+        }
     });
 });
