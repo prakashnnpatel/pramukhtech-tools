@@ -4,7 +4,7 @@
         <div class="swiper-wrapper">
             @foreach($suggestedToolListArr as $key => $tooInfo)
                 <a href="{{route('toollist', $tooInfo->slug)}}" class="swiper-slide" title="{{$tooInfo['title']}}">
-                    <div class="info-item">
+                    <div class="info-item" style="background: #fff;  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);">
                         <div class="info-icon">
                             <i class="{{$tooInfo['icon']}}"></i>
                         </div>
