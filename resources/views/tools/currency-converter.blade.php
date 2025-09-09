@@ -34,6 +34,11 @@ if(!empty($extraParams)) {
         <div class="header-title">{{ !empty($converter_title) ? $converter_title . ' ' : '' }} Currency Converter</div>
         <div class="header-desc">Support for 160+ global currencies with real-time exchange rates.</div>
     </div>
+    <div class="row">
+        <div class="col-lg-12">
+            @include('suggestionlist', ['slidertype' => 'H'])
+        </div>
+    </div>
     <div class="calculator-card">
         <div class="card-header">
             <h3><i class="fas fa-exchange-alt"></i> Currency Converter</h3>
@@ -110,10 +115,7 @@ if(!empty($extraParams)) {
     </div>    
 
     <div class="info-section">
-        <div class="row">
-            <div class="col-lg-12">
-                @include('suggestionlist', ['slidertype' => 'H'])
-            </div>
+        <div class="row">            
             <div class="col-lg-12">
                 <div class="info-content-card">
                     <div class="content-header">

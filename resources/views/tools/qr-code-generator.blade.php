@@ -11,6 +11,12 @@
         </div>
     </div>
 
+    <div class="row">
+         <div class="col-lg-12">
+            @include('suggestionlist', ['slidertype' => 'H'])
+        </div>    
+    <div>
+
     <div class="calculator-main">
         <div class="row">
             <div class="col-lg-6 mb-4">
@@ -97,10 +103,7 @@
     </div>
 
 	<!-- Step-by-step guide -->
-	<div class="row mt-3">
-        <div class="col-lg-12">
-            @include('suggestionlist', ['slidertype' => 'H'])
-        </div>
+	<div class="row mt-3">       
 		<div class="col-lg-12">
 			<div class="info-card">
 				<div class="info-header">

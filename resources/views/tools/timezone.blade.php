@@ -37,6 +37,12 @@ if(!empty($extraParams)) {
         <div class="header-desc">The {{$timezone_title??''}} timezone converter tool is powerful & accurate time management, the tool converts the datetime from one timezone to another time zone, which is designed to simplify time management across different regions.</div>
     </div>
 
+    <div class="row">
+        <div class="col-lg-12">
+            @include('suggestionlist', ['slidertype' => 'H'])
+        </div>
+    </div>
+
     <div class="calculator-main">
         <div class="row">
             <div class="col-lg-8 mb-4">
@@ -173,10 +179,6 @@ if(!empty($extraParams)) {
     <!-- Information Section -->
     <div class="info-section">
         <div class="row">
-            <div class="col-lg-12">
-                @include('suggestionlist', ['slidertype' => 'H'])
-            </div>
-            
             <div class="col-lg-12">
                 <div class="info-content-card">
                     <div class="content-header">

@@ -11,6 +11,12 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-lg-12">
+            @include('suggestionlist', ['slidertype' => 'H'])
+        </div>
+    </div>
+
 	<!-- Main Calculator Section -->
     <div class="calculator-main">
         <div class="row">
@@ -43,12 +49,8 @@
                 </div>
             </div>
 
-            <div class="col-lg-12 mt-5">
-                @include('suggestionlist', ['slidertype' => 'H'])
-            </div>
-
             <!-- Quick Info Section -->
-            <div class="col-lg-12">
+            <div class="col-lg-12 mt-5">
                 <div class="info-card">
                     <div class="info-header">
                         <h4><i class="fas fa-info-circle"></i> How it Works?</h4>

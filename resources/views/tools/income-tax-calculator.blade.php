@@ -11,7 +11,12 @@
             </div>
         </div>
     </div>
-
+     <!-- Quick Info Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            @include('suggestionlist', ['slidertype' => 'H'])
+        </div>
+    </div>
     <!-- Main Calculator Section -->
     <div class="calculator-main">
         <div class="row">
@@ -142,11 +147,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Quick Info Section -->
-        <div class="col-lg-12">
-            @include('suggestionlist', ['slidertype' => 'H'])
         </div>
 
         <!-- Results Section -->

@@ -23,6 +23,11 @@
         <div class="header-title">Merge Multiple Images Into One PDF</div>
         <div class="header-desc">Drag & drop your images below and download as a single PDF.</div>
     </div>
+    <DIV class="row">
+        <div class="col-lg-12">
+            @include('suggestionlist', ['slidertype' => 'H'])
+        </div>
+    </div>
     <div class="tool-card">
         <h5 class="mb-3">Turn multiple photos or images in any format into a polished, professional PDF.</h5>
         <form id="imageForm" action="{{ route('merge.images.pdf') }}" method="POST" enctype="multipart/form-data">
@@ -77,8 +82,6 @@
             </div>
         </form>
     </div>
-
-   @include('suggestionlist', ['slidertype' => 'H'])
 
     <!-- Step-by-step guide -->
     <div class="info-section">
