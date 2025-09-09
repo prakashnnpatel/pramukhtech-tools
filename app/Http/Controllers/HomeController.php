@@ -332,6 +332,15 @@ class HomeController extends Controller
             ["url" => route('toollist',['currency-converter','eur-to-gbp']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
             ["url" => route('toollist',['currency-converter','cad-to-inr']), "changeFreq" => Url::CHANGE_FREQUENCY_DAILY],
         ];
+
+        /* Categories search url */
+        foreach(config('constants.tools_category') as $cat_key=>$category_val) {
+            $staticPages[] = [
+                "url" => route('tools',$category_val),
+                "changeFreq" => Url::CHANGE_FREQUENCY_WEEKLY
+            ];
+        }
+
         //echo "<pre>"; print_r($staticPages);exit;
         foreach ($staticPages as $key => $page) {
             $sitemap->add(

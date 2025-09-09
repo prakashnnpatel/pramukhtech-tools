@@ -278,6 +278,16 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		{{-- Search Page --}}
+		@case('tools')
+			<title>Free Online Tools & Calculators | ToolHubSpot</title>
+			<meta name="description" content="Explore a wide range of free online tools and calculators at ToolHubSpot. Boost productivity with finance, documents, PDFs, text, conversions, and more tools." />
+			<meta name="keywords" content="free online tools, calculators, free calculators, productivity tools, document tools, PDF tools, text utilities, file converters, utility tools, search tools, free web tools, best online tools, online utilities, tool search, instant tools, tool directory, calculator hub, digital tools, ToolHubSpot" />
+			<meta property="og:title" content="Free Online Tools & Calculators | ToolHubSpot" />
+			<meta property="og:description" content="Explore a wide range of free online tools and calculators at ToolHubSpot. Boost productivity with finance, documents, PDFs, text, conversions, and more tools." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		@default
 			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
 			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			
