@@ -15,7 +15,7 @@
          <div class="col-lg-12">
             @include('suggestionlist', ['slidertype' => 'H'])
         </div>    
-    <div>
+    </div>
 
     <div class="calculator-main">
         <div class="row">
