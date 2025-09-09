@@ -26,7 +26,7 @@ var Home = (function () {
 				var query = $(this).siblings('.searchBox').val().trim();
 				redirectToSearch(query);
 			});
-
+                        
             $('.owl-carousel').each(function(idx, el) {
                 var $carousel = $(el);
                 $carousel.owlCarousel({
@@ -58,10 +58,26 @@ var Home = (function () {
                     bottom: '-30px',
                     zIndex: 10
                 });
-                $customNavButton.css({
-                    border: '0', 
-                    backgroundColor:'#f1f5f9',                
-                });
+                if($("#pagename").length > 0 && $("#pagename").val() == "about")
+                {
+                    var $customNavSpan = $('.owl-custom-nav').find('span');
+                    $customNavSpan.css({
+                        border: '1px solid', 
+                        backgroundColor:'#fff',                
+                    }); 
+                    $customNavButton.css({
+                        border: '0', 
+                        backgroundColor:'#fff',                
+                    });                  
+                }
+                else
+                {
+                    $customNavButton.css({
+                        border: '0', 
+                        backgroundColor:'#f1f5f9',                
+                    });
+                }
+                
                 $carousel.parent().css('position', 'relative');
             });
         },

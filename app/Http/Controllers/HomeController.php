@@ -203,7 +203,8 @@ class HomeController extends Controller
 
     public function aboutUs()
     {
-        return view("about-us");
+        $similarTools = Tools::where("status","Active")->get();
+        return view("about-us", ["suggestedToolListArr" => $similarTools]);
     }
 
     public function toolList(Request $request, $category = null)
@@ -238,7 +239,7 @@ class HomeController extends Controller
 		if($toolkey == "invoice-generator") {
 			$toolkey = "custom-invoice";
 		}
-
+                
 		$extraParams = [];
 		if(!empty($subpart) && (in_array($toolkey, ['timezone', 'image-converter','currency-converter'])))
 		{

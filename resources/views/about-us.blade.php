@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<input type="hidden" id="pagename" value="about"/>
 <div class="tool-page-container">
     <div class="tool-header mb-4">
         <div class="header-icon"><i class="fas fa-users"></i></div>
@@ -60,49 +61,24 @@
         <div class="tool-categories">
             <div class=" category-section">
                 <h3>What We Offer</h3>
-                <div class="tools-grid">
-                    <div class="tool-card animate-on-scroll" data-delay="0.1">
-                        <div class="tool-icon">
-                            <i class="fas fa-calculator"></i>
-                        </div>
-                        <div class="tool-content">
-                            <h3>Financial Calculators</h3>
-                            <p>EMI, SIP, FD, and other smart calculators to help you plan and manage finances effectively.</p>
-                            {{--<a href="{{route('toollist', 'fd-calculator')}}" class="tool-link" title="Try Now">
-                                Try Now <i class="fas fa-arrow-right"></i>
-                            </a>--}}
-                        </div>
-                        <div class="tool-hover-effect"></div>
-                    </div>
-                    
-                    <div class="tool-card animate-on-scroll" data-delay="0.2">
-                        <div class="tool-icon">
-                            <i class="fas fa-file-invoice"></i>
-                        </div>
-                        <div class="tool-content">
-                            <h3>Document Tools</h3>
-                            <p>Easy invoice creation, purchase orders, and customizable digital documents.</p>
-                            {{--<a href="{{route('toollist', 'sip-calculator')}}" class="tool-link" title="Try Now">
-                                Try Now <i class="fas fa-arrow-right"></i>
-                            </a>--}}
-                        </div>
-                        <div class="tool-hover-effect"></div>
-                    </div>
-                    
-                    <div class="tool-card animate-on-scroll" data-delay="0.3">
-                        <div class="tool-icon">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <div class="tool-content">
-                            <h3>Utility Tools</h3>
-                            <p>From color pickers and timezone converters to digital signatures, all in one place.</p>
-                            {{--<a href="{{route('toollist', 'emi-calculator')}}" class="tool-link" title="Try Now">
-                                Try Now <i class="fas fa-arrow-right"></i>
-                            </a>--}}
-                        </div>
-                        <div class="tool-hover-effect"></div>
-                    </div>
+                <div class="tools-grid owl-carousel owl-theme">
+                    @foreach($suggestedToolListArr as $tool)
+                        <a href="{{ $tool->slug }}" class="tool-card" title="{{ $tool->title }}" style="text-decoration:none;color:inherit;display:block;">
+                            <div class="tool-icon">
+                                <i class="{{ $tool->icon }}"></i>
+                            </div>
+                            <div class="tool-content">
+                                <h3>{{ $tool->title }}</h3>               
+                                <p>{{ \Illuminate\Support\Str::limit($tool->description, 140, $end='...') }}</p>
+                                <span class="tool-link" style="pointer-events:none;">
+                                    Try Now <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                            <div class="tool-hover-effect"></div>
+                        </a>
+                    @endforeach
                 </div>
+                <div class="owl-custom-nav"></div>
             </div>
         </div>
 
