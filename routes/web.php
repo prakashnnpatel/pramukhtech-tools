@@ -7,6 +7,7 @@ use App\Http\Controllers\{
 	HomeController,
 	PDFController,
 	QRCodeController,
+	CardTemplateController,
 };
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -27,6 +28,11 @@ Route::post('/barcode-sticker-generator/generate', [HomeController::class, 'gene
 
 // Split PDF Tool
 Route::post('/split-pdf/split', [App\Http\Controllers\SplitPdfController::class, 'split'])->name('tools.split-pdf.split');
+
+
+// Greeting card templates list and editor
+Route::get('/cards', [CardTemplateController::class, 'index'])->name('cards');
+Route::get('/greeting-cards/{slug}', [CardTemplateController::class, 'show'])->name('greeting-cards.show');
 
 ### Always keep This router at last
 Route::get('/{toolkey?}/{subpart?}',[HomeController::class, 'tools'])->name("toollist");
