@@ -246,12 +246,7 @@ class ToolsTableSeeder extends Seeder
                 "image" => "income-tax-calculator.png",
                 "category" => "Finance, Business",               
             ],
-        ];*/
-
-        
-		### New Tools
-		$tools = [
-			[
+            [
                 "title" => "Crop Image Online",
                 "description" => "Crop images online instantly. Free photo cropper tool to resize, cut, and adjust your pictures in custom sizes. Quick, easy & no software required.",
                 "keywords" => "crop image online, image cropper tool, free photo cropper, crop photo online, resize image, cut image online, picture crop tool, photo editing online",
@@ -260,7 +255,39 @@ class ToolsTableSeeder extends Seeder
                 "image" => "crop-image.png",
                 "category" => "Images, Business, Utilities, Productivity,",               
             ],
-		];
+            [
+                "title" => "Image Resize Tool",
+                "description" => "Resize images online by pixel or percentage. Upload, preview, and download instantly. Supports drag & drop and custom sizes.",
+                "keywords" => "image resize, resize image online, photo resizer, image resizer tool, resize by pixel, resize by percentage, online image tool, drag and drop image resize, download resized image, free image resizer",
+                "slug" => "image-resize",
+                "icon" => "fas fa-image",
+                "image" => "image-resize.png",
+                "category" => "Images, Utilities, Productivity,",               
+            ],
+        ];*/
+
+        
+		### New Tools
+        $tools = [
+            [
+                "title" => "Crop Image Online",
+                "description" => "Crop images online instantly. Free photo cropper tool to resize, cut, and adjust your pictures in custom sizes. Quick, easy & no software required.",
+                "keywords" => "crop image online, image cropper tool, free photo cropper, crop photo online, resize image, cut image online, picture crop tool, photo editing online",
+                "slug" => "crop-image",
+                "icon" => "fas fa-crop-alt",
+                "image" => "crop-image.png",
+                "category" => "Images, Business, Utilities, Productivity,",               
+            ],           
+            [
+                "title" => "Image Resize Tool",
+                "description" => "Resize images online by pixel or percentage. Upload, preview, and download instantly. Supports drag & drop and custom sizes.",
+                "keywords" => "image resize, resize image online, photo resizer, image resizer tool, resize by pixel, resize by percentage, online image tool, drag and drop image resize, download resized image, free image resizer",
+                "slug" => "image-resize",
+                "icon" => "fas fa-image",
+                "image" => "image-resize.png",
+                "category" => "Images, Utilities, Productivity,",               
+            ],
+        ];
 
         foreach ($tools as $index => $tool) {
             $tool['created_at'] = Carbon::now();

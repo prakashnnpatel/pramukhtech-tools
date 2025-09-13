@@ -287,6 +287,15 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('image-resize')
+			<title>Free Online Image Resizer - Resize Images Instantly | ToolHubSpot</title>
+			<meta name="description" content="Resize images online for free with ToolHubSpot's fast and easy image resizer. Instantly resize JPG, PNG, WEBP, and more. No sign-up or installation required." />
+			<meta name="keywords" content="image resizer, resize image online, free image resize tool, online photo resizer, resize JPG, resize PNG, resize WEBP, image size changer, resize picture, resize photo online, ToolHubSpot image resizer" />
+			<meta property="og:title" content="Free Online Image Resizer - Resize Images Instantly | ToolHubSpot" />
+			<meta property="og:description" content="Resize images online for free with ToolHubSpot's fast and easy image resizer. Instantly resize JPG, PNG, WEBP, and more. No sign-up or installation required." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		{{-- Search Page --}}
 		@case('tools')
 			<title>Free Online Tools & Calculators | ToolHubSpot</title>
