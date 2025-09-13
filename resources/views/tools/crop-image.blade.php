@@ -348,7 +348,7 @@
       if (canvas) {
         const link = document.createElement('a');
         link.href = canvas.toDataURL('image/png');
-        link.download = 'cropped-image.png';
+        link.download = 'ToolHubspot-cropped-image.png';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

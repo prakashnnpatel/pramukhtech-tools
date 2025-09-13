@@ -145,7 +145,7 @@ $(function() {
         let ext = 'png';
         if ($targetSize.val() && !isNaN(parseFloat($targetSize.val()))) ext = 'jpg';
         a.href = resizedDataUrl;
-        a.download = 'resized-image.' + ext;
+        a.download = 'ToolHubspot-resized-image.' + ext;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
