@@ -237,12 +237,7 @@ class ToolsTableSeeder extends Seeder
                 "image" => "ppf-calculator.png",
                 "category" => "Finance, Business",                
             ],
-        ];*/
-
-        
-		### New Tools
-		$tools = [
-			[
+            [
                 "title" => "Income Tax Calculator",
                 "description" => "Calculate your Indian income tax liability as per latest slabs.",
                 "keywords" => "income tax calculator, tax calculator India, income tax slab, tax calculation, tax liability, tax return calculator, income tax India, tax estimation, tax planning, tax filing",
@@ -250,6 +245,20 @@ class ToolsTableSeeder extends Seeder
                 "icon" => "fas fa-calculator",
                 "image" => "income-tax-calculator.png",
                 "category" => "Finance, Business",               
+            ],
+        ];*/
+
+        
+		### New Tools
+		$tools = [
+			[
+                "title" => "Crop Image Online",
+                "description" => "Crop images online instantly. Free photo cropper tool to resize, cut, and adjust your pictures in custom sizes. Quick, easy & no software required.",
+                "keywords" => "crop image online, image cropper tool, free photo cropper, crop photo online, resize image, cut image online, picture crop tool, photo editing online",
+                "slug" => "crop-image",
+                "icon" => "fas fa-crop-alt",
+                "image" => "crop-image.png",
+                "category" => "Images, Business, Utilities, Productivity,",               
             ],
 		];
 

@@ -278,6 +278,15 @@
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
+		@case('crop-image')
+			<title>Free Online Image Cropper - Crop Images Instantly | ToolHubSpot</title>
+			<meta name="description" content="Crop images online for free with ToolHubSpot's easy-to-use image cropper. Instantly crop JPG, PNG, WEBP, and more. No sign-up or installation required." />
+			<meta name="keywords" content="image cropper, crop image online, free image crop tool, online photo cropper, crop JPG, crop PNG, crop WEBP, resize image, crop picture, crop photo online, ToolHubSpot image cropper" />
+			<meta property="og:title" content="Free Online Image Cropper - Crop Images Instantly | ToolHubSpot" />
+			<meta property="og:description" content="Crop images online for free with ToolHubSpot's easy-to-use image cropper. Instantly crop JPG, PNG, WEBP, and more. No sign-up or installation required." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
 		{{-- Search Page --}}
 		@case('tools')
 			<title>Free Online Tools & Calculators | ToolHubSpot</title>
