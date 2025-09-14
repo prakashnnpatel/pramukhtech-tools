@@ -39,39 +39,42 @@ $(document).ready(function() {
 	// Helper: Make image resizable (jQuery UI or fallback)
 	function makeResizable($img) {
 	// Remove all other handles
-		$('.resize-handle, .rotate-handle, .delete-handle').remove();
+		$('.image-action-wrapper').remove();	
 	// Add handles only to the clicked image
-	   if ($img.next('.resize-handle').length === 0 && $img.next('.rotate-handle').length === 0 && $img.next('.delete-handle').length === 0) {
+	   if ($img.next('.image-action-wrapper').length === 0) {
+		   var $imageActionHandle = $('<div class="image-action-wrapper"></div>');
 		   var $resizeHandle = $('<div class="resize-handle" title="Resize image"> </div>');
 		   var $rotateHandle = $('<div class="rotate-handle" title="Rotate image"></div>');
 		   var $deleteHandle = $('<div class="delete-handle" title="Delete image"></div>');
-		   $img.after($resizeHandle).after($rotateHandle).after($deleteHandle);
+		 	
+			// Wrap the image with the parent div
+			$img.after($imageActionHandle);
+			$('.image-action-wrapper').append($resizeHandle, $rotateHandle, $deleteHandle);			
+			
 			$img.css('position', 'absolute');
 			$img.parent().css('position', 'relative');
 			// Position the handles at the bottom right of the image
 			   function updateHandlePosition() {
 				   var imgOffset = $img.position();
 				   var imgWidth = $img.outerWidth();
-				   var imgHeight = $img.outerHeight();
+				   var imgHeight = $img.outerHeight();				   
 				   $resizeHandle.css({
 					   left: imgOffset.left + imgWidth - $resizeHandle.outerWidth()/2 + 'px',
-					   top: imgOffset.top + imgHeight - $resizeHandle.outerHeight()/2 + 'px'
+					   top: imgOffset.top + imgHeight - $resizeHandle.outerHeight()/2 + 10 + 'px'
 				   });
 				   $rotateHandle.css({
 					   left: imgOffset.left + imgWidth - $rotateHandle.outerWidth()/2 - 28 + 'px',
-					   top: imgOffset.top + imgHeight - $rotateHandle.outerHeight()/2 + 'px'
+					   top: imgOffset.top + imgHeight - $rotateHandle.outerHeight()/2 + 10 + 'px'
 				   });
 				   $deleteHandle.css({
 					   left: imgOffset.left + imgWidth - $deleteHandle.outerWidth()/2 - 56 + 'px',
-					   top: imgOffset.top + imgHeight - $deleteHandle.outerHeight()/2 + 'px'
+					   top: imgOffset.top + imgHeight - $deleteHandle.outerHeight()/2 + 10 + 'px'
 				   });
 			   }
 		   // Delete logic
 		   $deleteHandle.on('mousedown', function(e) {
 			   $img.remove();
-			   $resizeHandle.remove();
-			   $rotateHandle.remove();
-			   $deleteHandle.remove();
+			   $imageActionHandle.remove();
 			   e.preventDefault();
 			   e.stopPropagation();
 		   });
