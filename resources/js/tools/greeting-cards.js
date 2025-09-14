@@ -39,28 +39,42 @@ $(document).ready(function() {
 	// Helper: Make image resizable (jQuery UI or fallback)
 	function makeResizable($img) {
 	// Remove all other handles
-	$('.resize-handle, .rotate-handle').remove();
+		$('.resize-handle, .rotate-handle, .delete-handle').remove();
 	// Add handles only to the clicked image
-	if ($img.next('.resize-handle').length === 0 && $img.next('.rotate-handle').length === 0) {
-			var $resizeHandle = $('<div class="resize-handle"></div>');
-			var $rotateHandle = $('<div class="rotate-handle"></div>');
-			$img.after($resizeHandle).after($rotateHandle);
+	   if ($img.next('.resize-handle').length === 0 && $img.next('.rotate-handle').length === 0 && $img.next('.delete-handle').length === 0) {
+		   var $resizeHandle = $('<div class="resize-handle" title="Resize image"> </div>');
+		   var $rotateHandle = $('<div class="rotate-handle" title="Rotate image"></div>');
+		   var $deleteHandle = $('<div class="delete-handle" title="Delete image"></div>');
+		   $img.after($resizeHandle).after($rotateHandle).after($deleteHandle);
 			$img.css('position', 'absolute');
 			$img.parent().css('position', 'relative');
 			// Position the handles at the bottom right of the image
-			function updateHandlePosition() {
-				var imgOffset = $img.position();
-				var imgWidth = $img.outerWidth();
-				var imgHeight = $img.outerHeight();
-				$resizeHandle.css({
-					left: imgOffset.left + imgWidth - $resizeHandle.outerWidth()/2 + 'px',
-					top: imgOffset.top + imgHeight - $resizeHandle.outerHeight()/2 + 'px'
-				});
-				$rotateHandle.css({
-					left: imgOffset.left + imgWidth - $rotateHandle.outerWidth()/2 - 28 + 'px',
-					top: imgOffset.top + imgHeight - $rotateHandle.outerHeight()/2 + 'px'
-				});
-			}
+			   function updateHandlePosition() {
+				   var imgOffset = $img.position();
+				   var imgWidth = $img.outerWidth();
+				   var imgHeight = $img.outerHeight();
+				   $resizeHandle.css({
+					   left: imgOffset.left + imgWidth - $resizeHandle.outerWidth()/2 + 'px',
+					   top: imgOffset.top + imgHeight - $resizeHandle.outerHeight()/2 + 'px'
+				   });
+				   $rotateHandle.css({
+					   left: imgOffset.left + imgWidth - $rotateHandle.outerWidth()/2 - 28 + 'px',
+					   top: imgOffset.top + imgHeight - $rotateHandle.outerHeight()/2 + 'px'
+				   });
+				   $deleteHandle.css({
+					   left: imgOffset.left + imgWidth - $deleteHandle.outerWidth()/2 - 56 + 'px',
+					   top: imgOffset.top + imgHeight - $deleteHandle.outerHeight()/2 + 'px'
+				   });
+			   }
+		   // Delete logic
+		   $deleteHandle.on('mousedown', function(e) {
+			   $img.remove();
+			   $resizeHandle.remove();
+			   $rotateHandle.remove();
+			   $deleteHandle.remove();
+			   e.preventDefault();
+			   e.stopPropagation();
+		   });
 			updateHandlePosition();
 			// Update handle position on resize or drag
 			$img.on('resize move', updateHandlePosition);
@@ -332,17 +346,19 @@ $(document).ready(function() {
 						makeResizable($(this));
 						e.stopPropagation();
 					});
-	// Hide all handles when clicking outside any image or handle
-	$(document).on('click', function(e) {
-		if (!$(e.target).hasClass('draggable-img') && !$(e.target).hasClass('resize-handle') && !$(e.target).hasClass('rotate-handle')) {
-			$('.resize-handle, .rotate-handle').remove();
-		}
-	});
+					
 				};
 				reader.readAsDataURL(file);
 			}
 		});
 		$input.click();
+	});
+
+	// Hide all handles when clicking outside any image or handle
+	$(document).on('click', function(e) {
+		if (!$(e.target).hasClass('draggable-img') && !$(e.target).hasClass('resize-handle') && !$(e.target).hasClass('rotate-handle') && !$(e.target).hasClass('delete-handle')) {
+			$('.resize-handle, .rotate-handle, .delete-handle').remove();
+		}
 	});
 
 	// Make elements draggable
