@@ -359,8 +359,8 @@ $(document).ready(function() {
 
 	// Hide all handles when clicking outside any image or handle
 	$(document).on('click', function(e) {
-		if (!$(e.target).hasClass('draggable-img') && !$(e.target).hasClass('resize-handle') && !$(e.target).hasClass('rotate-handle') && !$(e.target).hasClass('delete-handle')) {
-			$('.resize-handle, .rotate-handle, .delete-handle').remove();
+		if (!$(e.target).hasClass('draggable-img') && !$(e.target).hasClass('image-action-wrapper')) {
+			$('.image-action-wrapper').remove();
 		}
 	});
 
