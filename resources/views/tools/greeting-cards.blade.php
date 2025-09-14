@@ -35,6 +35,48 @@
 						<label>Color:</label>
 						<input type="color" id="font-color" class="form-control form-control-sm" value="#222222">
 					</div>
+					<div class="mb-2 d-flex flex-wrap gap-1 align-items-center">
+											<button type="button" class="btn btn-outline-secondary btn-sm" id="bold-btn" title="Bold"><b>B</b></button>
+											<button type="button" class="btn btn-outline-secondary btn-sm" id="italic-btn" title="Italic"><i>I</i></button>
+											<button type="button" class="btn btn-outline-secondary btn-sm" id="underline-btn" title="Underline"><u>U</u></button>
+											<!-- Bullet List Button -->
+											<button type="button" class="btn btn-outline-secondary btn-sm" id="bullet-list-btn" title="Bullet List">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+													<circle cx="3" cy="4" r="1.5"/>
+													<rect x="7" y="3" width="7" height="2" rx="1"/>
+													<circle cx="3" cy="8" r="1.5"/>
+													<rect x="7" y="7" width="7" height="2" rx="1"/>
+													<circle cx="3" cy="12" r="1.5"/>
+													<rect x="7" y="11" width="7" height="2" rx="1"/>
+												</svg>
+											</button>
+												<div class="btn-group ms-2" role="group" aria-label="Text alignment">
+												<button type="button" class="btn btn-outline-secondary btn-sm" id="align-left-btn" title="Align Left">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+														<rect width="12" height="2" x="0" y="2" rx="1"/>
+														<rect width="8" height="2" x="0" y="6" rx="1"/>
+														<rect width="12" height="2" x="0" y="10" rx="1"/>
+														<rect width="6" height="2" x="0" y="14" rx="1"/>
+													</svg>
+												</button>
+												<button type="button" class="btn btn-outline-secondary btn-sm" id="align-center-btn" title="Align Center">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+														<rect width="12" height="2" x="2" y="2" rx="1"/>
+														<rect width="8" height="2" x="4" y="6" rx="1"/>
+														<rect width="12" height="2" x="2" y="10" rx="1"/>
+														<rect width="6" height="2" x="5" y="14" rx="1"/>
+													</svg>
+												</button>
+												<button type="button" class="btn btn-outline-secondary btn-sm" id="align-right-btn" title="Align Right">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+														<rect width="12" height="2" x="4" y="2" rx="1"/>
+														<rect width="8" height="2" x="8" y="6" rx="1"/>
+														<rect width="12" height="2" x="4" y="10" rx="1"/>
+														<rect width="6" height="2" x="10" y="14" rx="1"/>
+													</svg>
+												</button>
+											</div>
+					</div>
 					<div class="mb-2">
 						<button class="btn btn-danger btn-sm" id="delete-element">Delete</button>
 						<button class="btn btn-light btn-sm" id="bring-front">Bring to Front</button>

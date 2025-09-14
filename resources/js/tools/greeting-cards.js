@@ -1,3 +1,66 @@
+// --- Text Style Controls ---
+$(document).on('click', '#bold-btn', function() {
+	if (window.selectedElement) {
+		let fontWeight = window.selectedElement.css('font-weight');
+		window.selectedElement.css('font-weight', (fontWeight === 'bold' || fontWeight >= 600) ? 'normal' : 'bold');
+	}
+});
+
+$(document).on('click', '#italic-btn', function() {
+	if (window.selectedElement) {
+		let fontStyle = window.selectedElement.css('font-style');
+		window.selectedElement.css('font-style', fontStyle === 'italic' ? 'normal' : 'italic');
+	}
+});
+
+$(document).on('click', '#underline-btn', function() {
+	if (window.selectedElement) {
+		let textDecoration = window.selectedElement.css('text-decoration-line');
+		window.selectedElement.css('text-decoration', textDecoration === 'underline' ? 'none' : 'underline');
+	}
+});
+
+$(document).on('click', '#align-left-btn', function() {
+	if (window.selectedElement) {
+		window.selectedElement.css('text-align', 'left');
+	}
+});
+
+$(document).on('click', '#align-center-btn', function() {
+	if (window.selectedElement) {
+		window.selectedElement.css('text-align', 'center');
+	}
+});
+
+
+$(document).on('click', '#align-right-btn', function() {
+	if (window.selectedElement) {
+		window.selectedElement.css('text-align', 'right');
+	}
+});
+
+// Bullet List Toggle
+$(document).on('click', '#bullet-list-btn', function() {
+	if (window.selectedElement && window.selectedElement.hasClass('draggable-text')) {
+		let $el = window.selectedElement;
+		let html = $el.html();
+		// If already a list, remove list
+		if ($el.data('is-bullet-list')) {
+			// Remove <ul><li>...</li></ul> and convert to plain text with <br>
+			let items = $el.find('li').map(function(){ return $(this).text(); }).get();
+			$el.html(items.join('<br>'));
+			$el.data('is-bullet-list', false);
+		} else {
+			// Convert lines to bullet list
+			let lines = html.replace(/<div>|<br>/gi, '\n').replace(/<[^>]+>/g, '').split(/\n|\r/).filter(Boolean);
+			if (lines.length === 0) lines = [$el.text()];
+			let ul = $('<ul style="padding-left: 1.2em; margin:0; list-style-type: disc;"></ul>');
+			lines.forEach(function(line){ ul.append($('<li></li>').text(line)); });
+			$el.html(ul.prop('outerHTML'));
+			$el.data('is-bullet-list', true);
+		}
+	}
+});
 
 // Use jQuery UI draggable if available for .draggable-text and .draggable-img
 function makeDraggable($el) {
