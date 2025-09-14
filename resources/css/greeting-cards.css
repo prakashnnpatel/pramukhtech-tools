@@ -21,7 +21,7 @@
   width: 600px;
   height: 400px;
   background: #fff;
-  border: 2px solid #f00 !important;
+  border: 2px solid #f00;
   overflow: visible;
   min-height: 100px;
 }

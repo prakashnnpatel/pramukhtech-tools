@@ -99,6 +99,36 @@ if (typeof window.jQuery === 'undefined') {
 }
 
 $(document).ready(function() {
+	// Main Canvas Border Controls
+	function updateMainCanvasBorder() {
+		var color = $('#main-canvas-border-color').val();
+		var width = $('#main-canvas-border-width').val();
+		var style = $('#main-canvas-border-style').val();
+		// Remove any existing border style first to avoid conflicts
+		$('#card-canvas').css({
+			'border-color': '',
+			'border-width': '',
+			'border-style': ''
+		});
+		
+		// Only apply if not 'none' and width > 0
+		if (style !== 'none' && parseInt(width) > 0) {
+			$('#card-canvas').css('border', width + 'px ' + style + ' ' + color);
+		} else {
+			$('#card-canvas').css('border', 'none');
+		}
+	}
+
+	$('#main-canvas-border-color, #main-canvas-border-width, #main-canvas-border-style').on('input change', function() {
+		updateMainCanvasBorder();
+	});
+	// Set initial border on page load (after DOM ready)
+	setTimeout(updateMainCanvasBorder, 0);
+	// Main Canvas Background Color Picker
+	$('#main-canvas-bg-color').on('input change', function() {
+		var color = $(this).val();
+		$('#card-canvas').css('background', color);
+	});
 	// --- Letter Spacing Slider ---
 	$("#letter-spacing-slider").slider({
 		range: "min",

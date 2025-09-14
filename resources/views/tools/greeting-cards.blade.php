@@ -161,10 +161,40 @@
 		</div>
 		<!-- Editor Canvas -->
 		<div class="col-md-9">
-			<div id="card-editor-wrapper" class="d-flex justify-content-center align-items-center" style="min-height: 600px;">
-				<div id="card-canvas" style="position: relative; width: 600px; height: 400px; background: #fff; border: 1px solid #ccc; overflow: hidden;">
-					<!-- Card elements (text/images) will be added here dynamically -->
-				</div>
+			   <!-- Canvas Background & Border Controls -->
+			   <div class="mb-2 d-flex align-items-center flex-wrap" style="gap: 16px;">
+				   <div class="d-flex align-items-center" style="gap: 8px;">
+					   <label for="main-canvas-bg-color" class="mb-0">Canvas Background:</label>
+					   <input type="color" id="main-canvas-bg-color" value="#ffffff" style="width: 40px; height: 32px; padding: 0; border: none; background: none;">
+				   </div>
+				   <div class="d-flex align-items-center" style="gap: 8px;">
+					   <label for="main-canvas-border-color" class="mb-0">Border Color:</label>
+					   <input type="color" id="main-canvas-border-color" value="#cccccc" style="width: 40px; height: 32px; padding: 0; border: none; background: none;">
+				   </div>
+				   <div class="d-flex align-items-center" style="gap: 8px;">
+					   <label for="main-canvas-border-width" class="mb-0">Border Width:</label>
+					   <input type="number" id="main-canvas-border-width" value="1" min="0" max="20" style="width: 60px;">
+					   <span>px</span>
+				   </div>
+				   <div class="d-flex align-items-center" style="gap: 8px;">
+					   <label for="main-canvas-border-style" class="mb-0">Border Style:</label>
+					   <select id="main-canvas-border-style" style="width: 90px;">
+						   <option value="solid">Solid</option>
+						   <option value="dashed">Dashed</option>
+						   <option value="dotted">Dotted</option>
+						   <option value="double">Double</option>
+						   <option value="groove">Groove</option>
+						   <option value="ridge">Ridge</option>
+						   <option value="inset">Inset</option>
+						   <option value="outset">Outset</option>
+						   <option value="none">None</option>
+					   </select>
+				   </div>
+			   </div>
+			   <div id="card-editor-wrapper" class="d-flex justify-content-center align-items-center" style="min-height: 600px;">
+				   <div id="card-canvas" style="position: relative; width: 600px; height: 400px; background: #fff; overflow: hidden;">
+					   <!-- Card elements (text/images) will be added here dynamically -->
+				   </div>
 			</div>
 			<div id="card-preview-modal" class="modal" tabindex="-1" role="dialog">
 				<div class="modal-dialog modal-lg" role="document">
