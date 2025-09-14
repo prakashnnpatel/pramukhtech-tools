@@ -99,6 +99,45 @@ if (typeof window.jQuery === 'undefined') {
 }
 
 $(document).ready(function() {
+	// --- Letter Spacing Slider ---
+	$("#letter-spacing-slider").slider({
+		range: "min",
+		value: 0,
+		min: 0,
+		max: 10,
+		step: 0.1,
+		slide: function(event, ui) {
+			if (window.selectedElement) {
+				window.selectedElement.css('letter-spacing', ui.value + 'px');
+			}
+		}
+	});
+	// --- Line Spacing Slider ---
+	$("#line-spacing-slider").slider({
+		range: "min",
+		value: 1,
+		min: 1,
+		max: 3,
+		step: 0.05,
+		slide: function(event, ui) {
+			if (window.selectedElement) {
+				window.selectedElement.css('line-height', ui.value);
+			}
+		}
+	});
+	// --- Padding Slider ---
+	$("#padding-slider").slider({
+		range: "min",
+		value: 0,
+		min: 0,
+		max: 40,
+		step: 1,
+		slide: function(event, ui) {
+			if (window.selectedElement) {
+				window.selectedElement.css('padding', ui.value + 'px');
+			}
+		}
+	});
 	// Show border on hover for images only (text uses CSS)
 	$(document).on('mouseenter', '.draggable-img', function() {
 		$(this).css('border', '2px solid #667eea');
@@ -365,10 +404,58 @@ $(document).ready(function() {
 			$('#font-family').val($el.css('font-family').replace(/"/g, ''));
 			$('#font-size').val(parseInt($el.css('font-size')));
 			$('#font-color').val(rgb2hex($el.css('color')));
+			// Set sliders to current values
+			var ls = parseFloat($el.css('letter-spacing')) || 0;
+			var lh = parseFloat($el.css('line-height')) || 1;
+			var pd = parseInt($el.css('padding')) || 0;
+			$("#letter-spacing-slider").slider('value', ls);
+			$("#line-spacing-slider").slider('value', lh);
+			$("#padding-slider").slider('value', pd);
+
+			// Set background color
+			var bg = $el.css('background-color');
+			$('#background-color').val(rgb2hex(bg));
+			// Set border color
+			var borderColor = $el.css('border-color');
+			$('#border-color').val(rgb2hex(borderColor));
+			// Set border style
+			var borderStyle = $el.css('border-style') || 'none';
+			$('#border-style').val(borderStyle);
+			// Set border width
+			var borderWidth = parseInt($el.css('border-width')) || 0;
+			$('#border-width').val(borderWidth);
 		} else {
 			$('#editor-controls').hide();
 		}
 	}
+	// Background color
+	$('#background-color').on('input', function() {
+		if (window.selectedElement) {
+			window.selectedElement.css('background-color', $(this).val());
+		}
+	});
+
+	// Border color
+	$('#border-color').on('input', function() {
+		if (window.selectedElement) {
+			window.selectedElement.css('border-color', $(this).val());
+		}
+	});
+
+	// Border style
+	$('#border-style').on('change', function() {
+		if (window.selectedElement) {
+			window.selectedElement.css('border-style', $(this).val());
+		}
+	});
+
+	// Border width
+	$('#border-width').on('input', function() {
+		if (window.selectedElement) {
+			var val = parseInt($(this).val()) || 0;
+			window.selectedElement.css('border-width', val + 'px');
+		}
+	});
 
 	// Font family
 	$('#font-family').on('change', function() {
