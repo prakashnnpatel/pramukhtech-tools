@@ -168,12 +168,12 @@ $(document).ready(function() {
 			}
 		}
 	});
-	// Show border on hover for images only (text uses CSS)
+	// Show highlight on hover for images only (preserve user border)
 	$(document).on('mouseenter', '.draggable-img', function() {
-		$(this).css('border', '2px solid #667eea');
+		$(this).css('outline', '2px solid #667eea');
 	});
 	$(document).on('mouseleave', '.draggable-img', function() {
-		$(this).css('border', '');
+		$(this).css('outline', '');
 	});
 
 	// Add focus/selected class for .draggable-text
@@ -209,34 +209,71 @@ $(document).ready(function() {
 	// Add handles only to the clicked image
 	   if ($img.next('.image-action-wrapper').length === 0) {
 		   var $imageActionHandle = $('<div class="image-action-wrapper"></div>');
-		   var $resizeHandle = $('<div class="resize-handle" title="Resize image"> </div>');
+		   var $resizeHandle = $('<div class="resize-handle" title="Resize image"></div>');
 		   var $rotateHandle = $('<div class="rotate-handle" title="Rotate image"></div>');
 		   var $deleteHandle = $('<div class="delete-handle" title="Delete image"></div>');
-		 	
-			// Wrap the image with the parent div
-			$img.after($imageActionHandle);
-			$('.image-action-wrapper').append($resizeHandle, $rotateHandle, $deleteHandle);			
-			
-			$img.css('position', 'absolute');
-			$img.parent().css('position', 'relative');
+		   // Border/Radius controls (now in a flex row)
+		   var $controlsRow = $('<div class="img-border-controls" style="display:flex;align-items:center;gap:6px;margin-left:8px;"></div>');
+		   var $radiusInput = $('<input type="number" min="0" max="100" value="'+(parseInt($img.css('border-radius'))||0)+'" class="img-radius-input" title="Radius (px)" style="width:38px;">');
+		   var $borderColor = $('<input type="color" value="#'+((($img.css('border-color')||'#000').replace(/rgb\\((\\d+), (\\d+), (\\d+)\\)/, function(m,r,g,b){return ((1<<24)+(parseInt(r)<<16)+(parseInt(g)<<8)+parseInt(b)).toString(16).slice(1);}) ).replace('#',''))+'" class="img-border-color" title="Border Color" style="width:28px; height:28px;">');
+		   var borderWidth = parseInt($img.css('border-width'))||1;
+		   var $borderWidth = $('<input type="number" min="0" max="20" value="'+borderWidth+'" class="img-border-width" title="Border Width (px)" style="width:32px;">');
+		   var borderStyle = $img.css('border-style')||'solid';
+		   var $borderStyle = $('<select class="img-border-style" title="Border Style" style="width:60px;">'+
+			   '<option value="solid">Solid</option><option value="dashed">Dashed</option><option value="dotted">Dotted</option><option value="double">Double</option><option value="groove">Groove</option><option value="ridge">Ridge</option><option value="inset">Inset</option><option value="outset">Outset</option><option value="none">None</option>'+
+		   '</select>');
+		   $borderStyle.val(borderStyle);
+		   $controlsRow.append($radiusInput, $borderColor, $borderWidth, $borderStyle);
+		   // Wrap the image with the parent div
+		   $img.after($imageActionHandle);
+		   $('.image-action-wrapper').append($resizeHandle, $rotateHandle, $deleteHandle, $controlsRow);
+
+		   $img.css('position', 'absolute');
+		   $img.parent().css('position', 'relative');
 			// Position the handles at the bottom right of the image
 			   function updateHandlePosition() {
 				   var imgOffset = $img.position();
 				   var imgWidth = $img.outerWidth();
-				   var imgHeight = $img.outerHeight();				   
+				   var imgHeight = $img.outerHeight();
 				   $resizeHandle.css({
 					   left: imgOffset.left + imgWidth - $resizeHandle.outerWidth()/2 + 'px',
-					   top: imgOffset.top + imgHeight - $resizeHandle.outerHeight()/2 + 10 + 'px'
+					   top: imgOffset.top + imgHeight - $resizeHandle.outerHeight()/2 + 10 + 'px',
+					   position: 'absolute'
 				   });
 				   $rotateHandle.css({
 					   left: imgOffset.left + imgWidth - $rotateHandle.outerWidth()/2 - 28 + 'px',
-					   top: imgOffset.top + imgHeight - $rotateHandle.outerHeight()/2 + 10 + 'px'
+					   top: imgOffset.top + imgHeight - $rotateHandle.outerHeight()/2 + 10 + 'px',
+					   position: 'absolute'
 				   });
 				   $deleteHandle.css({
 					   left: imgOffset.left + imgWidth - $deleteHandle.outerWidth()/2 - 56 + 'px',
-					   top: imgOffset.top + imgHeight - $deleteHandle.outerHeight()/2 + 10 + 'px'
+					   top: imgOffset.top + imgHeight - $deleteHandle.outerHeight()/2 + 10 + 'px',
+					   position: 'absolute'
 				   });
+				   // Controls row: always static in flex, no need to position
 			   }
+		   // Border/Radius controls logic
+		   $radiusInput.on('input change', function() {
+			   $img.css('border-radius', $(this).val() + 'px');
+		   });
+		   $borderColor.on('input change', function() {
+			   var color = $(this).val();
+			   var width = $borderWidth.val() || 1;
+			   var style = $borderStyle.val() || 'solid';
+			   $img.css('border', width + 'px ' + style + ' ' + color);
+		   });
+		   $borderWidth.on('input change', function() {
+			   var width = $(this).val() || 1;
+			   var color = $borderColor.val();
+			   var style = $borderStyle.val() || 'solid';
+			   $img.css('border', width + 'px ' + style + ' ' + color);
+		   });
+		   $borderStyle.on('input change', function() {
+			   var style = $(this).val() || 'solid';
+			   var width = $borderWidth.val() || 1;
+			   var color = $borderColor.val();
+			   $img.css('border', width + 'px ' + style + ' ' + color);
+		   });
 		   // Delete logic
 		   $deleteHandle.on('mousedown', function(e) {
 			   $img.remove();
@@ -571,9 +608,9 @@ $(document).ready(function() {
 		$input.click();
 	});
 
-	// Hide all handles when clicking outside any image or handle
+	// Hide all handles when clicking outside any image or its controls
 	$(document).on('click', function(e) {
-		if (!$(e.target).hasClass('draggable-img') && !$(e.target).hasClass('image-action-wrapper')) {
+		if (!$(e.target).hasClass('draggable-img') && $(e.target).closest('.image-action-wrapper').length === 0) {
 			$('.image-action-wrapper').remove();
 		}
 	});
