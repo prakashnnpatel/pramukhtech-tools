@@ -36,24 +36,44 @@ if (typeof window.jQuery === 'undefined') {
 }
 
 $(document).ready(function() {
-	// Show border on hover for images and text boxes
-	$(document).on('mouseenter', '.draggable-img, .draggable-text', function() {
+	// Show border on hover for images only (text uses CSS)
+	$(document).on('mouseenter', '.draggable-img', function() {
 		$(this).css('border', '2px solid #667eea');
 	});
-	$(document).on('mouseleave', '.draggable-img, .draggable-text', function() {
-		// Only remove border if not selected (for text), or always for images
-		if ($(this).hasClass('draggable-text')) {
-			if (!$(this).is(window.selectedElement)) {
-				$(this).css('border', '');
-			}
-		} else {
-			$(this).css('border', '');
+	$(document).on('mouseleave', '.draggable-img', function() {
+		$(this).css('border', '');
+	});
+
+	// Add focus/selected class for .draggable-text
+	$(document).on('mousedown click', '.draggable-text', function(e) {
+		$('.draggable-text').removeClass('selected');
+		$(this).addClass('selected');
+		// Make editable and focus so user can type
+		$(this).attr('contenteditable', 'true').focus();
+		// Move cursor to end of content in text box
+		var el = this;
+		if (window.getSelection && document.createRange) {
+			var range = document.createRange();
+			range.selectNodeContents(el);
+			range.collapse(false);
+			var sel = window.getSelection();
+			sel.removeAllRanges();
+			sel.addRange(range);
 		}
+	});
+	// Remove 'selected' class when clicking outside any .draggable-text
+	$(document).on('mousedown', function(e) {
+		if (!$(e.target).closest('.draggable-text').length) {
+			$('.draggable-text').removeClass('selected');
+		}
+	});
+	$(document).on('blur', '.draggable-text', function() {
+		$(this).removeClass('selected');
 	});
 	// Helper: Make image resizable (jQuery UI or fallback)
 	function makeResizable($img) {
 	// Remove all other handles
-		$('.image-action-wrapper').remove();	
+	$('.image-action-wrapper').remove();	
 	// Add handles only to the clicked image
 	   if ($img.next('.image-action-wrapper').length === 0) {
 		   var $imageActionHandle = $('<div class="image-action-wrapper"></div>');

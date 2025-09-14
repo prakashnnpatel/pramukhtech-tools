@@ -28,8 +28,8 @@
 
 
 .draggable-text {
-  background: rgba(255,255,255,0.8);
-  border: 1px dashed #888;
+  background: transparent;
+  border: 1.5px dashed transparent;
   min-width: 60px;
   min-height: 30px;
   padding: 4px 8px;
@@ -41,6 +41,12 @@
   font-size: 20px;
   user-select: text;
   outline: none;
+  transition: border-color 0.2s;
+}
+
+.draggable-text:hover, .draggable-text:focus, .draggable-text.selected {
+  border-color: #667eea;
+  background: rgba(255,255,255,0.05);
 }
 
 .draggable-img {
