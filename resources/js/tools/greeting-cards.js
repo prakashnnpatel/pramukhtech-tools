@@ -36,6 +36,20 @@ if (typeof window.jQuery === 'undefined') {
 }
 
 $(document).ready(function() {
+	// Show border on hover for images and text boxes
+	$(document).on('mouseenter', '.draggable-img, .draggable-text', function() {
+		$(this).css('border', '2px solid #667eea');
+	});
+	$(document).on('mouseleave', '.draggable-img, .draggable-text', function() {
+		// Only remove border if not selected (for text), or always for images
+		if ($(this).hasClass('draggable-text')) {
+			if (!$(this).is(window.selectedElement)) {
+				$(this).css('border', '');
+			}
+		} else {
+			$(this).css('border', '');
+		}
+	});
 	// Helper: Make image resizable (jQuery UI or fallback)
 	function makeResizable($img) {
 	// Remove all other handles
