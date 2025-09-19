@@ -287,4 +287,5 @@
 	</script>
 @endisset
 @vite('resources/js/tools/greeting-cards.js')
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 @endpush

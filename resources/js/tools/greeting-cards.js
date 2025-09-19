@@ -95,7 +95,7 @@ function makeDraggable($el) {
 }
 
 if (typeof window.jQuery === 'undefined') {
-	alert('jQuery is not loaded. Please ensure jQuery is included before this script.');
+	Swal.fire({icon:"error",title:"oops",text:"jQuery is not loaded. Please ensure jQuery is included before this script."});
 }
 
 $(document).ready(function() {
@@ -427,6 +427,8 @@ $(document).ready(function() {
 					if (el.type === 'text') {
 						var $text = $('<div class="draggable-text"></div>')
 							.attr('id', el.id || ('text-' + Date.now()))
+							.attr('data-toggle', 'popover')
+							.attr('title', 'Click to edit text, drag & drop anywhere.')
 							.text(el.text || 'Edit me');
 						if (el.css) {
 							if (typeof el.css === 'string') {
@@ -437,6 +439,7 @@ $(document).ready(function() {
 						}
 						$('#card-canvas').append($text);
 						makeDraggable($text);
+						initPopover($text);
 					} else if (el.type === 'image') {
 						var $img = $('<img class="draggable-img">')
 							.attr('id', el.id || ('img-' + Date.now()))
@@ -470,30 +473,31 @@ $(document).ready(function() {
 				});
 			}
 		} catch (e) {
-			console.error('Failed to parse template data:', e);
+			//console.error('Failed to parse template data:', e);
 		}
 	}
 
 
 	// Add Text
-
 		$('#add-text').off('click').on('click', function() {
 			var $canvas = $('#card-canvas');
 			if ($canvas.length === 0) {
-				alert('Card canvas not found.');
-				console.error('No #card-canvas found in DOM.');
+				Swal.fire({icon:"error",title:"oops",text:"Card canvas not found."});
+				//console.error('No #card-canvas found in DOM.');
 				return;
 			}
 			var textId = 'text-' + Date.now();
 			var $text = $('<div class="draggable-text" contenteditable="true"></div>')
-				.attr('id', textId)
-				
-				.text('Edit me');
+			.attr('id', textId)
+			.attr('data-toggle', 'popover')
+			.attr('title', 'Click to edit text, drag & drop anywhere.')
+			.text('Edit me');
+			
 			$canvas.append($text);
 			makeDraggable($text);
 			selectElement($text);
 			$text.focus();
-			console.log('Added text box to canvas.');
+			initPopover($text);
 		});
 
 	// Text element selection and controls
@@ -507,6 +511,20 @@ $(document).ready(function() {
 			selectElement(null);
 		}
 	});*/
+
+	// Popover intialization
+	function initPopover($el) {
+		$el.popover({
+			trigger: 'manual',
+			placement: 'top'
+		});
+		// Show on hover
+		$el.on("mouseenter", function(){
+			$(this).popover('show');
+		}).on("mouseleave", function(){
+			$(this).popover('hide');
+		});
+	}
 
 	function selectElement($el) {
 		window.selectedElement = $el;
@@ -687,7 +705,7 @@ $(document).ready(function() {
 	// Preview card (using html2canvas)
 	$('#preview-card').on('click', function() {
 		if (typeof html2canvas === 'undefined') {
-			alert('Preview requires html2canvas.');
+			Swal.fire({icon:"error",title:"oops",text:"Preview requires html2canvas."});
 			return;
 		}
 		html2canvas(document.getElementById('card-canvas')).then(function(canvas) {
@@ -699,7 +717,7 @@ $(document).ready(function() {
 	// Download card (using html2canvas)
 	$('#download-card').on('click', function() {
 		if (typeof html2canvas === 'undefined') {
-			alert('Download requires html2canvas.');
+			Swal.fire({icon:"error",title:"oops",text:"Download requires html2canvas."});
 			return;
 		}
 		html2canvas(document.getElementById('card-canvas')).then(function(canvas) {
@@ -707,6 +725,34 @@ $(document).ready(function() {
 			link.download = 'greeting-card.png';
 			link.href = canvas.toDataURL('image/png');
 			link.click();
+
+			Swal.fire({
+				title: "Downloaded",
+				text: 'Your greeting card has been downloaded successfully',
+				icon: "success",
+			});
+
+			/* Confetti animation */
+			var duration = 2 * 1000;
+			var end = Date.now() + duration;
+			(function frame() {
+				confetti({
+					particleCount: 5,
+					angle: 60,
+					spread: 55,
+					origin: { x: 0 }
+				});
+				confetti({
+					particleCount: 5,
+					angle: 120,
+					spread: 55,
+					origin: { x: 1 }
+				});
+
+				if (Date.now() < end) {
+					requestAnimationFrame(frame);
+				}
+			}());
 		});
 	});
 
