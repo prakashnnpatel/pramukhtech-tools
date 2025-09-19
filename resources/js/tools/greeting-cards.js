@@ -127,7 +127,26 @@ $(document).ready(function() {
 	// Main Canvas Background Color Picker
 	$('#main-canvas-bg-color').on('input change', function() {
 		var color = $(this).val();
-		$('#card-canvas').css('background', color);
+		// If a background image is set, keep it, just update background-color
+		var bgImg = $('#main-canvas-bg-image').val();
+		if (bgImg) {
+			$('#card-canvas').css('background', color + ' url("' + bgImg + '") center/cover no-repeat');
+		} else {
+			$('#card-canvas').css('background', color);
+		}
+	});
+
+	// Main Canvas Background Image Picker (thumbnails)
+	$(document).on('click', '#main-canvas-bg-thumbs .bg-thumb', function() {
+		$('#main-canvas-bg-thumbs .bg-thumb').css('border-color', '#ccc');
+		$(this).css('border-color', '#007bff');
+		var img = $(this).data('img');
+		var color = $('#main-canvas-bg-color').val();
+		if (img) {
+			$('#card-canvas').css('background', color + ' url("' + img + '") center/cover no-repeat');
+		} else {
+			$('#card-canvas').css('background', color);
+		}
 	});
 	// --- Letter Spacing Slider ---
 	$("#letter-spacing-slider").slider({
@@ -168,6 +187,29 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	// --- Canvas Zoom Slider ---
+	$("#canvas-zoom-slider").slider({
+		range: "min",
+		value: 100,
+		min: 25,
+		max: 200,
+		step: 1,
+		slide: function(event, ui) {
+			var scale = ui.value / 100;
+			$('#card-canvas').css({
+				'transform': 'scale(' + scale + ')',
+				'transform-origin': 'top left'
+			});
+			$('#canvas-zoom-value').text(ui.value + '%');
+		}
+	});
+	// Set initial zoom
+	$('#card-canvas').css({
+		'transform': 'scale(1)',
+		'transform-origin': 'top left'
+	});
+	$('#canvas-zoom-value').text('100%');
 	// Show highlight on hover for images only (preserve user border)
 	$(document).on('mouseenter', '.draggable-img', function() {
 		$(this).css('outline', '2px solid #667eea');
@@ -227,6 +269,8 @@ $(document).ready(function() {
 		   // Wrap the image with the parent div
 		   $img.after($imageActionHandle);
 		   $('.image-action-wrapper').append($resizeHandle, $rotateHandle, $deleteHandle, $controlsRow);
+		   // Hide text editor controls when image is selected
+		   $('#editor-controls').hide();
 
 		   $img.css('position', 'absolute');
 		   $img.parent().css('position', 'relative');
@@ -408,8 +452,8 @@ $(document).ready(function() {
 								position: 'absolute',
 								top: el.top || '80px',
 								left: el.left || '80px',
-								maxWidth: el.maxWidth || '200px',
-								maxHeight: el.maxHeight || '150px',
+								//maxWidth: el.maxWidth || '200px',
+								//maxHeight: el.maxHeight || '150px',
 								border: '1px solid #888',
 								cursor: 'move',
 								zIndex: zIndex++
@@ -588,8 +632,10 @@ $(document).ready(function() {
 							position: 'absolute',
 							top: '80px',
 							left: '80px',
-							maxWidth: '200px',
-							maxHeight: '150px',
+							width: '200px',
+							height: '150px',
+							//maxWidth: '200px',
+							//maxHeight: '150px',
 							border: '1px solid #888',
 							cursor: 'move',
 							zIndex: zIndex++

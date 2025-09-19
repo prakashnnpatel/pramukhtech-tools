@@ -5,12 +5,14 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use App\Models\CardTemplates;
 
 // php artisan db:seed --class=CardTemplatesTableSeeder
 class CardTemplatesTableSeeder extends Seeder
 {
     public function run()
     {
+        CardTemplates::truncate();
         DB::table('card_templates')->insert([
             [
                 'title' => 'Birthday Balloons',
