@@ -290,55 +290,86 @@ $(document).ready(function() {
 	// Helper: Make image resizable (jQuery UI or fallback)
 	function makeResizable($img) {
 	// Remove all other handles
-	$('.image-action-wrapper').remove();	
+	$('.image-action-wrapper').remove();
 	// Add handles only to the clicked image
-	   if ($img.next('.image-action-wrapper').length === 0) {
-		   var $imageActionHandle = $('<div class="image-action-wrapper"></div>');
-		   var $resizeHandle = $('<div class="resize-handle" title="Resize image"></div>');
-		   var $rotateHandle = $('<div class="rotate-handle" title="Rotate image"></div>');
-		   var $deleteHandle = $('<div class="delete-handle" title="Delete image"></div>');
-		   // Border/Radius controls (now in a flex row)
-		   var $controlsRow = $('<div class="img-border-controls" style="display:flex;align-items:center;gap:6px;margin-left:8px;"></div>');
-		   var $radiusInput = $('<input type="number" min="0" max="100" value="'+(parseInt($img.css('border-radius'))||0)+'" class="img-radius-input" title="Radius (px)" style="width:38px;">');
-		   var $borderColor = $('<input type="color" value="#'+((($img.css('border-color')||'#000').replace(/rgb\\((\\d+), (\\d+), (\\d+)\\)/, function(m,r,g,b){return ((1<<24)+(parseInt(r)<<16)+(parseInt(g)<<8)+parseInt(b)).toString(16).slice(1);}) ).replace('#',''))+'" class="img-border-color" title="Border Color" style="width:28px; height:28px;">');
-		   var borderWidth = parseInt($img.css('border-width'))||1;
-		   var $borderWidth = $('<input type="number" min="0" max="20" value="'+borderWidth+'" class="img-border-width" title="Border Width (px)" style="width:32px;">');
-		   var borderStyle = $img.css('border-style')||'solid';
-		   var $borderStyle = $('<select class="img-border-style" title="Border Style" style="width:60px;">'+
-			   '<option value="solid">Solid</option><option value="dashed">Dashed</option><option value="dotted">Dotted</option><option value="double">Double</option><option value="groove">Groove</option><option value="ridge">Ridge</option><option value="inset">Inset</option><option value="outset">Outset</option><option value="none">None</option>'+
-		   '</select>');
-		   $borderStyle.val(borderStyle);
-		   $controlsRow.append($radiusInput, $borderColor, $borderWidth, $borderStyle);
-		   // Wrap the image with the parent div
-		   $img.after($imageActionHandle);
-		   $('.image-action-wrapper').append($resizeHandle, $rotateHandle, $deleteHandle, $controlsRow);
-		   // Hide text editor controls when image is selected
-		   $('#editor-controls').hide();
+	if ($img.next('.image-action-wrapper').length === 0) {
+		var $imageActionHandle = $('<div class="image-action-wrapper"></div>');
+		var $resizeHandle = $('<div class="resize-handle" title="Resize image"></div>'); // corner (proportional)
+		var $resizeLeft = $('<div class="resize-handle-side resize-handle-left" title="Resize left"></div>');
+		var $resizeRight = $('<div class="resize-handle-side resize-handle-right" title="Resize right"></div>');
+		var $resizeTop = $('<div class="resize-handle-side resize-handle-top" title="Resize top"></div>');
+		var $resizeBottom = $('<div class="resize-handle-side resize-handle-bottom" title="Resize bottom"></div>');
+		var $rotateHandle = $('<div class="rotate-handle" title="Rotate image"></div>');
+		var $deleteHandle = $('<div class="delete-handle" title="Delete image"></div>');
+		// Border/Radius controls (now in a flex row)
+		var $controlsRow = $('<div class="img-border-controls" style="display:flex;align-items:center;gap:6px;margin-left:8px;"></div>');
+		var $radiusInput = $('<input type="number" min="0" max="100" value="'+(parseInt($img.css('border-radius'))||0)+'" class="img-radius-input" title="Radius (px)" style="width:38px;">');
+		var $borderColor = $('<input type="color" value="#'+((($img.css('border-color')||'#000').replace(/rgb\\((\\d+), (\\d+), (\\d+)\\)/, function(m,r,g,b){return ((1<<24)+(parseInt(r)<<16)+(parseInt(g)<<8)+parseInt(b)).toString(16).slice(1);}) ).replace('#',''))+'" class="img-border-color" title="Border Color" style="width:28px; height:28px;">');
+		var borderWidth = parseInt($img.css('border-width'))||1;
+		var $borderWidth = $('<input type="number" min="0" max="20" value="'+borderWidth+'" class="img-border-width" title="Border Width (px)" style="width:32px;">');
+		var borderStyle = $img.css('border-style')||'solid';
+		var $borderStyle = $('<select class="img-border-style" title="Border Style" style="width:60px;">'+
+			'<option value="solid">Solid</option><option value="dashed">Dashed</option><option value="dotted">Dotted</option><option value="double">Double</option><option value="groove">Groove</option><option value="ridge">Ridge</option><option value="inset">Inset</option><option value="outset">Outset</option><option value="none">None</option>'+
+		'</select>');
+		$borderStyle.val(borderStyle);
+		$controlsRow.append($radiusInput, $borderColor, $borderWidth, $borderStyle);
+		// Wrap the image with the parent div
+		$img.after($imageActionHandle);
+		$('.image-action-wrapper').append($resizeHandle, $resizeLeft, $resizeRight, $resizeTop, $resizeBottom, $rotateHandle, $deleteHandle, $controlsRow);
+		// Hide text editor controls when image is selected
+		$('#editor-controls').hide();
 
 		   $img.css('position', 'absolute');
 		   $img.parent().css('position', 'relative');
-			// Position the handles at the bottom right of the image
-			   function updateHandlePosition() {
-				   var imgOffset = $img.position();
-				   var imgWidth = $img.outerWidth();
-				   var imgHeight = $img.outerHeight();
-				   $resizeHandle.css({
-					   left: imgOffset.left + imgWidth - $resizeHandle.outerWidth()/2 + 'px',
-					   top: imgOffset.top + imgHeight - $resizeHandle.outerHeight()/2 + 10 + 'px',
-					   position: 'absolute'
-				   });
-				   $rotateHandle.css({
-					   left: imgOffset.left + imgWidth - $rotateHandle.outerWidth()/2 - 28 + 'px',
-					   top: imgOffset.top + imgHeight - $rotateHandle.outerHeight()/2 + 10 + 'px',
-					   position: 'absolute'
-				   });
-				   $deleteHandle.css({
-					   left: imgOffset.left + imgWidth - $deleteHandle.outerWidth()/2 - 56 + 'px',
-					   top: imgOffset.top + imgHeight - $deleteHandle.outerHeight()/2 + 10 + 'px',
-					   position: 'absolute'
-				   });
-				   // Controls row: always static in flex, no need to position
-			   }
+		   // Ensure left/top are set explicitly for resizing math
+		   if (typeof $img.css('left') === 'undefined' || $img.css('left') === 'auto' || $img.css('left') === '') {
+			   $img.css('left', ($img.position().left || 0) + 'px');
+		   }
+		   if (typeof $img.css('top') === 'undefined' || $img.css('top') === 'auto' || $img.css('top') === '') {
+			   $img.css('top', ($img.position().top || 0) + 'px');
+		   }
+		// Position the handles
+		function updateHandlePosition() {
+			var imgOffset = $img.position();
+			var imgWidth = $img.outerWidth();
+			var imgHeight = $img.outerHeight();
+			$resizeHandle.css({
+				left: imgOffset.left + imgWidth - $resizeHandle.outerWidth()/2 + 'px',
+				top: imgOffset.top + imgHeight - $resizeHandle.outerHeight()/2 + 10 + 'px',
+				position: 'absolute'
+			});
+			$resizeLeft.css({
+				left: imgOffset.left - $resizeLeft.outerWidth()/2 + 'px',
+				top: imgOffset.top + imgHeight/2 - $resizeLeft.outerHeight()/2 + 'px',
+				position: 'absolute'
+			});
+			$resizeRight.css({
+				left: imgOffset.left + imgWidth - $resizeRight.outerWidth()/2 + 'px',
+				top: imgOffset.top + imgHeight/2 - $resizeRight.outerHeight()/2 + 'px',
+				position: 'absolute'
+			});
+			$resizeTop.css({
+				left: imgOffset.left + imgWidth/2 - $resizeTop.outerWidth()/2 + 'px',
+				top: imgOffset.top - $resizeTop.outerHeight()/2 + 'px',
+				position: 'absolute'
+			});
+			$resizeBottom.css({
+				left: imgOffset.left + imgWidth/2 - $resizeBottom.outerWidth()/2 + 'px',
+				top: imgOffset.top + imgHeight - $resizeBottom.outerHeight()/2 + 'px',
+				position: 'absolute'
+			});
+			$rotateHandle.css({
+				left: imgOffset.left + imgWidth - $rotateHandle.outerWidth()/2 - 28 + 'px',
+				top: imgOffset.top + imgHeight - $rotateHandle.outerHeight()/2 + 10 + 'px',
+				position: 'absolute'
+			});
+			$deleteHandle.css({
+				left: imgOffset.left + imgWidth - $deleteHandle.outerWidth()/2 - 56 + 'px',
+				top: imgOffset.top + imgHeight - $deleteHandle.outerHeight()/2 + 10 + 'px',
+				position: 'absolute'
+			});
+			// Controls row: always static in flex, no need to position
+		}
 		   // Border/Radius controls logic
 		   $radiusInput.on('input change', function() {
 			   $img.css('border-radius', $(this).val() + 'px');
@@ -373,27 +404,91 @@ $(document).ready(function() {
 			$img.on('resize move', updateHandlePosition);
 			var observer = new MutationObserver(updateHandlePosition);
 			observer.observe($img[0], { attributes: true, attributeFilter: ['style', 'width', 'height'] });
-			var resizing = false, startX, startY, startW, startH;
-			$resizeHandle.on('mousedown', function(e) {
-				resizing = true;
-				startX = e.pageX; startY = e.pageY;
-				startW = $img.width(); startH = $img.height();
-				e.preventDefault();
-				e.stopPropagation();
-			});
-			$(document).on('mousemove.resizer', function(e) {
-				if (resizing) {
-					var dx = e.pageX - startX;
-					var dy = e.pageY - startY;
-					var ratio = startW / startH;
-					var newW = Math.max(30, startW + dx);
-					var newH = Math.max(30, newW / ratio);
-					$img.width(newW).height(newH);
-					updateHandlePosition();
-				}
-			}).on('mouseup.resizer', function() {
-				resizing = false;
-			});
+			   // --- Resize logic ---
+			   var resizing = false, startX, startY, startW, startH, resizeAxis = null;
+			   var startLeft = 0, startTop = 0;
+			   $resizeHandle.on('mousedown', function(e) {
+				   resizing = true;
+				   resizeAxis = 'corner';
+				   startX = e.pageX; startY = e.pageY;
+				   startW = $img.width(); startH = $img.height();
+				   e.preventDefault();
+				   e.stopPropagation();
+			   });
+			   $resizeLeft.off('mousedown').on('mousedown', function(e) {
+				   e.preventDefault();
+				   e.stopPropagation();
+				   resizing = true;
+				   resizeAxis = 'left';
+				   startX = e.pageX;
+				   startW = $img.width();
+				   var leftVal = parseInt($img.css('left'));
+				   startLeft = isNaN(leftVal) ? 0 : leftVal;
+			   });
+			   $resizeRight.on('mousedown', function(e) {
+				   resizing = true;
+				   resizeAxis = 'right';
+				   startX = e.pageX;
+				   startW = $img.width();
+				   e.preventDefault();
+				   e.stopPropagation();
+			   });
+			   $resizeTop.off('mousedown').on('mousedown', function(e) {
+				   e.preventDefault();
+				   e.stopPropagation();
+				   resizing = true;
+				   resizeAxis = 'top';
+				   startY = e.pageY;
+				   startH = $img.height();
+				   var topVal = parseInt($img.css('top'));
+				   startTop = isNaN(topVal) ? 0 : topVal;
+			   });
+			   $resizeBottom.on('mousedown', function(e) {
+				   resizing = true;
+				   resizeAxis = 'bottom';
+				   startY = e.pageY;
+				   startH = $img.height();
+				   e.preventDefault();
+				   e.stopPropagation();
+			   });
+			   $(document).on('mousemove.resizer', function(e) {
+					if (resizing) {
+					   if (resizeAxis === 'corner') {
+						   var dx = e.pageX - startX;
+						   var dy = e.pageY - startY;
+						   var ratio = startW / startH;
+						   var newW = Math.max(30, startW + dx);
+						   var newH = Math.max(30, newW / ratio);
+						   $img.width(newW).height(newH);
+					   } else if (resizeAxis === 'left') {
+						   var dx = e.pageX - startX;
+						   var newW = Math.max(30, startW - dx);
+						   var newLeft = startLeft + dx;
+						   if (newW >= 30) {
+							   $img.width(newW).css('left', newLeft + 'px');
+						   }
+					   } else if (resizeAxis === 'right') {
+						   var dx = e.pageX - startX;
+						   var newW = Math.max(30, startW + dx);
+						   $img.width(newW);
+					   } else if (resizeAxis === 'top') {
+						   var dy = e.pageY - startY;
+						   var newH = Math.max(30, startH - dy);
+						   var newTop = startTop + dy;
+						   if (newH >= 30) {
+							   $img.height(newH).css('top', newTop + 'px');
+						   }
+					   } else if (resizeAxis === 'bottom') {
+						   var dy = e.pageY - startY;
+						   var newH = Math.max(30, startH + dy);
+						   $img.height(newH);
+					   }
+					   updateHandlePosition();
+				   }
+			   }).on('mouseup.resizer', function() {
+				   resizing = false;
+				   resizeAxis = null;
+			   });
 			// Rotate logic
 			var rotating = false, rotateStartX, rotateStartY, startAngle = 0;
 			$rotateHandle.on('mousedown', function(e) {

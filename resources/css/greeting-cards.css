@@ -1,3 +1,26 @@
+/* Side resize handles for images (left, right, top, bottom) */
+.resize-handle-side {
+  display: block !important;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 2.5px solid #667eea;
+  border-radius: 50%;
+  box-shadow: 0 0 4px #667eea33;
+  cursor: pointer;
+  z-index: 1002;
+  transition: background 0.2s, border 0.2s;
+  pointer-events: auto;
+}
+.resize-handle-side:hover {
+  background: #e0e7ff;
+  border-color: #3b82f6;
+}
+.resize-handle-left { cursor: ew-resize; }
+.resize-handle-right { cursor: ew-resize; }
+.resize-handle-top { cursor: ns-resize; }
+.resize-handle-bottom { cursor: ns-resize; }
 /* Delete handle for image removal */
 .delete-handle {
   display: block !important;
