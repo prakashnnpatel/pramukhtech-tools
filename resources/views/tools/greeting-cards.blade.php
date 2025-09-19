@@ -12,60 +12,27 @@
 			<div class="col-lg-12 mb-4">
 				<div class="calculator-card">
 					<div class="card-header">
-						<h3>{{$card->title}}</h3>
-						<p class="calculator-subtitle">{{$card->description}}</p>
-					</div>
-					<div class="card-body">
+						   <div class="d-flex justify-content-between align-items-center w-100">
+							   <div>
+								   <h3 class="mb-0">{{$card->title}}</h3>
+								   <p class="calculator-subtitle mb-0">{{$card->description}}</p>
+							   </div>
+							   <button class="btn btn-sm btn-outline-secondary collapse-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#main-card-body" aria-expanded="true" aria-controls="main-card-body" style="border:1px solid #ddd;">
+								   <span class="collapse-icon" aria-hidden="true" style="display: inline-block; transition: transform 0.3s;">
+									   <!-- Bootstrap chevron-down SVG -->
+									   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+										   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+									   </svg>
+								   </span>
+								   <span class="visually-hidden">Toggle section</span>
+							   </button>
+						   </div>
+					   </div>
+					   <div class="card-body collapse show" id="main-card-body">
 						{{-- Canvas Background & Border Controls --}}
 						<div class="row mb-3">
-							<div class="col-lg-12">
-								<p style="color:#6c757d;">For the Main Container</p>
-							</div>
-							<div class="col-lg-2">
-								<label for="main-canvas-bg-color" class="form-label">Main Background</label>
-								<input type="color" id="main-canvas-bg-color" value="#ffffff" style="width: 40px; height: 32px; padding: 0; border: none; background: none;" class="form-control">
-							</div>
-							<div class="col-lg-2">
-								<label for="main-canvas-border-color" class="form-label">Border Color</label>
-								<input type="color" id="main-canvas-border-color" value="#cccccc" style="width: 40px; height: 32px; padding: 0; border: none; background: none;" class="form-control">
-							</div>
-							<div class="col-lg-2">
-								<label for="main-canvas-border-width" class="form-label">Border Width</label>
-								<div class="input-group-custom">
-                                    <div class="input-wrapper">
-                                        <input type="number" class="form-control custom-input" id="main-canvas-border-width" value="1" min="0" max="30">
-                                        <span class="input-suffix mr-4">px</span>
-                                    </div>                                    
-                                </div>
-							</div>
-							<div class="col-lg-2">
-								<label for="main-canvas-border-style" class="form-label">Border Style</label>
-								<select id="main-canvas-border-style" class="form-select">
-									<option value="solid">Solid</option>
-									<option value="dashed">Dashed</option>
-									<option value="dotted">Dotted</option>
-									<option value="double">Double</option>
-									<option value="groove">Groove</option>
-									<option value="ridge">Ridge</option>
-									<option value="inset">Inset</option>
-									<option value="outset">Outset</option>
-									<option value="none">None</option>
-								</select>
-							</div>
-							<div class="col-lg-4">
-                                <div class="input-group-custom">
-                                    <label for="canvas-zoom-slider">Zoom: <span id="canvas-zoom-value">100%</span></label>
-                                    <div class="slider-container">
-                                        <div id="canvas-zoom-slider" class="custom-slider"></div>
-										<div class="slider-labels">
-                                            <span>25%</span>
-                                            <span>200%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 							<div class="col-lg-12 d-flex align-items-center" style="gap: 8px;">
-								<label class="mb-0" style="min-width:110px;">Backgrounds:</label>
+								<label class="form-label">Backgrounds:</label>
 								<div id="main-canvas-bg-thumbs" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 420px; max-height: 90px; overflow-x: auto; overflow-y: hidden; border: 1px solid #eee; padding: 4px 0 4px 4px; background: #fafafa; border-radius: 6px;">
 									<div class="bg-thumb" data-img="" style="width: 60px; height: 40px; border: 2px solid #ccc; border-radius: 4px; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 12px; color: #888;">None</div>
 									<img src="/images/greeting-cards/backgrounds/birthday-1.jpeg" class="bg-thumb" data-img="/images/greeting-cards/backgrounds/birthday-1.jpeg" style="width: 60px; height: 40px; object-fit: cover; border: 2px solid #ccc; border-radius: 4px; cursor: pointer;" title="Birthday 1" />
@@ -81,13 +48,74 @@
 
 			{{-- Editor Canvas --}}
 			<div class="col-lg-8 mb-4">
-				<div class="calculator-card">
-                    <div class="card-body">
-						<div class="row">
-                            <div class="col-lg-12">
+				<div class="row mb-4">
+                    <div class="col-lg-12">
+						<div class="calculator-card">
+							<div class="card-body">
 								<div id="card-editor-wrapper" class="d-flex justify-content-center align-items-center">
 									<div id="card-canvas" style="position: relative;  background: #fff; overflow: hidden;">
 										<!-- Card elements (text/images) will be added here dynamically -->
+									</div>
+								</div>
+							</div>							
+						</div>						
+					</div>
+				</div>
+				{{-- Canvas Background & Border Controls --}}
+				<div class="calculator-card">
+					   <div class="card-header d-flex justify-content-between align-items-center">
+						   <h4 class="mb-0">Manage Main Container</h4>
+						   <button class="btn btn-sm btn-outline-secondary collapse-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#main-container-settings" aria-expanded="true" aria-controls="main-container-settings" id="toggle-main-container-settings" style="border:1px solid #ddd;">
+							   <span class="collapse-icon" aria-hidden="true" style="display: inline-block; transition: transform 0.3s;">
+								   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+									   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+								   </svg>
+							   </span>
+							   <span class="visually-hidden">Toggle section</span>
+						   </button>
+					   </div>
+					   <div class="card-body collapse show" id="main-container-settings">
+						<div class="row">
+							<div class="col-lg-3">
+								<label for="main-canvas-bg-color" class="form-label">Main Background</label>
+								<input type="color" id="main-canvas-bg-color" value="#ffffff" style="width: 40px; height: 32px; padding: 0; border: none; background: none;" class="form-control">
+							</div>
+							<div class="col-lg-3">
+								<label for="main-canvas-border-color" class="form-label">Border Color</label>
+								<input type="color" id="main-canvas-border-color" value="#cccccc" style="width: 40px; height: 32px; padding: 0; border: none; background: none;" class="form-control">
+							</div>
+							<div class="col-lg-3">
+								<label for="main-canvas-border-width" class="form-label">Border Width</label>
+								<div class="input-group-custom">
+									<div class="input-wrapper">
+										<input type="number" class="form-control custom-input" id="main-canvas-border-width" value="1" min="0" max="30">
+										<span class="input-suffix mr-4">px</span>
+									</div>                                    
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<label for="main-canvas-border-style" class="form-label">Border Style</label>
+								<select id="main-canvas-border-style" class="form-select">
+									<option value="solid">Solid</option>
+									<option value="dashed">Dashed</option>
+									<option value="dotted">Dotted</option>
+									<option value="double">Double</option>
+									<option value="groove">Groove</option>
+									<option value="ridge">Ridge</option>
+									<option value="inset">Inset</option>
+									<option value="outset">Outset</option>
+									<option value="none">None</option>
+								</select>
+							</div>
+							<div class="col-lg-6">
+								<div class="input-group-custom">
+									<label for="canvas-zoom-slider">Zoom: <span id="canvas-zoom-value">100%</span></label>
+									<div class="slider-container">
+										<div id="canvas-zoom-slider" class="custom-slider"></div>
+										<div class="slider-labels">
+											<span>25%</span>
+											<span>200%</span>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -293,5 +321,16 @@
 	</script>
 @endisset
 @vite('resources/js/tools/greeting-cards.js')
+<style>
+	.collapse-toggle-btn .collapse-icon {
+		transition: transform 0.3s;
+	}
+	.collapse-toggle-btn[aria-expanded="false"] .collapse-icon {
+		transform: rotate(-90deg);
+	}
+	.collapse-toggle-btn[aria-expanded="true"] .collapse-icon {
+		transform: rotate(0deg);
+	}
+</style>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 @endpush

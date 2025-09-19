@@ -1,4 +1,3 @@
-// --- Text Style Controls ---
 $(document).on('click', '#bold-btn', function() {
 	if (window.selectedElement) {
 		let fontWeight = window.selectedElement.css('font-weight');
