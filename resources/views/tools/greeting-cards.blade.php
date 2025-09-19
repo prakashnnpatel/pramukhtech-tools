@@ -127,6 +127,12 @@
 										<rect x="7" y="11" width="7" height="2" rx="1"/>
 									</svg>
 								</button>
+								   <!-- Rotate Text Button -->
+								   <button type="button" class="btn btn-outline-secondary btn-sm" id="rotate-text-btn" title="Rotate Text, Click and hold to rotate">
+									   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="16" height="16">
+										   <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+									   </svg>
+								   </button>
 								<div class="btn-group ms-2" role="group" aria-label="Text alignment">
 									<button type="button" class="btn btn-outline-secondary btn-sm" id="align-left-btn" title="Align Left">
 										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">

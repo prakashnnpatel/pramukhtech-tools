@@ -99,6 +99,49 @@ if (typeof window.jQuery === 'undefined') {
 }
 
 $(document).ready(function() {
+	// --- Rotate Text Feature ---
+	var textRotating = false, textRotateStartX, textRotateStartY, textStartAngle = 0;
+	$(document).on('mousedown', '#rotate-text-btn', function(e) {
+		if (window.selectedElement && window.selectedElement.hasClass('draggable-text')) {
+			textRotating = true;
+			var $el = window.selectedElement;
+			var offset = $el.offset();
+			var width = $el.outerWidth();
+			var height = $el.outerHeight();
+			var centerX = offset.left + width / 2;
+			var centerY = offset.top + height / 2;
+			textRotateStartX = e.pageX - centerX;
+			textRotateStartY = e.pageY - centerY;
+			var transform = $el.css('transform');
+			if (transform && transform !== 'none') {
+				var values = transform.split('(')[1].split(')')[0].split(',');
+				var a = values[0], b = values[1];
+				textStartAngle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+			} else {
+				textStartAngle = 0;
+			}
+			e.preventDefault();
+			e.stopPropagation();
+		}
+	});
+	$(document).on('mousemove.rotateText', function(e) {
+		if (textRotating && window.selectedElement && window.selectedElement.hasClass('draggable-text')) {
+			var $el = window.selectedElement;
+			var offset = $el.offset();
+			var width = $el.outerWidth();
+			var height = $el.outerHeight();
+			var centerX = offset.left + width / 2;
+			var centerY = offset.top + height / 2;
+			var x = e.pageX - centerX;
+			var y = e.pageY - centerY;
+			var angle = Math.atan2(y, x) * (180/Math.PI);
+			var rotateDeg = angle - Math.atan2(textRotateStartY, textRotateStartX) * (180/Math.PI) + textStartAngle;
+			$el.css('transform', 'rotate(' + rotateDeg + 'deg)');
+		}
+	});
+	$(document).on('mouseup.rotateText', function() {
+		textRotating = false;
+	});
 	// Main Canvas Border Controls
 	function updateMainCanvasBorder() {
 		var color = $('#main-canvas-border-color').val();
