@@ -10,7 +10,7 @@ class TemplateBackgroundSeeder extends Seeder
 {
     public function run()
     {
-        CardTemplateBackground::truncate();
+        //CardTemplateBackground::truncate();
         $bgImages = [
             [
                 'title' => '',
@@ -25,12 +25,97 @@ class TemplateBackgroundSeeder extends Seeder
             ],
             [
                 'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-3.jpeg',                
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-3.jpeg',
                 'category' => 'Birthday',
             ],
             [
                 'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-4.jpeg',                
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-4.jpeg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-5.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-6.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-7.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-8.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-9.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-10.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-11.jpeg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-12.jpeg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-13.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-14.jpeg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-15.jpeg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-16.jpeg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-17.jpeg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-18.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-19.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-20.jpeg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-21.jpg',
                 'category' => 'Birthday',
             ],
         ];

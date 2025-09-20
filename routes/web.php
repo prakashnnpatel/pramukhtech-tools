@@ -33,6 +33,7 @@ Route::post('/split-pdf/split', [App\Http\Controllers\SplitPdfController::class,
 // Greeting card templates list and editor
 Route::get('/cards', [CardTemplateController::class, 'index'])->name('cards');
 Route::get('/greeting-cards/{slug}', [CardTemplateController::class, 'show'])->name('greeting-cards.show');
+Route::get('/api/card-template-backgrounds', [CardTemplateController::class, 'backgrounds'])->name('api.card-template-backgrounds');
 
 ### Always keep This router at last
 Route::get('/{toolkey?}/{subpart?}',[HomeController::class, 'tools'])->name("toollist");

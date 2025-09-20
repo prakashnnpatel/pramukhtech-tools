@@ -30,16 +30,19 @@
 					   </div>
 					   <div class="card-body collapse show" id="main-card-body">
 						{{-- Canvas Background & Border Controls --}}
-						<div class="row mb-3">
-							<div class="col-lg-12 d-flex align-items-center" style="gap: 8px;">
-								<label class="form-label">Backgrounds:</label>
-								<div id="main-canvas-bg-thumbs" style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 420px; max-height: 90px; overflow-x: auto; overflow-y: hidden; border: 1px solid #eee; padding: 4px 0 4px 4px; background: #fafafa; border-radius: 6px;">
-									<div class="bg-thumb" data-img="" style="width: 60px; height: 40px; border: 2px solid #ccc; border-radius: 4px; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 12px; color: #888;">None</div>
-									<img src="/images/greeting-cards/backgrounds/birthday-1.jpeg" class="bg-thumb" data-img="/images/greeting-cards/backgrounds/birthday-1.jpeg" style="width: 60px; height: 40px; object-fit: cover; border: 2px solid #ccc; border-radius: 4px; cursor: pointer;" title="Birthday 1" />
-									<img src="/images/greeting-cards/backgrounds/birthday-2.jpg" class="bg-thumb" data-img="/images/greeting-cards/backgrounds/birthday-2.jpg" style="width: 60px; height: 40px; object-fit: cover; border: 2px solid #ccc; border-radius: 4px; cursor: pointer;" title="Birthday 2" />
-									<img src="/images/greeting-cards/backgrounds/birthday-3.jpeg" class="bg-thumb" data-img="/images/greeting-cards/backgrounds/birthday-3.jpeg" style="width: 60px; height: 40px; object-fit: cover; border: 2px solid #ccc; border-radius: 4px; cursor: pointer;" title="Birthday 3" />
-									<img src="/images/greeting-cards/backgrounds/birthday-4.jpeg" class="bg-thumb" data-img="/images/greeting-cards/backgrounds/birthday-4.jpeg" style="width: 60px; height: 40px; object-fit: cover; border: 2px solid #ccc; border-radius: 4px; cursor: pointer;" title="Birthday 4" />
+						<div class="row">
+							<div class="col-12">
+								<label class="form-label">Backgrounds</label>
+								<div id="main-canvas-bg-thumbs" class="main-canvas-bg-carousel" style="display: flex; flex-wrap: nowrap; gap: 12px; width: 100%;  min-height: 70px; max-height: 120px; overflow-x: auto; overflow-y: hidden; border: 1px solid #eee; padding: 8px 16px; background: #fafafa; border-radius: 8px; position: relative; margin: 0 auto;">
+									<div class="bg-thumb" data-img="" style="width: 90px; height: 60px; border: 2px solid #ccc; border-radius: 6px; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 15px; color: #888;">None</div>
+									<!-- Dynamic thumbs will be appended here by JS -->
+									<div id="bg-thumbs-loader" style="display:none; align-items:center; justify-content:center; width:90px; height:60px;"><span class="spinner-border spinner-border-sm"></span></div>
 								</div>
+								<input type="hidden" id="main-canvas-bg-image" value="" />
+								<!-- Template for JS to use for thumbs -->
+								<template id="bg-thumb-template">
+									<img class="bg-thumb" data-img="" style="width: 90px; height: 60px; object-fit: cover; border: 2px solid #ccc; border-radius: 6px; cursor: pointer;" title="" loading="lazy" />
+								</template>
 							</div>
 						</div>				
 					</div>
@@ -321,16 +324,5 @@
 	</script>
 @endisset
 @vite('resources/js/tools/greeting-cards.js')
-<style>
-	.collapse-toggle-btn .collapse-icon {
-		transition: transform 0.3s;
-	}
-	.collapse-toggle-btn[aria-expanded="false"] .collapse-icon {
-		transform: rotate(-90deg);
-	}
-	.collapse-toggle-btn[aria-expanded="true"] .collapse-icon {
-		transform: rotate(0deg);
-	}
-</style>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 @endpush

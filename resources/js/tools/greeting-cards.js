@@ -1,3 +1,61 @@
+// --- Dynamic Card Backgrounds AJAX Carousel ---
+$(function() {
+	var bgPage = 1;
+	var bgLastPage = false;
+	var bgLoading = false;
+	var $carousel = $('#main-canvas-bg-thumbs');
+	var $loader = $('#bg-thumbs-loader');
+	var $template = $('#bg-thumb-template');
+
+	function loadBackgrounds(page) {
+		if (bgLoading || bgLastPage) return;
+		bgLoading = true;
+		$loader.show();
+		$.get('/api/card-template-backgrounds', { page: page }, function(res) {
+			if (res && res.data && res.data.length) {
+				var $loaderDiv = $carousel.find('#bg-thumbs-loader');
+				res.data.forEach(function(bg) {
+					var $img = $($template.html());
+					$img.attr('src', bg.thumbnail_url || bg.image_url);
+					$img.attr('data-img', bg.image_url);
+					$img.attr('title', bg.title || '');
+					if ($loaderDiv.length) {
+						$img.insertBefore($loaderDiv);
+					} else {
+						$carousel.append($img);
+					}
+				});
+				bgPage = res.current_page + 1;
+				if (res.current_page >= res.last_page) bgLastPage = true;
+			} else {
+				bgLastPage = true;
+			}
+		}).always(function() {
+			$loader.hide();
+			bgLoading = false;
+		});
+	}
+
+	// Initial load
+	loadBackgrounds(bgPage);
+
+	// Lazy load on scroll to end
+	$carousel.on('scroll', function() {
+		var scrollLeft = $carousel.scrollLeft();
+		var scrollWidth = $carousel[0].scrollWidth;
+		var clientWidth = $carousel[0].clientWidth;
+		if (scrollLeft + clientWidth >= scrollWidth - 40) {
+			loadBackgrounds(bgPage);
+		}
+	});
+
+	// Also load next page if carousel is not full (for small screens)
+	$carousel.on('mouseenter', function() {
+		if ($carousel[0].scrollWidth <= $carousel[0].clientWidth + 10 && !bgLastPage) {
+			loadBackgrounds(bgPage);
+		}
+	});
+});
 $(document).on('click', '#bold-btn', function() {
 	if (window.selectedElement) {
 		let fontWeight = window.selectedElement.css('font-weight');
@@ -184,6 +242,7 @@ $(document).ready(function() {
 		$(this).css('border-color', '#007bff');
 		var img = $(this).data('img');
 		var color = $('#main-canvas-bg-color').val();
+		$('#main-canvas-bg-image').val(img || '');
 		if (img) {
 			$('#card-canvas').css('background', color + ' url("' + img + '") center/cover no-repeat');
 		} else {

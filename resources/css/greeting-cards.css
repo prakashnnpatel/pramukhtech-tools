@@ -114,3 +114,12 @@
   cursor: se-resize;
   z-index: 1001;
 } 
+.collapse-toggle-btn .collapse-icon {
+	transition: transform 0.3s;
+}
+.collapse-toggle-btn[aria-expanded="false"] .collapse-icon {
+  transform: rotate(-90deg);
+}
+.collapse-toggle-btn[aria-expanded="true"] .collapse-icon {
+  transform: rotate(0deg);
+}
