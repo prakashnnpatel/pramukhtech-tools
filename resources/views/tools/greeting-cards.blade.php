@@ -30,13 +30,13 @@
 					   </div>
 					   <div class="card-body collapse show" id="main-card-body">
 						{{-- Canvas Background & Border Controls --}}
+						<input type="file" id="custom-bg-upload" accept="image/*" style="opacity:0;position:absolute;left:0;top:0;width:100%;height:100%;cursor:pointer;" />
 						<div class="row">
-							<div class="col-12">
+							<div class="col-12">								
 								<label class="form-label">Backgrounds</label>
 								<div id="main-canvas-bg-thumbs" class="main-canvas-bg-carousel" style="display: flex; flex-wrap: nowrap; gap: 12px; width: 100%;  min-height: 70px; max-height: 120px; overflow-x: auto; overflow-y: hidden; border: 1px solid #eee; padding: 8px 16px; background: #fafafa; border-radius: 8px; position: relative; margin: 0 auto;">
-									<div class="bg-thumb" data-img="" style="width: 90px; height: 60px; border: 2px solid #ccc; border-radius: 6px; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 15px; color: #888;">None</div>
-									<!-- Dynamic thumbs will be appended here by JS -->
-									<div id="bg-thumbs-loader" style="display:none; align-items:center; justify-content:center; width:90px; height:60px;"><span class="spinner-border spinner-border-sm"></span></div>
+									<!-- Plus icon for custom background upload -->
+									<img class="bg-thumb" id="custome-upload-icn" data-img="" src="http://dev.pamukhtechtools.com/images/greeting-cards/backgrounds/default.jpg" style="width: 90px; height: 60px; object-fit: cover; border: 2px solid #ccc; border-radius: 6p	x; cursor: pointer;" title="Custome Upload" loading="lazy" />									
 								</div>
 								<input type="hidden" id="main-canvas-bg-image" value="" />
 								<!-- Template for JS to use for thumbs -->
@@ -199,6 +199,21 @@
 									<option value="Comic Sans MS">Comic Sans</option>
 									<option value="Georgia">Georgia</option>
 									<option value="Courier New">Courier New</option>
+									<option value="Lobster">Lobster</option>
+									<option value="Pacifico">Pacifico</option>
+									<option value="Great Vibes">Great Vibes</option>
+									<option value="Montserrat">Montserrat</option>
+									<option value="Poppins">Poppins</option>
+									<option value="Lato">Lato</option>
+									<option value="Playfair Display">Playfair Display</option>
+									<option value="Merriweather">Merriweather</option>
+									<option value="Cinzel">Cinzel</option>
+									<option value="Indie Flower">Indie Flower</option>
+									<option value="Amatic SC">Amatic SC</option>
+									<option value="Dancing Script">Dancing Script</option>
+									<option value="Bebas Neue">Bebas Neue</option>
+									<option value="Abril Fatface">Abril Fatface</option>
+									<option value="Righteous">Righteous</option>
 								</select>
 							</div>
 							<div class="col-lg-6 mb-3">

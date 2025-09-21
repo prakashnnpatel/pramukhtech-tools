@@ -55,6 +55,28 @@ $(function() {
 			loadBackgrounds(bgPage);
 		}
 	});
+	
+	// Custom background upload logic
+	$(document).on('change', '#custom-bg-upload', function(e) {
+		var file = e.target.files[0];
+		if (!file) return;
+		var reader = new FileReader();
+		reader.onload = function(evt) {
+			var imgData = evt.target.result;
+			// Set as canvas background
+			var color = $('#main-canvas-bg-color').val();
+			$('#main-canvas-bg-image').val(imgData);
+			$('#card-canvas').css('background', color + ' url("' + imgData + '") center/cover no-repeat');
+			// Optionally, highlight the plus icon
+			$('.bg-thumb-upload').css('border-color', '#007bff');
+			$('#main-canvas-bg-thumbs .bg-thumb').not('.bg-thumb-upload').css('border-color', '#ccc');
+		};
+		reader.readAsDataURL(file);
+	});
+
+	$("#custome-upload-icn").click(function(){
+		$("#custom-bg-upload").trigger("click");
+	})
 });
 $(document).on('click', '#bold-btn', function() {
 	if (window.selectedElement) {
@@ -785,7 +807,10 @@ $(document).ready(function() {
 	// Font family
 	$('#font-family').on('change', function() {
 		if (window.selectedElement) {
-			window.selectedElement.css('font-family', $(this).val());
+			var font = $(this).val();
+			// Add quotes for font names with spaces and fallback
+			var fontCss = /[\s]/.test(font) ? `'${font}', sans-serif` : `${font}, sans-serif`;
+			window.selectedElement.css('font-family', fontCss);
 		}
 	});
 	// Font size
