@@ -36,7 +36,7 @@
 								<label class="form-label">Backgrounds</label>
 								<div id="main-canvas-bg-thumbs" class="main-canvas-bg-carousel" style="display: flex; flex-wrap: nowrap; gap: 12px; width: 100%;  min-height: 70px; max-height: 120px; overflow-x: auto; overflow-y: hidden; border: 1px solid #eee; padding: 8px 16px; background: #fafafa; border-radius: 8px; position: relative; margin: 0 auto;">
 									<!-- Plus icon for custom background upload -->
-									<img class="bg-thumb" id="custome-upload-icn" data-img="" src="http://dev.pamukhtechtools.com/images/greeting-cards/backgrounds/default.jpg" style="width: 90px; height: 60px; object-fit: cover; border: 2px solid #ccc; border-radius: 6p	x; cursor: pointer;" title="Custome Upload" loading="lazy" />									
+									<img class="bg-thumb" id="custome-upload-icn" data-img="" src="http://dev.pamukhtechtools.com/images/greeting-cards/default.jpg" style="width: 90px; height: 60px; object-fit: cover; border: 2px solid #ccc; border-radius: 6p	x; cursor: pointer;" title="Custome Upload" loading="lazy" />									
 								</div>
 								<input type="hidden" id="main-canvas-bg-image" value="" />
 								<!-- Template for JS to use for thumbs -->
