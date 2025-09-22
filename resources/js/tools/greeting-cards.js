@@ -371,6 +371,96 @@ $(document).ready(function() {
 	$(document).on('blur', '.draggable-text', function() {
 		$(this).removeClass('selected');
 	});
+	// --- Curve Toolbar for Images ---
+	function showCurveToolbar($img) {
+		// Remove any existing toolbar
+		$('.curve-toolbar').remove();
+		// Create toolbar
+		var $toolbar = $('<div class="curve-toolbar" style="position:absolute;z-index:2000;top:0;left:0;background:#fff;border:1px solid #ccc;padding:4px 8px;border-radius:6px;box-shadow:0 2px 8px #0002;display:flex;gap:6px;"></div>');
+		var curves = [
+			{name:'None', val:'none'},
+			{name:'Circle', val:'circle'},
+			{name:'Rectangle', val:'rect'},
+			{name:'Triangle', val:'triangle'},
+			{name:'Star', val:'star'},
+			{name:'Wave', val:'wave'}
+		];
+		curves.forEach(function(curve){
+			var $btn = $('<button type="button" class="curve-btn" style="padding:2px 8px;font-size:13px;">'+curve.name+'</button>');
+			$btn.data('curve', curve.val);
+			$toolbar.append($btn);
+		});
+		// Position toolbar above the image
+		var offset = $img.offset();
+		var left = offset.left;
+		var top = offset.top - 38; // above image
+		$toolbar.css({left:left+'px',top:top+'px',position:'absolute'});
+		$('body').append($toolbar);
+		// Highlight current curve
+		var current = $img.data('curve-style') || 'none';
+		$toolbar.find('.curve-btn').each(function(){
+			if($(this).data('curve')===current){ $(this).css('background','#e0e7ff'); }
+		});
+		// Button click handler
+		$toolbar.on('click', '.curve-btn', function(e){
+			var style = $(this).data('curve');
+			applyCurveToImage($img, style);
+			$toolbar.find('.curve-btn').css('background','');
+			$(this).css('background','#e0e7ff');
+		});
+	}
+
+	// --- Apply curve effect to image ---
+	function applyCurveToImage($img, style) {
+		$img.data('curve-style', style);
+		// Remove any previous circle wrapper (legacy)
+		if ($img.parent().hasClass('circle-clip-wrapper')) {
+			var $parent = $img.parent();
+			$img.css({
+				left: $parent.position().left + 'px',
+				top: $parent.position().top + 'px',
+				position: 'absolute',
+				width: '',
+				height: ''
+			});
+			$parent.after($img);
+			$parent.remove();
+		}
+		$img.css('clip-path','');
+		$img.css('-webkit-clip-path','');
+		$img.css('border-radius','');
+		$img.css('overflow','');
+		if(style==='none'){
+			$img.css('clip-path','none');
+			$img.css('-webkit-clip-path','none');
+			$img.css('border-radius','');
+			$img.css('overflow','');
+			return;
+		}
+		var clip = '';
+		switch(style){
+			case 'circle':
+				   clip = 'circle(40% at 50% 50%)';
+				break;
+			case 'rect':
+				clip = 'inset(0% round 18px)';
+				break;
+			case 'triangle':
+				clip = 'polygon(50% 0%, 0% 100%, 100% 100%)';
+				break;
+			case 'star':
+				// 5-point star
+				clip = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
+				break;
+			case 'wave':
+				// Simple wave
+				clip = 'path("M0,80 Q40,120 80,80 T160,80 T240,80 V150 H0 Z")';
+				break;
+		}
+		$img.css('clip-path',clip);
+		$img.css('-webkit-clip-path',clip);
+	}
+
 	// Helper: Make image resizable (jQuery UI or fallback)
 	function makeResizable($img) {
 	// Remove all other handles
@@ -400,8 +490,10 @@ $(document).ready(function() {
 		// Wrap the image with the parent div
 		$img.after($imageActionHandle);
 		$('.image-action-wrapper').append($resizeHandle, $resizeLeft, $resizeRight, $resizeTop, $resizeBottom, $rotateHandle, $deleteHandle, $controlsRow);
-		// Hide text editor controls when image is selected
-		$('#editor-controls').hide();
+	// Hide text editor controls when image is selected
+	$('#editor-controls').hide();
+	// Show curve toolbar for this image
+	setTimeout(function(){ showCurveToolbar($img); }, 10);
 
 		   $img.css('position', 'absolute');
 		   $img.parent().css('position', 'relative');
@@ -708,6 +800,8 @@ $(document).ready(function() {
 							   // Add selection to clicked image
 							   $(this).addClass('selected');
 							   makeResizable($(this));
+							   // Show curve toolbar for this image
+							   setTimeout(()=>showCurveToolbar($(this)),10);
 							   e.stopPropagation();
 						   });
 					}
@@ -916,10 +1010,11 @@ $(document).ready(function() {
 		$input.click();
 	});
 
-	// Hide all handles when clicking outside any image or its controls
+	// Hide all handles and curve toolbar when clicking outside any image or its controls
 	$(document).on('click', function(e) {
-		if (!$(e.target).hasClass('draggable-img') && $(e.target).closest('.image-action-wrapper').length === 0) {
+		if (!$(e.target).hasClass('draggable-img') && $(e.target).closest('.image-action-wrapper').length === 0 && $(e.target).closest('.curve-toolbar').length === 0) {
 			$('.image-action-wrapper').remove();
+			$('.curve-toolbar').remove();
 		}
 	});
 
