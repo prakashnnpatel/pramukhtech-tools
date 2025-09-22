@@ -36,7 +36,7 @@
 								<label class="form-label">Backgrounds</label>
 								<div id="main-canvas-bg-thumbs" class="main-canvas-bg-carousel" style="display: flex; flex-wrap: nowrap; gap: 12px; width: 100%;  min-height: 70px; max-height: 120px; overflow-x: auto; overflow-y: hidden; border: 1px solid #eee; padding: 8px 16px; background: #fafafa; border-radius: 8px; position: relative; margin: 0 auto;">
 									<!-- Plus icon for custom background upload -->
-									<img class="bg-thumb" id="custome-upload-icn" data-img="" src="http://dev.pamukhtechtools.com/images/greeting-cards/default.jpg" style="width: 90px; height: 60px; object-fit: cover; border: 2px solid #ccc; border-radius: 6p	x; cursor: pointer;" title="Custome Upload" loading="lazy" />									
+									<img class="bg-thumb" id="custome-upload-icn" data-img="" src="/images/greeting-cards/default.jpg" style="width: 90px; height: 60px; object-fit: cover; border: 2px solid #ccc; border-radius: 6p	x; cursor: pointer;" title="Upload your background image" loading="lazy" />									
 								</div>
 								<input type="hidden" id="main-canvas-bg-image" value="" />
 								<!-- Template for JS to use for thumbs -->
@@ -223,17 +223,17 @@
 							<!-- Text Color Controls -->
 							<div class="col-lg-4 mb-3">
 								<label for="font-color" class="form-label">Text Color:</label>
-								<input type="color" id="font-color" class="form-control form-control-sm" value="#222222">
+								<input type="color" id="font-color" class="form-control form-control-sm" value="#222222" style="cursor: pointer;">
 							</div>
 							<!-- Text Background Controls -->
 							<div class="col-lg-4 mb-3">
 								<label for="background-color" class="form-label" title="Background Color">BG Color:</label>
-								<input type="color" id="background-color" class="form-control form-control-sm" value="#ffffff" title="Background Color">
+								<input type="color" id="background-color" class="form-control form-control-sm" value="#ffffff" title="Background Color" style="cursor: pointer;">
 							</div>
 							<!-- Text Border Controls -->
 							<div class="col-lg-4 mb-3">
 								<label for="border-color" class="form-label">Border Color:</label>
-								<input type="color" id="border-color" class="form-control form-control-sm" value="#000000">
+								<input type="color" id="border-color" class="form-control form-control-sm" value="#000000" style="cursor: pointer;">
 							</div>
 							<div class="col-lg-6 mb-3">
 								<label for="border-style" class="form-label">Border Style:</label>
