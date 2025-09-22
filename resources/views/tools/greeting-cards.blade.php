@@ -81,11 +81,11 @@
 						<div class="row">
 							<div class="col-lg-3">
 								<label for="main-canvas-bg-color" class="form-label">Main Background</label>
-								<input type="color" id="main-canvas-bg-color" value="#ffffff" style="width: 40px; height: 32px; padding: 0; border: none; background: none;" class="form-control">
+								<input type="color" id="main-canvas-bg-color" value="#667eea" style="padding: 0; border: none; background: none; cursor: pointer;" class="form-control">
 							</div>
 							<div class="col-lg-3">
 								<label for="main-canvas-border-color" class="form-label">Border Color</label>
-								<input type="color" id="main-canvas-border-color" value="#cccccc" style="width: 40px; height: 32px; padding: 0; border: none; background: none;" class="form-control">
+								<input type="color" id="main-canvas-border-color" value="#cccccc" style="padding: 0; border: none; background: none; cursor: pointer;" class="form-control">
 							</div>
 							<div class="col-lg-3">
 								<label for="main-canvas-border-width" class="form-label">Border Width</label>
@@ -223,17 +223,17 @@
 							<!-- Text Color Controls -->
 							<div class="col-lg-4 mb-3">
 								<label for="font-color" class="form-label">Text Color:</label>
-								<input type="color" id="font-color" class="form-control form-control-sm" value="#222222" style="cursor: pointer;">
+								<input type="color" id="font-color" class="form-control form-control-sm" value="#222222" style="cursor: pointer; width: 100%;">
 							</div>
 							<!-- Text Background Controls -->
 							<div class="col-lg-4 mb-3">
 								<label for="background-color" class="form-label" title="Background Color">BG Color:</label>
-								<input type="color" id="background-color" class="form-control form-control-sm" value="#ffffff" title="Background Color" style="cursor: pointer;">
+								<input type="color" id="background-color" class="form-control form-control-sm" value="#ffffff" title="Background Color" style="cursor: pointer; width: 100%;">
 							</div>
 							<!-- Text Border Controls -->
 							<div class="col-lg-4 mb-3">
 								<label for="border-color" class="form-label">Border Color:</label>
-								<input type="color" id="border-color" class="form-control form-control-sm" value="#000000" style="cursor: pointer;">
+								<input type="color" id="border-color" class="form-control form-control-sm" value="#000000" style="cursor: pointer; width: 100%;">
 							</div>
 							<div class="col-lg-6 mb-3">
 								<label for="border-style" class="form-label">Border Style:</label>
