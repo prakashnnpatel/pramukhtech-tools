@@ -61,22 +61,24 @@ $(function() {
 		var file = e.target.files[0];
 		if (!file) return;
 		var reader = new FileReader();
-		reader.onload = function(evt) {
-			var imgData = evt.target.result;
-			// Set as canvas background
-			var color = $('#main-canvas-bg-color').val();
-			$('#main-canvas-bg-image').val(imgData);
-			$('#card-canvas').css('background', color + ' url("' + imgData + '") center/cover no-repeat');
-			// Optionally, highlight the plus icon
-			$('.bg-thumb-upload').css('border-color', '#007bff');
-			$('#main-canvas-bg-thumbs .bg-thumb').not('.bg-thumb-upload').css('border-color', '#ccc');
-		};
+		   reader.onload = function(evt) {
+			   var imgData = evt.target.result;
+			   // Set as canvas background
+			   var color = $('#main-canvas-bg-color').val();
+			   $('#main-canvas-bg-image').val(imgData);
+			   $('#card-canvas').css('background', color + ' url("' + imgData + '") center/cover no-repeat');
+			   // Show uploaded image on the custom upload icon
+			   $('#custome-upload-icn').attr('src', imgData);
+			   // Optionally, highlight the plus icon
+			   $('.bg-thumb-upload').css('border-color', '#007bff');
+			   $('#main-canvas-bg-thumbs .bg-thumb').not('.bg-thumb-upload').css('border-color', '#ccc');
+		   };
 		reader.readAsDataURL(file);
 	});
 
 	$("#custome-upload-icn").click(function(){
 		$("#custom-bg-upload").trigger("click");
-	})
+	});
 });
 $(document).on('click', '#bold-btn', function() {
 	if (window.selectedElement) {
@@ -343,20 +345,22 @@ $(document).ready(function() {
 
 	// Add focus/selected class for .draggable-text
 	$(document).on('mousedown click', '.draggable-text', function(e) {
-		$('.draggable-text').removeClass('selected');
-		$(this).addClass('selected');
-		// Make editable and focus so user can type
-		$(this).attr('contenteditable', 'true').focus();
-		// Move cursor to end of content in text box
-		var el = this;
-		if (window.getSelection && document.createRange) {
-			var range = document.createRange();
-			range.selectNodeContents(el);
-			range.collapse(false);
-			var sel = window.getSelection();
-			sel.removeAllRanges();
-			sel.addRange(range);
-		}
+		   $('.draggable-text').removeClass('selected');
+		   $(this).addClass('selected');
+		   // Hide image action wrapper when text is selected
+		   $('.image-action-wrapper').remove();
+		   // Make editable and focus so user can type
+		   $(this).attr('contenteditable', 'true').focus();
+		   // Move cursor to end of content in text box
+		   var el = this;
+		   if (window.getSelection && document.createRange) {
+			   var range = document.createRange();
+			   range.selectNodeContents(el);
+			   range.collapse(false);
+			   var sel = window.getSelection();
+			   sel.removeAllRanges();
+			   sel.addRange(range);
+		   }
 	});
 	// Remove 'selected' class when clicking outside any .draggable-text
 	$(document).on('mousedown', function(e) {
@@ -409,47 +413,52 @@ $(document).ready(function() {
 			   $img.css('top', ($img.position().top || 0) + 'px');
 		   }
 		// Position the handles
-		function updateHandlePosition() {
-			var imgOffset = $img.position();
-			var imgWidth = $img.outerWidth();
-			var imgHeight = $img.outerHeight();
-			$resizeHandle.css({
-				left: imgOffset.left + imgWidth - $resizeHandle.outerWidth()/2 + 'px',
-				top: imgOffset.top + imgHeight - $resizeHandle.outerHeight()/2 + 10 + 'px',
-				position: 'absolute'
-			});
-			$resizeLeft.css({
-				left: imgOffset.left - $resizeLeft.outerWidth()/2 + 'px',
-				top: imgOffset.top + imgHeight/2 - $resizeLeft.outerHeight()/2 + 'px',
-				position: 'absolute'
-			});
-			$resizeRight.css({
-				left: imgOffset.left + imgWidth - $resizeRight.outerWidth()/2 + 'px',
-				top: imgOffset.top + imgHeight/2 - $resizeRight.outerHeight()/2 + 'px',
-				position: 'absolute'
-			});
-			$resizeTop.css({
-				left: imgOffset.left + imgWidth/2 - $resizeTop.outerWidth()/2 + 'px',
-				top: imgOffset.top - $resizeTop.outerHeight()/2 + 'px',
-				position: 'absolute'
-			});
-			$resizeBottom.css({
-				left: imgOffset.left + imgWidth/2 - $resizeBottom.outerWidth()/2 + 'px',
-				top: imgOffset.top + imgHeight - $resizeBottom.outerHeight()/2 + 'px',
-				position: 'absolute'
-			});
-			$rotateHandle.css({
-				left: imgOffset.left + imgWidth - $rotateHandle.outerWidth()/2 - 28 + 'px',
-				top: imgOffset.top + imgHeight - $rotateHandle.outerHeight()/2 + 10 + 'px',
-				position: 'absolute'
-			});
-			$deleteHandle.css({
-				left: imgOffset.left + imgWidth - $deleteHandle.outerWidth()/2 - 56 + 'px',
-				top: imgOffset.top + imgHeight - $deleteHandle.outerHeight()/2 + 10 + 'px',
-				position: 'absolute'
-			});
-			// Controls row: always static in flex, no need to position
-		}
+		   function updateHandlePosition() {
+			   var imgOffset = $img.position();
+			   var imgWidth = $img.outerWidth();
+			   var imgHeight = $img.outerHeight();
+			   // Add margin offsets to position
+			   var marginLeft = parseInt($img.css('margin-left')) || 0;
+			   var marginTop = parseInt($img.css('margin-top')) || 0;
+			   var left = imgOffset.left + marginLeft;
+			   var top = imgOffset.top + marginTop;
+			   $resizeHandle.css({
+				   left: left + imgWidth - $resizeHandle.outerWidth()/2 + 'px',
+				   top: top + imgHeight - $resizeHandle.outerHeight()/2 + 10 + 'px',
+				   position: 'absolute'
+			   });
+			   $resizeLeft.css({
+				   left: left - $resizeLeft.outerWidth()/2 + 'px',
+				   top: top + imgHeight/2 - $resizeLeft.outerHeight()/2 + 'px',
+				   position: 'absolute'
+			   });
+			   $resizeRight.css({
+				   left: left + imgWidth - $resizeRight.outerWidth()/2 + 'px',
+				   top: top + imgHeight/2 - $resizeRight.outerHeight()/2 + 'px',
+				   position: 'absolute'
+			   });
+			   $resizeTop.css({
+				   left: left + imgWidth/2 - $resizeTop.outerWidth()/2 + 'px',
+				   top: top - $resizeTop.outerHeight()/2 + 'px',
+				   position: 'absolute'
+			   });
+			   $resizeBottom.css({
+				   left: left + imgWidth/2 - $resizeBottom.outerWidth()/2 + 'px',
+				   top: top + imgHeight - $resizeBottom.outerHeight()/2 + 'px',
+				   position: 'absolute'
+			   });
+			   $rotateHandle.css({
+				   left: left + imgWidth - $rotateHandle.outerWidth()/2 - 28 + 'px',
+				   top: top + imgHeight - $rotateHandle.outerHeight()/2 + 10 + 'px',
+				   position: 'absolute'
+			   });
+			   $deleteHandle.css({
+				   left: left + imgWidth - $deleteHandle.outerWidth()/2 - 56 + 'px',
+				   top: top + imgHeight - $deleteHandle.outerHeight()/2 + 10 + 'px',
+				   position: 'absolute'
+			   });
+			   // Controls row: always static in flex, no need to position
+		   }
 		   // Border/Radius controls logic
 		   $radiusInput.on('input change', function() {
 			   $img.css('border-radius', $(this).val() + 'px');
@@ -680,13 +689,21 @@ $(document).ready(function() {
 								zIndex: zIndex++
 							});
 						}
-						$('#card-canvas').append($img);
-						makeDraggable($img);
-						// Show resize handle only on click
-						$img.on('click', function(e) {
-							makeResizable($(this));
-							e.stopPropagation();
-						});
+						   $('#card-canvas').append($img);
+						   makeDraggable($img);
+						   // Select the first image by default (only once)
+						   if ($('.draggable-img.selected').length === 0) {
+							   $img.addClass('selected');
+						   }
+						   // Show resize handle only on click (to re-focus if needed)
+						   $img.on('click', function(e) {
+							   // Remove selection from all images
+							   $('.draggable-img').removeClass('selected');
+							   // Add selection to clicked image
+							   $(this).addClass('selected');
+							   makeResizable($(this));
+							   e.stopPropagation();
+						   });
 					}
 				});
 			}
