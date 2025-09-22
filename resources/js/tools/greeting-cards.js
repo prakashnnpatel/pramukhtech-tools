@@ -644,8 +644,14 @@ $(document).ready(function() {
 	if (window.cardTemplateData) {
 		try {
 			var tpl = typeof window.cardTemplateData === 'string' ? JSON.parse(window.cardTemplateData) : window.cardTemplateData;
-			// Set background color if present
-			if (tpl.bgColor) {
+			// Set background image if present, otherwise fallback to color
+			if (tpl.bgImage && tpl.bgImage !== null && tpl.bgImage !== '') {
+				if (tpl.bgColor) {
+					$('#card-canvas').css('background', tpl.bgColor + ' url("' + tpl.bgImage + '") center/cover no-repeat');
+				} else {
+					$('#card-canvas').css('background', 'url("' + tpl.bgImage + '") center/cover no-repeat');
+				}
+			} else if (tpl.bgColor) {
 				$('#card-canvas').css('background', tpl.bgColor);
 			}
 			// Render elements (text/images)
