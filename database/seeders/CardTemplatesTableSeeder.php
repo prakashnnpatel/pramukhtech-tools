@@ -22,7 +22,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'description' => 'A colorful birthday card with balloons.',
                 'template_data' => json_encode([
                     'bgColor' => '',
-                    'bgImage' => "/images/greeting-cards/backgrounds/birthday-25.jpg",
+                    'bgImage' => "/images/greeting-cards/backgrounds/birthday-11.jpg",
                     'elements' => [
                         [
                             'type' => 'text',
@@ -55,14 +55,14 @@ class CardTemplatesTableSeeder extends Seeder
                 'description' => 'A colorful birthday card with balloons.',
                 'template_data' => json_encode([
                     'bgColor' => '',
-                    'bgImage' => "/images/greeting-cards/backgrounds/birthday-26.jpg",
+                    'bgImage' => "/images/greeting-cards/backgrounds/birthday-12.jpg",
                     'elements' => [
                         [
                             'type' => 'text',
                             'id' => 'title1',
                             'text' => 'Happy Birthday',
                             'css' => 'z-index: 48;left: 205px;top: 243px;font-family: Lato, sans-serif;font-weight: bold;font-size: 24px;color: rgb(64, 0, 64);',
-                        ], 
+                        ],
                         [
                             'type' => 'text',
                             'id' => 'title2',
