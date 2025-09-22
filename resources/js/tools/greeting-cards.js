@@ -68,7 +68,7 @@ $(function() {
 			   $('#main-canvas-bg-image').val(imgData);
 			   $('#card-canvas').css('background', color + ' url("' + imgData + '") center/cover no-repeat');
 			   // Show uploaded image on the custom upload icon
-			   $('#custome-upload-icn').attr('src', imgData);
+			   //$('#custome-upload-icn').attr('src', imgData);
 			   // Optionally, highlight the plus icon
 			   $('.bg-thumb-upload').css('border-color', '#007bff');
 			   $('#main-canvas-bg-thumbs .bg-thumb').not('.bg-thumb-upload').css('border-color', '#ccc');
