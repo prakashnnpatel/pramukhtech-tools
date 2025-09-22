@@ -227,8 +227,8 @@
 							</div>
 							<!-- Text Background Controls -->
 							<div class="col-lg-4 mb-3">
-								<label for="background-color" class="form-label">Background Color:</label>
-								<input type="color" id="background-color" class="form-control form-control-sm" value="#ffffff">
+								<label for="background-color" class="form-label" title="Background Color">BG Color:</label>
+								<input type="color" id="background-color" class="form-control form-control-sm" value="#ffffff" title="Background Color">
 							</div>
 							<!-- Text Border Controls -->
 							<div class="col-lg-4 mb-3">
