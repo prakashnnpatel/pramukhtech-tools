@@ -371,129 +371,73 @@ $(document).ready(function() {
 	$(document).on('blur', '.draggable-text', function() {
 		$(this).removeClass('selected');
 	});
-	// --- Curve Toolbar for Images ---
-	function showCurveToolbar($img) {
-		// Remove any existing toolbar
-		$('.curve-toolbar').remove();
-		// Create toolbar
-		var $toolbar = $('<div class="curve-toolbar" style="position:absolute;z-index:2000;top:0;left:0;background:#fff;border:1px solid #ccc;padding:4px 8px;border-radius:6px;box-shadow:0 2px 8px #0002;display:flex;gap:6px;"></div>');
-		var curves = [
-			{name:'None', val:'none'},
-			{name:'Circle', val:'circle'},
-			{name:'Rectangle', val:'rect'},
-			{name:'Triangle', val:'triangle'},
-			{name:'Star', val:'star'},
-			{name:'Wave', val:'wave'}
-		];
-		curves.forEach(function(curve){
-			var $btn = $('<button type="button" class="curve-btn" style="padding:2px 8px;font-size:13px;">'+curve.name+'</button>');
-			$btn.data('curve', curve.val);
-			$toolbar.append($btn);
-		});
-		// Position toolbar above the image
-		var offset = $img.offset();
-		var left = offset.left;
-		var top = offset.top - 38; // above image
-		$toolbar.css({left:left+'px',top:top+'px',position:'absolute'});
-		$('body').append($toolbar);
-		// Highlight current curve
+	// --- Curve Button for Images (only Circle supported) ---
+	function addCircleCurveButton($controlsRow, $img) {
+		var $circleBtn = $('<button type="button" class="curve-btn" style="padding:2px 8px;font-size:13px;">Circle</button>');
+		var $noneBtn = $('<button type="button" class="curve-btn" style="padding:2px 8px;font-size:13px;">None</button>');
+		// Highlight current
 		var current = $img.data('curve-style') || 'none';
-		$toolbar.find('.curve-btn').each(function(){
-			if($(this).data('curve')===current){ $(this).css('background','#e0e7ff'); }
+		if(current === 'circle') $circleBtn.css('background','#e0e7ff');
+		else $noneBtn.css('background','#e0e7ff');
+		$controlsRow.append($circleBtn, $noneBtn);
+		$circleBtn.on('click', function(){
+			applyCurveToImage($img, 'circle');
+			$circleBtn.css('background','#e0e7ff');
+			$noneBtn.css('background','');
 		});
-		// Button click handler
-		$toolbar.on('click', '.curve-btn', function(e){
-			var style = $(this).data('curve');
-			applyCurveToImage($img, style);
-			$toolbar.find('.curve-btn').css('background','');
-			$(this).css('background','#e0e7ff');
+		$noneBtn.on('click', function(){
+			applyCurveToImage($img, 'none');
+			$circleBtn.css('background','');
+			$noneBtn.css('background','#e0e7ff');
 		});
 	}
 
 	// --- Apply curve effect to image ---
 	function applyCurveToImage($img, style) {
 		$img.data('curve-style', style);
-		// Remove any previous circle wrapper (legacy)
-		if ($img.parent().hasClass('circle-clip-wrapper')) {
-			var $parent = $img.parent();
-			$img.css({
-				left: $parent.position().left + 'px',
-				top: $parent.position().top + 'px',
-				position: 'absolute',
-				width: '',
-				height: ''
-			});
-			$parent.after($img);
-			$parent.remove();
-		}
 		$img.css('clip-path','');
 		$img.css('-webkit-clip-path','');
 		$img.css('border-radius','');
 		$img.css('overflow','');
-		if(style==='none'){
-			$img.css('clip-path','none');
-			$img.css('-webkit-clip-path','none');
-			$img.css('border-radius','');
-			$img.css('overflow','');
-			return;
+		if(style==='circle'){
+			$img.css('border-radius','50%');
 		}
-		var clip = '';
-		switch(style){
-			case 'circle':
-				   clip = 'circle(40% at 50% 50%)';
-				break;
-			case 'rect':
-				clip = 'inset(0% round 18px)';
-				break;
-			case 'triangle':
-				clip = 'polygon(50% 0%, 0% 100%, 100% 100%)';
-				break;
-			case 'star':
-				// 5-point star
-				clip = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
-				break;
-			case 'wave':
-				// Simple wave
-				clip = 'path("M0,80 Q40,120 80,80 T160,80 T240,80 V150 H0 Z")';
-				break;
-		}
-		$img.css('clip-path',clip);
-		$img.css('-webkit-clip-path',clip);
+		// else none: no curve
 	}
+
 
 	// Helper: Make image resizable (jQuery UI or fallback)
 	function makeResizable($img) {
-	// Remove all other handles
-	$('.image-action-wrapper').remove();
-	// Add handles only to the clicked image
-	if ($img.next('.image-action-wrapper').length === 0) {
-		var $imageActionHandle = $('<div class="image-action-wrapper"></div>');
-		var $resizeHandle = $('<div class="resize-handle" title="Resize image"></div>'); // corner (proportional)
-		var $resizeLeft = $('<div class="resize-handle-side resize-handle-left" title="Resize left"></div>');
-		var $resizeRight = $('<div class="resize-handle-side resize-handle-right" title="Resize right"></div>');
-		var $resizeTop = $('<div class="resize-handle-side resize-handle-top" title="Resize top"></div>');
-		var $resizeBottom = $('<div class="resize-handle-side resize-handle-bottom" title="Resize bottom"></div>');
-		var $rotateHandle = $('<div class="rotate-handle" title="Rotate image"></div>');
-		var $deleteHandle = $('<div class="delete-handle" title="Delete image"></div>');
-		// Border/Radius controls (now in a flex row)
-		var $controlsRow = $('<div class="img-border-controls" style="display:flex;align-items:center;gap:6px;margin-left:8px;"></div>');
-		var $radiusInput = $('<input type="number" min="0" max="100" value="'+(parseInt($img.css('border-radius'))||0)+'" class="img-radius-input" title="Radius (px)" style="width:38px;">');
-		var $borderColor = $('<input type="color" value="#'+((($img.css('border-color')||'#000').replace(/rgb\\((\\d+), (\\d+), (\\d+)\\)/, function(m,r,g,b){return ((1<<24)+(parseInt(r)<<16)+(parseInt(g)<<8)+parseInt(b)).toString(16).slice(1);}) ).replace('#',''))+'" class="img-border-color" title="Border Color" style="width:28px; height:28px;">');
-		var borderWidth = parseInt($img.css('border-width'))||1;
-		var $borderWidth = $('<input type="number" min="0" max="20" value="'+borderWidth+'" class="img-border-width" title="Border Width (px)" style="width:32px;">');
-		var borderStyle = $img.css('border-style')||'solid';
-		var $borderStyle = $('<select class="img-border-style" title="Border Style" style="width:60px;">'+
-			'<option value="solid">Solid</option><option value="dashed">Dashed</option><option value="dotted">Dotted</option><option value="double">Double</option><option value="groove">Groove</option><option value="ridge">Ridge</option><option value="inset">Inset</option><option value="outset">Outset</option><option value="none">None</option>'+
-		'</select>');
-		$borderStyle.val(borderStyle);
-		$controlsRow.append($radiusInput, $borderColor, $borderWidth, $borderStyle);
-		// Wrap the image with the parent div
-		$img.after($imageActionHandle);
-		$('.image-action-wrapper').append($resizeHandle, $resizeLeft, $resizeRight, $resizeTop, $resizeBottom, $rotateHandle, $deleteHandle, $controlsRow);
-	// Hide text editor controls when image is selected
-	$('#editor-controls').hide();
-	// Show curve toolbar for this image
-	setTimeout(function(){ showCurveToolbar($img); }, 10);
+		// Remove all other handles
+		$('.image-action-wrapper').remove();
+		// Add handles only to the clicked image
+		if ($img.next('.image-action-wrapper').length === 0) {
+			var $imageActionHandle = $('<div class="image-action-wrapper"></div>');
+			var $resizeHandle = $('<div class="resize-handle" title="Resize image"></div>'); // corner (proportional)
+			var $resizeLeft = $('<div class="resize-handle-side resize-handle-left" title="Resize left"></div>');
+			var $resizeRight = $('<div class="resize-handle-side resize-handle-right" title="Resize right"></div>');
+			var $resizeTop = $('<div class="resize-handle-side resize-handle-top" title="Resize top"></div>');
+			var $resizeBottom = $('<div class="resize-handle-side resize-handle-bottom" title="Resize bottom"></div>');
+			var $rotateHandle = $('<div class="rotate-handle" title="Rotate image"></div>');
+			var $deleteHandle = $('<div class="delete-handle" title="Delete image"></div>');
+			// Border/Radius controls (now in a flex row)
+			var $controlsRow = $('<div class="img-border-controls" style="display:flex;align-items:center;gap:6px;margin-left:8px;"></div>');
+			var $borderColor = $('<input type="color" value="#'+((($img.css('border-color')||'#000').replace(/rgb\\((\\d+), (\\d+), (\\d+)\\)/, function(m,r,g,b){return ((1<<24)+(parseInt(r)<<16)+(parseInt(g)<<8)+parseInt(b)).toString(16).slice(1);}) ).replace('#',''))+'" class="img-border-color" title="Border Color" style="width:28px; height:28px;">');
+			var borderWidth = parseInt($img.css('border-width'))||1;
+			var $borderWidth = $('<input type="number" min="0" max="20" value="'+borderWidth+'" class="img-border-width" title="Border Width (px)" style="width:32px;">');
+			var borderStyle = $img.css('border-style')||'solid';
+			var $borderStyle = $('<select class="img-border-style" title="Border Style" style="width:60px;">'+
+				'<option value="solid">Solid</option><option value="dashed">Dashed</option><option value="dotted">Dotted</option><option value="double">Double</option><option value="groove">Groove</option><option value="ridge">Ridge</option><option value="inset">Inset</option><option value="outset">Outset</option><option value="none">None</option>'+
+			'</select>');
+			$borderStyle.val(borderStyle);
+			$controlsRow.append($borderColor, $borderWidth, $borderStyle);
+			// Add Circle/None curve buttons
+			addCircleCurveButton($controlsRow, $img);
+			// Wrap the image with the parent div
+			$img.after($imageActionHandle);
+			$('.image-action-wrapper').append($resizeHandle, $resizeLeft, $resizeRight, $resizeTop, $resizeBottom, $rotateHandle, $deleteHandle, $controlsRow);
+			// Hide text editor controls when image is selected
+			$('#editor-controls').hide();
 
 		   $img.css('position', 'absolute');
 		   $img.parent().css('position', 'relative');
@@ -551,10 +495,7 @@ $(document).ready(function() {
 			   });
 			   // Controls row: always static in flex, no need to position
 		   }
-		   // Border/Radius controls logic
-		   $radiusInput.on('input change', function() {
-			   $img.css('border-radius', $(this).val() + 'px');
-		   });
+		   // Border/Radius controls logic		   
 		   $borderColor.on('input change', function() {
 			   var color = $(this).val();
 			   var width = $borderWidth.val() || 1;
@@ -1041,11 +982,46 @@ $(document).ready(function() {
 		});
 	}
 
+
+	// Ensure all image curves are set as inline styles for html2canvas
+	function fixImageCurvesForCanvas() {
+		let unsupported = false;
+		$('#card-canvas img.draggable-img').each(function() {
+			var $img = $(this);
+			var style = $img.data('curve-style') || 'none';
+			$img[0].style.clipPath = '';
+			$img[0].style.webkitClipPath = '';
+			$img[0].style.borderRadius = '';
+			if(style==='none') {
+				$img[0].style.clipPath = 'none';
+				$img[0].style.webkitClipPath = 'none';
+				$img[0].style.borderRadius = '';
+				return;
+			}
+			if(style==='circle') {
+				$img[0].style.borderRadius = '50%';
+				$img[0].style.clipPath = 'none';
+				$img[0].style.webkitClipPath = 'none';
+			} else {
+				unsupported = true;
+				// fallback: show as normal image
+				$img[0].style.clipPath = '';
+				$img[0].style.webkitClipPath = '';
+				$img[0].style.borderRadius = '';
+			}
+		});
+		return unsupported;
+	}
+
 	// Preview card (using html2canvas)
 	$('#preview-card').on('click', function() {
 		if (typeof html2canvas === 'undefined') {
 			Swal.fire({icon:"error",title:"oops",text:"Preview requires html2canvas."});
 			return;
+		}
+		var unsupported = fixImageCurvesForCanvas();
+		if (unsupported) {
+			Swal.fire({icon:"warning",title:"Note",text:"Only the Circle curve is supported in preview/download. Other shapes will appear as normal images."});
 		}
 		html2canvas(document.getElementById('card-canvas')).then(function(canvas) {
 			$('#preview-image').attr('src', canvas.toDataURL('image/png'));
@@ -1058,6 +1034,10 @@ $(document).ready(function() {
 		if (typeof html2canvas === 'undefined') {
 			Swal.fire({icon:"error",title:"oops",text:"Download requires html2canvas."});
 			return;
+		}
+		var unsupported = fixImageCurvesForCanvas();
+		if (unsupported) {
+			Swal.fire({icon:"warning",title:"Note",text:"Only the Circle curve is supported in preview/download. Other shapes will appear as normal images."});
 		}
 		html2canvas(document.getElementById('card-canvas')).then(function(canvas) {
 			var link = document.createElement('a');
