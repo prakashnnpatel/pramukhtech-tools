@@ -40,7 +40,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'type' => 'image',
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/g-user-2.jpeg',
-                            'css' => 'position: absolute;top: 70px;left: 184px;width: 200px;height: 150px;border: 1px solid rgb(136, 136, 136);cursor: move;z-index: 28;clip-path: circle(40% at 50% 50%);',
+                            'css' => 'position: absolute;top: 31px;left: 184px;width: 200px;height: 190px;border: 1px solid rgb(136, 136, 136);cursor: move;z-index: 28; border-radius: 50%;',
                         ],                        
                     ]
                 ]),

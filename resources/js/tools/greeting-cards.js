@@ -989,25 +989,25 @@ $(document).ready(function() {
 		$('#card-canvas img.draggable-img').each(function() {
 			var $img = $(this);
 			var style = $img.data('curve-style') || 'none';
-			$img[0].style.clipPath = '';
-			$img[0].style.webkitClipPath = '';
-			$img[0].style.borderRadius = '';
+			//$img[0].style.clipPath = '';
+			//$img[0].style.webkitClipPath = '';
+			//$img[0].style.borderRadius = '';
 			if(style==='none') {
-				$img[0].style.clipPath = 'none';
-				$img[0].style.webkitClipPath = 'none';
-				$img[0].style.borderRadius = '';
+				//$img[0].style.clipPath = 'none';
+				//$img[0].style.webkitClipPath = 'none';
+				//$img[0].style.borderRadius = '';
 				return;
 			}
 			if(style==='circle') {
-				$img[0].style.borderRadius = '50%';
-				$img[0].style.clipPath = 'none';
-				$img[0].style.webkitClipPath = 'none';
+				//$img[0].style.borderRadius = '50%';
+				//$img[0].style.clipPath = 'none';
+				//$img[0].style.webkitClipPath = 'none';
 			} else {
 				unsupported = true;
 				// fallback: show as normal image
-				$img[0].style.clipPath = '';
-				$img[0].style.webkitClipPath = '';
-				$img[0].style.borderRadius = '';
+				//$img[0].style.clipPath = '';
+				//$img[0].style.webkitClipPath = '';
+				//$img[0].style.borderRadius = '';
 			}
 		});
 		return unsupported;
