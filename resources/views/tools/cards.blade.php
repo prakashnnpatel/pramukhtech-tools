@@ -5,15 +5,15 @@
 	<h2 class="mb-4">Select a Greeting Card Template</h2>
 	<div class="row" id="card-templates">
 		@forelse($cards as $card)
-			<div class="col-md-3 mb-4">
+			<div class="col-md-4 mb-3">
 				<div class="card card-template" data-card-id="{{ $card->slug }}" title="Click to use this template">
-					<div class="card-preview-container" style="width: 100%; height: 160px; background: #f8f9fa; border-bottom: 1px solid #eee; position: relative;">
+					<div class="card-preview-container" >
 						<a href="{{route('greeting-cards.show',$card->slug)}}" title="Use This Template">
-							<img src="{{$card->thumbnail}}" style="display: inline-block;width: 100%;height: 100%; cursor:pointer;"/>
+							<img src="{{$card->thumbnail}}" style="display: inline-block; width: 100%; cursor:pointer;"/>
 						</a>
 					</div>
 					
-					<div class="text-center m-3">
+					<div class="text-center m-2">
 						<h6 class="card-title">
 							<a href="{{route('greeting-cards.show',$card->slug)}}" title="Use This Template" style="color:#667eea;">{{ $card->title }}</a>
 						</h6>						
