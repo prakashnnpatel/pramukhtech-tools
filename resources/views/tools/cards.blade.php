@@ -6,16 +6,24 @@
 	<div class="row" id="card-templates">
 		@forelse($cards as $card)
 			<div class="col-md-3 mb-4">
-				<div class="card card-template" data-card-id="{{ $card->slug }}">
+				<div class="card card-template" data-card-id="{{ $card->slug }}" title="Click to use this template">
 					<div class="card-preview-container" style="width: 100%; height: 160px; background: #f8f9fa; border-bottom: 1px solid #eee; position: relative;">
-						<img src="{{$card->thumbnail}}" style="display: inline-block;width: 100%;height: 100%;"/>
+						<a href="{{route('greeting-cards.show',$card->slug)}}" title="Use This Template">
+							<img src="{{$card->thumbnail}}" style="display: inline-block;width: 100%;height: 100%; cursor:pointer;"/>
+						</a>
 					</div>
-					<div class="card-body text-center">
-						<h6 class="card-title">{{ $card->title }}</h6>
-						@if($card->description)
+					
+					<div class="text-center m-3">
+						<h6 class="card-title">
+							<a href="{{route('greeting-cards.show',$card->slug)}}" title="Use This Template" style="color:#667eea;">{{ $card->title }}</a>
+						</h6>						
+						{{--@if($card->description)
 							<small class="text-muted">{{ $card->description }}</small>
-						@endif
-					</div>					
+						@endif--}}
+						<a href="{{route('greeting-cards.show',$card->slug)}}" class="invoice-action-btn tool-cta-btn" title="Try Now">
+							Try Now <i class="fas fa-arrow-right ms-1"></i>
+						</a>
+					</div>
 				</div>				
 			</div>
 		@empty

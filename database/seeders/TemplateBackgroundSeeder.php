@@ -28,6 +28,7 @@ class TemplateBackgroundSeeder extends Seeder
                 'image_path' => '/images/greeting-cards/backgrounds/birthday-3.jpg',
                 'category' => 'Birthday',
             ],
+           
             [
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/birthday-4.jpg',
@@ -47,37 +48,7 @@ class TemplateBackgroundSeeder extends Seeder
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/birthday-7.jpg',
                 'category' => 'Birthday',
-            ],
-            [
-                'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-8.jpeg',
-                'category' => 'Birthday',
-            ],
-            [
-                'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-9.jpeg',
-                'category' => 'Birthday',
-            ],
-            [
-                'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-10.jpg',
-                'category' => 'Birthday',
-            ],
-            [
-                'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-11.jpg',
-                'category' => 'Birthday',
-            ],
-            [
-                'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-12.jpg',
-                'category' => 'Birthday',
-            ],
-            [
-                'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-13.jpg',
-                'category' => 'Birthday',
-            ],
+            ],           
         ];
         //dd($bgImages);
         

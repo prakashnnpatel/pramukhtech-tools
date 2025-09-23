@@ -1,12 +1,12 @@
 
 $(document).ready(function() {
 	// When a card template is clicked, redirect to the editor page
-	$(document).on('click', '.card-template', function() {
+	/*$(document).on('click', '.card-template', function() {
 		var cardId = $(this).data('card-id');
 		if (cardId) {
 			window.location.href = '/greeting-cards/' + encodeURIComponent(cardId);
 		}
-	});
+	});*/
 
 	// Render live previews for each card
 	$('.card-preview-container').each(function() {
