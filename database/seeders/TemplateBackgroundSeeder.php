@@ -10,7 +10,7 @@ class TemplateBackgroundSeeder extends Seeder
 {
     public function run()
     {
-        //CardTemplateBackground::truncate();
+        CardTemplateBackground::truncate();
         $bgImages = [
             [
                 'title' => '',
@@ -71,6 +71,11 @@ class TemplateBackgroundSeeder extends Seeder
             [
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/birthday-12.jpg',
+                'category' => 'Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/birthday-13.jpg',
                 'category' => 'Birthday',
             ],
         ];
