@@ -254,6 +254,78 @@ class CardTemplatesTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'title' => 'Happy Diwali',
+                'slug' => 'happy-diwali',
+                'thumbnail' => '/images/greeting-cards/happy-diwali-thumb.png',
+                'category' => 'Festival',
+                'description' => 'Festival',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/birthday-12.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Happy',
+                            'css' => 'z-index: 39; left: 245px; top: 75px; font-family: Montserrat, sans-serif; font-size: 35px; color: rgb(255, 255, 0); font-weight: normal;',
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Diwali',
+                            'css' => 'z-index: 40; left: 208px; top: 95px; font-size: 60px; font-family: Pacifico, sans-serif; color: rgb(255, 255, 0);',
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Your Text Here',
+                            'css' => 'z-index: 35; left: 211px; top: 204px; color: rgb(255, 255, 0); font-size: 25px;',
+                        ],                     
+                    ]
+                ]),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Diwali Wishes',
+                'slug' => 'diwali-wishes',
+                'thumbnail' => '/images/greeting-cards/diwali-wishes-thumb.png',
+                'category' => 'Festival',
+                'description' => 'Festival',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/birthday-13.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Happy Diwali',
+                            'css' => 'z-index: 71; left: 24px; top: 51px; color: rgb(218, 165, 32); font-weight: bold; font-family: "Great Vibes", sans-serif; font-size: 45px;',
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Warm Wishes & Gifts for You !',
+                            'css' => 'z-index: 37; left: 19px; top: 104px; color: rgb(218, 165, 32); line-height: 3; letter-spacing: 0px; font-family: Merriweather, sans-serif;',
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'From: type text here',
+                            'css' => 'z-index: 72; left: 133px; top: 349px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                        ], 
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/g-user-2.png',
+                            'css' => 'position: absolute; top: 292px; left: 15px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 59; border-radius: 50%;',
+                        ],                   
+                    ]
+                ]),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
