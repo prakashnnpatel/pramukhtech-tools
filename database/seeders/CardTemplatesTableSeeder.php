@@ -156,19 +156,19 @@ class CardTemplatesTableSeeder extends Seeder
                         [
                             'type' => 'image',
                             'id' => 'img1',
-                            'src' => '/images/greeting-cards/element/g-user-6.png',
+                            'src' => '/images/greeting-cards/element/kid-2.png',
                             'css' => 'position: absolute;top: 91px;left: 128px;width: 131.986px;height: 131.986px;border: 5px solid rgb(140, 120, 120);cursor: move;z-index: 37;transform: rotate(-6.68235deg);',
                         ], 
                         [
                             'type' => 'image',
                             'id' => 'img2',
-                            'src' => '/images/greeting-cards/element/g-user-5.jpeg',
+                            'src' => '/images/greeting-cards/element/kid-1.png',
                             'css' => 'position: absolute;top: 151px;left: 253px;width: 126px;height: 115.623px;border: 5px double rgb(165, 126, 151);cursor: move;z-index: 38;transform: rotate(-6.90027deg);',
                         ], 
                         [
                             'type' => 'image',
                             'id' => 'img3',
-                            'src' => '/images/greeting-cards/element/g-user-4.jpeg',
+                            'src' => '/images/greeting-cards/element/kid-3.png',
                             'css' => 'position: absolute;top: 205px;left: 372px;width: 139.995px;height: 124.085px;border: 2px outset rgb(209, 128, 128);cursor: move;z-index: 21;transform: rotate(-7.87307deg);',
                         ],                        
                     ]
