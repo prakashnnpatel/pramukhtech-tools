@@ -11,7 +11,8 @@ $(function() {
 		if (bgLoading || bgLastPage) return;
 		bgLoading = true;
 		$loader.show();
-		$.get('/api/card-template-backgrounds', { page: page }, function(res) {
+		let cardcategory = $("#card_category").val();
+		$.get('/api/card-template-backgrounds', { page: page, category: cardcategory}, function(res) {
 			if (res && res.data && res.data.length) {
 				var $loaderDiv = $carousel.find('#bg-thumbs-loader');
 				res.data.forEach(function(bg) {
@@ -1073,7 +1074,24 @@ $(document).ready(function() {
 				}
 			}());
 		});
+
+		/***Use Counter Update */
+		increaseTemplateuseCount();
 	});
+
+	/**Counter update when card download */
+	function increaseTemplateuseCount()
+	{
+		let card_id = $("#card_id").val();
+		$.ajax({
+            url: '/update-card-use-counter/'+card_id,
+            type: "POST",
+            data: [],            
+            success: function(r) {
+                
+            }
+        });
+	}
 
 	// Optional: double-click to edit text
 	$(document).on('dblclick', '.draggable-text', function() {

@@ -32,6 +32,9 @@ class CardTemplateController extends Controller
     {
         $perPage = 10;
         $query = CardTemplateBackground::where('is_active', true)->orderBy('id', 'asc');
+        if(!empty($request->get('category')) && $request->get('category') != "All") {
+            $query = $query->where("category", $request->get('category'));
+        }
         $backgrounds = $query->paginate($perPage);
 
         // Map to include full image URLs
@@ -48,5 +51,11 @@ class CardTemplateController extends Controller
             'per_page' => $backgrounds->perPage(),
             'total' => $backgrounds->total(),
         ]);
+    }
+
+    /***Counter update when Card Download */
+    public function updateUseCardCounter(CardTemplates $card)
+    {
+        $card->increment('use_count');
     }
 }

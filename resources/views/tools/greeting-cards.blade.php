@@ -9,6 +9,8 @@
 <div class="fd-calculator-container">
 	<div class="calculator-main">
 		<div class="row">
+			<input type="hidden" id="card_category" value="{{$card->category ?? 'All'}}"/>
+			<input type="hidden" id="card_id" value="{{$card->id ?? ''}}"/>
 			<div class="col-lg-12 mb-4">
 				<div class="calculator-card">
 					<div class="card-header" style="padding:15px;">

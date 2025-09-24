@@ -397,20 +397,32 @@ class CardTemplatesTableSeeder extends Seeder
                         [
                             'type' => 'text',
                             'id' => 'title1',
-                            'text' => 'Happy New Year',
-                            'css' => 'z-index: 24; left: 185px; top: 62px; color: rgb(255, 255, 128); font-weight: bold; font-family: Righteous, sans-serif; font-size: 45px; text-align: center;',
-                        ],                       
+                            'text' => 'Happy',
+                            'css' => 'z-index: 34; left: 207px; top: 59px; color: rgb(255, 255, 128); font-weight: bold; font-family: Righteous, sans-serif; font-size: 45px; text-align: center;',
+                        ], 
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'New Year',
+                            'css' => 'z-index: 35; left: 187px; top: 126px; color: rgb(255, 255, 128); font-size: 45px; font-family: Righteous, sans-serif;',
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => '2026',
+                            'css' => 'z-index: 36; left: 224px; top: 188px; color: rgb(255, 255, 128); font-size: 45px; font-weight: bold; font-family: Poppins, sans-serif;',
+                        ],                     
                         [
                             'type' => 'text',
                             'id' => 'title3',
                             'text' => 'From: Add Your Name',
-                            'css' => 'z-index: 22; left: 232px; top: 338px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                            'css' => 'z-index: 79; left: 249px; top: 345px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
                         ], 
                         [
                             'type' => 'image',
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/g-user-2.png',
-                            'css' => 'z-index: 22; left: 232px; top: 338px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                            'css' => 'position: absolute; top: 296px; left: 467px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 82; border-radius: 50%;',
                         ],                                       
                     ]
                 ]),
