@@ -23,20 +23,20 @@
 @if(request()->segment(1) !== NULL)
 	@switch(request()->segment(1))
 		@case('timezone')
-			<title>Smart Timezone Converter | ToolHubSpot</title>
+			<title>Smart Timezone Converter | {{ config('app.name') }}</title>
 			<meta name="description" content="The timezone converter tool is powerful & accurate time management, Convert Timezones Instantly and Schedule Meetings Globally with Ease." />
 			<meta name="keywords" content="timezone converter, UTC to IST, IST to UTC, GMT to IST, EST to PST, time zone difference, time zone calculator, world clock converter, convert time zones, online time converter, global time converter, time zone conversion tool, convert UTC to local time, international time zones, time zone map">
-			<meta property="og:title" content="Smart Timezone Converter | ToolHubSpot" />
-			<meta property="og:description" content="Easily convert and compare time zones worldwide with ToolHubSpot's tool. Instantly check the current time across cities, plan meetings, and avoid confusion!" />
+			<meta property="og:title" content="Smart Timezone Converter | {{ config('app.name') }}" />
+			<meta property="og:description" content="Easily convert and compare time zones worldwide with {{ config('app.name') }}'s tool. Instantly check the current time across cities, plan meetings, and avoid confusion!" />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
 		@case('emi-calculator')
-			<title>Free EMI Calculator for Home, Car and Personal Loans | ToolHubSpot</title>
+			<title>Free EMI Calculator for Home, Car and Personal Loans | {{ config('app.name') }}</title>
 			<meta name="description" content="Use our EMI Calculator to calculate your loan EMIs with ease quickly. Get detailed insights into monthly payments, interest rates, and repayment schedules." />
 			<meta name="keywords" content="EMI calculator, loan EMI calculator, home loan calculator, car loan EMI calculator, personal loan EMI, monthly loan payment calculator, interest rate EMI calculator, loan repayment schedule, loan amortization calculator, calculate EMI online">
-			<meta property="og:title" content="Free EMI Calculator - Calculate Loan EMIs | ToolHubSpot" />
-			<meta property="og:description" content="Easily calculate your monthly EMI with ToolHubSpot's Free EMI Calculator. Get quick and accurate results for home, car, personal, or business loans." />
+			<meta property="og:title" content="Free EMI Calculator - Calculate Loan EMIs | {{ config('app.name') }}" />
+			<meta property="og:description" content="Easily calculate your monthly EMI with {{ config('app.name') }}'s Free EMI Calculator. Get quick and accurate results for home, car, personal, or business loans." />
 			<link rel="canonical" href="{{url('/emi-calculator')}}"/>
 		@break
 
@@ -44,8 +44,8 @@
 			<title>The Smart SIP Calculator to Maximize Your Investments</title>
 			<meta name="description" content="SIP Calculator - Systematic Investment Plan Calculator. This tool can help you determine the amount you want to invest and the estimated value of the returns." />
 			<meta name="keywords" content="SIP calculator, mutual fund SIP calculator, SIP return calculator, monthly SIP investment, SIP growth calculator, systematic investment plan calculator, SIP maturity calculator, SIP amount calculator, calculate SIP returns, SIP investment calculator online">
-			<meta property="og:title" content="Free SIP Calculator - Plan Your Investments | ToolHubSpot" />
-			<meta property="og:description" content="Plan your investments with ToolHubSpot's Free SIP Calculator. Instantly calculate expected returns from Systematic Investment Plans. Easy, accurate!" />
+			<meta property="og:title" content="Free SIP Calculator - Plan Your Investments | {{ config('app.name') }}" />
+			<meta property="og:description" content="Plan your investments with {{ config('app.name') }}'s Free SIP Calculator. Instantly calculate expected returns from Systematic Investment Plans. Easy, accurate!" />
 			<link rel="canonical" href="{{url('/sip-calculator')}}"/>
 		@break
 
@@ -53,33 +53,33 @@
 			<title>FD Calculator - Calculate Fixed Deposit Interest Online</title>
 			<meta name="description" content="Calculate fixed deposit interest easily and maturity value with {{ config('app.name') }} FD Calculator. Plan your savings efficiently with accurate results." />
 			<meta name="keywords" content="FD calculator, fixed deposit calculator, bank FD interest calculator, FD maturity amount, fixed deposit interest rate, FD investment calculator, FD interest calculator online, compound interest FD calculator, fixed deposit return calculator, calculate FD maturity value">
-			<meta property="og:title" content="Free FD Calculator - Calculate FD Interest | ToolHubSpot" />
-			<meta property="og:description" content="Use ToolHubSpot's Free FD Calculator to estimate fixed deposit returns. Quick, accurate, and simple - check maturity amounts and interest earned in seconds." />
+			<meta property="og:title" content="Free FD Calculator - Calculate FD Interest | {{ config('app.name') }}" />
+			<meta property="og:description" content="Use {{ config('app.name') }}'s Free FD Calculator to estimate fixed deposit returns. Quick, accurate, and simple - check maturity amounts and interest earned in seconds." />
 			<link rel="canonical" href="{{url('/fd-calculator')}}"/>
 		@break
 
 		@case('contact-us')
 			<title>Have a Question? We're Just a Message Away</title>
 			<meta name="description" content="We are eager to discuss your needs and explore how we can help. Whether it's a new tools or enhancing an existing one, get in touch with us anytime." />
-			<meta name="keywords" content="contact ToolHubSpot, ToolHubSpot support, get in touch, customer service, contact details, ToolHubSpot email, ToolHubSpot help, send message, ToolHubSpot phone number, ToolHubSpot contact form">
-			<meta property="og:title" content="Contact ToolHubSpot - We're Here to Help You" />
-			<meta property="og:description" content="Have a question or suggestion? Reach out to the ToolHubSpot team anytime. We're here to support you and ensure the best experience with our free online tools." />
+			<meta name="keywords" content="contact {{ config('app.name') }}, {{ config('app.name') }} support, get in touch, customer service, contact details, {{ config('app.name') }} email, {{ config('app.name') }} help, send message, {{ config('app.name') }} phone number, {{ config('app.name') }} contact form">
+			<meta property="og:title" content="Contact {{ config('app.name') }} - We're Here to Help You" />
+			<meta property="og:description" content="Have a question or suggestion? Reach out to the {{ config('app.name') }} team anytime. We're here to support you and ensure the best experience with our free online tools." />
 			<link rel="canonical" href="{{url('/contact-us')}}"/>
 		@break
 
 		@case('terms-of-use')
 			<title>Terms of Use</title>
 			<meta name="description" content="Welcome to {{ config('app.name') }}. These Terms and Conditions govern your use of our services, website, and related tools." />
-			<meta property="og:title" content="ToolHubSpot Terms of Use - Understand Your Rights" />
-			<meta property="og:description" content="Read the official Terms of Use for ToolHubSpot. Learn about user responsibilities, permitted usage, and legal guidelines for accessing our free online tools and services." />
+			<meta property="og:title" content="{{ config('app.name') }} Terms of Use - Understand Your Rights" />
+			<meta property="og:description" content="Read the official Terms of Use for {{ config('app.name') }}. Learn about user responsibilities, permitted usage, and legal guidelines for accessing our free online tools and services." />
 			<link rel="canonical" href="{{url('/terms-of-use')}}"/>
 		@break
 
 		@case('privacy-policy')
 			<title>Privacy Policy</title>
 			<meta name="description" content="We are a team of IT professionals passionate about delivering IT services and developing high-quality, free tools for public use on the Internet. The primary goal of this website is to offer a comprehensive collection of free online tools (e.g., calculators, color pickers, image resizers, code formatters, etc.) to make everyday tasks easier for users." />
-			<meta property="og:title" content="ToolHubSpot Privacy Policy - Your Data, Our Responsibility" />
-			<meta property="og:description" content="Understand how ToolHubSpot collects, uses, and protects your personal data. We value your privacy and ensure transparency in every step of your interaction with our tools." />
+			<meta property="og:title" content="{{ config('app.name') }} Privacy Policy - Your Data, Our Responsibility" />
+			<meta property="og:description" content="Understand how {{ config('app.name') }} collects, uses, and protects your personal data. We value your privacy and ensure transparency in every step of your interaction with our tools." />
 			<link rel="canonical" href="{{url('/privacy-policy')}}"/>
 		@break
 
@@ -88,44 +88,44 @@
 			<meta name="description" content="Record your screen with system & mic audio online. No software needed. Free, easy, and secure screen recorder with instant HD download - no watermark!" />
 			<meta name="keywords" content="screen recorder, online screen recording, free screen recorder, record computer screen, browser screen recorder, video screen capture, screen recording software online, screen recorder with audio, capture screen online, record screen for free">
 			<meta property="og:title" content="Free Online Screen Recorder with Audio | No Installation" />
-			<meta property="og:description" content="Record your screen online with ToolHubSpot's free screen recorder. No extensions needed. Just record, preview, and download in a few clicks!" />
+			<meta property="og:description" content="Record your screen online with {{ config('app.name') }}'s free screen recorder. No extensions needed. Just record, preview, and download in a few clicks!" />
 			<link rel="canonical" href="{{url('/screen-recording')}}"/>
 		@break
 
 		@case('digital-document')
-			<title>Create Digital Document | Free & Download PDF | ToolHubSpot</title>
-			<meta name="description" content="Create and download professional digital documents in seconds with ToolHubSpot's free document generator - perfect for freelancers and businesses." />
+			<title>Create Digital Document | Free & Download PDF | {{ config('app.name') }}</title>
+			<meta name="description" content="Create and download professional digital documents in seconds with {{ config('app.name') }}'s free document generator - perfect for freelancers and businesses." />
 			<meta name="keywords" content="digital document creator, online document generator, free document maker, create invoice online, PDF document creator, online receipt maker, professional document template, generate certificate online, make digital document, online bill generator">
-			<meta property="og:title" content="Create Free Digital Document & Download PDF | ToolHubSpot" />
-			<meta property="og:description" content="Create and download professional digital documents in seconds with ToolHubSpot's free document generator - perfect for freelancers and businesses." />
+			<meta property="og:title" content="Create Free Digital Document & Download PDF | {{ config('app.name') }}" />
+			<meta property="og:description" content="Create and download professional digital documents in seconds with {{ config('app.name') }}'s free document generator - perfect for freelancers and businesses." />
 			<link rel="canonical" href="{{url('/digital-document')}}"/>
 		@break
 
 		@case('invoice-generator')
 		@case('custom-invoice')
-			<title>Free Invoice Generator - 100% Editable | ToolHubSpot</title>
+			<title>Free Invoice Generator - 100% Editable | {{ config('app.name') }}</title>
 			<meta name="description" content="Generate branded invoices in minutes with our free tool. Add logo, tax, items & download PDF instantly. No login needed - fast, easy, and 100% free!" />
-			<meta property="og:title" content="Free Invoice Generator - 100% Editable | ToolHubSpot" />
+			<meta property="og:title" content="Free Invoice Generator - 100% Editable | {{ config('app.name') }}" />
 			<meta property="og:description" content="Generate branded invoices in minutes with our free tool. Add logo, tax, items & download PDF instantly. No login needed - fast, easy, and 100% free!" />
-			<meta name="keywords" content="Invoice generator, free invoice maker, online invoice tool, invoice template, invoice creator, create invoice online, professional invoice tool, no sign up invoice maker, ToolHubSpot invoice">
+			<meta name="keywords" content="Invoice generator, free invoice maker, online invoice tool, invoice template, invoice creator, create invoice online, professional invoice tool, no sign up invoice maker, {{ config('app.name') }} invoice">
 			<link rel="canonical" href="{{url('/custom-invoice')}}"/>
 		@break
 
 		@case('generate-quote')
-			<title>Create Free Quote for Your Clients | ToolHubSpot</title>
-			<meta name="description" content="Generate professional, branded quotes for your clients with ToolHubSpot's free quote generator. 100% customizable, Download as PDF instantly!" />
-			<meta property="og:title" content="Create Free Quote for Your Clients | ToolHubSpot" />
-			<meta property="og:description" content="Generate professional, branded quotes for your clients with ToolHubSpot's free quote generator. 100% customizable, Download as PDF instantly!" />
-			<meta name="keywords" content="Quote generator, free quote maker, online quote tool, quote template, quote creator, create quote online, professional quote tool, no sign up quote maker, ToolHubSpot quote">
+			<title>Create Free Quote for Your Clients | {{ config('app.name') }}</title>
+			<meta name="description" content="Generate professional, branded quotes for your clients with {{ config('app.name') }}'s free quote generator. 100% customizable, Download as PDF instantly!" />
+			<meta property="og:title" content="Create Free Quote for Your Clients | {{ config('app.name') }}" />
+			<meta property="og:description" content="Generate professional, branded quotes for your clients with {{ config('app.name') }}'s free quote generator. 100% customizable, Download as PDF instantly!" />
+			<meta name="keywords" content="Quote generator, free quote maker, online quote tool, quote template, quote creator, create quote online, professional quote tool, no sign up quote maker, {{ config('app.name') }} quote">
 			<link rel="canonical" href="{{url('/generate-quote')}}"/>
 		@break
 
 		@case('purchase-order')
-			<title>Create and Download Free Purchase Order | ToolHubSpot</title>
-			<meta name="description" content="Generate professional purchase orders for free with ToolHubSpot's online PO generator. Fully customizable templates. Download as PDF instantly!" />
-			<meta property="og:title" content="Create and Download Free Purchase Order | ToolHubSpot" />
-			<meta property="og:description" content="Generate professional purchase orders for free with ToolHubSpot's online PO generator. Fully customizable templates. Download as PDF instantly!" />
-			<meta name="keywords" content="customizable purchase order generator, free purchase order maker, online purchase order tool, purchase order template, purchase order creator, create purchase order online, professional purchase order tool, no sign up purchase order maker, ToolHubSpot purchase order">
+			<title>Create and Download Free Purchase Order | {{ config('app.name') }}</title>
+			<meta name="description" content="Generate professional purchase orders for free with {{ config('app.name') }}'s online PO generator. Fully customizable templates. Download as PDF instantly!" />
+			<meta property="og:title" content="Create and Download Free Purchase Order | {{ config('app.name') }}" />
+			<meta property="og:description" content="Generate professional purchase orders for free with {{ config('app.name') }}'s online PO generator. Fully customizable templates. Download as PDF instantly!" />
+			<meta name="keywords" content="customizable purchase order generator, free purchase order maker, online purchase order tool, purchase order template, purchase order creator, create purchase order online, professional purchase order tool, no sign up purchase order maker, {{ config('app.name') }} purchase order">
 			<link rel="canonical" href="{{url('/purchase-order')}}"/>
 		@break
 
@@ -134,7 +134,7 @@
 			<meta name="description" content="Create your digital signature online for free. Draw or type your e-signature and download it as a transparent PNG. Fast, secure, and no registration required." />
 			<meta name="keywords" content="online signature, digital signature maker, e-signature creator, signature generator, free online signature tool, create digital signature, draw signature online, sign documents online, electronic signature maker, digital sign tool">
 			<meta property="og:title" content="Free Digital Signature Tool - Create Your E-Signature" />
-			<meta property="og:description" content="Create your digital signature in seconds with ToolHubSpot's free online signature tool. Draw, type, or stylize your signature and download instantly!" />
+			<meta property="og:description" content="Create your digital signature in seconds with {{ config('app.name') }}'s free online signature tool. Draw, type, or stylize your signature and download instantly!" />
 			<link rel="canonical" href="{{url('/signature')}}"/>
 		@break
 
@@ -166,29 +166,29 @@
 		@break
 
 		@case('about-us')
-			<title>About Us | ToolHubSpot - Your All-in-One Online Tools Hub</title>
-			<meta name="description" content="Discover ToolHubSpot's mission, and vision, for your favorite online tools. Learn how we create simple, powerful, and free tools to make your daily tasks easier.">
-			<meta name="keywords" content="about ToolHubSpot, ToolHubSpot team, ToolHubSpot mission, online tools hub, free tools provider, our story, ToolHubSpot vision, web tools, productivity tools, ToolHubSpot overview">
-			<meta property="og:title" content="About Us | ToolHubSpot - Your All-in-One Online Tools Hub" />
-			<meta property="og:description" content="Discover ToolHubSpot's mission, and vision, for your favorite online tools. Learn how we create simple, powerful, and free tools to make your daily tasks easier." />
+			<title>About Us | {{ config('app.name') }} - Your All-in-One Online Tools Hub</title>
+			<meta name="description" content="Discover {{ config('app.name') }}'s mission, and vision, for your favorite online tools. Learn how we create simple, powerful, and free tools to make your daily tasks easier.">
+			<meta name="keywords" content="about {{ config('app.name') }}, {{ config('app.name') }} team, {{ config('app.name') }} mission, online tools hub, free tools provider, our story, {{ config('app.name') }} vision, web tools, productivity tools, {{ config('app.name') }} overview">
+			<meta property="og:title" content="About Us | {{ config('app.name') }} - Your All-in-One Online Tools Hub" />
+			<meta property="og:description" content="Discover {{ config('app.name') }}'s mission, and vision, for your favorite online tools. Learn how we create simple, powerful, and free tools to make your daily tasks easier." />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
 		@case('merge-images-to-pdf')
-			<title>Merge Images to PDF Online | Free Combine Multiple Images into One PDF Tool | ToolHubSpot</title>
+			<title>Merge Images to PDF Online | Free Combine Multiple Images into One PDF Tool | {{ config('app.name') }}</title>
 			<meta name="description" content="Easily merge images into a single PDF online. Free tool to combine JPEG, PNG, JPG, GIF, SVG, WEBP, BMP & TIFF into one PDF. Fast, secure & no installation.">
 			<meta name="keywords" content="merge images to pdf, combine images into one pdf, image to pdf converter, convert images to pdf online, join multiple images into pdf, jpg to pdf, png to pdf, free pdf tool, online image to pdf, photo to pdf maker">
-			<meta property="og:title" content="Merge Images to PDF Online | Free Combine Multiple Images into One PDF Tool | ToolHubSpot" />
+			<meta property="og:title" content="Merge Images to PDF Online | Free Combine Multiple Images into One PDF Tool | {{ config('app.name') }}" />
 			<meta property="og:description" content="Easily merge images into a single PDF online. Free tool to combine JPEG, PNG, JPG, GIF, SVG, WEBP, BMP & TIFF into one PDF. Fast, secure & no installation." />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
 		@case('qr-code-generator')
-			<title>Free Online QR Code Generator | Create QR Codes - ToolHubSpot</title>
-			<meta name="description" content="Create free custom QR codes instantly with ToolHubSpot's QR Code Generator. Generate QR codes for URLs, text, Wi-Fi, vCards, and more.">
+			<title>Free Online QR Code Generator | Create QR Codes - {{ config('app.name') }}</title>
+			<meta name="description" content="Create free custom QR codes instantly with {{ config('app.name') }}'s QR Code Generator. Generate QR codes for URLs, text, Wi-Fi, vCards, and more.">
 			<meta name="keywords" content="QR Code Generator, Free QR Code Generator, Online QR Code Maker, Custom QR Code, Create QR Code Online, Download QR Code, QR Code for URL, QR Code for WiFi, QR Code Generator Tool">
-			<meta property="og:title" content="Free Online QR Code Generator | Create QR Codes - ToolHubSpot" />
-			<meta property="og:description" content="Create free custom QR codes instantly with ToolHubSpot's QR Code Generator. Generate QR codes for URLs, text, Wi-Fi, vCards, and more." />
+			<meta property="og:title" content="Free Online QR Code Generator | Create QR Codes - {{ config('app.name') }}" />
+			<meta property="og:description" content="Create free custom QR codes instantly with {{ config('app.name') }}'s QR Code Generator. Generate QR codes for URLs, text, Wi-Fi, vCards, and more." />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
@@ -283,30 +283,40 @@
 		@break
 
 		@case('crop-image')
-			<title>Free Online Image Cropper - Crop Images Instantly | ToolHubSpot</title>
-			<meta name="description" content="Crop images online for free with ToolHubSpot's easy-to-use image cropper. Instantly crop JPG, PNG, WEBP, and more. No sign-up or installation required." />
-			<meta name="keywords" content="image cropper, crop image online, free image crop tool, online photo cropper, crop JPG, crop PNG, crop WEBP, resize image, crop picture, crop photo online, ToolHubSpot image cropper" />
-			<meta property="og:title" content="Free Online Image Cropper - Crop Images Instantly | ToolHubSpot" />
-			<meta property="og:description" content="Crop images online for free with ToolHubSpot's easy-to-use image cropper. Instantly crop JPG, PNG, WEBP, and more. No sign-up or installation required." />
+			<title>Free Online Image Cropper - Crop Images Instantly | {{ config('app.name') }}</title>
+			<meta name="description" content="Crop images online for free with {{ config('app.name') }}'s easy-to-use image cropper. Instantly crop JPG, PNG, WEBP, and more. No sign-up or installation required." />
+			<meta name="keywords" content="image cropper, crop image online, free image crop tool, online photo cropper, crop JPG, crop PNG, crop WEBP, resize image, crop picture, crop photo online, {{ config('app.name') }} image cropper" />
+			<meta property="og:title" content="Free Online Image Cropper - Crop Images Instantly | {{ config('app.name') }}" />
+			<meta property="og:description" content="Crop images online for free with {{ config('app.name') }}'s easy-to-use image cropper. Instantly crop JPG, PNG, WEBP, and more. No sign-up or installation required." />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
 		@case('image-resize')
-			<title>Free Online Image Resizer - Resize Images Instantly | ToolHubSpot</title>
-			<meta name="description" content="Resize images online for free with ToolHubSpot's fast and easy image resizer. Instantly resize JPG, PNG, WEBP, and more. No sign-up or installation required." />
-			<meta name="keywords" content="image resizer, resize image online, free image resize tool, online photo resizer, resize JPG, resize PNG, resize WEBP, image size changer, resize picture, resize photo online, ToolHubSpot image resizer" />
-			<meta property="og:title" content="Free Online Image Resizer - Resize Images Instantly | ToolHubSpot" />
-			<meta property="og:description" content="Resize images online for free with ToolHubSpot's fast and easy image resizer. Instantly resize JPG, PNG, WEBP, and more. No sign-up or installation required." />
+			<title>Free Online Image Resizer - Resize Images Instantly | {{ config('app.name') }}</title>
+			<meta name="description" content="Resize images online for free with {{ config('app.name') }}'s fast and easy image resizer. Instantly resize JPG, PNG, WEBP, and more. No sign-up or installation required." />
+			<meta name="keywords" content="image resizer, resize image online, free image resize tool, online photo resizer, resize JPG, resize PNG, resize WEBP, image size changer, resize picture, resize photo online, {{ config('app.name') }} image resizer" />
+			<meta property="og:title" content="Free Online Image Resizer - Resize Images Instantly | {{ config('app.name') }}" />
+			<meta property="og:description" content="Resize images online for free with {{ config('app.name') }}'s fast and easy image resizer. Instantly resize JPG, PNG, WEBP, and more. No sign-up or installation required." />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
 		{{-- Search Page --}}
 		@case('tools')
-			<title>Free Online Tools & Calculators | ToolHubSpot</title>
-			<meta name="description" content="Explore a wide range of free online tools and calculators at ToolHubSpot. Boost productivity with finance, documents, PDFs, text, conversions, and more tools." />
-			<meta name="keywords" content="free online tools, calculators, free calculators, productivity tools, document tools, PDF tools, text utilities, file converters, utility tools, search tools, free web tools, best online tools, online utilities, tool search, instant tools, tool directory, calculator hub, digital tools, ToolHubSpot" />
-			<meta property="og:title" content="Free Online Tools & Calculators | ToolHubSpot" />
-			<meta property="og:description" content="Explore a wide range of free online tools and calculators at ToolHubSpot. Boost productivity with finance, documents, PDFs, text, conversions, and more tools." />
+			<title>Free Online Tools & Calculators | {{ config('app.name') }}</title>
+			<meta name="description" content="Explore a wide range of free online tools and calculators at {{ config('app.name') }}. Boost productivity with finance, documents, PDFs, text, conversions, and more tools." />
+			<meta name="keywords" content="free online tools, calculators, free calculators, productivity tools, document tools, PDF tools, text utilities, file converters, utility tools, search tools, free web tools, best online tools, online utilities, tool search, instant tools, tool directory, calculator hub, digital tools, {{ config('app.name') }}" />
+			<meta property="og:title" content="Free Online Tools & Calculators | {{ config('app.name') }}" />
+			<meta property="og:description" content="Explore a wide range of free online tools and calculators at {{ config('app.name') }}. Boost productivity with finance, documents, PDFs, text, conversions, and more tools." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
+		{{-- Card Template List --}}
+		@case('cards')
+			<title>Free Greeting Cards Online | {{ config('app.name') }}</title>
+			<meta name="description" content="Discover and design beautiful greeting cards for every occasion. Browse a wide selection of free templates for birthdays, anniversaries, festivals, thank you, weddings, and more. Personalize with photos, backgrounds, and custom messages. Print or send as eCards instantly!" />
+			<meta name="keywords" content="greeting card templates, free greeting cards, online card maker, birthday card, anniversary card, festival card, thank you card, wedding card, printable cards, ecard maker, card design, custom greeting card, create card online, {{ config('app.name') }} cards" />
+			<meta property="og:title" content="Create Free Greeting Cards Online | {{ config('app.name') }}" />
+			<meta property="og:description" content="Browse and personalize free greeting cards for any event. Choose a template, add your message and photos, and print or send your card online instantly!" />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 
@@ -321,19 +331,19 @@
 		@break
 
 		@default
-			<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
-			<meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			
-			<meta name="keywords" content="online tools, free web tools, productivity tools, digital tools, time converter, timezone converter, EMI calculator, SIP calculator, FD calculator, online signature maker, screen recorder, color picker, document creator, ToolHubSpot">
-			<meta property="og:title" content="Free Online Tools for Everyday Work | ToolHubSpot" />
-			<meta property="og:description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />
+			<title>Free Online Tools for Everyday Work | {{ config('app.name') }}</title>
+			<meta name="description" content="Explore 100% free online tools on {{ config('app.name') }} - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />			
+			<meta name="keywords" content="online tools, free web tools, productivity tools, digital tools, time converter, timezone converter, EMI calculator, SIP calculator, FD calculator, online signature maker, screen recorder, color picker, document creator, {{ config('app.name') }}">
+			<meta property="og:title" content="Free Online Tools for Everyday Work | {{ config('app.name') }}" />
+			<meta property="og:description" content="Explore 100% free online tools on {{ config('app.name') }} - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />
 			<link rel="canonical" href="{{url('/')}}"/>
 		@break
 	@endswitch
 @else
-	<title>Free Online Tools for Everyday Work | ToolHubSpot</title>
-    <meta name="description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />
-	<meta name="keywords" content="online tools, free web tools, productivity tools, digital tools, time converter, timezone converter, EMI calculator, SIP calculator, FD calculator, online signature maker, screen recorder, color picker, document creator, ToolHubSpot">
-	<meta property="og:title" content="Free Online Tools for Everyday Work | ToolHubSpot" />
-	<meta property="og:description" content="Explore 100% free online tools on ToolHubSpot - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />
+	<title>Free Online Tools for Everyday Work | {{ config('app.name') }}</title>
+    <meta name="description" content="Explore 100% free online tools on {{ config('app.name') }} - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />
+	<meta name="keywords" content="online tools, free web tools, productivity tools, digital tools, time converter, timezone converter, EMI calculator, SIP calculator, FD calculator, online signature maker, screen recorder, color picker, document creator, {{ config('app.name') }}">
+	<meta property="og:title" content="Free Online Tools for Everyday Work | {{ config('app.name') }}" />
+	<meta property="og:description" content="Explore 100% free online tools on {{ config('app.name') }} - screen recorder, e-signature, timezone converter, create invoice & more. No sign-up, no download, just use!" />
 	<link rel="canonical" href="{{url('/')}}"/>
 @endif

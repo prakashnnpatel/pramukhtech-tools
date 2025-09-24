@@ -6,12 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\CardTemplates;
 use App\Models\CardTemplateBackground;
+use App\Models\Tools;
 
 class CardTemplateController extends Controller
 {
     public function index()
     {
         $cards = CardTemplates::orderBy('id')->get();
+        Tools::where("slug", 'cards')->increment("use_count");
         return view("tools.index", ["toolKey" => 'cards', "cards" => $cards]);
     }
 

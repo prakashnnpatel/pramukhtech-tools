@@ -270,22 +270,13 @@ class ToolsTableSeeder extends Seeder
 		### New Tools
         $tools = [
             [
-                "title" => "Crop Image Online",
-                "description" => "Crop images online instantly. Free photo cropper tool to resize, cut, and adjust your pictures in custom sizes. Quick, easy & no software required.",
-                "keywords" => "crop image online, image cropper tool, free photo cropper, crop photo online, resize image, cut image online, picture crop tool, photo editing online",
-                "slug" => "crop-image",
-                "icon" => "fas fa-crop-alt",
-                "image" => "crop-image.png",
-                "category" => "Images, Business, Utilities, Productivity,",               
-            ],           
-            [
-                "title" => "Image Resize Tool",
-                "description" => "Resize images online by pixel or percentage. Upload, preview, and download instantly. Supports drag & drop and custom sizes.",
-                "keywords" => "image resize, resize image online, photo resizer, image resizer tool, resize by pixel, resize by percentage, online image tool, drag and drop image resize, download resized image, free image resizer",
-                "slug" => "image-resize",
-                "icon" => "fas fa-image",
-                "image" => "image-resize.png",
-                "category" => "Images, Utilities, Productivity,",               
+                "title" => "Greeting Card Maker",
+                "description" => "Create personalized greeting cards online for any occasion. Choose from templates, customize text and images, and download or share your card instantly. Perfect for birthdays, holidays, and special events.",
+                "keywords" => "greeting card maker, online greeting card, personalized greeting card, free card maker, custom greeting card, digital greeting card, create greeting card, birthday card maker, holiday card maker, special occasion card",
+                "slug" => "cards",
+                "icon" => "fas fa-gift",
+                "image" => "cards.png",
+                "category" => "Business, Productivity, Utilities, Images, Stickers",               
             ],
         ];
 

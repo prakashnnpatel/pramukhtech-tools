@@ -17,6 +17,7 @@
 						   <div class="d-flex justify-content-between align-items-center w-100">
 							   <div>
 								   <h4 class="mb-0">{{$card->title}}</h4>
+								   <p class="calculator-subtitle mb-0">Create personalized greeting cards for every special moment.</p>
 								   {{--<p class="calculator-subtitle mb-0">{{$card->description}}</p>--}}
 							   </div>
 							   <button class="btn btn-sm btn-outline-secondary collapse-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#main-card-body" aria-expanded="true" aria-controls="main-card-body" style="border:1px solid #ddd;">
@@ -314,7 +315,7 @@
 		</div>
 	</div>
 
-	 <!-- Step-by-step guide -->
+	<!-- Step-by-step guide -->
     <div class="info-section">
         <div class="row">
             <div class="col-lg-12">
