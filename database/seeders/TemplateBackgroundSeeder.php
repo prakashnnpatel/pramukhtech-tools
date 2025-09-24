@@ -71,12 +71,32 @@ class TemplateBackgroundSeeder extends Seeder
             ],
             [
                 'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-12.jpg',
+                'image_path' => '/images/greeting-cards/backgrounds/festival-1.jpg',
                 'category' => 'Festival',
             ],
             [
                 'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/birthday-13.jpg',
+                'image_path' => '/images/greeting-cards/backgrounds/festival-2.jpg',
+                'category' => 'Festival',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/festival-3.jpg',
+                'category' => 'Festival',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/festival-4.jpg',
+                'category' => 'Festival',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/festival-5.jpg',
+                'category' => 'Festival',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/festival-6.jpg',
                 'category' => 'Festival',
             ],
 

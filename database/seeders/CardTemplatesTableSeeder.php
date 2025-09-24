@@ -262,7 +262,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'description' => 'Festival',
                 'template_data' => json_encode([
                     'bgColor' => '',
-                    'bgImage' => "/images/greeting-cards/backgrounds/birthday-12.jpg",
+                    'bgImage' => "/images/greeting-cards/backgrounds/festival-1.jpg",
                     'elements' => [
                         [
                             'type' => 'text',
@@ -295,7 +295,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'description' => 'Festival',
                 'template_data' => json_encode([
                     'bgColor' => '',
-                    'bgImage' => "/images/greeting-cards/backgrounds/birthday-13.jpg",
+                    'bgImage' => "/images/greeting-cards/backgrounds/festival-2.jpg",
                     'elements' => [
                         [
                             'type' => 'text',
@@ -312,7 +312,7 @@ class CardTemplatesTableSeeder extends Seeder
                         [
                             'type' => 'text',
                             'id' => 'title3',
-                            'text' => 'From: type text here',
+                            'text' => 'From: Add Your Name',
                             'css' => 'z-index: 72; left: 133px; top: 349px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
                         ], 
                         [
@@ -321,6 +321,162 @@ class CardTemplatesTableSeeder extends Seeder
                             'src' => '/images/greeting-cards/element/g-user-2.png',
                             'css' => 'position: absolute; top: 292px; left: 15px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 59; border-radius: 50%;',
                         ],                   
+                    ]
+                ]),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Diwali Celebration',
+                'slug' => 'diwali-celebration',
+                'thumbnail' => '/images/greeting-cards/diwali-celebration-thumb.png',
+                'category' => 'Festival',
+                'description' => 'Festival',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/festival-3.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Happy Diwali',
+                            'css' => 'z-index: 44; left: 310px; top: 94px; color: rgb(255, 255, 0); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 45px;',
+                        ],                       
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'From: Add Your Name',
+                            'css' => 'z-index: 42; left: 133px; top: 349px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                        ], 
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/g-user-2.png',
+                            'css' => 'position: absolute; top: 292px; left: 15px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 59; border-radius: 50%;',
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/cracker-1.png',
+                            'css' => 'position: absolute; top: 275px; left: 440px; width: 183px; height: 137.281px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 46; transform: rotate(10.3277deg);',
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
+                            'src' => '/images/greeting-cards/element/dip-1.gif',
+                            'css' => 'position: absolute; top: 180px; left: 346px; width: 137px; height: 104px; border: 9px inset rgb(255, 255, 0); cursor: move; z-index: 47; border-radius: 50%;',
+                        ],                  
+                    ]
+                ]),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Happy New Year',
+                'slug' => 'happy-new-year',
+                'thumbnail' => '/images/greeting-cards/happy-new-year-thumb.png',
+                'category' => 'Festival',
+                'description' => 'Festival',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/festival-4.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Happy New Year',
+                            'css' => 'z-index: 24; left: 185px; top: 62px; color: rgb(255, 255, 128); font-weight: bold; font-family: Righteous, sans-serif; font-size: 45px; text-align: center;',
+                        ],                       
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'From: Add Your Name',
+                            'css' => 'z-index: 22; left: 232px; top: 338px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                        ], 
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/g-user-2.png',
+                            'css' => 'z-index: 22; left: 232px; top: 338px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                        ],                                       
+                    ]
+                ]),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'New Year Wishes',
+                'slug' => 'new-year-wishes',
+                'thumbnail' => '/images/greeting-cards/new-year-wishes-thumb.png',
+                'category' => 'Festival',
+                'description' => 'Festival',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/festival-5.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Happy New Year 2026',
+                            'css' => 'z-index: 78; left: 120px; top: 145px; color: rgb(255, 255, 0); font-weight: bold; font-family: Righteous, sans-serif; font-size: 35px; text-align: center; border-style: none; border-width: 0px; border-color: rgb(255, 255, 255);',
+                        ], 
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Cheers to a healthy, happy, and prosperous New Year!',
+                            'css' => 'z-index: 83; left: 84px; top: 260px; color: rgb(255, 255, 0); font-size: 15px; font-weight: bold;',
+                        ],                     
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'From: Add Your Name',
+                            'css' => 'z-index: 79; left: 249px; top: 345px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                        ], 
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/g-user-2.png',
+                            'css' => 'position: absolute; top: 296px; left: 467px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 82; border-radius: 50%;',
+                        ],                                          
+                    ]
+                ]),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'New Year Celebration',
+                'slug' => 'new-year-celebration',
+                'thumbnail' => '/images/greeting-cards/new-year-celebration-thumb.png',
+                'category' => 'Festival',
+                'description' => 'Festival',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/festival-6.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Happy New Year',
+                            'css' => 'z-index: 36; left: 163px; top: 54px; color: rgb(218, 165, 32); font-weight: bold; font-family: Merriweather, sans-serif; font-size: 40px;',
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => '2026',
+                            'css' => 'z-index: 37; left: 269px; top: 168px; color: rgb(255, 255, 255); font-weight: bold; font-size: 50px; font-family: "Bebas Neue", sans-serif;',
+                        ],                       
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Let\'s Celebrate !',
+                            'css' => 'z-index: 25; left: 222px; top: 113px; color: rgb(218, 165, 32); font-family: Pacifico, sans-serif; font-weight: bold; font-size: 30px;',
+                        ],
+                         [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'Cheers to a New Beginning!  ',
+                            'css' => 'z-index: 38; left: 166px; top: 345px; color: rgb(255, 255, 128); font-weight: bold;',
+                        ],                                                              
                     ]
                 ]),
                 'created_at' => now(),
