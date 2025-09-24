@@ -15,6 +15,19 @@ class CardTemplatesTableSeeder extends Seeder
         CardTemplates::truncate();
         DB::table('card_templates')->insert([
             [
+                'title' => 'New Blank Card',
+                'slug' => 'new-blank-card',
+                'thumbnail' => '/images/greeting-cards/new-blank-card-thumb.png',
+                'category' => 'All',
+                'description' => 'A colorful birthday card with balloons.',
+                'template_data' => json_encode([
+                                           
+                    
+                ]),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'title' => 'Balloon Bloom',
                 'slug' => 'balloon-bloom',
                 'thumbnail' => '/images/greeting-cards/balloon-bloom-thumb.png',
