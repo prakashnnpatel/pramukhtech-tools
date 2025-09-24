@@ -313,6 +313,87 @@
 			</div>
 		</div>
 	</div>
+
+	 <!-- Step-by-step guide -->
+    <div class="info-section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="info-content-card">
+                    <div class="content-header">
+                        <h3><i class="fas fa-book-open"></i> How to use {{$card->title ?? 'Greeting'}} Template</h3>
+                    </div>
+                    <div class="content-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+								<h4><i class="fas fa-star"></i> How to Create Your Custom Greeting Card</h4>
+								<ol style="line-height:30px;">
+									<li><strong>Choose a template:</strong> Browse and select a card template that fits your occasion or style.</li>
+									<li><strong>Add and edit text:</strong> Click <b>Add Text</b> to insert your own message. Drag to position, and use the editor to change font, size, color, and more.</li>
+									<li><strong>Click a text to edit:</strong> When you click on a text, the text editor panel appears on the right. Here you can change the font, size, color, add bullet points or lists, rotate, adjust spacing, or delete the text.</li>
+									<li><strong>Add a photo:</strong> Click <b>Add Photo</b> to upload your image. Move and resize it as needed. Use the <b>Circle</b> button to make your photo round.</li>
+									<li><strong>Click a photo to edit:</strong> When you click on a photo, editing icons will appear next to it, use these to <b>rotate</b>, <b>resize</b>, or <b>delete</b> the image. At the top, you can also apply a border color, change the border style, or make the image circular.</li>
+									<li><strong>Customize background:</strong> Select a background from the gallery or upload your own for a personal touch.</li>
+									<li><strong>Adjust borders & layout:</strong> Use the controls to set border color, width, and style for your card.</li>
+									<li><strong>Preview your card:</strong> Click <span class="badge bg-success">Preview</span> to see how your card will look before downloading.</li>
+									<li><strong>Download & share:</strong> Click <span class="badge bg-success">Download</span> to save your finished card as an image. Share it online or print it for your loved ones!</li>
+								</ol>
+                            </div>
+                            <div class="col-lg-12 mt-3">
+								<h5 class="mb-2"><i class="fas fa-lightbulb"></i> Tips & Best Practices</h5>
+								<ul class="mb-0" style="line-height:26px; margin-left:1rem;">
+									<li><strong>Image order:</strong> Arrange your images in the order you want them to appear. Drag-and-drop to reorder if needed.</li>
+									<li><strong>Consistent look:</strong> For a neat card, use images with similar sizes or orientations (all landscape or all portrait).</li>
+									<li><strong>High quality:</strong> Upload clear, high-resolution images for the best print and digital results.</li>
+									<li><strong>Backgrounds:</strong> Try different backgrounds or upload your own to match the occasion or your style.</li>
+									<li><strong>Text contrast:</strong> Use contrasting text and background colors for better readability.</li>
+									<li><strong>File size:</strong> Each image should be under 50MB. If upload fails, try resizing or compressing your image.</li>
+								</ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+	<!-- Information Section -->
+    <div class="info-section">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="info-content-card">
+					<div class="content-header">
+						<h3><i class="fas fa-book-open"></i> About the {{$card->title ?? 'Greeting'}} Template</h3>
+					</div>
+					<div class="content-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="content-block">
+									<h4><i class="fas fa-file"></i> Design Beautiful Greeting Cards</h4>
+									<p>The <b>{{$card->title ?? 'Greeting Card'}}</b> tool lets you create personalized greeting cards for any occasion - birthdays, festivals, anniversaries, and more. Add your own text, photos, and backgrounds to make each card unique and meaningful.</p>
+									<p>Customize every detail: choose from a variety of templates, edit fonts and colors, add decorative elements, and adjust the layout to match your style. The intuitive editor makes it easy for anyone to design a card that stands out.</p>
+									<p>Once you're happy with your design, preview your card and download it as a high-quality image - ready to print or share online with friends and family. No software installation needed; everything works right in your browser for a fast and secure experience.</p>
+								</div>
+							</div>
+							<div class="col-lg-12">
+								<div class="content-block">
+									<h4><i class="fas fa-star"></i> Key Features</h4>
+									<ul class="feature-list">
+										<li><strong>Personalized designs:</strong> Add your own text, images, and backgrounds to create a one-of-a-kind card.</li>
+										<li><strong>Easy editing:</strong> Drag, drop, resize, rotate, and style elements with simple controls.</li>
+										<li><strong>Template variety:</strong> Choose from multiple card templates for different occasions.</li>
+										<li><strong>Instant preview:</strong> See your card exactly as it will appear before downloading.</li>
+										<li><strong>High-quality output:</strong> Download your card as a crisp, print-ready image file.</li>
+										<li><strong>Works everywhere:</strong> No app required - design and download directly in your browser.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
 </div>
 
 {{-- Card Preview Modal --}}

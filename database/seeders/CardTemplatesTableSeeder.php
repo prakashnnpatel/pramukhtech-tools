@@ -21,9 +21,10 @@ class CardTemplatesTableSeeder extends Seeder
                 'category' => 'All',
                 'description' => 'A colorful birthday card with balloons.',
                 'template_data' => json_encode([
-                                           
-                    
                 ]),
+                'seo_title' => "Create your Own - Free Editable Card Template | ToolHubSpot",
+                "seo_description" => "Create personalized greeting cards online with our free editable card templates. Customize text, images, and colors to make your own unique card for any occasion at ToolHubSpot.",
+                "seo_keywords" => "Greeting card maker online, free editable greeting cards, personalized card templates, custom greeting card, greeting card with photo and text, create greeting card online free, printable greeting cards editable, greeting card background editor, greeting wishes card design free, greeting card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -57,6 +58,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                        
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable Birthday Card Template | ToolHubSpot",
+                "seo_description" => "Create and personalize this {title} birthday card online. Add your own text, images, and colors. Free editable birthday greeting card template at ToolHubSpot.",
+                "seo_keywords" => "birthday card maker online, free editable birthday cards, personalized birthday card templates, custom birthday greeting card, birthday card with photo and text, create birthday card online free, printable birthday cards editable, birthday card background editor, birthday wishes card design free, birthday card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -96,6 +100,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                         
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable Birthday Card Template | ToolHubSpot",
+                "seo_description" => "Create and personalize this {title} birthday card online. Add your own text, images, and colors. Free editable birthday greeting card template at ToolHubSpot.",
+                "seo_keywords" => "birthday card maker online, free editable birthday cards, personalized birthday card templates, custom birthday greeting card, birthday card with photo and text, create birthday card online free, printable birthday cards editable, birthday card background editor, birthday wishes card design free, birthday card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -135,6 +142,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                        
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable Birthday Card Template | ToolHubSpot",
+                "seo_description" => "Create and personalize this {title} birthday card online. Add your own text, images, and colors. Free editable birthday greeting card template at ToolHubSpot.",
+                "seo_keywords" => "birthday card maker online, free editable birthday cards, personalized birthday card templates, custom birthday greeting card, birthday card with photo and text, create birthday card online free, printable birthday cards editable, birthday card background editor, birthday wishes card design free, birthday card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -186,6 +196,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                        
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable Birthday Card Template | ToolHubSpot",
+                "seo_description" => "Create and personalize this {title} birthday card online. Add your own text, images, and colors. Free editable birthday greeting card template at ToolHubSpot.",
+                "seo_keywords" => "birthday card maker online, free editable birthday cards, personalized birthday card templates, custom birthday greeting card, birthday card with photo and text, create birthday card online free, printable birthday cards editable, birthday card background editor, birthday wishes card design free, birthday card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -219,6 +232,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable Birthday Card Template | ToolHubSpot",
+                "seo_description" => "Create and personalize this {title} birthday card online. Add your own text, images, and colors. Free editable birthday greeting card template at ToolHubSpot.",
+                "seo_keywords" => "birthday card maker online, free editable birthday cards, personalized birthday card templates, custom birthday greeting card, birthday card with photo and text, create birthday card online free, printable birthday cards editable, birthday card background editor, birthday wishes card design free, birthday card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -264,6 +280,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable Birthday Card Template | ToolHubSpot",
+                "seo_description" => "Create and personalize this {title} birthday card online. Add your own text, images, and colors. Free editable birthday greeting card template at ToolHubSpot.",
+                "seo_keywords" => "birthday card maker online, free editable birthday cards, personalized birthday card templates, custom birthday greeting card, birthday card with photo and text, create birthday card online free, printable birthday cards editable, birthday card background editor, birthday wishes card design free, birthday card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -297,6 +316,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                     
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable Diwali/Festival Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this {title} festival card online. Add your own text, images, and colors. Free editable Diwali and festival greeting card template at ToolHubSpot.",
+                "seo_keywords" => "diwali card maker online, free editable diwali cards, personalized festival card templates, custom diwali greeting card, diwali card with photo and text, create festival card online free, printable diwali cards editable, festival card background editor, diwali wishes card design free, festival card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -336,6 +358,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                   
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable Diwali/Festival Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this {title} festival card online. Add your own text, images, and colors. Free editable Diwali and festival greeting card template at ToolHubSpot.",
+                "seo_keywords" => "diwali card maker online, free editable diwali cards, personalized festival card templates, custom diwali greeting card, diwali card with photo and text, create festival card online free, printable diwali cards editable, festival card background editor, diwali wishes card design free, festival card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -381,6 +406,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                  
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable Diwali/Festival Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this {title} festival card online. Add your own text, images, and colors. Free editable Diwali and festival greeting card template at ToolHubSpot.",
+                "seo_keywords" => "diwali card maker online, free editable diwali cards, personalized festival card templates, custom diwali greeting card, diwali card with photo and text, create festival card online free, printable diwali cards editable, festival card background editor, diwali wishes card design free, festival card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -426,6 +454,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                                       
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable New Year Celebration Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this {title} New Year celebration card online. Add your own text, images, and colors. Free editable New Year greeting card template at ToolHubSpot.",
+                "seo_keywords" => "new year card maker online, free editable new year cards, personalized new year card templates, custom new year greeting card, new year card with photo and text, create new year card online free, printable new year cards editable, new year card background editor, happy new year wishes card design free, new year card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -465,6 +496,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                                          
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable New Year Celebration Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this {title} New Year celebration card online. Add your own text, images, and colors. Free editable New Year greeting card template at ToolHubSpot.",
+                "seo_keywords" => "new year card maker online, free editable new year cards, personalized new year card templates, custom new year greeting card, new year card with photo and text, create new year card online free, printable new year cards editable, new year card background editor, happy new year wishes card design free, new year card customization tool",                
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -504,6 +538,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                                                              
                     ]
                 ]),
+                'seo_title' => "{title} - Free Editable New Year Celebration Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this {title} New Year celebration card online. Add your own text, images, and colors. Free editable New Year greeting card template at ToolHubSpot.",
+                "seo_keywords" => "new year card maker online, free editable new year cards, personalized new year card templates, custom new year greeting card, new year card with photo and text, create new year card online free, printable new year cards editable, new year card background editor, happy new year wishes card design free, new year card customization tool",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

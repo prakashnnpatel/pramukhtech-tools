@@ -9,7 +9,11 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{url()->current()}}" />
 <meta property="og:site_name" content="{{ config('app.name') }}" />
-<meta property="og:image" content="{{ url('/') }}/images/tools/{{$toolKey??request()->segment(1)}}.png" />
+@if(request()->segment(1) !== NULL && request()->segment(1) == "greeting-cards" && isset($card))
+	<meta property="og:image" content="{{ url('/') }}/images/greeting-cards/{{ $card->slug }}-thumb.png" />
+@else
+	<meta property="og:image" content="{{ url('/') }}/images/tools/{{$toolKey??request()->segment(1)}}.png" />
+@endif
 @if(config('app.env') == 'production')
 	<meta name="robots" content="index, follow" />
 @else
@@ -303,6 +307,16 @@
 			<meta name="keywords" content="free online tools, calculators, free calculators, productivity tools, document tools, PDF tools, text utilities, file converters, utility tools, search tools, free web tools, best online tools, online utilities, tool search, instant tools, tool directory, calculator hub, digital tools, ToolHubSpot" />
 			<meta property="og:title" content="Free Online Tools & Calculators | ToolHubSpot" />
 			<meta property="og:description" content="Explore a wide range of free online tools and calculators at ToolHubSpot. Boost productivity with finance, documents, PDFs, text, conversions, and more tools." />
+			<link rel="canonical" href="{{url()->current()}}"/>
+		@break
+
+		{{-- Greeting Cards Detail Page --}}
+		@case('greeting-cards')
+			<title>{{ str_replace('{title}', $card->title, $card->seo_title) }}</title>
+			<meta name="description" content="{{ str_replace('{title}', $card->title, $card->seo_description) }}" />
+			<meta name="keywords" content="{{ str_replace('{title}', $card->title, $card->seo_keywords) }}" />
+			<meta property="og:title" content="{{ str_replace('{title}', $card->title, $card->seo_title) }}" />
+			<meta property="og:description" content="{{ str_replace('{title}', $card->title, $card->seo_description) }}" />
 			<link rel="canonical" href="{{url()->current()}}"/>
 		@break
 

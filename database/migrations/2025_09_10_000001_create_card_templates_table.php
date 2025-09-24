@@ -16,8 +16,8 @@ return new class extends Migration {
             $table->text('description')->nullable();
             $table->json('template_data')->nullable();
             $table->string('seo_title')->nullable();
-            $table->string('seo_description')->nullable();
-            $table->string('seo_keywords')->nullable();
+            $table->text('seo_description')->nullable();
+            $table->text('seo_keywords')->nullable();
             $table->integer('use_count')->default(0);
             $table->timestamps();
         });
