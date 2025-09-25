@@ -56,25 +56,23 @@
 		</div>
 		@foreach($cards as $idx => $card)
 			<div class="col-md-4 mb-3">
-				<div class="card card-template" data-card-id="{{ $card->slug }}" title="Click to use this template">
-					<div class="card-preview-container" >
+				<div class="calculator-card card card-template" data-card-id="{{ $card->slug }}" title="Click to use this template">
+					<div class="card-preview-container">
 						<a href="{{route('greeting-cards.show',$card->slug)}}" title="Use This Template">
 							<img src="{{$card->thumbnail}}" style="display: inline-block; width: 100%; cursor:pointer;"/>
 						</a>
 					</div>
-					
+					{{--
 					<div class="text-center m-2">
 						<h6 class="card-title">
 							<a href="{{route('greeting-cards.show',$card->slug)}}" title="Use This Template" style="color:#667eea;">{{ $card->title }}</a>
-						</h6>						
-						{{--@if($card->description)
-							<small class="text-muted">{{ $card->description }}</small>
-						@endif--}}
+						</h6>
 						<a href="{{route('greeting-cards.show',$card->slug)}}" class="invoice-action-btn tool-cta-btn" title="Try Now">
 							Edit Now <i class="fas fa-arrow-right ms-1"></i>
 						</a>
 					</div>
-				</div>				
+					--}}
+				</div>
 			</div>
 		@endforeach
 		<div class="col-lg-12 d-flex justify-content-center">
