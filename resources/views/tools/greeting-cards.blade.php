@@ -59,7 +59,7 @@
 							<div class="card-body">
 								<p class="calculator-subtitle">Create personalized greeting cards for every special moment.</p>
 								<div id="card-editor-wrapper" class="d-flex justify-content-center align-items-center">
-									<div id="card-canvas" style="position: relative; background: #fff; overflow: hidden; height: 400px;">
+									<div id="card-canvas" style="position: relative; background: #fff; overflow: hidden; height: 400px; width: 600px;">
 										<!-- Card elements (text/images) will be added here dynamically -->
 									</div>
 								</div>
@@ -118,6 +118,15 @@
 								<div class="input-group-custom">
 									<div class="input-wrapper">
 										<input type="number" class="form-control custom-input" id="main-canvas-height" value="400" min="100" max="1200">
+										<span class="input-suffix mr-4">px</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<label for="main-canvas-width" class="form-label">Card Width</label>
+								<div class="input-group-custom">
+									<div class="input-wrapper">
+										<input type="number" class="form-control custom-input" id="main-canvas-width" value="600" min="100" max="1200">
 										<span class="input-suffix mr-4">px</span>
 									</div>
 								</div>

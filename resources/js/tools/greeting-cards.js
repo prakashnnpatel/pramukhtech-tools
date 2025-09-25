@@ -1101,15 +1101,24 @@ $(document).ready(function() {
 		$(this).attr('contenteditable', 'false');
 	});
 });
-// Main Canvas Height Control
+// Main Canvas Height & Width Control
 document.addEventListener('DOMContentLoaded', function() {
 	var heightInput = document.getElementById('main-canvas-height');
+	var widthInput = document.getElementById('main-canvas-width');
 	var cardCanvas = document.getElementById('card-canvas');
 	if (heightInput && cardCanvas) {
 		heightInput.addEventListener('input', function() {
 			var val = parseInt(this.value, 10);
 			if (!isNaN(val) && val >= 100 && val <= 1200) {
 				cardCanvas.style.height = val + 'px';
+			}
+		});
+	}
+	if (widthInput && cardCanvas) {
+		widthInput.addEventListener('input', function() {
+			var val = parseInt(this.value, 10);
+			if (!isNaN(val) && val >= 100 && val <= 1200) {
+				cardCanvas.style.width = val + 'px';
 			}
 		});
 	}
