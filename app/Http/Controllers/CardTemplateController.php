@@ -26,10 +26,11 @@ class CardTemplateController extends Controller
         if(empty($category))
             $category = $request->search;
 
+        
         if(!empty($category)) {
             $cards = $cards->where("category","LIKE", "%".$category."%");
         }
-        $cards = $cards->paginate(10)->appends($request->all());
+        $cards = $cards->paginate(12)->appends($request->all());
 
 
         $currentTool = Tools::select(["id", "slug","category"])->where("slug",'cards')->first();
@@ -51,7 +52,9 @@ class CardTemplateController extends Controller
                 $similarTools = CardTemplates::where("id", "!=", $card->id)
                 ->where(function($query) use ($categories) {
                     foreach ($categories as $category) {
-                        $query->orWhere("category", "LIKE", "%" . trim($category) . "%");
+                        if(!empty(trim($category))) {
+                            $query->orWhere("category", "LIKE", "%" . trim($category) . "%");
+                        }
                     }
                 })->get();
             }
@@ -73,7 +76,7 @@ class CardTemplateController extends Controller
             $categoryArr = explode(",", $category);
             $query = $query->where(function($q) use ($categoryArr) {
                 foreach ($categoryArr as $cat) {
-                    if(!empty($cat)) {
+                    if(!empty(trim($cat))) {
                         $q->orWhere('category', 'LIKE', "%" . trim($cat) . "%");
                     }
                 }

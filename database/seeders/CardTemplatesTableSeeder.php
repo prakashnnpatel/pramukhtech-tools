@@ -32,7 +32,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Balloon Bloom',
                 'slug' => 'balloon-bloom',
                 'thumbnail' => '/images/greeting-cards/balloon-bloom-thumb.png',
-                'category' => 'Birthday',
+                'category' => 'Birthday, New Baby',
                 'description' => 'A colorful birthday card with balloons.',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -68,7 +68,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Birthday Bliss',
                 'slug' => 'birthday-bliss',
                 'thumbnail' => '/images/greeting-cards/birthday-bliss-thumb.png',
-                'category' => 'Birthday',
+                'category' => 'Birthday, New Baby',
                 'description' => 'A colorful birthday card with balloons.',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -110,7 +110,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Birthday Delight',
                 'slug' => 'birthday-delight',
                 'thumbnail' => '/images/greeting-cards/birthday-delight-thumb.png',
-                'category' => 'Birthday',
+                'category' => 'Birthday, New Baby',
                 'description' => 'A colorful birthday card with balloons.',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -152,7 +152,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Joyful Moments',
                 'slug' => 'joyful-moments',
                 'thumbnail' => '/images/greeting-cards/joyful-moments-thumb.png',
-                'category' => 'Birthday',
+                'category' => 'Birthday, New Baby',
                 'description' => 'A colorful birthday card with balloons.',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -206,7 +206,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Celebration Glow',
                 'slug' => 'celebration-glow',
                 'thumbnail' => '/images/greeting-cards/celebration-glow-thumb.png',
-                'category' => 'Birthday',
+                'category' => 'Birthday, New Baby',
                 'description' => 'A colorful birthday card with balloons.',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -242,7 +242,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Twins Birthday',
                 'slug' => 'twins-birthday',
                 'thumbnail' => '/images/greeting-cards/twins-birthday-thumb.png',
-                'category' => 'Birthday',
+                'category' => 'Birthday, New Baby',
                 'description' => 'A colorful birthday card with balloons.',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -290,7 +290,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Happy Diwali',
                 'slug' => 'happy-diwali',
                 'thumbnail' => '/images/greeting-cards/happy-diwali-thumb.png',
-                'category' => 'Festival',
+                'category' => 'Festival, Diwali',
                 'description' => 'Festival',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -326,7 +326,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Diwali Wishes',
                 'slug' => 'diwali-wishes',
                 'thumbnail' => '/images/greeting-cards/diwali-wishes-thumb.png',
-                'category' => 'Festival',
+                'category' => 'Festival, Diwali',
                 'description' => 'Festival',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -368,7 +368,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Diwali Celebration',
                 'slug' => 'diwali-celebration',
                 'thumbnail' => '/images/greeting-cards/diwali-celebration-thumb.png',
-                'category' => 'Festival',
+                'category' => 'Festival, Diwali',
                 'description' => 'Festival',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -416,7 +416,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Happy New Year',
                 'slug' => 'happy-new-year',
                 'thumbnail' => '/images/greeting-cards/happy-new-year-thumb.png',
-                'category' => 'Festival',
+                'category' => 'Festival, New Year',
                 'description' => 'Festival',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -464,7 +464,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'New Year Wishes',
                 'slug' => 'new-year-wishes',
                 'thumbnail' => '/images/greeting-cards/new-year-wishes-thumb.png',
-                'category' => 'Festival',
+                'category' => 'Festival, New Year',
                 'description' => 'Festival',
                 'template_data' => json_encode([
                     'bgColor' => '',
@@ -506,7 +506,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'New Year Celebration',
                 'slug' => 'new-year-celebration',
                 'thumbnail' => '/images/greeting-cards/new-year-celebration-thumb.png',
-                'category' => 'Festival',
+                'category' => 'Festival, New Year',
                 'description' => 'Festival',
                 'template_data' => json_encode([
                     'bgColor' => '',
