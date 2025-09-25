@@ -22,7 +22,7 @@ class CardTemplateController extends Controller
             });
         }
 
-        if ($request->has('category') && !empty($request->category))
+        if(empty($category))
             $category = $request->search;
 
         if(!empty($category)) {
