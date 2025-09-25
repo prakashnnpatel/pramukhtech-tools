@@ -43,7 +43,20 @@ class CardTemplateController extends Controller
         if (!$card) {
             abort(404);
         }
-        return view('tools.greeting-cards', compact('card'));
+        else {
+            $similarTools = [];
+            if(!empty($card))
+            {
+                $categories = explode(',', $card->category);
+                $similarTools = CardTemplates::where("id", "!=", $card->id)
+                ->where(function($query) use ($categories) {
+                    foreach ($categories as $category) {
+                        $query->orWhere("category", "LIKE", "%" . trim($category) . "%");
+                    }
+                })->get();
+            }
+        }
+        return view('tools.greeting-cards', compact('card', 'similarTools'));
     }
 
     /**

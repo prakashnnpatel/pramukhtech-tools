@@ -19,6 +19,8 @@
 								   <h4 class="mb-0">{{$card->title}}</h4>
 								   {{--<p class="calculator-subtitle mb-0">{{$card->description}}</p>--}}
 							   </div>
+							   <div>
+							   	<a href="{{route('cards')}}" class="mr-3 btn btn-sm btn-outline-secondary">Back</a>
 							   <button class="btn btn-sm btn-outline-secondary collapse-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#main-card-body" aria-expanded="true" aria-controls="main-card-body" style="border:1px solid #ddd;">
 								   <span class="collapse-icon" aria-hidden="true" style="display: inline-block; transition: transform 0.3s;">
 									   <!-- Bootstrap chevron-down SVG -->
@@ -28,6 +30,7 @@
 								   </span>
 								   <span class="visually-hidden">Toggle section</span>
 							   </button>
+							   </div>
 						   </div>
 					   </div>
 					   <div class="card-body collapse show" id="main-card-body">
@@ -332,6 +335,12 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="row">
+        <div class="col-lg-12">
+            @include('similaCard', ['slidertype' => 'H'])
+        </div>
+    </div>
 
 	<!-- Step-by-step guide -->
     <div class="info-section">
