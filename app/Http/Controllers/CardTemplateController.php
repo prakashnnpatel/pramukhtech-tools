@@ -54,12 +54,9 @@ class CardTemplateController extends Controller
     {
         $perPage = 10;
         $query = CardTemplateBackground::where('is_active', true)->orderBy('id', 'asc');
-        if(!empty($request->get('category'))) {
+        if(!empty($request->get('category')) && $request->get('category') != 'All') {
             $category = $request->get('category');
             $category .= ",All";//Common images for all cards
-            if($category == "Anniversary") {
-                $category .= ",Love";
-            }
             $categoryArr = explode(",", $category);
             $query = $query->where(function($q) use ($categoryArr) {
                 foreach ($categoryArr as $cat) {
