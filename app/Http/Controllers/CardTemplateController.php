@@ -10,11 +10,27 @@ use App\Models\Tools;
 
 class CardTemplateController extends Controller
 {
-    public function index()
+    public function index(Request $request, $category = null)
     {
-        $cards = CardTemplates::orderBy('id')->get();
-        Tools::where("slug", 'cards')->increment("use_count");
-        return view("tools.index", ["toolKey" => 'cards', "cards" => $cards]);
+        $cards = CardTemplates::whereNotNull("category");
+        if ($request->has('search') && !empty($request->search)) {
+            $search = $request->search;
+            $cards->where(function($q) use ($search) {
+                $q->where('title', 'LIKE', "%{$search}%")
+                  ->orWhere('description', 'LIKE', "%{$search}%")
+                  ->orWhere('seo_keywords', 'LIKE', "%{$search}%");
+            });
+        }
+
+        if ($request->has('category') && !empty($request->category))
+            $category = $request->search;
+
+        if(!empty($category)) {
+            $cards = $cards->where("category","LIKE", "%".$category."%");
+        }
+        $cards = $cards->paginate(10)->appends($request->all());
+
+        return view("tools.index", ["toolKey" => 'cards', "cards" => $cards, "category" => $category, "param" => $request->all()]);
     }
 
     public function show($slug)

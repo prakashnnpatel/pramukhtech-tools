@@ -2,10 +2,59 @@
 
 @section('content')
 <div class="container mt-4">
-	<h2 class="mb-4">🎉 Find your perfect match</h2>
-	<p>Create personalized greeting cards for every special moment.</p>
+	{{-- Search & Filter Section --}}
+	<div class="calculator-main">
+		<div class="row">
+			<div class="col-lg-12 mb-4">
+				<div class="calculator-card">
+					<div class="card-header">
+						<h3>🎉 Find your perfect match</h3>
+						{{--<p class="calculator-subtitle">Browse all available tools in one place.</p>--}}
+					</div>
+					<div class="card-body">
+						<form method="GET" action="javascript:void(0);" id="cardSearchFrm" name="cardSearchFrm">
+							<div class="row g-3 align-items-end">
+								<div class="col-12 col-lg-10">
+									<label for="search" class="form-label">Search</label>
+									<input type="text" class="form-control" id="search" name="search" value="{{$param['search']??''}}" placeholder="Browse the best cards for special moments." />
+								</div>								
+								<div class="col-12 col-lg-2 text-center text-lg-start">
+									<button type="button" class="invoice-action-btn mt-2 mt-lg-4 tool-search-btn" id="cardSearchBtn">
+										<i class="fas fa-search"></i> Search
+									</button>
+								</div>
+							</div>
+							<hr/>
+							{{-- Display Category buttons --}}
+							<div class="row">
+								<div class="col-lg-12">
+									<input type="hidden" id="category" name="category" value="@if(!empty($category)){{$category}}@endif"/>
+									<div class="d-flex flex-wrap gap-2 category-chip-wrap">
+									<a href="{{ route('cards') }}" type="button" class="@if(!empty($category)) invoice-defaul-btn @else invoice-action-btn  @endif" title="Explore All Free Tools Online | Easy to Use" style="padding: 7px 18px;">
+										All
+									</a>
+									@foreach(config('constants.card_category') as $cat_key=>$category_val)
+										<a href="{{ route('cards',$category_val) }}" type="button" class="@if(!empty($category) && $category == $category_val) invoice-action-btn @else invoice-defaul-btn @endif" title="Explore All {{$category_val}} Cards Online | Free & Easy to Use" style="padding: 7px 20px;">
+											{{$category_val}}
+										</a>
+									@endforeach
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>          
+		</div>
+	</div>
 	<div class="row" id="card-templates">
-		@forelse($cards as $card)
+	@if($cards->total() > 0)
+		<div class="col-md-12 mb-3">
+			<h4 style="color:#667eea;font-weight: bold;padding: 0px 0px 10px 10px;">{{$cards->total()}} Cards Found
+			</h4> 
+			<p>Create personalized greeting cards for every special moment.</p>                  
+		</div>
+		@foreach($cards as $idx => $card)
 			<div class="col-md-4 mb-3">
 				<div class="card card-template" data-card-id="{{ $card->slug }}" title="Click to use this template">
 					<div class="card-preview-container" >
@@ -27,11 +76,15 @@
 					</div>
 				</div>				
 			</div>
-		@empty
-			<div class="col-12">
-				<div class="alert alert-info">No card templates found.</div>
-			</div>
-		@endforelse
+		@endforeach
+		<div class="col-lg-12 d-flex justify-content-center">
+			{{ $cards->onEachSide(1)->links('pagination.centered') }}
+		</div>
+	@else
+		<div class="col-12">
+			<div class="alert alert-info">No card templates found. Please refine your search criteria.</div>
+		</div>
+	@endif
 	</div>
 
 	<!-- Step-by-step guide -->

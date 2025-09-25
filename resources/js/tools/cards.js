@@ -1,12 +1,31 @@
 
+function formSubmit() {
+	var search = $.trim($("#cardSearchFrm").find("#search").val());
+	var category = $.trim($("#cardSearchFrm").find("#category").val());
+	var searchURL = '/cards';
+	
+	if (category != "") {
+		searchURL += '/' + category;
+	}
+
+	if (search != "") {
+		searchURL += '?search=' + encodeURIComponent(search);
+	}
+	//console.log(searchURL);    
+	window.location.href = searchURL;
+}
+
 $(document).ready(function() {
-	// When a card template is clicked, redirect to the editor page
-	/*$(document).on('click', '.card-template', function() {
-		var cardId = $(this).data('card-id');
-		if (cardId) {
-			window.location.href = '/greeting-cards/' + encodeURIComponent(cardId);
+	
+	$('#cardSearchBtn').click(function () {
+		formSubmit();
+	});
+
+	$('#search').on('keypress', function(e) {
+		if (e.which == 13) {
+			formSubmit();
 		}
-	});*/
+	});
 
 	// Render live previews for each card
 	$('.card-preview-container').each(function() {
