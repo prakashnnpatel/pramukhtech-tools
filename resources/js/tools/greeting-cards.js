@@ -1101,3 +1101,16 @@ $(document).ready(function() {
 		$(this).attr('contenteditable', 'false');
 	});
 });
+// Main Canvas Height Control
+document.addEventListener('DOMContentLoaded', function() {
+	var heightInput = document.getElementById('main-canvas-height');
+	var cardCanvas = document.getElementById('card-canvas');
+	if (heightInput && cardCanvas) {
+		heightInput.addEventListener('input', function() {
+			var val = parseInt(this.value, 10);
+			if (!isNaN(val) && val >= 100 && val <= 1200) {
+				cardCanvas.style.height = val + 'px';
+			}
+		});
+	}
+});

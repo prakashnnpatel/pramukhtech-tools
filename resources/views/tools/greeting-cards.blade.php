@@ -17,7 +17,6 @@
 						   <div class="d-flex justify-content-between align-items-center w-100">
 							   <div>
 								   <h4 class="mb-0">{{$card->title}}</h4>
-								   <p class="calculator-subtitle mb-0">Create personalized greeting cards for every special moment.</p>
 								   {{--<p class="calculator-subtitle mb-0">{{$card->description}}</p>--}}
 							   </div>
 							   <button class="btn btn-sm btn-outline-secondary collapse-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#main-card-body" aria-expanded="true" aria-controls="main-card-body" style="border:1px solid #ddd;">
@@ -58,8 +57,9 @@
                     <div class="col-lg-12">
 						<div class="calculator-card">
 							<div class="card-body">
+								<p class="calculator-subtitle">Create personalized greeting cards for every special moment.</p>
 								<div id="card-editor-wrapper" class="d-flex justify-content-center align-items-center">
-									<div id="card-canvas" style="position: relative;  background: #fff; overflow: hidden;">
+									<div id="card-canvas" style="position: relative; background: #fff; overflow: hidden; height: 400px;">
 										<!-- Card elements (text/images) will be added here dynamically -->
 									</div>
 								</div>
@@ -112,6 +112,15 @@
 									<option value="outset">Outset</option>
 									<option value="none">None</option>
 								</select>
+							</div>
+							<div class="col-lg-3">
+								<label for="main-canvas-height" class="form-label">Card Height</label>
+								<div class="input-group-custom">
+									<div class="input-wrapper">
+										<input type="number" class="form-control custom-input" id="main-canvas-height" value="400" min="100" max="1200">
+										<span class="input-suffix mr-4">px</span>
+									</div>
+								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="input-group-custom">
