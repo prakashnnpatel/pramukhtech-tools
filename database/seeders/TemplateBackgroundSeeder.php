@@ -98,8 +98,157 @@ class TemplateBackgroundSeeder extends Seeder
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/festival-6.jpg',
                 'category' => 'Festival',
+            ], 
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-1.jpg',
+                'category' => 'All',
+            ], 
+             [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-2.jpg',
+                'category' => 'All',
+            ],           
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-3.png',
+                'category' => 'All',
             ],
-
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-4.jpg',
+                'category' => 'aAllll',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-5.jpg',
+                'category' => 'All',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-6.jpg',
+                'category' => 'All',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-7.png',
+                'category' => 'All',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-8.png',
+                'category' => 'All',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-9.png',
+                'category' => 'All',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/all-10.png',
+                'category' => 'All',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-1.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-2.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-3.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-4.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-5.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-6.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-7.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-8.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-9.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-10.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-11.jpg',
+                'category' => 'Love',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-12.jpg',
+                'category' => 'Love',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-13.jpg',
+                'category' => 'Love',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-14.jpg',
+                'category' => 'Love',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-15.jpg',
+                'category' => 'Love',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-16.jpg',
+                'category' => 'Love',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-17.jpg',
+                'category' => 'Love',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-18.jpg',
+                'category' => 'Love',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-19.jpg',
+                'category' => 'Love',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-20.jpg',
+                'category' => 'Love',
+            ],
         ];
         //dd($bgImages);
         
