@@ -698,10 +698,29 @@ $(document).ready(function() {
 							.attr('title', 'Click to edit text, drag & drop anywhere.')
 							.text(el.text || 'Edit me');
 						if (el.css) {
-							if (typeof el.css === 'string') {
-								$text.attr('style', el.css);
-							} else if (typeof el.css === 'object') {
-								$text.css(el.css);
+							let cssVal = el.css;
+							let deviceType = (function() {
+								if (typeof window !== 'undefined') {
+									return (window.innerWidth <= 768) ? 'mobile' : 'desktop';
+								}
+								return 'desktop';
+							})();
+							if (typeof cssVal === 'string') {
+								try {
+									let parsed = JSON.parse(cssVal);
+									if (parsed && typeof parsed === 'object' && (parsed.desktop !== undefined || parsed.mobile !== undefined)) {
+										cssVal = parsed[deviceType] || parsed.desktop || '';
+									}
+								} catch (e) {
+									// Not JSON, treat as desktop css string
+								}
+							} else if (typeof cssVal === 'object' && (cssVal.desktop !== undefined || cssVal.mobile !== undefined)) {
+								cssVal = cssVal[deviceType] || cssVal.desktop || '';
+							}
+							if (typeof cssVal === 'string') {
+								$text.attr('style', cssVal);
+							} else if (typeof cssVal === 'object') {
+								$text.css(cssVal);
 							}
 						}
 						$('#card-canvas').append($text);
@@ -712,10 +731,29 @@ $(document).ready(function() {
 							.attr('id', el.id || ('img-' + Date.now()))
 							.attr('src', el.src);
 						if (el.css) {
-							if (typeof el.css === 'string') {
-								$img.attr('style', el.css);
-							} else if (typeof el.css === 'object') {
-								$img.css(el.css);
+							let cssVal = el.css;
+							let deviceType = (function() {
+								if (typeof window !== 'undefined') {
+									return (window.innerWidth <= 768) ? 'mobile' : 'desktop';
+								}
+								return 'desktop';
+							})();
+							if (typeof cssVal === 'string') {
+								try {
+									let parsed = JSON.parse(cssVal);
+									if (parsed && typeof parsed === 'object' && (parsed.desktop !== undefined || parsed.mobile !== undefined)) {
+										cssVal = parsed[deviceType] || parsed.desktop || '';
+									}
+								} catch (e) {
+									// Not JSON, treat as desktop css string
+								}
+							} else if (typeof cssVal === 'object' && (cssVal.desktop !== undefined || cssVal.mobile !== undefined)) {
+								cssVal = cssVal[deviceType] || cssVal.desktop || '';
+							}
+							if (typeof cssVal === 'string') {
+								$img.attr('style', cssVal);
+							} else if (typeof cssVal === 'object') {
+								$img.css(cssVal);
 							}
 						} else {
 							$img.css({
@@ -729,23 +767,23 @@ $(document).ready(function() {
 								zIndex: zIndex++
 							});
 						}
-						   $('#card-canvas').append($img);
-						   makeDraggable($img);
-						   // Select the first image by default (only once)
-						   if ($('.draggable-img.selected').length === 0) {
-							   $img.addClass('selected');
-						   }
-						   // Show resize handle only on click (to re-focus if needed)
-						   $img.on('click', function(e) {
-							   // Remove selection from all images
-							   $('.draggable-img').removeClass('selected');
-							   // Add selection to clicked image
-							   $(this).addClass('selected');
-							   makeResizable($(this));
-							   // Show curve toolbar for this image
-							   setTimeout(()=>showCurveToolbar($(this)),10);
-							   e.stopPropagation();
-						   });
+						$('#card-canvas').append($img);
+						makeDraggable($img);
+						// Select the first image by default (only once)
+						if ($('.draggable-img.selected').length === 0) {
+							$img.addClass('selected');
+						}
+						// Show resize handle only on click (to re-focus if needed)
+						$img.on('click', function(e) {
+							// Remove selection from all images
+							$('.draggable-img').removeClass('selected');
+							// Add selection to clicked image
+							$(this).addClass('selected');
+							makeResizable($(this));
+							// Show curve toolbar for this image
+							setTimeout(()=>showCurveToolbar($(this)),10);
+							e.stopPropagation();
+						});
 					}
 				});
 			}
