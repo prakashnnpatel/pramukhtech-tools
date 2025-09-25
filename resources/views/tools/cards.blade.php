@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <div class="container mt-4">
 	{{-- Search & Filter Section --}}
 	<div class="calculator-main">
@@ -114,8 +111,3 @@
         </div>
     </div>
 </div>
-@endsection
-
-@push('page_scripts')
-@vite('resources/js/tools/cards.js')
-@endpush

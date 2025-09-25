@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+	<input type="hidden" id="tool_id" value="{{$tool_id ?? ''}}"/>
     @php
 		$viewPath = 'tools.' . $toolKey;
 	@endphp
@@ -15,6 +16,7 @@
 @endsection
 
 @push('page_scripts')
+@vite("resources/js/tools/common.js")
 @if($toolKey == "signature" || $toolKey == "digital-document")
 	@vite("resources/js/jquery.signature.js")
 @endif

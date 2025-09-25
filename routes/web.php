@@ -17,6 +17,7 @@ Route::post('/contact-us', [HomeController::class, 'contactUsSubmit']);
 Route::get('/sitemap.xml', [HomeController::class, 'sitemap']);
 Route::post('/generate-invoice',[HomeController::class, 'generateInvoice'])->name("generate-invoice");
 Route::post('/digital-document',[HomeController::class, 'digitalDocument'])->name("digital-document");
+Route::post('/update-tool-use-counter/{tool}', [HomeController::class, 'updateUseCounter'])->name('tool.usecounter');
 Route::post('/merge-images-to-pdf', [PDFController::class, 'mergeImagesToPdf'])->name('merge.images.pdf');
 // QR Code generator API (keep before catch-all)
 Route::match(['GET','POST'],'/qr-code-generator/generate', [QRCodeController::class, 'generate'])->name('qr.generate');
@@ -34,7 +35,7 @@ Route::post('/split-pdf/split', [App\Http\Controllers\SplitPdfController::class,
 Route::get('/cards/{category?}', [CardTemplateController::class, 'index'])->name('cards');
 Route::get('/greeting-cards/{slug}', [CardTemplateController::class, 'show'])->name('greeting-cards.show');
 Route::get('/api/card-template-backgrounds', [CardTemplateController::class, 'backgrounds'])->name('api.card-template-backgrounds');
-Route::post('/update-card-use-counter/{card}', [CardTemplateController::class, 'updateUseCardCounter'])->name('card.usecounter');
+Route::post('/update-card-use-counter/{card}', [CardTemplateController::class, 'updateUseCounter'])->name('card.usecounter');
 
 ### Always keep This router at last
 Route::get('/{toolkey?}/{subpart?}',[HomeController::class, 'tools'])->name("toollist");

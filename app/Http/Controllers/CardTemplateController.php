@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\CardTemplates;
 use App\Models\CardTemplateBackground;
 use App\Models\Tools;
+use Jaybizzle\CrawlerDetect\CrawlerDetect;
 
 class CardTemplateController extends Controller
 {
@@ -30,7 +31,10 @@ class CardTemplateController extends Controller
         }
         $cards = $cards->paginate(10)->appends($request->all());
 
-        return view("tools.index", ["toolKey" => 'cards', "cards" => $cards, "category" => $category, "param" => $request->all()]);
+
+        $currentTool = Tools::select(["id", "slug","category"])->where("slug",'cards')->first();
+        
+        return view("tools.index", ["toolKey" => $currentTool->slug, "tool_id" => $currentTool->id, "cards" => $cards, "category" => $category, "param" => $request->all()]);
     }
 
     public function show($slug)
@@ -71,9 +75,12 @@ class CardTemplateController extends Controller
         ]);
     }
 
-    /***Counter update when Card Download */
-    public function updateUseCardCounter(CardTemplates $card)
+    /* Counter update when Card Download */
+    public function updateUseCounter(Request $request, CardTemplates $card)
     {
-        $card->increment('use_count');
+        $crawlerDetect = new CrawlerDetect;
+        if($request->ajax() && !$crawlerDetect->isCrawler()) {
+            $card->increment('use_count');
+        }
     }
 }

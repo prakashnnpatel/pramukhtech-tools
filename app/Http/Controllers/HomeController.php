@@ -9,6 +9,7 @@ use App\Models\Tools;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Illuminate\Support\Arr;
+use Jaybizzle\CrawlerDetect\CrawlerDetect;
 
 class HomeController extends Controller
 {
@@ -246,7 +247,6 @@ class HomeController extends Controller
 			$extraParams = explode("-to-",$subpart);
 		}
 
-        Tools::where("slug", $toolkey)->increment("use_count");
         $currentTool = Tools::select(["id", "category"])->where("slug", "=", $toolkey)->first();
         $similarTools = [];
         if(!empty($currentTool))
@@ -261,7 +261,7 @@ class HomeController extends Controller
         }
         
 		try {
-			return view("tools.index", ["toolKey" => $toolkey, "extraParams" => $extraParams, "suggestedToolListArr" => $similarTools]);
+			return view("tools.index", ["toolKey" => $toolkey, "tool_id" => $currentTool->id,"extraParams" => $extraParams, "suggestedToolListArr" => $similarTools]);
 		}
 		catch(Exception $e) {
 			return response()->view('errors.404', [], 404);
@@ -623,6 +623,15 @@ class HomeController extends Controller
             
         } catch (\Exception $e) {
             throw new \Exception('Failed to generate PDF: ' . $e->getMessage());
+        }
+    }
+
+    /* Counter update when Tool Opened */
+    public function updateUseCounter(Request $request, Tools $tool)
+    {
+        $crawlerDetect = new CrawlerDetect;
+        if($request->ajax() && !$crawlerDetect->isCrawler()) {
+            $tool->increment('use_count');
         }
     }
 }

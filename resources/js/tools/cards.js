@@ -30,7 +30,9 @@ $(document).ready(function() {
 	// Render live previews for each card
 	$('.card-preview-container').each(function() {
 		var $container = $(this);
-		var slug = $container.attr('id').replace('preview-', '');
+		var id = $container.attr('id');
+		if (!id) return; // skip if id is missing
+		var slug = id.replace('preview-', '');
 		var dataScript = document.getElementById('template-data-' + slug);
 		if (!dataScript) return;
 		var tpl;
