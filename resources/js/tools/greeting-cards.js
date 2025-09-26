@@ -1030,11 +1030,28 @@ $(document).ready(function() {
 						});
 					$('#card-canvas').append($img);
 					makeDraggable($img);
-					$img.on('click', function(e) {
+					// Show controls immediately after upload
+					setTimeout(function() {
+						$('.draggable-img').removeClass('selected');
+						$img.addClass('selected');
+						makeResizable($img);
+						setTimeout(()=>showCurveToolbar($img),10);
+					}, 10);
+					$img.on('click touchstart', function(e) {
+						// Prevent duplicate firing on touch devices
+						if (e.type === 'touchstart') {
+							if (e.originalEvent.touches && e.originalEvent.touches.length > 1) return;
+							$(this).data('touched', true);
+						} else if ($(this).data('touched')) {
+							$(this).data('touched', false);
+							return;
+						}
+						$('.draggable-img').removeClass('selected');
+						$(this).addClass('selected');
 						makeResizable($(this));
+						setTimeout(()=>showCurveToolbar($(this)),10);
 						e.stopPropagation();
 					});
-					
 				};
 				reader.readAsDataURL(file);
 			}
