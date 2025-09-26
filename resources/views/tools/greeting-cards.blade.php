@@ -3,6 +3,14 @@
 @push('page_css')
 @vite('resources/css/jquery-ui.css')
 @vite('resources/css/greeting-cards.css')
+<style>
+	@media (max-width: 768px) 
+	{
+		.mainpart-collapse {
+			width: auto;
+		}
+	}
+</style>
 @endpush
 
 @section('content')
@@ -72,9 +80,9 @@
 				</div>
 				{{-- Canvas Background & Border Controls --}}
 				<div class="calculator-card">
-					   <div class="card-header d-flex justify-content-between align-items-center">
+					   <div class="card-header d-flex justify-content-between">
 						   <h4 class="mb-0">Manage Main Container</h4>
-						   <button class="btn btn-sm btn-outline-secondary collapse-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#main-container-settings" aria-expanded="true" aria-controls="main-container-settings" id="toggle-main-container-settings" style="border:1px solid #ddd;">
+						   <button class="mainpart-collapse btn btn-sm btn-outline-secondary collapse-toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#main-container-settings" aria-expanded="true" aria-controls="main-container-settings" id="toggle-main-container-settings" style="border:1px solid #ddd;">
 							   <span class="collapse-icon" aria-hidden="true" style="display: inline-block; transition: transform 0.3s;">
 								   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
 									   <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
