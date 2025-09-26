@@ -355,24 +355,36 @@ $(document).ready(function() {
 		$(this).css('outline', '');
 	});
 
-	// Add focus/selected class for .draggable-text
-	$(document).on('mousedown click', '.draggable-text', function(e) {
-		   $('.draggable-text').removeClass('selected');
-		   $(this).addClass('selected');
-		   // Hide image action wrapper when text is selected
-		   $('.image-action-wrapper').remove();
-		   // Make editable and focus so user can type
-		   $(this).attr('contenteditable', 'true').focus();
-		   // Move cursor to end of content in text box
-		   var el = this;
-		   if (window.getSelection && document.createRange) {
-			   var range = document.createRange();
-			   range.selectNodeContents(el);
-			   range.collapse(false);
-			   var sel = window.getSelection();
-			   sel.removeAllRanges();
-			   sel.addRange(range);
-		   }
+	// Add focus/selected class for .draggable-text (mobile & desktop)
+	$(document).on('mousedown click touchstart', '.draggable-text', function(e) {
+		// Prevent duplicate firing on touch devices
+		if (e.type === 'touchstart') {
+			if (e.originalEvent.touches && e.originalEvent.touches.length > 1) return;
+			$(this).data('touched', true);
+		} else if ($(this).data('touched')) {
+			$(this).data('touched', false);
+			return;
+		}
+		$('.draggable-text').removeClass('selected');
+		$(this).addClass('selected');
+		// Hide image action wrapper when text is selected
+		$('.image-action-wrapper').remove();
+		// Make editable and focus so user can type
+		$(this).attr('contenteditable', 'true');
+		// On mobile, focus may need a delay
+		var el = this;
+		setTimeout(function() {
+			el.focus();
+			// Move cursor to end of content in text box
+			if (window.getSelection && document.createRange) {
+				var range = document.createRange();
+				range.selectNodeContents(el);
+				range.collapse(false);
+				var sel = window.getSelection();
+				sel.removeAllRanges();
+				sel.addRange(range);
+			}
+		}, 10);
 	});
 	// Remove 'selected' class when clicking outside any .draggable-text
 	$(document).on('mousedown', function(e) {
