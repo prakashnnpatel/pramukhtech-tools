@@ -98,7 +98,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'Add Name Here',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 50; left: 348px; top: 239px; font-family: Pacifico, sans-serif; font-size: 25px; font-weight: bold; color:rgb(109, 70, 94);',
-                                'mobile' => 'z-index: 50; left: 55%; top: 285px; font-family: Pacifico, sans-serif; font-size: 25px; font-weight: bold; color:rgb(109, 70, 94);'
+                                'mobile' => 'z-index: 50; width: 100%; text-align: center; top: 285px; font-family: Pacifico, sans-serif; font-size: 25px; font-weight: bold; color:rgb(109, 70, 94);'
                             ]),
                         ],                       
                         [
@@ -107,7 +107,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'src' => '/images/greeting-cards/element/g-user-3.jpeg',
                             'css' => json_encode([
                                 'desktop' => 'position: absolute; top: 30px; left: 275px; width: 133px; height: 142.533px; border:10px groove rgb(232, 166, 166); cursor: move; z-index: 51; clip-path: none;',
-                                'mobile' => 'position: absolute; top: 40%; left: 275px; width: 133px; height: 142.533px; border:10px groove rgb(232, 166, 166); cursor: move; z-index: 51; clip-path: none;'
+                                'mobile' => 'position: absolute; top: 10%; left: 40%; width: 133px; height: 142.533px; border:10px groove rgb(232, 166, 166); cursor: move; z-index: 51; clip-path: none;'
                             ]),
                         ],                        
                         [
@@ -203,7 +203,7 @@ class CardTemplatesTableSeeder extends Seeder
                         [
                             'type' => 'text',
                             'id' => 'title2',
-                            'text' => 'Add Name Here',
+                            'text' => 'Add Name',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 3;left: 174px;top: 294px;font-size: 18px;font-style: italic;border-color: rgb(191, 196, 223);border-width: 3px;border-style: none;background-color: rgb(216, 218, 233);',
                                 'mobile' => 'z-index: 3;left: 17%;top: 294px;font-size: 18px;font-style: italic;border-color: rgb(191, 196, 223);border-width: 3px;border-style: none;background-color: rgb(216, 218, 233);'
@@ -224,7 +224,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'src' => '/images/greeting-cards/element/kid-2.png',
                             'css' => json_encode([
                                 'desktop' => 'position: absolute;top: 91px;left: 128px;width: 131.986px;height: 131.986px;border: 5px solid rgb(140, 120, 120);cursor: move;z-index: 37;transform: rotate(-6.68235deg);',
-                                'mobile' => 'position: absolute;top: 91px;left: 10%;width: 131.986px;height: 131.986px;border: 5px solid rgb(140, 120, 120);cursor: move;z-index: 37;transform: rotate(-6.68235deg);'
+                                'mobile' => 'position: absolute;top: 10%;left: 10%;width: 131.986px;height: 131.986px;border: 5px solid rgb(140, 120, 120);cursor: move;z-index: 37;transform: rotate(-6.68235deg);'
                             ]),
                         ],
                         [
@@ -242,7 +242,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'src' => '/images/greeting-cards/element/kid-3.png',
                             'css' => json_encode([
                                 'desktop' => 'position: absolute;top: 205px;left: 372px;width: 139.995px;height: 124.085px;border: 2px outset rgb(209, 128, 128);cursor: move;z-index: 21;transform: rotate(-7.87307deg);',
-                                'mobile' => 'position: absolute;top: 205px;left: 55%;width: 139.995px;height: 124.085px;border: 2px outset rgb(209, 128, 128);cursor: move;z-index: 21;transform: rotate(-7.87307deg);'
+                                'mobile' => 'position: absolute;top: 58%;left: 55%;width: 139.995px;height: 124.085px;border: 2px outset rgb(209, 128, 128);cursor: move;z-index: 21;transform: rotate(-7.87307deg);'
                             ]),
                         ],                        
                     ]
@@ -375,19 +375,28 @@ class CardTemplatesTableSeeder extends Seeder
                             'type' => 'text',
                             'id' => 'title1',
                             'text' => 'Happy',
-                            'css' => json_encode(['desktop' => 'z-index: 39; left: 245px; top: 75px; font-family: Montserrat, sans-serif; font-size: 35px; color: rgb(255, 255, 0); font-weight: normal;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 39; left: 245px; top: 75px; font-family: Montserrat, sans-serif; font-size: 35px; color: rgb(255, 255, 0); font-weight: normal;',
+                                'mobile' => 'z-index: 39; width: 100%; text-align: center; top: 10%; font-family: Montserrat, sans-serif; font-size: 35px; color: rgb(255, 255, 0); font-weight: normal;'
+                            ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title2',
                             'text' => 'Diwali',
-                            'css' => json_encode(['desktop' => 'z-index: 40; left: 208px; top: 95px; font-size: 60px; font-family: Pacifico, sans-serif; color: rgb(255, 255, 0);', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 40; left: 208px; top: 95px; font-size: 60px; font-family: Pacifico, sans-serif; color: rgb(255, 255, 0);',
+                                'mobile' => 'z-index: 40; width: 100%; text-align: center; top: 20%; font-size: 60px; font-family: Pacifico, sans-serif; color: rgb(255, 255, 0);'
+                            ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title3',
                             'text' => 'Your Text Here',
-                            'css' => json_encode(['desktop' => 'z-index: 35; left: 211px; top: 204px; color: rgb(255, 255, 0); font-size: 25px;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 35; left: 211px; top: 204px; color: rgb(255, 255, 0); font-size: 25px;',
+                                'mobile' => 'z-index: 35; width: 100%; text-align: center; top: 45%; color: rgb(255, 255, 0); font-size: 25px;'
+                            ]),
                         ],                     
                     ]
                 ]),
@@ -411,25 +420,37 @@ class CardTemplatesTableSeeder extends Seeder
                             'type' => 'text',
                             'id' => 'title1',
                             'text' => 'Happy Diwali',
-                            'css' => json_encode(['desktop' => 'z-index: 71; left: 24px; top: 51px; color: rgb(218, 165, 32); font-weight: bold; font-family: "Great Vibes", sans-serif; font-size: 45px;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 71; left: 24px; top: 51px; color: rgb(218, 165, 32); font-weight: bold; font-family: "Great Vibes", sans-serif; font-size: 45px;',
+                                'mobile' => 'z-index: 71; width: 100%; text-align: center; top:5%; color: rgb(218, 165, 32); font-weight: bold; font-family: "Great Vibes", sans-serif; font-size: 45px;'
+                            ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title2',
                             'text' => 'Warm Wishes & Gifts for You !',
-                            'css' => json_encode(['desktop' => 'z-index: 37; left: 19px; top: 104px; color: rgb(218, 165, 32); line-height: 3; letter-spacing: 0px; font-family: Merriweather, sans-serif;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 37; left: 19px; top: 104px; color: rgb(218, 165, 32); line-height: 3; letter-spacing: 0px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 37; width: 100%; text-align: center; top: 25%; color: rgb(218, 165, 32); font-family: Merriweather, sans-serif;'
+                            ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title3',
                             'text' => 'From: Add Your Name',
-                            'css' => json_encode(['desktop' => 'z-index: 72; left: 133px; top: 349px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 72; left: 133px; top: 349px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 72; width: 100%; text-align: center; top: 349px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;'
+                            ]),
                         ], 
                         [
                             'type' => 'image',
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/g-user-2.png',
-                            'css' => json_encode(['desktop' => 'position: absolute; top: 292px; left: 15px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 59; border-radius: 50%;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 292px; left: 15px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 59; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 50%; left: 15px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 59; border-radius: 50%;'
+                            ]),
                         ],                   
                     ]
                 ]),
@@ -453,31 +474,46 @@ class CardTemplatesTableSeeder extends Seeder
                             'type' => 'text',
                             'id' => 'title1',
                             'text' => 'Happy Diwali',
-                            'css' => json_encode(['desktop' => 'z-index: 44; left: 310px; top: 94px; color: rgb(255, 255, 0); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 45px;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 44; left: 310px; top: 94px; color: rgb(255, 255, 0); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 45px;',
+                                'mobile' => 'z-index: 44; width: 100%; text-align: center; top: 5%; color: rgb(255, 255, 0); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 45px;'
+                            ]),
                         ],                       
                         [
                             'type' => 'text',
                             'id' => 'title3',
                             'text' => 'From: Add Your Name',
-                            'css' => json_encode(['desktop' => 'z-index: 42; left: 133px; top: 349px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 42; left: 133px; top: 349px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 42; width: 100%; text-align: center; top: 349px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;'
+                            ]),
                         ], 
                         [
                             'type' => 'image',
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/g-user-2.png',
-                            'css' => json_encode(['desktop' => 'position: absolute; top: 292px; left: 15px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 59; border-radius: 50%;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 292px; left: 15px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 59; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 60%; left: 15px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 59; border-radius: 50%;'
+                            ]),
                         ],
                         [
                             'type' => 'image',
                             'id' => 'img2',
                             'src' => '/images/greeting-cards/element/cracker-1.png',
-                            'css' => json_encode(['desktop' => 'position: absolute; top: 275px; left: 440px; width: 183px; height: 137.281px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 46; transform: rotate(10.3277deg);', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 275px; left: 440px; width: 183px; height: 137.281px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 46; transform: rotate(10.3277deg);',
+                                'mobile' => 'position: absolute; top: 60%; left: 50%; width: 183px; height: 137.281px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 46; transform: rotate(10.3277deg);'
+                            ]),
                         ],
                         [
                             'type' => 'image',
                             'id' => 'img3',
                             'src' => '/images/greeting-cards/element/dip-1.gif',
-                            'css' => json_encode(['desktop' => 'position: absolute; top: 180px; left: 346px; width: 137px; height: 104px; border: 9px inset rgb(255, 255, 0); cursor: move; z-index: 47; border-radius: 50%;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 180px; left: 346px; width: 137px; height: 104px; border: 9px inset rgb(255, 255, 0); cursor: move; z-index: 47; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 27%; left: 30%; width: 137px; height: 104px; border: 9px inset rgb(255, 255, 0); cursor: move; z-index: 47; border-radius: 50%;'
+                            ]),
                         ],                  
                     ]
                 ]),
@@ -501,31 +537,46 @@ class CardTemplatesTableSeeder extends Seeder
                             'type' => 'text',
                             'id' => 'title1',
                             'text' => 'Happy',
-                            'css' => json_encode(['desktop' => 'z-index: 34; left: 207px; top: 59px; color: rgb(255, 255, 128); font-weight: bold; font-family: Righteous, sans-serif; font-size: 45px; text-align: center;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 34; left: 207px; top: 59px; color: rgb(255, 255, 128); font-weight: bold; font-family: Righteous, sans-serif; font-size: 45px; text-align: center;',
+                                'mobile' => 'z-index: 34; width: 100%; text-align: center; top: 10%; color: rgb(255, 255, 128); font-weight: bold; font-family: Righteous, sans-serif; font-size: 45px; text-align: center;'
+                            ]),
                         ], 
                         [
                             'type' => 'text',
                             'id' => 'title2',
                             'text' => 'New Year',
-                            'css' => json_encode(['desktop' => 'z-index: 35; left: 187px; top: 126px; color: rgb(255, 255, 128); font-size: 45px; font-family: Righteous, sans-serif;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 35; left: 187px; top: 126px; color: rgb(255, 255, 128); font-size: 45px; font-family: Righteous, sans-serif;',
+                                'mobile' => 'z-index: 35; width: 100%; text-align: center; top: 25%; color: rgb(255, 255, 128); font-size: 45px; font-family: Righteous, sans-serif;'
+                            ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title4',
                             'text' => '2026',
-                            'css' => json_encode(['desktop' => 'z-index: 36; left: 224px; top: 188px; color: rgb(255, 255, 128); font-size: 45px; font-weight: bold; font-family: Poppins, sans-serif;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 36; left: 224px; top: 188px; color: rgb(255, 255, 128); font-size: 45px; font-weight: bold; font-family: Poppins, sans-serif;',
+                                'mobile' => 'z-index: 36; width: 100%; text-align: center; top: 40%; color: rgb(255, 255, 128); font-size: 45px; font-weight: bold; font-family: Poppins, sans-serif;'
+                            ]),
                         ],                     
                         [
                             'type' => 'text',
                             'id' => 'title3',
                             'text' => 'From: Add Your Name',
-                            'css' => json_encode(['desktop' => 'z-index: 79; left: 249px; top: 345px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 79; left: 249px; top: 345px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 79; width: 100%; text-align: center; top: 345px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;'
+                            ]),
                         ], 
                         [
                             'type' => 'image',
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/g-user-2.png',
-                            'css' => json_encode(['desktop' => 'position: absolute; top: 296px; left: 467px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 82; border-radius: 50%;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 296px; left: 467px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 82; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 60%; left: 27%; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 82; border-radius: 50%;'
+                            ]),
                         ],                                       
                     ]
                 ]),
@@ -549,25 +600,37 @@ class CardTemplatesTableSeeder extends Seeder
                             'type' => 'text',
                             'id' => 'title1',
                             'text' => 'Happy New Year 2026',
-                            'css' => json_encode(['desktop' => 'z-index: 78; left: 120px; top: 145px; color: rgb(255, 255, 0); font-weight: bold; font-family: Righteous, sans-serif; font-size: 35px; text-align: center; border-style: none; border-width: 0px; border-color: rgb(255, 255, 255);', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 78; left: 120px; top: 145px; color: rgb(255, 255, 0); font-weight: bold; font-family: Righteous, sans-serif; font-size: 35px; text-align: center; border-style: none; border-width: 0px; border-color: rgb(255, 255, 255);',
+                                'mobile' => 'z-index: 78; top: 5%; color: rgb(255, 255, 0); font-weight: bold; font-family: Righteous, sans-serif; font-size: 35px; text-align: center; border-style: none; border-width: 0px; border-color: rgb(255, 255, 255);'
+                            ]),
                         ], 
                         [
                             'type' => 'text',
                             'id' => 'title2',
                             'text' => 'Cheers to a healthy, happy, and prosperous New Year!',
-                            'css' => json_encode(['desktop' => 'z-index: 83; left: 84px; top: 260px; color: rgb(255, 255, 0); font-size: 15px; font-weight: bold;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 83; left: 84px; top: 260px; color: rgb(255, 255, 0); font-size: 15px; font-weight: bold;', 
+                                'mobile' => 'z-index: 83; width: 100%; text-align: center; top: 50%; color: rgb(255, 255, 0); font-size: 15px; font-weight: bold;'
+                            ]),
                         ],                     
                         [
                             'type' => 'text',
                             'id' => 'title3',
-                            'text' => 'From: Add Your Name',
-                            'css' => json_encode(['desktop' => 'z-index: 79; left: 249px; top: 345px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;', 'mobile' => '']),
+                            'text' => 'Add Your Name',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 79; left: 315px; top: 345px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 79; width: 100%; text-align: center; top: 350px; color: rgb(255, 255, 0); font-family: Lato, sans-serif; font-weight: bold;'
+                            ]),
                         ], 
                         [
                             'type' => 'image',
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/g-user-2.png',
-                            'css' => json_encode(['desktop' => 'position: absolute; top: 296px; left: 467px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 82; border-radius: 50%;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 296px; left: 467px; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 82; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 260px; left: 30%; width: 124px; height: 92px; border: 8px groove rgb(218, 165, 32); cursor: move; z-index: 82; border-radius: 50%;'
+                            ]),
                         ],                                          
                     ]
                 ]),
@@ -591,25 +654,37 @@ class CardTemplatesTableSeeder extends Seeder
                             'type' => 'text',
                             'id' => 'title1',
                             'text' => 'Happy New Year',
-                            'css' => json_encode(['desktop' => 'z-index: 36; left: 163px; top: 54px; color: rgb(218, 165, 32); font-weight: bold; font-family: Merriweather, sans-serif; font-size: 40px;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 36; left: 163px; top: 54px; color: rgb(218, 165, 32); font-weight: bold; font-family: Merriweather, sans-serif; font-size: 40px;',
+                                'mobile' => 'z-index: 36; width: 100%; text-align: center; top: 5%; color: rgb(218, 165, 32); font-weight: bold; font-family: Merriweather, sans-serif; font-size: 40px;'
+                            ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title2',
                             'text' => '2026',
-                            'css' => json_encode(['desktop' => 'z-index: 37; left: 269px; top: 168px; color: rgb(255, 255, 255); font-weight: bold; font-size: 50px; font-family: "Bebas Neue", sans-serif;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 37; left: 269px; top: 168px; color: rgb(255, 255, 255); font-weight: bold; font-size: 50px; font-family: "Bebas Neue", sans-serif;',
+                                'mobile' => 'z-index: 37; width: 100%; text-align: center; top: 50%; color: rgb(255, 255, 255); font-weight: bold; font-size: 50px; font-family: "Bebas Neue", sans-serif;'
+                            ]),
                         ],                       
                         [
                             'type' => 'text',
                             'id' => 'title3',
                             'text' => 'Let\'s Celebrate !',
-                            'css' => json_encode(['desktop' => 'z-index: 25; left: 222px; top: 113px; color: rgb(218, 165, 32); font-family: Pacifico, sans-serif; font-weight: bold; font-size: 30px;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 25; left: 222px; top: 113px; color: rgb(218, 165, 32); font-family: Pacifico, sans-serif; font-weight: bold; font-size: 30px;',
+                                'mobile' => 'z-index: 25; left: 10%; top: 36%; color: rgb(218, 165, 32); font-family: Pacifico, sans-serif; font-weight: bold; font-size: 30px; width: 100%; text-align: center;'
+                            ]),
                         ],
                          [
                             'type' => 'text',
                             'id' => 'title4',
                             'text' => 'Cheers to a New Beginning!  ',
-                            'css' => json_encode(['desktop' => 'z-index: 38; left: 166px; top: 345px; color: rgb(255, 255, 128); font-weight: bold;', 'mobile' => '']),
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 38; left: 166px; top: 345px; color: rgb(255, 255, 128); font-weight: bold;',
+                                'mobile' => 'z-index: 38; width: 100%; text-align: center; top: 345px; color: rgb(255, 255, 128); font-weight: bold;'
+                            ]),
                         ],                                                              
                     ]
                 ]),
