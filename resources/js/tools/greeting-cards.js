@@ -369,6 +369,8 @@ $(document).ready(function() {
 		$(this).addClass('selected');
 		// Hide image action wrapper when text is selected
 		$('.image-action-wrapper').remove();
+		// Always call selectElement to show editor controls
+		selectElement($(this));
 		// Make editable and focus so user can type
 		$(this).attr('contenteditable', 'true');
 		// On mobile, focus may need a delay
