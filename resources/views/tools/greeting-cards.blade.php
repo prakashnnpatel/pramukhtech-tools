@@ -10,6 +10,9 @@
 			width: auto;
 		}
 	}
+	#card-canvas {
+	 touch-action: none;   /* Prevent browser scroll/zoom on touch */
+	}
 </style>
 @endpush
 
