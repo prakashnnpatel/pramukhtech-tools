@@ -10,6 +10,7 @@ export default defineConfig({
                 'resources/sass/frontend.scss',
                 'resources/css/fd-calculator.css',
                 'resources/css/invoice-builder.css',
+                'resources/css/greeting-cards.css',
                 'resources/css/jquery-ui.css',
                 'resources/js/app.js',
                 'resources/js/frontend.js',
