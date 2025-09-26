@@ -183,7 +183,16 @@ if (typeof window.jQuery === 'undefined') {
 $(document).ready(function() {
 	// --- Rotate Text Feature ---
 	var textRotating = false, textRotateStartX, textRotateStartY, textStartAngle = 0;
-	$(document).on('mousedown', '#rotate-text-btn', function(e) {
+	function getEventXY(ev) {
+		if (ev.type.startsWith('touch')) {
+			var t = ev.originalEvent.touches[0] || ev.originalEvent.changedTouches[0];
+			return { x: t.pageX, y: t.pageY };
+		} else {
+			return { x: ev.pageX, y: ev.pageY };
+		}
+	}
+	$(document).on('mousedown touchstart', '#rotate-text-btn', function(e) {
+		var ev = getEventXY(e);
 		if (window.selectedElement && window.selectedElement.hasClass('draggable-text')) {
 			textRotating = true;
 			var $el = window.selectedElement;
@@ -192,8 +201,8 @@ $(document).ready(function() {
 			var height = $el.outerHeight();
 			var centerX = offset.left + width / 2;
 			var centerY = offset.top + height / 2;
-			textRotateStartX = e.pageX - centerX;
-			textRotateStartY = e.pageY - centerY;
+			textRotateStartX = ev.x - centerX;
+			textRotateStartY = ev.y - centerY;
 			var transform = $el.css('transform');
 			if (transform && transform !== 'none') {
 				var values = transform.split('(')[1].split(')')[0].split(',');
@@ -206,22 +215,24 @@ $(document).ready(function() {
 			e.stopPropagation();
 		}
 	});
-	$(document).on('mousemove.rotateText', function(e) {
+	$(document).on('mousemove.rotateText touchmove.rotateText', function(e) {
 		if (textRotating && window.selectedElement && window.selectedElement.hasClass('draggable-text')) {
+			var ev = getEventXY(e);
 			var $el = window.selectedElement;
 			var offset = $el.offset();
 			var width = $el.outerWidth();
 			var height = $el.outerHeight();
 			var centerX = offset.left + width / 2;
 			var centerY = offset.top + height / 2;
-			var x = e.pageX - centerX;
-			var y = e.pageY - centerY;
+			var x = ev.x - centerX;
+			var y = ev.y - centerY;
 			var angle = Math.atan2(y, x) * (180/Math.PI);
 			var rotateDeg = angle - Math.atan2(textRotateStartY, textRotateStartX) * (180/Math.PI) + textStartAngle;
 			$el.css('transform', 'rotate(' + rotateDeg + 'deg)');
+			e.preventDefault();
 		}
 	});
-	$(document).on('mouseup.rotateText', function() {
+	$(document).on('mouseup.rotateText touchend.rotateText touchcancel.rotateText', function() {
 		textRotating = false;
 	});
 	// Main Canvas Border Controls
@@ -530,125 +541,143 @@ $(document).ready(function() {
 			   // --- Resize logic ---
 			   var resizing = false, startX, startY, startW, startH, resizeAxis = null;
 			   var startLeft = 0, startTop = 0;
-			   $resizeHandle.on('mousedown', function(e) {
+			   function getEventXY(ev) {
+				   if (ev.type && ev.type.startsWith('touch')) {
+					   var t = ev.originalEvent.touches[0] || ev.originalEvent.changedTouches[0];
+					   return { x: t.pageX, y: t.pageY };
+				   } else {
+					   return { x: ev.pageX, y: ev.pageY };
+				   }
+			   }
+			   $resizeHandle.on('mousedown touchstart', function(e) {
+				   var ev = getEventXY(e);
 				   resizing = true;
 				   resizeAxis = 'corner';
-				   startX = e.pageX; startY = e.pageY;
+				   startX = ev.x; startY = ev.y;
 				   startW = $img.width(); startH = $img.height();
 				   e.preventDefault();
 				   e.stopPropagation();
 			   });
-			   $resizeLeft.off('mousedown').on('mousedown', function(e) {
+			   $resizeLeft.off('mousedown touchstart').on('mousedown touchstart', function(e) {
+				   var ev = getEventXY(e);
 				   e.preventDefault();
 				   e.stopPropagation();
 				   resizing = true;
 				   resizeAxis = 'left';
-				   startX = e.pageX;
+				   startX = ev.x;
 				   startW = $img.width();
 				   var leftVal = parseInt($img.css('left'));
 				   startLeft = isNaN(leftVal) ? 0 : leftVal;
 			   });
-			   $resizeRight.on('mousedown', function(e) {
+			   $resizeRight.on('mousedown touchstart', function(e) {
+				   var ev = getEventXY(e);
 				   resizing = true;
 				   resizeAxis = 'right';
-				   startX = e.pageX;
+				   startX = ev.x;
 				   startW = $img.width();
 				   e.preventDefault();
 				   e.stopPropagation();
 			   });
-			   $resizeTop.off('mousedown').on('mousedown', function(e) {
+			   $resizeTop.off('mousedown touchstart').on('mousedown touchstart', function(e) {
+				   var ev = getEventXY(e);
 				   e.preventDefault();
 				   e.stopPropagation();
 				   resizing = true;
 				   resizeAxis = 'top';
-				   startY = e.pageY;
+				   startY = ev.y;
 				   startH = $img.height();
 				   var topVal = parseInt($img.css('top'));
 				   startTop = isNaN(topVal) ? 0 : topVal;
 			   });
-			   $resizeBottom.on('mousedown', function(e) {
+			   $resizeBottom.on('mousedown touchstart', function(e) {
+				   var ev = getEventXY(e);
 				   resizing = true;
 				   resizeAxis = 'bottom';
-				   startY = e.pageY;
+				   startY = ev.y;
 				   startH = $img.height();
 				   e.preventDefault();
 				   e.stopPropagation();
 			   });
-			   $(document).on('mousemove.resizer', function(e) {
+			   $(document).on('mousemove.resizer touchmove.resizer', function(e) {
 					if (resizing) {
+					   var ev = getEventXY(e);
 					   if (resizeAxis === 'corner') {
-						   var dx = e.pageX - startX;
-						   var dy = e.pageY - startY;
+						   var dx = ev.x - startX;
+						   var dy = ev.y - startY;
 						   var ratio = startW / startH;
 						   var newW = Math.max(30, startW + dx);
 						   var newH = Math.max(30, newW / ratio);
 						   $img.width(newW).height(newH);
 					   } else if (resizeAxis === 'left') {
-						   var dx = e.pageX - startX;
+						   var dx = ev.x - startX;
 						   var newW = Math.max(30, startW - dx);
 						   var newLeft = startLeft + dx;
 						   if (newW >= 30) {
 							   $img.width(newW).css('left', newLeft + 'px');
 						   }
 					   } else if (resizeAxis === 'right') {
-						   var dx = e.pageX - startX;
+						   var dx = ev.x - startX;
 						   var newW = Math.max(30, startW + dx);
 						   $img.width(newW);
 					   } else if (resizeAxis === 'top') {
-						   var dy = e.pageY - startY;
+						   var dy = ev.y - startY;
 						   var newH = Math.max(30, startH - dy);
 						   var newTop = startTop + dy;
 						   if (newH >= 30) {
 							   $img.height(newH).css('top', newTop + 'px');
 						   }
 					   } else if (resizeAxis === 'bottom') {
-						   var dy = e.pageY - startY;
+						   var dy = ev.y - startY;
 						   var newH = Math.max(30, startH + dy);
 						   $img.height(newH);
 					   }
 					   updateHandlePosition();
+					   e.preventDefault();
 				   }
-			   }).on('mouseup.resizer', function() {
+			   }).on('mouseup.resizer touchend.resizer touchcancel.resizer', function() {
 				   resizing = false;
 				   resizeAxis = null;
 			   });
-			// Rotate logic
-			var rotating = false, rotateStartX, rotateStartY, startAngle = 0;
-			$rotateHandle.on('mousedown', function(e) {
-				rotating = true;
-				var offset = $img.offset();
-				var centerX = offset.left + $img.outerWidth()/2;
-				var centerY = offset.top + $img.outerHeight()/2;
-				rotateStartX = e.pageX - centerX;
-				rotateStartY = e.pageY - centerY;
-				var transform = $img.css('transform');
-				if (transform && transform !== 'none') {
-					var values = transform.split('(')[1].split(')')[0].split(',');
-					var a = values[0], b = values[1];
-					startAngle = Math.round(Math.atan2(b, a) * (180/Math.PI));
-				} else {
-					startAngle = 0;
-				}
-				e.preventDefault();
-				e.stopPropagation();
-			});
-			$(document).on('mousemove.rotate', function(e) {
-				if (rotating) {
-					var offset = $img.offset();
-					var centerX = offset.left + $img.outerWidth()/2;
-					var centerY = offset.top + $img.outerHeight()/2;
-					var x = e.pageX - centerX;
-					var y = e.pageY - centerY;
-					var angle = Math.atan2(y, x) * (180/Math.PI);
-					var rotateDeg = angle - Math.atan2(rotateStartY, rotateStartX) * (180/Math.PI) + startAngle;
-					$img.css('transform', 'rotate(' + rotateDeg + 'deg)');
-					updateHandlePosition();
-				}
-			}).on('mouseup.rotate', function() {
-				rotating = false;
-				// Ensure handles are visible and positioned after rotation
-				setTimeout(updateHandlePosition, 10);
-			});
+			   // Rotate logic (mouse and touch)
+			   var rotating = false, rotateStartX, rotateStartY, startAngle = 0;
+			   $rotateHandle.on('mousedown touchstart', function(e) {
+				   var ev = (e.type.startsWith('touch')) ? (e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]) : e;
+				   rotating = true;
+				   var offset = $img.offset();
+				   var centerX = offset.left + $img.outerWidth()/2;
+				   var centerY = offset.top + $img.outerHeight()/2;
+				   rotateStartX = ev.pageX - centerX;
+				   rotateStartY = ev.pageY - centerY;
+				   var transform = $img.css('transform');
+				   if (transform && transform !== 'none') {
+					   var values = transform.split('(')[1].split(')')[0].split(',');
+					   var a = values[0], b = values[1];
+					   startAngle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+				   } else {
+					   startAngle = 0;
+				   }
+				   e.preventDefault();
+				   e.stopPropagation();
+			   });
+			   $(document).on('mousemove.rotate touchmove.rotate', function(e) {
+				   if (rotating) {
+					   var ev = (e.type && e.type.startsWith('touch')) ? (e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]) : e;
+					   var offset = $img.offset();
+					   var centerX = offset.left + $img.outerWidth()/2;
+					   var centerY = offset.top + $img.outerHeight()/2;
+					   var x = ev.pageX - centerX;
+					   var y = ev.pageY - centerY;
+					   var angle = Math.atan2(y, x) * (180/Math.PI);
+					   var rotateDeg = angle - Math.atan2(rotateStartY, rotateStartX) * (180/Math.PI) + startAngle;
+					   $img.css('transform', 'rotate(' + rotateDeg + 'deg)');
+					   updateHandlePosition();
+					   e.preventDefault();
+				   }
+			   }).on('mouseup.rotate touchend.rotate touchcancel.rotate', function() {
+				   rotating = false;
+				   // Ensure handles are visible and positioned after rotation
+				   setTimeout(updateHandlePosition, 10);
+			   });
 			// Also update handle position if transform changes (rotation)
 			var observerTransform = new MutationObserver(updateHandlePosition);
 			observerTransform.observe($img[0], { attributes: true, attributeFilter: ['style', 'transform'] });
@@ -998,9 +1027,11 @@ $(document).ready(function() {
 		}
 	});
 
-	// Make elements draggable
+	// Make elements draggable (mouse and touch support)
 	function makeDraggable($el) {
 		var isDragging = false, startX, startY, origX, origY;
+
+		// Mouse events
 		$el.on('mousedown', function(e) {
 			isDragging = true;
 			startX = e.pageX;
@@ -1017,6 +1048,31 @@ $(document).ready(function() {
 				$el.css({ left: origX + dx, top: origY + dy });
 			}
 		}).on('mouseup', function() {
+			isDragging = false;
+		});
+
+		// Touch events
+		$el.on('touchstart', function(e) {
+			if (e.originalEvent.touches.length === 1) {
+				isDragging = true;
+				var touch = e.originalEvent.touches[0];
+				startX = touch.pageX;
+				startY = touch.pageY;
+				origX = parseInt($el.css('left'));
+				origY = parseInt($el.css('top'));
+				$el.css('z-index', zIndex++);
+				e.preventDefault();
+			}
+		});
+		$(document).on('touchmove', function(e) {
+			if (isDragging && e.originalEvent.touches.length === 1) {
+				var touch = e.originalEvent.touches[0];
+				var dx = touch.pageX - startX;
+				var dy = touch.pageY - startY;
+				$el.css({ left: origX + dx, top: origY + dy });
+				e.preventDefault();
+			}
+		}).on('touchend touchcancel', function() {
 			isDragging = false;
 		});
 	}
