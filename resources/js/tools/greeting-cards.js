@@ -803,10 +803,21 @@ $(document).ready(function() {
 							$img.addClass('selected');
 						}
 						// Show resize handle only on click (to re-focus if needed)
-						$img.on('click', function(e) {
+						// Show controls on click or touchstart (mobile)
+						$img.on('click touchstart', function(e) {
+							// Prevent duplicate firing on touch devices
+							if (e.type === 'touchstart') {
+								// Only handle first touch
+								if (e.originalEvent.touches && e.originalEvent.touches.length > 1) return;
+								// Prevent simulated mouse event after touch
+								$(this).data('touched', true);
+							} else if ($(this).data('touched')) {
+								$(this).data('touched', false);
+								return;
+							}
 							// Remove selection from all images
 							$('.draggable-img').removeClass('selected');
-							// Add selection to clicked image
+							// Add selection to this image
 							$(this).addClass('selected');
 							makeResizable($(this));
 							// Show curve toolbar for this image
