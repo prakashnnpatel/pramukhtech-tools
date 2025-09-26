@@ -1080,7 +1080,7 @@ $(document).ready(function() {
 		}
 		html2canvas(document.getElementById('card-canvas')).then(function(canvas) {
 			var link = document.createElement('a');
-			link.download = 'greeting-card.png';
+			link.download = 'ToolHubspot-Greeting-Card.png';
 			link.href = canvas.toDataURL('image/png');
 			link.click();
 

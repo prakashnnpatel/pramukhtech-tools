@@ -94,7 +94,7 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<p><b>🎉 Celebrate Every Occasion with ToolHubSpot's Free Online Card Maker 🎉</b></p>
-								<p>From birthdays to business events, ToolHubSpot makes it effortless to design personalized greeting cards that leave a lasting impression. Whether you're celebrating a Birthday, Anniversary, Wedding, Love & Romance, Thank You, Congratulations, Festival, Sympathy, Friendship, Invitation, Farewell, Apology, Humor, Spiritual, Business, Get Well Soon, New Baby, Graduation, Retirement, Mother's Day, Father's Day, Valentine's Day, Easter, Christmas, New Year, Halloween, Diwali, Holi, Ramadan, Eid, or any special moment—you'll find the perfect template to match.</p>
+								<p>From birthdays to business events, ToolHubSpot makes it effortless to design personalized greeting cards that leave a lasting impression. Whether you're celebrating a Birthday, Anniversary, Wedding, Love & Romance, Thank You, Congratulations, Festival, Sympathy, Friendship, Invitation, Farewell, Apology, Humor, Spiritual, Business, Get Well Soon, New Baby, Graduation, Retirement, Mother's Day, Father's Day, Valentine's Day, Easter, Christmas, New Year, Halloween, Diwali, Holi, Ramadan, Eid, or any special moment - you'll find the perfect template to match.</p>
 
 								
 								<p>Pick a template, personalize it with your own message, and let your creativity shine. Designing greeting cards has never been this fun, fast, and stress-free!</p>
