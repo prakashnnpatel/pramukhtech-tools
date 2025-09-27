@@ -772,7 +772,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/couple-1.jpg',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 18; left: 203px; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);',
+                                'desktop' => 'z-index: 6; left: 163px; top: 91px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32); position: absolute; width: 226.6px; height: 226.6px; border: 10px double rgb(218, 165, 32);',
                                 'mobile' => 'position: absolute; top: 91px; left: 12%; width: 230px; height: 233px; border: 10px double rgb(218, 165, 32); cursor: move; z-index: 12;'
                             ]),
                         ],                                                                                   
