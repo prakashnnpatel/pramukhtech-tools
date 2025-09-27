@@ -694,6 +694,150 @@ class CardTemplatesTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'title' => 'Anniversary Wishes',
+                'slug' => 'anniversary-wishes',
+                'thumbnail' => '/images/greeting-cards/anniversary-wishes-thumb.png',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+                'description' => 'Anniversary',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/anniversary-1.jpeg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Happy',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 52; left: 354px; top: 55px; font-size: 40px; font-family: Lobster, sans-serif; color: rgb(255, 0, 0);',
+                                'mobile' => 'z-index: 52; left: 34%; top: 55px; font-size: 40px; font-family: Lobster, sans-serif; color: rgb(255, 0, 0);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Anniversary',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 51; left: 308px; top: 111px; font-size: 40px; font-family: Lobster, sans-serif; color: rgb(255, 0, 0);',
+                                'mobile' => 'z-index: 51; left: 20%; top: 111px; font-size: 40px; font-family: Lobster, sans-serif; color: rgb(255, 0, 0);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'to my and only one !',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 50; left: 323px; top: 178px; font-family: Pacifico, sans-serif;',
+                                'mobile' => 'z-index: 50; left: 20%; top: 178px; font-family: Pacifico, sans-serif;'
+                            ]),
+                        ],                                                                                     
+                    ]
+                ]),
+                'seo_title' => "{title} - Free Editable Celebration Card Template | ToolHubSpot",
+                "seo_description" => "Explore beautiful anniversary wishes & greeting cards — heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
+                "seo_keywords" => "anniversary wishes,anniversary greeting cards, romantic anniversary messages,anniversary quotes",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Happy Anniversary',
+                'slug' => 'happy-anniversary',
+                'thumbnail' => '/images/greeting-cards/happy-anniversary-thumb.png',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+                'description' => 'Anniversary',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/anniversary-2.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Happy Anniversary',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 20; left: 143px; top: 25px; color: rgb(218, 165, 32); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 40px;',
+                                'mobile' => 'z-index: 20; left: 18%; top: 37px; color: rgb(218, 165, 32); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 27px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'my one and only',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 18; left: 203px; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);',
+                                'mobile' => 'z-index: 18; left: 26%; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/couple-1.jpg',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 18; left: 203px; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);',
+                                'mobile' => 'position: absolute; top: 91px; left: 12%; width: 230px; height: 233px; border: 10px double rgb(218, 165, 32); cursor: move; z-index: 12;'
+                            ]),
+                        ],                                                                                   
+                    ]
+                ]),
+                'seo_title' => "{title} - Free Editable Celebration Card Template | ToolHubSpot",
+                 "seo_description" => "Explore beautiful anniversary wishes & greeting cards — heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
+                "seo_keywords" => "anniversary wishes,anniversary greeting cards, romantic anniversary messages,anniversary quotes",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Anniversary Celebration',
+                'slug' => 'anniversary-celebration',
+                'thumbnail' => '/images/greeting-cards/anniversary-celebration-thumb.png',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+                'description' => 'Anniversary',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/anniversary-3.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'To The Best Decision',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 9; left: 153px; top: 20px; text-align: center; font-family: "Courier New", sans-serif; color: rgb(64, 0, 64); font-weight: bold;',
+                                'mobile' => 'z-index: 32; left: 6%; top: 21px; text-align: center; font-family: "Courier New", sans-serif; color: rgb(64, 0, 64); font-weight: bold;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'I Ever Made',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 15; left: 204px; top: 51px; font-family: "Courier New", sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 1; left: 23%; top: 51px; font-family: "Courier New", sans-serif; font-weight: bold;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Happy Anniversary',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 6; left: 85px; top: 297px; color: rgb(255, 0, 0); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 40px;',
+                                'mobile' => 'z-index: 6; left: 16%; top: 297px; color: rgb(255, 0, 0); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 32px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/couple-2.jpg',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 102px; left: 169px; width: 200px; height: 189px; border: 10px ridge rgb(255, 0, 0); cursor: move; z-index: 31; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 102px; left: 17%; width: 200px; height: 189px; border: 10px ridge rgb(255, 0, 0); cursor: move; z-index: 31; border-radius: 50%;'
+                            ]),
+                        ],                                                                                      
+                    ]
+                ]),
+                'seo_title' => "{title} - Free Editable Celebration Card Template | ToolHubSpot",
+                 "seo_description" => "Explore beautiful anniversary wishes & greeting cards — heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
+                "seo_keywords" => "anniversary wishes,anniversary greeting cards, romantic anniversary messages,anniversary quotes",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }
