@@ -32,7 +32,6 @@ class CardTemplateController extends Controller
         }
         $cards = $cards->paginate(12)->appends($request->all());
 
-
         $currentTool = Tools::select(["id", "slug","category"])->where("slug",'cards')->first();
         
         return view("tools.index", ["toolKey" => $currentTool->slug, "tool_id" => $currentTool->id, "cards" => $cards, "category" => $category, "param" => $request->all()]);

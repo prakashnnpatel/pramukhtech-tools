@@ -98,33 +98,40 @@
 						<div class="row">
 							<div class="col-lg-3">
 								<label for="main-canvas-bg-color" class="form-label">Main Background</label>
-								<input type="color" id="main-canvas-bg-color" value="#667eea" style="padding: 0; border: none; background: none; cursor: pointer;" class="form-control">
+								<input type="color" id="main-canvas-bg-color" value="{{$card->template_data['bgColor'] ?? '#667eea'}}" style="padding: 0; border: none; background: none; cursor: pointer;" class="form-control">
 							</div>
 							<div class="col-lg-3">
 								<label for="main-canvas-border-color" class="form-label">Border Color</label>
-								<input type="color" id="main-canvas-border-color" value="#cccccc" style="padding: 0; border: none; background: none; cursor: pointer;" class="form-control">
+								<input type="color" id="main-canvas-border-color" value="{{$card->template_data['main-border-color'] ?? '#cccccc'}}" style="padding: 0; border: none; background: none; cursor: pointer;" class="form-control">
 							</div>
 							<div class="col-lg-3">
 								<label for="main-canvas-border-width" class="form-label">Border Width</label>
 								<div class="input-group-custom">
 									<div class="input-wrapper">
-										<input type="number" class="form-control custom-input" id="main-canvas-border-width" value="1" min="0" max="30">
+										<input type="number" class="form-control custom-input" id="main-canvas-border-width" value="{{$card->template_data['main-border-width'] ?? '1'}}" min="0" max="30">
 										<span class="input-suffix mr-4">px</span>
 									</div>                                    
 								</div>
 							</div>
 							<div class="col-lg-3">
 								<label for="main-canvas-border-style" class="form-label">Border Style</label>
+								<?php
+									$borderStyleOptions = [
+										'solid' => 'Solid',
+										'dashed' => 'Dashed',
+										'dotted' => 'Dotted',
+										'double' => 'Double',
+										'groove' => 'Groove',
+										'ridge' => 'Ridge',
+										'inset' => 'Inset',
+										'outset' => 'Outset',
+										'none' => 'None',
+									];
+								?>
 								<select id="main-canvas-border-style" class="form-select">
-									<option value="solid">Solid</option>
-									<option value="dashed">Dashed</option>
-									<option value="dotted">Dotted</option>
-									<option value="double">Double</option>
-									<option value="groove">Groove</option>
-									<option value="ridge">Ridge</option>
-									<option value="inset">Inset</option>
-									<option value="outset">Outset</option>
-									<option value="none">None</option>
+									@foreach($borderStyleOptions as $value => $label)
+										<option value="{{ $value }}" @if(!empty($card->template_data['main-border-style']) && $card->template_data['main-border-style'] == $value) selected @endif>{{ $label }}</option>
+									@endforeach
 								</select>
 							</div>
 							<div class="col-lg-3">

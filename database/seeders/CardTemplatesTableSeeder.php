@@ -702,6 +702,9 @@ class CardTemplatesTableSeeder extends Seeder
                 'description' => 'Anniversary',
                 'template_data' => json_encode([
                     'bgColor' => '',
+                    "main-border-width" => "10",
+                    "main-border-color" => "#0e989a",
+                    "main-border-style" => "double",
                     'bgImage' => "/images/greeting-cards/backgrounds/anniversary-1.jpeg",
                     'elements' => [
                         [
@@ -709,8 +712,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'title1',
                             'text' => 'Happy',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 52; left: 354px; top: 55px; font-size: 40px; font-family: Lobster, sans-serif; color: rgb(255, 0, 0);',
-                                'mobile' => 'z-index: 52; left: 34%; top: 55px; font-size: 40px; font-family: Lobster, sans-serif; color: rgb(255, 0, 0);'
+                                'desktop' => 'z-index: 52; left: 354px; top: 55px; font-size: 40px; font-family: Lobster, sans-serif; color: #1A939B',
+                                'mobile' => 'z-index: 52; left: 34%; top: 55px; font-size: 40px; font-family: Lobster, sans-serif; color:#1A939B'
                             ]),
                         ],
                         [
@@ -718,8 +721,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'title2',
                             'text' => 'Anniversary',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 51; left: 308px; top: 111px; font-size: 40px; font-family: Lobster, sans-serif; color: rgb(255, 0, 0);',
-                                'mobile' => 'z-index: 51; left: 20%; top: 111px; font-size: 40px; font-family: Lobster, sans-serif; color: rgb(255, 0, 0);'
+                                'desktop' => 'z-index: 51; left: 308px; top: 111px; font-size: 40px; font-family: Lobster, sans-serif; color: #1A939B;',
+                                'mobile' => 'z-index: 51; left: 20%; top: 111px; font-size: 40px; font-family: Lobster, sans-serif; color: #1A939B;'
                             ]),
                         ],
                         [
@@ -747,6 +750,9 @@ class CardTemplatesTableSeeder extends Seeder
                 'description' => 'Anniversary',
                 'template_data' => json_encode([
                     'bgColor' => '',
+                    "main-border-width" => "10",
+                    "main-border-color" => "#f5e6c2",
+                    "main-border-style" => "ridge",
                     'bgImage' => "/images/greeting-cards/backgrounds/anniversary-2.jpg",
                     'elements' => [
                         [
@@ -761,9 +767,9 @@ class CardTemplatesTableSeeder extends Seeder
                         [
                             'type' => 'text',
                             'id' => 'title2',
-                            'text' => 'my one and only',
+                            'text' => 'I Love you more every year',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 18; left: 203px; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);',
+                                'desktop' => 'z-index: 18; left: 30%; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);',
                                 'mobile' => 'z-index: 18; left: 26%; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);'
                             ]),
                         ],
@@ -772,7 +778,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/couple-1.jpg',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 1; left: 163px; top: 91px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32); position: absolute; width: 226.6px; height: 226.6px; border: 10px double rgb(218, 165, 32);',
+                                'desktop' => 'z-index: 1; left: 30%; top: 91px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32); position: absolute; width: 226.6px; height: 226.6px; border: 10px double rgb(218, 165, 32);',
                                 'mobile' => 'position: absolute; top: 91px; left: 12%; width: 230px; height: 233px; border: 10px double rgb(218, 165, 32); cursor: move; z-index: 12;'
                             ]),
                         ],                                                                                   
@@ -817,8 +823,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'title2',
                             'text' => 'Happy Anniversary',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 6; left: 85px; top: 297px; color: rgb(255, 0, 0); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 40px;',
-                                'mobile' => 'z-index: 6; left: 16%; top: 297px; color: rgb(255, 0, 0); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 32px;'
+                                'desktop' => 'z-index: 6; left: 85px; top: 297px; color: rgb(234, 87, 87); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 40px;',
+                                'mobile' => 'z-index: 6; left: 16%; top: 297px; color: rgb(234, 87, 87); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 32px;'
                             ]),
                         ],
                         [
@@ -826,8 +832,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/couple-2.jpg',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; top: 102px; left: 169px; width: 200px; height: 189px; border: 10px ridge rgb(255, 0, 0); cursor: move; z-index: 31; border-radius: 50%;',
-                                'mobile' => 'position: absolute; top: 102px; left: 17%; width: 200px; height: 189px; border: 10px ridge rgb(255, 0, 0); cursor: move; z-index: 31; border-radius: 50%;'
+                                'desktop' => 'position: absolute; top: 102px; left: 169px; width: 200px; height: 189px; border: 10px ridge rgb(252, 166, 166); cursor: move; z-index: 31; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 102px; left: 17%; width: 200px; height: 189px; border: 10px ridge rgb(252, 166, 166); cursor: move; z-index: 31; border-radius: 50%;'
                             ]),
                         ],                                                                                      
                     ]
