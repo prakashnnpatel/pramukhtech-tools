@@ -703,7 +703,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'template_data' => json_encode([
                     'bgColor' => '',
                     "main-border-width" => "10",
-                    "main-border-color" => "#0e989a",
+                    "main-border-color" => "#7CADB2",
                     "main-border-style" => "double",
                     'bgImage' => "/images/greeting-cards/backgrounds/anniversary-1.jpeg",
                     'elements' => [
