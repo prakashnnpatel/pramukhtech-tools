@@ -736,8 +736,8 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                                                                                     
                     ]
                 ]),
-                'seo_title' => "{title} - Free Editable Celebration Card Template | ToolHubSpot",
-                "seo_description" => "Explore beautiful anniversary wishes & greeting cards — heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
+                "seo_title" => "{title} - Free Editable Anniversary Card | ToolHubSpot",
+                "seo_description" => "Explore beautiful anniversary wishes & greeting cards - heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
                 "seo_keywords" => "anniversary wishes,anniversary greeting cards, romantic anniversary messages,anniversary quotes",
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -760,8 +760,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'title1',
                             'text' => 'Happy Anniversary',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 20; left: 143px; top: 25px; color: rgb(218, 165, 32); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 40px;',
-                                'mobile' => 'z-index: 20; left: 18%; top: 37px; color: rgb(218, 165, 32); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 27px;'
+                                'desktop' => 'z-index: 20; width:100%; text-align: center; top: 25px; color: rgb(218, 165, 32); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 40px;',
+                                'mobile' => 'z-index: 20; width:100%; text-align: center; top: 37px; color: rgb(218, 165, 32); font-weight: bold; font-family: "Dancing Script", sans-serif; font-size: 27px;'
                             ]),
                         ],
                         [
@@ -769,8 +769,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'title2',
                             'text' => 'I Love you more every year',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 18; left: 30%; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);',
-                                'mobile' => 'z-index: 18; left: 26%; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);'
+                                'desktop' => 'z-index: 18; width:100%; text-align: center; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);',
+                                'mobile' => 'z-index: 18; width:100%; text-align: center; top: 323px; font-family: Pacifico, sans-serif; color: rgb(218, 165, 32);'
                             ]),
                         ],
                         [
@@ -784,8 +784,8 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                                                                                   
                     ]
                 ]),
-                'seo_title' => "{title} - Free Editable Celebration Card Template | ToolHubSpot",
-                 "seo_description" => "Explore beautiful anniversary wishes & greeting cards — heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
+                "seo_title" => "{title} - Free Editable Anniversary Card | ToolHubSpot",
+                "seo_description" => "Explore beautiful anniversary wishes & greeting cards - heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
                 "seo_keywords" => "anniversary wishes,anniversary greeting cards, romantic anniversary messages,anniversary quotes",
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -805,8 +805,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'title1',
                             'text' => 'To The Best Decision',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 9; left: 153px; top: 20px; text-align: center; font-family: "Courier New", sans-serif; color: rgb(64, 0, 64); font-weight: bold;',
-                                'mobile' => 'z-index: 32; left: 6%; top: 21px; text-align: center; font-family: "Courier New", sans-serif; color: rgb(64, 0, 64); font-weight: bold;'
+                                'desktop' => 'z-index: 9; width:100%; text-align: center; top: 20px; text-align: center; font-family: "Courier New", sans-serif; color: rgb(64, 0, 64); font-weight: bold;',
+                                'mobile' => 'z-index: 32; width:100%; text-align: center; top: 21px; text-align: center; font-family: "Courier New", sans-serif; color: rgb(64, 0, 64); font-weight: bold;'
                             ]),
                         ],
                         [
@@ -814,8 +814,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'title3',
                             'text' => 'I Ever Made',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 15; left: 204px; top: 51px; font-family: "Courier New", sans-serif; font-weight: bold;',
-                                'mobile' => 'z-index: 1; left: 23%; top: 51px; font-family: "Courier New", sans-serif; font-weight: bold;'
+                                'desktop' => 'z-index: 15; width:100%; text-align: center; top: 51px; font-family: "Courier New", sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 1; width:100%; text-align: center; top: 51px; font-family: "Courier New", sans-serif; font-weight: bold;'
                             ]),
                         ],
                         [
@@ -823,8 +823,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'title2',
                             'text' => 'Happy Anniversary',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 6; left: 85px; top: 297px; color: rgb(234, 87, 87); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 40px;',
-                                'mobile' => 'z-index: 6; left: 16%; top: 297px; color: rgb(234, 87, 87); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 32px;'
+                                'desktop' => 'z-index: 6; top: 297px; color: rgb(234, 87, 87); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 40px; width:100%; text-align: center;',
+                                'mobile' => 'z-index: 6; top: 297px; color: rgb(234, 87, 87); font-weight: bold; font-family: "Courier New", sans-serif; font-size: 32px; width:100%; text-align: center;'
                             ]),
                         ],
                         [
@@ -832,15 +832,61 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'img1',
                             'src' => '/images/greeting-cards/element/couple-2.jpg',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; top: 102px; left: 169px; width: 200px; height: 189px; border: 10px ridge rgb(252, 166, 166); cursor: move; z-index: 31; border-radius: 50%;',
+                                'desktop' => 'position: absolute; top: 102px; left: 33%; width: 200px; height: 189px; border: 10px ridge rgb(252, 166, 166); cursor: move; z-index: 31; border-radius: 50%;',
                                 'mobile' => 'position: absolute; top: 102px; left: 17%; width: 200px; height: 189px; border: 10px ridge rgb(252, 166, 166); cursor: move; z-index: 31; border-radius: 50%;'
                             ]),
                         ],                                                                                      
                     ]
                 ]),
-                'seo_title' => "{title} - Free Editable Celebration Card Template | ToolHubSpot",
-                 "seo_description" => "Explore beautiful anniversary wishes & greeting cards — heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
+                "seo_title" => "{title} - Free Editable Anniversary Card | ToolHubSpot",
+                "seo_description" => "Explore beautiful anniversary wishes & greeting cards - heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
                 "seo_keywords" => "anniversary wishes,anniversary greeting cards, romantic anniversary messages,anniversary quotes",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Born to be mine',
+                'slug' => 'born-to-be-mine',
+                'thumbnail' => '/images/greeting-cards/born-to-be-mine-thumb.png',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+                'description' => 'Anniversary',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/love-4.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "From the very first moment, it feels like destiny whispered the truth, you were born to be mine, and I'll spend forever proving it.",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 18; width: 100%; text-align: center; top: 441px;font-family: &quot;Times New Roman&quot;, sans-serif;color: rgb(238, 104, 104); font-size: 15px;',
+                                'mobile' => 'z-index: 5;width: 100%;text-align: center;top: 425px;color: rgb(238, 104, 104);font-size: 14px;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Happy Anniversary',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 6; top: 11px; color: rgb(234, 87, 87); font-weight: bold; font-family: Lobster, sans-serif; font-size: 40px; width:100%; text-align: center;',
+                                'mobile' => 'z-index: 6; top: 2%; color: rgb(234, 87, 87); font-weight: bold; font-family: Lobster, sans-serif; font-size: 28px; width:100%; text-align: center;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/couple-2.jpg',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 157px; left: 202px; width: 185.986px; height: 175.84px; border: 10px ridge rgb(252, 166, 166); cursor: move; z-index: 21; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 167px; left: 57px; width: 185.986px; height: 175.84px; border: 10px ridge rgb(252, 166, 166); cursor: move; z-index: 3; border-radius: 50%;'
+                            ]),
+                        ],                                                                                      
+                    ]
+                ]),
+                "seo_title" => "Born to Be Mine Anniversary Greeting Card | Romantic Love Card Online",
+                "seo_description" => "Celebrate love with the Born to Be Mine anniversary greeting card. A perfect romantic card to express your forever bond - ideal for anniversaries, couples, and special occasions.",
+                "seo_keywords" => "born to be mine card, anniversary greeting card, romantic love card, online greeting cards, love anniversary card, forever love greeting, digital greeting card, couples anniversary card",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

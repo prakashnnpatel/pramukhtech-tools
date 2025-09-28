@@ -138,7 +138,7 @@
 								<label for="main-canvas-height" class="form-label">Card Height</label>
 								<div class="input-group-custom">
 									<div class="input-wrapper">
-										<input type="number" class="form-control custom-input" id="main-canvas-height" value="400" min="100" max="1200">
+										<input type="number" class="form-control custom-input" id="main-canvas-height" value="{{$card->template_data['main-card-height']??400}}" min="100" max="1200">
 										<span class="input-suffix mr-4">px</span>
 									</div>
 								</div>
@@ -147,7 +147,7 @@
 								<label for="main-canvas-width" class="form-label">Card Width</label>
 								<div class="input-group-custom">
 									<div class="input-wrapper">
-										<input type="number" class="form-control custom-input" id="main-canvas-width" value="600" min="100" max="1200">
+										<input type="number" class="form-control custom-input" id="main-canvas-width" value="{{$card->template_data['main-card-width']??600}}" min="100" max="1200">
 										<span class="input-suffix mr-4">px</span>
 									</div>
 								</div>

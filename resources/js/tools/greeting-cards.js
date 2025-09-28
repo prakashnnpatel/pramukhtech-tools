@@ -240,6 +240,8 @@ $(document).ready(function() {
 		var color = $('#main-canvas-border-color').val();
 		var width = $('#main-canvas-border-width').val();
 		var style = $('#main-canvas-border-style').val();
+		var card_height = $('#main-canvas-height').val();
+		var card_width = $('#main-canvas-width').val();
 		// Remove any existing border style first to avoid conflicts
 		$('#card-canvas').css({
 			'border-color': '',
@@ -253,6 +255,8 @@ $(document).ready(function() {
 		} else {
 			$('#card-canvas').css('border', 'none');
 		}
+		$('#card-canvas').css('height', card_height);
+		$('#card-canvas').css('width', card_width);
 	}
 
 	$('#main-canvas-border-color, #main-canvas-border-width, #main-canvas-border-style').on('input change', function() {
