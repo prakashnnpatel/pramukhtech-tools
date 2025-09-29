@@ -838,9 +838,55 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                                                                                      
                     ]
                 ]),
-                "seo_title" => "{title} - Free Editable Anniversary Card | ToolHubSpot",
+                "seo_title" => "Free Anniversary Card - {title} | ToolHubSpot",
                 "seo_description" => "Explore beautiful anniversary wishes & greeting cards - heartfelt messages, romantic lines & creative quotes perfect for every couple's milestone celebration.",
                 "seo_keywords" => "anniversary wishes,anniversary greeting cards, romantic anniversary messages,anniversary quotes",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Big Heart',
+                'slug' => 'big-heart',
+                'thumbnail' => '/images/greeting-cards/big-heart-thumb.png',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+                'description' => 'Anniversary',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/love-13.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Cheers to another year of wonderful moments!",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 9;width: 100%;text-align: center;top: 373px;color: rgb(234, 67, 67);font-size: 15px;',
+                                'mobile' => 'z-index: 9;width: 100%;text-align: center;top: 342px;color: rgb(234, 67, 67);font-size: 15px;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'I Love You Forever',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 4;top: 84px;color: rgb(234, 67, 67);font-weight: bold;font-family: Lobster, sans-serif;font-size: 30px;width: 100%;text-align: center;',
+                                'mobile' => 'z-index: 4;top: 20%;color: rgb(234, 67, 67);font-weight: bold;font-family: Lobster, sans-serif;font-size: 30px;width: 100%;text-align: center;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/couple-3.png',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 12; width: 206.472px; text-align: center; top: 153px; color: rgb(238, 104, 104); font-size: 15px; left: 193px; position: absolute; height: 206.472px; transform: rotate(-5.49787deg);',
+                                'mobile' => 'z-index: 4;width: 163.455px;text-align: center;top: 33%;color: rgb(238, 104, 104);font-size: 15px;left: 64px;position: absolute;height: 163.455px;transform: rotate(-5.49787deg);'
+                            ]),
+                        ],
+                    ]
+                ]),
+                "seo_title" => "Anniversary Greeting Cards - Beautiful Online Wishes & Messages",
+                "seo_description" => "Explore free anniversary greeting cards online. Send romantic, funny, and heartfelt wishes to celebrate love, marriage, and special moments with customizable designs.",
+                "seo_keywords" => "Anniversary Greeting Cards, Wedding Anniversary Cards, Happy Anniversary Wishes, Romantic Anniversary Messages, Free Online Greeting Cards, Marriage Anniversary Greetings",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -890,6 +936,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            
         ]);
     }
 }
