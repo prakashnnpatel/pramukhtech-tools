@@ -12,8 +12,8 @@ class CardTemplatesTableSeeder extends Seeder
 {
     public function run()
     {
-        CardTemplates::truncate();
-        DB::table('card_templates')->insert([
+        /*CardTemplates::truncate();
+        $cards = [
             [
                 'title' => 'New Blank Card',
                 'slug' => 'new-blank-card',
@@ -935,7 +935,10 @@ class CardTemplatesTableSeeder extends Seeder
                 "seo_keywords" => "born to be mine card, anniversary greeting card, romantic love card, online greeting cards, love anniversary card, forever love greeting, digital greeting card, couples anniversary card",
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],
+            ],                     
+        ];*/
+
+         $cards = [
             [
                 'title' => 'Happy Valentine Day',
                 'slug' => 'happy-valentine-day',
@@ -1118,7 +1121,68 @@ class CardTemplatesTableSeeder extends Seeder
                 "seo_keywords" => "valentine card maker online, free editable valentine cards, personalized valentine card templates, custom valentine greeting card, valentine card with photo and text, create valentine card online free, printable valentine cards editable, valentine card background editor, valentine wishes card design free, valentine card customization tool",               
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],         
-        ]);
+            ],
+            [
+                'title' => 'The best couple',
+                'slug' => 'the-best-couple',
+                'thumbnail' => '/images/greeting-cards/the-best-couple-thumb.png',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+                'description' => 'Anniversary',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/love-15.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Just for you, my love, Thomas",
+                            'css' => json_encode([
+                                'desktop' => 'width: 100%; text-align: center; color: rgb(238, 104, 104); left: 128px; top: 359px;',
+                                'mobile' => 'width: 100%; text-align: center; color: rgb(238, 104, 104); top: 359px;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Happy Anniversary',
+                            'css' => json_encode([
+                                'desktop' => 'top: -1px; color: rgb(234, 87, 87); font-weight: bold; font-family: "Great Vibes", sans-serif; font-size: 40px; width: 100%; text-align: center; left: 120px;',
+                                'mobile' => 'top: -1px;color: rgb(234, 87, 87);font-weight: bold;font-family: "Great Vibes", sans-serif;font-size: 30px;width: 100%;text-align: center;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/couple-4.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 73px; left: 287px; width: 182.967px; height: 172.993px; border: 0px ridge rgb(0, 0, 0); cursor: move; transform: rotate(5.24234deg);',
+                                'mobile' => 'position: absolute; top: 72px; left: 130px; width: 145.96px; height: 138.001px; border: 0px ridge rgb(0, 0, 0); cursor: move; transform: rotate(-12.7761deg);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/couple-5.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 202px; left: 426px; width: 161.953px; height: 153.119px; border: 0px ridge rgb(0, 0, 0); cursor: move; transform: rotate(-6.80346deg); outline: rgb(102, 126, 234) solid 2px;',
+                                'mobile' => 'position: absolute; top: 217px; left: 122px; width: 145.96px; height: 138.001px; border: 0px ridge rgb(0, 0, 0); cursor: move; transform: rotate(10.4202deg);'
+                            ]),
+                        ],
+                    ]
+                ]),
+                "seo_title" => "Born to Be Mine Anniversary Greeting Card | Romantic Love Card Online",
+                "seo_description" => "Celebrate love with the Born to Be Mine anniversary greeting card. A perfect romantic card to express your forever bond - ideal for anniversaries, couples, and special occasions.",
+                "seo_keywords" => "born to be mine card, anniversary greeting card, romantic love card, online greeting cards, love anniversary card, forever love greeting, digital greeting card, couples anniversary card",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ];
+
+        foreach ($cards as $index => $card) {
+            CardTemplates::updateOrInsert(
+                ['slug' => $card['slug']],
+                $card
+            );
+        }
     }
 }
