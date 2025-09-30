@@ -1170,9 +1170,9 @@ class CardTemplatesTableSeeder extends Seeder
                         ],
                     ]
                 ]),
-                "seo_title" => "Born to Be Mine Anniversary Greeting Card | Romantic Love Card Online",
-                "seo_description" => "Celebrate love with the Born to Be Mine anniversary greeting card. A perfect romantic card to express your forever bond - ideal for anniversaries, couples, and special occasions.",
-                "seo_keywords" => "born to be mine card, anniversary greeting card, romantic love card, online greeting cards, love anniversary card, forever love greeting, digital greeting card, couples anniversary card",
+                "seo_title" => "The Best Couple Anniversary Greeting Card – Create & Share Online",
+                "seo_description" => "Celebrate love with The Best Couple anniversary greeting card. Personalize with names, photos, and heartfelt messages. Design online, download, or share instantly.",
+                "seo_keywords" => "the best couple anniversary card, anniversary greeting card, personalized anniversary card, online anniversary card maker, custom couple card, romantic anniversary card, free anniversary card design",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
