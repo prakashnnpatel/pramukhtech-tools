@@ -936,7 +936,189 @@ class CardTemplatesTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+            [
+                'title' => 'Happy Valentine Day',
+                'slug' => 'happy-valentine-day',
+                'thumbnail' => '/images/greeting-cards/happy-valentine-day-thumb.png',
+                'category' => 'Love, Valentine Day',
+                'description' => 'Valentine Day',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/love-7.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Happy",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 26; left: 112px; top: 155px; font-size: 35px; color: rgb(255, 128, 192); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 1; left: 14%; top: 155px; font-size: 35px; color: rgb(255, 128, 192); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Valentines',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 29; left: 69px; top: 197px; font-size: 40px; color: rgb(255, 0, 0); font-weight: bold; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 29; left: 1%; top: 197px; font-size: 40px; color: rgb(255, 0, 0); font-weight: bold; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Day',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 17; left: 122px; top: 240px; color: rgb(255, 128, 255); font-size: 30px; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 17; left: 20%; top: 240px; color: rgb(255, 128, 255); font-size: 30px; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'You are my today',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 18; left: 47px; top: 353px; color: rgb(64, 0, 64); font-family: Lobster, sans-serif; font-size: 25px; text-align: center; font-weight: normal;',
+                                'mobile' => 'z-index: 3; left: 15%; top: 353px; color: rgb(64, 0, 64); font-family: Lobster, sans-serif; font-size: 25px; text-align: center; font-weight: normal;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'and all of my tomorrows',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 17; left: 26px; top: 388px; font-weight: normal; font-family: Lobster, sans-serif; font-size: 25px;',
+                                'mobile' => 'z-index: 3; left: 6%; top: 387px; color: rgb(64, 0, 64); font-family: Lobster, sans-serif; font-size: 25px; text-align: center; font-weight: normal;'
+                            ]),
+                        ],                                                                                  
+                    ]
+                ]),
+                "seo_title" => "Happy Valentine Day - Free Editable Valentine Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Happy Valentine Day card online. Add your own text, images, and colors. Free editable Valentine greeting card template at ToolHubSpot.",
+                "seo_keywords" => "valentine card maker online, free editable valentine cards, personalized valentine card templates, custom valentine greeting card, valentine card with photo and text, create valentine card online free, printable valentine cards editable, valentine card background editor, valentine wishes card design free, valentine card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Love You Forever',
+                'slug' => 'love-you-forever',
+                'thumbnail' => '/images/greeting-cards/love-you-forever-thumb.png',
+                'category' => 'Love, Valentine Day',
+                'description' => 'Valentine Day',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/love-24.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Happy",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 10; left: 345px; top: 129px; font-size: 35px; color: rgb(222, 222, 222); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 39; left: 32%; top: 122px; font-size: 35px; color: rgb(222, 222, 222); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Valentine\'s',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 6; left: 297px; top: 169px; color: rgb(255, 255, 255); font-size: 40px; font-family: Lobster, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 40; left: 24%; top: 161px; font-size: 40px; color: rgb(255, 255, 255); font-weight: bold; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Day',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 3; left: 350px; top: 221px; color: rgb(222, 222, 222); font-size: 30px; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 41; left: 36%; top: 211px; color: rgb(222, 222, 222); font-size: 30px; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Love is like the wind, you can\'t see it but you can feel it',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 9; left: 192px; top: 295px; color: rgb(222, 222, 222); font-family: "Comic Sans MS", sans-serif; font-size: 25px;',
+                                'mobile' => 'z-index: 43; left: 20%; top: 294px; color: rgb(222, 222, 222); font-family: Georgia, sans-serif; font-size: 18px; font-weight: bold; text-align: center;'
+                            ]),
+                        ],                                                                                  
+                    ]
+                ]),
+                "seo_title" => "Love You Forever - Free Editable Valentine Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Love You Forever card online. Add your own text, images, and colors. Free editable Valentine greeting card template at ToolHubSpot.",
+                "seo_keywords" => "valentine card maker online, free editable valentine cards, personalized valentine card templates, custom valentine greeting card, valentine card with photo and text, create valentine card online free, printable valentine cards editable, valentine card background editor, valentine wishes card design free, valentine card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Valentine Wishes',
+                'slug' => 'valentine-wishes',
+                'thumbnail' => '/images/greeting-cards/valentine-wishes-thumb.png',
+                'category' => 'Love, Valentine Day',
+                'description' => 'Valentine Wishes',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/love-20.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Happy",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 1; left: 107px; top: 63px; font-size: 35px; color: rgb(222, 222, 222); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 11; left: 81px; top: 81px; font-size: 35px; color: rgb(222, 222, 222); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Valentine\'s',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 18; left: 56px; top: 98px; color: rgb(255, 255, 255); font-size: 40px; font-family: Lobster, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 10; left: 33px; top: 115px; color: rgb(255, 255, 255); font-size: 40px; font-family: Lobster, sans-serif; font-weight: bold;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Day',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 7; left: 106px; top: 146px; color: rgb(222, 222, 222); font-size: 30px; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 14; left: 87px; top: 156px; color: rgb(222, 222, 222); font-size: 30px; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'February 14',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 15; left: 280px; top: 255px; color: rgb(255, 255, 255); font-weight: bold; font-family: Montserrat, sans-serif;',
+                                'mobile' => 'z-index: 15; left: 20%; top: 255px; color: rgb(255, 255, 255); font-weight: bold; font-family: Montserrat, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'Let\'s celebrate the day of love with joy and complicity. Each moment together is a story that we write with smiles, caresses and glances that speak for themselves.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 17; left: 172px; top: 288px; color: rgb(222, 222, 222); font-family: "Comic Sans MS", sans-serif; font-size: 15px; font-weight: bold;',
+                                'mobile' => 'z-index: 7; left: 10%; top: 282px; color: rgb(222, 222, 222); font-family: "Comic Sans MS", sans-serif; font-size: 15px; font-weight: bold;'
+                            ]),
+                        ],                                                                                  
+                    ]
+                ]),
+                "seo_title" => "Valentine Wishes - Free Editable Valentine Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Valentine Wishes card online. Add your own text, images, and colors. Free editable Valentine greeting card template at ToolHubSpot.",
+                "seo_keywords" => "valentine card maker online, free editable valentine cards, personalized valentine card templates, custom valentine greeting card, valentine card with photo and text, create valentine card online free, printable valentine cards editable, valentine card background editor, valentine wishes card design free, valentine card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],         
         ]);
     }
 }
