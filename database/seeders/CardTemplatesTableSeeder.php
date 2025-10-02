@@ -935,10 +935,7 @@ class CardTemplatesTableSeeder extends Seeder
                 "seo_keywords" => "born to be mine card, anniversary greeting card, romantic love card, online greeting cards, love anniversary card, forever love greeting, digital greeting card, couples anniversary card",
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],                     
-        ];*/
-
-         $cards = [
+            ],
             [
                 'title' => 'Happy Valentine Day',
                 'slug' => 'happy-valentine-day',
@@ -1175,7 +1172,175 @@ class CardTemplatesTableSeeder extends Seeder
                 "seo_keywords" => "the best couple anniversary card, anniversary greeting card, personalized anniversary card, online anniversary card maker, custom couple card, romantic anniversary card, free anniversary card design",
                 'created_at' => now(),
                 'updated_at' => now(),
+            ],                     
+        ];*/
+
+         $cards = [
+            [
+                'title' => 'Love is Blind',
+                'slug' => 'love-is-blind',
+                'thumbnail' => '/images/greeting-cards/love-is-blind-thumb.png',
+                'category' => 'Love, Valentine Day',
+                'description' => 'Valentine Day',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/love-26.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "You are not just my love, you are my world, my reason, and my forever.",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 43; left: 15px; top: 15px; color: rgb(64, 0, 0); font-family: "Courier New", sans-serif; font-size: 18px; text-align: center; font-weight: bold;',
+                                'mobile' => 'z-index: 1; left: 15px; top: 15px; color: rgb(64, 0, 0); font-family: "Courier New", sans-serif; font-size: 15px; text-align: center; font-weight: bold;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Happy',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 38; left: 417px; top: 176px; font-size: 35px; color: rgb(101, 67, 33); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 38; left: 53%; top: 176px; font-size: 35px; color: rgb(101, 67, 33); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Valentines',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 23; left: 370px; top: 215px; font-size: 40px; color: rgb(101, 67, 33); font-weight: bold; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 23; left: 42%; top: 215px; font-size: 33px; color: rgb(101, 67, 33); font-weight: bold; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'Day',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 42; left: 421px; top: 260px; color: rgb(101, 67, 33); font-size: 30px; font-family: Lobster, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 42; left: 57%; top: 252px; color: rgb(101, 67, 33); font-size: 30px; font-family: Lobster, sans-serif; font-weight: bold;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/g-user-6.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 331px; left: 384px; width: 159px; height: 142px; border: 9px solid rgb(101, 67, 33); cursor: move; z-index: 34; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 331px; left: 44%; width: 151px; height: 135px; border: 9px solid rgb(101, 67, 33); cursor: move; z-index: 34; border-radius: 50%;'
+                            ]),
+                        ],                                                                                  
+                    ]
+                ]),
+                "seo_title" => "Love is Blind - Free Editable Valentine Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Love is Blind card online. Add your own text, images, and colors. Free editable Valentine greeting card template at ToolHubSpot.",
+                "seo_keywords" => "valentine card maker online, free editable valentine cards, personalized valentine card templates, custom valentine greeting card, valentine card with photo and text, create valentine card online free, printable valentine cards editable, valentine card background editor, valentine wishes card design free, valentine card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
+            [
+                'title' => 'Love is Emotion',
+                'slug' => 'love-is-emotion',
+                'thumbnail' => '/images/greeting-cards/love-is-emotion-thumb.png',
+                'category' => 'Love, Valentine Day',
+                'description' => 'Valentine Day',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/love-27.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Happy",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 21; left: 112px; top: 155px; font-size: 35px; color: rgb(255, 255, 255); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif; border-width: 0px; border-color: rgb(102, 126, 234);',
+                                'mobile' => 'z-index: 1; left: 25%; top: 155px; font-size: 35px; color: rgb(255, 255, 255); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Lobster, sans-serif; border-width: 0px; border-color: rgb(102, 126, 234);'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Valentines',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 20; left: 69px; top: 201px; font-size: 40px; color: rgb(255, 255, 255); font-weight: bold; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 20; left: 12%; top: 201px; font-size: 40px; color: rgb(255, 255, 255); font-weight: bold; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Day',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 6; left: 126px; top: 252px; color: rgb(255, 255, 255); font-size: 30px; font-family: Lobster, sans-serif;',
+                                'mobile' => 'z-index: 6; left: 30%; top: 252px; color: rgb(255, 255, 255); font-size: 30px; font-family: Lobster, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'In your smile, I find my world.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 18; left: 158px; top: 453px; color: rgb(255, 255, 255); font-family: "Bebas Neue", sans-serif; font-size: 25px; text-align: center; font-weight: bold;',
+                                'mobile' => 'z-index: 18; left: 6%; top: 453px; color: rgb(255, 255, 255); font-family: "Bebas Neue", sans-serif; font-size: 21px; text-align: center; font-weight: bold;'
+                            ]),
+                        ],                                                                                                          
+                    ]
+                ]),
+                "seo_title" => "Love is Emotion - Free Editable Valentine Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Love is Emotion card online. Add your own text, images, and colors. Free editable Valentine greeting card template at ToolHubSpot.",
+                "seo_keywords" => "valentine card maker online, free editable valentine cards, personalized valentine card templates, custom valentine greeting card, valentine card with photo and text, create valentine card online free, printable valentine cards editable, valentine card background editor, valentine wishes card design free, valentine card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Feeling of Love',
+                'slug' => 'feeling-of-love',
+                'thumbnail' => '/images/greeting-cards/feeling-of-love-thumb.png',
+                'category' => 'Love, Valentine Day',
+                'description' => 'Valentine Day',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/love-28.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Happy",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 53; left: 161px; top: 73px; font-size: 80px; color: rgb(255, 0, 0); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Pacifico, sans-serif; border-width: 0px; border-color: rgb(102, 126, 234);',
+                                'mobile' => 'z-index: 54; left: 16%; top: 73px; font-size: 61px; color: rgb(255, 0, 0); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: Pacifico, sans-serif; border-width: 0px; border-color: rgb(102, 126, 234);'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Valentines',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 51; left: 87px; top: 182px; font-size: 80px; color: rgb(255, 0, 0); font-weight: bold; font-family: Pacifico, sans-serif;',
+                                'mobile' => 'z-index: 56; left: 9%; top: 182px; font-size: 48px; color: rgb(255, 0, 0); font-weight: bold; font-family: Pacifico, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Day',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 48; left: 175px; top: 276px; color: rgb(255, 0, 0); font-size: 80px; font-family: Pacifico, sans-serif;',
+                                'mobile' => 'z-index: 48; left: 25%; top: 249px; color: rgb(255, 0, 0); font-size: 56px; font-family: Pacifico, sans-serif;'
+                            ]),
+                        ],                                                                                                                                  
+                    ]
+                ]),
+                "seo_title" => "Feeling of Love - Free Editable Valentine Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Feeling of Love card online. Add your own text, images, and colors. Free editable Valentine greeting card template at ToolHubSpot.",
+                "seo_keywords" => "valentine card maker online, free editable valentine cards, personalized valentine card templates, custom valentine greeting card, valentine card with photo and text, create valentine card online free, printable valentine cards editable, valentine card background editor, valentine wishes card design free, valentine card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],            
         ];
 
         foreach ($cards as $index => $card) {

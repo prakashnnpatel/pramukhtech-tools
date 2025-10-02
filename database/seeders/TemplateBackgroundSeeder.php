@@ -264,6 +264,46 @@ class TemplateBackgroundSeeder extends Seeder
                 'image_path' => '/images/greeting-cards/backgrounds/anniversary-3.jpg',
                 'category' => 'Love, Valentine Day, Anniversary, Wedding',
             ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-21.jpg',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-22.jpg',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-23.jpg',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-24.jpg',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-25.jpg',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-26.jpg',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-27.jpg',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+            ],            
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/love-28.jpg',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+            ],
         ];
         //dd($bgImages);
         
