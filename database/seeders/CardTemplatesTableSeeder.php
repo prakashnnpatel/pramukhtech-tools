@@ -1340,7 +1340,172 @@ class CardTemplatesTableSeeder extends Seeder
                 "seo_keywords" => "valentine card maker online, free editable valentine cards, personalized valentine card templates, custom valentine greeting card, valentine card with photo and text, create valentine card online free, printable valentine cards editable, valentine card background editor, valentine wishes card design free, valentine card customization tool",               
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],            
+            ],
+            [
+                'title' => 'Happy Christmas',
+                'slug' => 'happy-christmas',
+                'thumbnail' => '/images/greeting-cards/happy-christmas-thumb.png',
+                'category' => 'Love, Christmas',
+                'description' => 'Christmas',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/christmas-1.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Merry",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 24; left: 117px; top: 112px; color: rgb(255, 255, 255); font-size: 50px; font-family: "Dancing Script", sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 24; left: 20%; top: 112px; color: rgb(255, 255, 255); font-size: 50px; font-family: "Dancing Script", sans-serif; font-weight: bold;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Christmas',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 63; left: 84px; top: 164px; color: rgb(255, 255, 255); font-family: "Dancing Script", sans-serif; font-size: 50px; font-weight: bold;',
+                                'mobile' => 'z-index: 1; left: 8%; top: 164px; color: rgb(255, 255, 255); font-family: "Dancing Script", sans-serif; font-size: 50px; font-weight: bold;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/chri-1.jpeg',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 283px; left: 229px; width: 133px; height: 115px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 64;',
+                                'mobile' => 'position: absolute; top: 283px; left: 30%; width: 133px; height: 115px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 64;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/chri-4.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 115px; left: 115px; width: 31.6px; height: 31.6px; border: 2px rgb(0, 0, 0); cursor: move; z-index: 65;',
+                                'mobile' => 'position: absolute; top: 115px; left: 21%; width: 31.6px; height: 31.6px; border: 2px rgb(0, 0, 0); cursor: move; z-index: 65;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/chri-5.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 386px; left: 237px; width: 73px; height: 67px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 66;',
+                                'mobile' => 'position: absolute; top: 386px; left: 28%; width: 73px; height: 67px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 66;'
+                            ]),
+                        ],
+                    ]
+                ]),
+                "seo_title" => "Happy Christmas - Free Editable Christmas Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Happy Christmas card online. Add your own text, images, and colors. Free editable christmas greeting card template at ToolHubSpot.",
+                "seo_keywords" => "christmas card maker online, free editable christmas cards, personalized christmas card templates, custom christmas greeting card, christmas card with photo and text, create christmas card online free, printable christmas cards editable, christmas card background editor, christmas wishes card design free, christmas card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Christmas Joy',
+                'slug' => 'christmas-joy',
+                'thumbnail' => '/images/greeting-cards/christmas-joy-thumb.png',
+                'category' => 'Love, Christmas',
+                'description' => 'Christmas',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/christmas-2.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Merry",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 41; left: 207px; top: 128px; font-size: 80px; color: rgb(255, 255, 255); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: "Bebas Neue", sans-serif; border-width: 0px; border-color: rgb(102, 126, 234);',
+                                'mobile' => 'z-index: 1; left: 20%; top: 128px; font-size: 80px; color: rgb(255, 255, 255); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: "Bebas Neue", sans-serif; border-width: 0px; border-color: rgb(102, 126, 234);'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Christmas',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 12; left: 139px; top: 196px; font-size: 80px; color: rgb(255, 255, 255); font-weight: bold; font-family: "Bebas Neue", sans-serif;',
+                                'mobile' => 'z-index: 12; left: 3%; top: 196px; font-size: 71px; color: rgb(255, 255, 255); font-weight: bold; font-family: "Bebas Neue", sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Wishing you joy, love, and peace this Christmas.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 40; left: 105px; top: 346px; color: rgb(255, 255, 255); font-weight: bold; font-style: italic; font-family: Georgia, sans-serif; font-size: 15px;',
+                                'mobile' => 'z-index: 40; left: 10%; top: 346px; color: rgb(255, 255, 255); font-weight: bold; font-style: italic; font-family: Georgia, sans-serif; font-size: 15px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/chri-1.jpeg',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 129px; left: 141px; width: 80px; height: 116px; border: 0px rgb(0, 0, 0); cursor: move; z-index: 42; transform: rotate(-1.69221deg);',
+                                'mobile' => 'position: absolute; top: 129px; left: 1%; width: 80px; height: 116px; border: 0px rgb(0, 0, 0); cursor: move; z-index: 42; transform: rotate(-1.69221deg);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/chri-5.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 112px; left: 352px; width: 62px; height: 93px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 36;',
+                                'mobile' => 'position: absolute; top: 112px; left: 74%; width: 62px; height: 93px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 36;'
+                            ]),
+                        ],                   
+                    ]
+                ]),
+                "seo_title" => "Christmas Joy - Free Editable Christmas Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Christmas Joy card online. Add your own text, images, and colors. Free editable christmas greeting card template at ToolHubSpot.",
+                "seo_keywords" => "christmas card maker online, free editable christmas cards, personalized christmas card templates, custom christmas greeting card, christmas card with photo and text, create christmas card online free, printable christmas cards editable, christmas card background editor, christmas wishes card design free, christmas card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Christmas Blessings',
+                'slug' => 'christmas-blessings',
+                'thumbnail' => '/images/greeting-cards/christmas-blessings-thumb.png',
+                'category' => 'Love, Christmas',
+                'description' => 'Christmas',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "500",
+                    'bgImage' => "/images/greeting-cards/backgrounds/christmas-3.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Merry",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 24; left: 275px; top: 301px; font-size: 60px; color: rgb(0, 0, 0); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: "Great Vibes", sans-serif; border-width: 0px; border-color: rgb(102, 126, 234);',
+                                'mobile' => 'z-index: 24; left: 20%; top: 301px; font-size: 60px; color: rgb(0, 0, 0); font-weight: normal; padding: 6px; text-align: right; text-decoration: none; border-style: none; font-family: "Great Vibes", sans-serif; border-width: 0px; border-color: rgb(102, 126, 234);'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Christmas',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 17; left: 226px; top: 357px; font-size: 60px; color: rgb(0, 0, 0); font-weight: bold; font-family: "Great Vibes", sans-serif;',
+                                'mobile' => 'z-index: 17; left: 8%; top: 357px; font-size: 60px; color: rgb(0, 0, 0); font-weight: bold; font-family: "Great Vibes", sans-serif;'
+                            ]),
+                        ], 
+                    ]
+                ]),
+                "seo_title" => "Christmas Blessings - Free Editable Christmas Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Christmas Blessings card online. Add your own text, images, and colors. Free editable christmas greeting card template at ToolHubSpot.",
+                "seo_keywords" => "christmas card maker online, free editable christmas cards, personalized christmas card templates, custom christmas greeting card, christmas card with photo and text, create christmas card online free, printable christmas cards editable, christmas card background editor, christmas wishes card design free, christmas card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],                      
         ];
 
         foreach ($cards as $index => $card) {

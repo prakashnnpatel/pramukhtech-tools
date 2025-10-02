@@ -304,6 +304,26 @@ class TemplateBackgroundSeeder extends Seeder
                 'image_path' => '/images/greeting-cards/backgrounds/love-28.jpg',
                 'category' => 'Love, Valentine Day, Anniversary, Wedding',
             ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/christmas-1.jpg',
+                'category' => 'Love, Christmas',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/christmas-2.jpg',
+                'category' => 'Love, Christmas',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/christmas-3.jpg',
+                'category' => 'Love, Christmas',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/christmas-4.png',
+                'category' => 'Love, Christmas',
+            ],
         ];
         //dd($bgImages);
         
