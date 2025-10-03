@@ -1786,70 +1786,126 @@ class CardTemplatesTableSeeder extends Seeder
                 'category' => 'Ring Ceremony, Love',
                 'description' => 'Celebrate love and togetherness with our beautifully designed Ring Ceremony Invitation Card. Perfect for inviting family and friends to your special engagement day.',
                 'template_data' => json_encode([
-                    'bgColor' => '',
-                    'bgImage' => "/images/greeting-cards/backgrounds/border-2.jpg",
+                    'bgColor' => '#f1e9df',
+                    "main-card-height" => "1024",
+                    "main-card-width" => "1024",
+                    'bgImage' => "",
                     'elements' => [
                         [
                             'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/border-1.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; width: 1024px; height: 50px; cursor: move;',
+                                'mobile' => 'position: absolute; width: 1024px; height: 50px; cursor: move;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
                             'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/border-1.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; width: 1024px; height: 50px; cursor: move; bottom:0px;',
+                                'mobile' => 'position: absolute; width: 1024px; height: 50px; cursor: move; bottom:0px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
                             'src' => '/images/greeting-cards/element/frame-2.png',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; top: 61px; left: 167px; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 98;',
-                                'mobile' => 'position: absolute; top: 61px; left: -1%; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 1;'
+                                'desktop' => 'position: absolute; width: 621.951px; height: 855.972px; cursor: move; bottom: 0px; z-index: 1; left: 30px; top: 87px;',
+                                'mobile' => 'position: absolute; height: 855.101px; cursor: move; bottom: 0px; z-index: 1; left: 26px; top: 89px; width: 241.465px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img4',
+                            'src' => '/images/greeting-cards/element/ganesh-1.jpg',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 70px; cursor: move; z-index: 2; left: 319px; top: 145px;',
+                                'mobile' => 'position: absolute; height: 70px; cursor: move; z-index: 2; left: 319px; top: 145px;'
                             ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title1',
-                            'text' => "Pramukh Electric",
+                            'text' => 'We Request the Pleasure of Your Company',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 99; left: 241px; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 99; left: 22%; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 23px; font-family: Merriweather, sans-serif;'
-                            ]),
-                        ],                        
-                        [
-                            'type' => 'text',
-                            'id' => 'title2',
-                            'text' => 'Your Trusted Source for electronics',
-                            'css' => json_encode([
-                                'desktop' => 'z-index: 63; left: 240px; top: 93px; color: rgb(255, 255, 255); font-size: 16px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 63; left: 24%; top: 93px; color: rgb(255, 255, 255); font-size: 12px; font-family: Merriweather, sans-serif;'
+                                'desktop' => 'z-index: 3; top: 240px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 3; top: 240px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px;'
                             ]),
                         ],
                         [
-                            'type' => 'image',
-                            'id' => 'img2',
-                            'src' => '/images/greeting-cards/element/ganesh-4.png',
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Pranav & Anjali',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; top: 119px; left: 111px; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;',
-                                'mobile' => 'position: absolute; top: 119px; left: 20%; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;'
+                                'desktop' => 'z-index: 4; top: 315px; font-size: 50px; font-weight: bold; color: rgb(206, 145, 64); width: 100%; text-align: center; left: -16px; letter-spacing: 4px; font-family: "Great Vibes", sans-serif;',
+                                'mobile' => 'z-index: 4; top: 315px; font-size: 50px; font-weight: bold; color: rgb(206, 145, 64); width: 100%; text-align: center; left: -16px; letter-spacing:4px; font-family: "Great Vibes", sans-serif;'
                             ]),
-                        ],                        
+                        ], 
+                        [
+                            'type' => 'image',
+                            'id' => 'img5',
+                            'src' => '/images/greeting-cards/element/ring.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute;height: 70px;cursor: move;z-index: 4;left: 313px;top: 400px;',
+                                'mobile' => 'position: absolute;height: 70px;cursor: move;z-index: 4;left: 313px;top: 400px;'
+                            ]),
+                        ],
                         [
                             'type' => 'text',
                             'id' => 'title3',
-                            'text' => 'Phone: 569-879-6549',
+                            'text' => 'request the honour of your presence at their',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 101; left: 144px; top: 214px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 5; left: 2%; top: 214px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                                'desktop' => 'z-index: 4;top: 498px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 4;top: 498px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
                             ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title4',
-                            'text' => 'Address: 123 Main Street, Anytown, Gujarat, 380001',
+                            'text' => 'Ring Ceremony',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 96; left: 144px; top: 237px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 96; left: 2%; top: 237px; color: rgb(255, 255, 255); font-size: 10px; font-family: Merriweather, sans-serif;'
+                                'desktop' => 'z-index: 3;top: 563px;font-size: 50px;font-weight: bold;color: rgb(206, 145, 64);width: 100%;text-align: center; letter-spacing: 4px;font-family: "Great Vibes", sans-serif;',
+                                'mobile' => 'z-index: 3;top: 563px;font-size: 50px;font-weight: bold;color: rgb(206, 145, 64);width: 100%;text-align: center; letter-spacing: 4px;font-family: "Great Vibes", sans-serif;'
                             ]),
-                        ],                        
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'Monday, 22th December 2025',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5;top: 656px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 5;top: 656px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
                         [
                             'type' => 'text',
                             'id' => 'title6',
-                            'text' => 'Email: pramukhelectric@gmail.com',
+                            'text' => '7:30 PM Onwards',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 97; left: 143px; top: 263px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 97; left: 2%; top: 263px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                                'desktop' => 'z-index: 6;top: 698px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 6;top: 698px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'The Grand Ballroom, Celebration St, Mumbai',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5;top: 741px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 5;top: 741px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => 'Dinner to Follow',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 6;top: 790px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 6;top: 790px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
                             ]),
                         ],
                     ]

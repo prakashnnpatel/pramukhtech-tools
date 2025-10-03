@@ -356,7 +356,7 @@ class TemplateBackgroundSeeder extends Seeder
             ],
             [
                 'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/border-2.jpg',
+                'image_path' => '/images/greeting-cards/backgrounds/border-2.png',
                 'category' => 'Love, Valentine Day, Anniversary, Wedding',
             ],
             [
