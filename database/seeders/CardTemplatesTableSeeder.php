@@ -1783,7 +1783,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'title' => 'Ring Ceremony Invitation Card',
                 'slug' => 'ring-ceremony-invitation-card',
                 'thumbnail' => '/images/greeting-cards/ring-ceremony-invitation-card-thumb.png',
-                'category' => 'Ring Ceremony, Love',
+                'category' => 'Ring Ceremony, Love, Wedding',
                 'description' => 'Celebrate love and togetherness with our beautifully designed Ring Ceremony Invitation Card. Perfect for inviting family and friends to your special engagement day.',
                 'template_data' => json_encode([
                     'bgColor' => '#F7F0E5',
@@ -1913,6 +1913,116 @@ class CardTemplatesTableSeeder extends Seeder
                 "seo_title" => "Ring Ceremony Invitation Card - Elegant Engagement Invite Designs",
                 "seo_description" => "Discover beautiful Ring Ceremony Invitation Cards to invite your loved ones to your engagement. Elegant, customizable designs perfect for creating lasting memories.",
                 "seo_keywords" => "Ring Ceremony Invitation Card, Engagement Invitation Card, Engagement Ceremony Invite, Wedding Ring Ceremony Card, Custom Invitation Cards, Printable Engagement Invite, Elegant Ring Ceremony Design, Personalized Invitation Card, Engagement Party Invitation, Digital Invitation Card",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Engagement Ring Ceremony Invitation',
+                'slug' => 'engagement-ring-ceremony-invitation',
+                'thumbnail' => '/images/greeting-cards/engagement-ring-ceremony-invitation-thumb.png',
+                'category' => 'Ring Ceremony, Love, Wedding',
+                'description' => 'Invite your loved ones in style with our Engagement Ring Ceremony Invitation cards. Elegant and customizable designs to make your special day unforgettable.',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/border-5.jpg",
+                    "main-card-height" => "1024",
+                    "main-card-width" => "1024",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img4',
+                            'src' => '/images/greeting-cards/element/ganesh-3.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 80px;cursor: move;z-index: 16;left: 301px;top: 201px;border: 0px;width: 85.9882px;',
+                                'mobile' => 'position: absolute; height: 70px; cursor: move; z-index: 2; left: 115px; top: 200px; border:0px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'We Request the Pleasure of Your Company',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 3; top: 295px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 3; top: 280px; font-size: 18px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; padding-left:40px; padding-right:40px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Kajal & Dishal',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 4; top: 355px; font-size: 50px; font-weight: bold; color: rgb(206, 145, 64); width: 100%; text-align: center; left: -16px; letter-spacing: 4px; font-family: "Great Vibes", sans-serif;',
+                                'mobile' => 'z-index: 4; top: 350px; font-size: 25px; font-weight: bold; color: rgb(206, 145, 64); width: 100%; text-align: center; left: 0px; letter-spacing: 4px; font-family: "Great Vibes", sans-serif;'
+                            ]),
+                        ], 
+                        [
+                            'type' => 'image',
+                            'id' => 'img5',
+                            'src' => '/images/greeting-cards/element/ring.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute;height: 70px;cursor: move;z-index: 4;left: 313px;top: 425px; border:0px;',
+                                'mobile' => 'position: absolute;height: 70px;cursor: move;z-index: 4;left: 121px;top: 390px; border:0px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'request the honour of your presence at their',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 4;top: 498px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 4;top: 450px;font-size: 14px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px; padding-left:50px; padding-right:40px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'Ring Ceremony',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 3;top: 563px;font-size: 50px;font-weight: bold;color: rgb(206, 145, 64);width: 100%;text-align: center; letter-spacing: 4px;font-family: "Great Vibes", sans-serif;',
+                                'mobile' => 'z-index: 3;top: 515px;font-size: 25px;font-weight: bold;color: rgb(206, 145, 64);width: 100%;text-align: center; letter-spacing: 4px;font-family: "Great Vibes", sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'Tuesday, 07th July 2026',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5;top: 656px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 5;top: 572px;font-size: 18px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px; padding-left:50px; padding-right:55px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title6',
+                            'text' => '7:30 PM Onwards',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 6;top: 698px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 6;top: 640px;font-size: 18px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'The Grand Ballroom, Celebration St, Mumbai',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5;top: 741px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 5;top: 683px;font-size: 18px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px; padding-left:20px; padding-right:20px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => 'Dinner to Follow',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 6;top: 790px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
+                                'mobile' => 'z-index: 6;top: 787px;font-size: 18px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                    ]
+                ]),
+                "seo_title" => "Engagement Ring Ceremony Invitation - Stylish Custom Cards",
+                "seo_description" => "Explore elegant Engagement Ring Ceremony Invitation cards to invite your family and friends. Personalized, stylish, and perfect for celebrating your special day.",
+                "seo_keywords" => "Engagement Ring Ceremony Invitation, Ring Ceremony Card, Engagement Invitation, Engagement Invite Card, Wedding Ring Ceremony Invitation, Custom Engagement Cards",
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
