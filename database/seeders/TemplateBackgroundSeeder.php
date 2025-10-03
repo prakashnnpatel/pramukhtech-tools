@@ -374,6 +374,61 @@ class TemplateBackgroundSeeder extends Seeder
                 'image_path' => '/images/greeting-cards/backgrounds/border-5.jpg',
                 'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony',
             ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-6.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-7.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-8.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-9.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony, Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-10.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony, Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-11.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony, Birthday',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-12.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony, Birthday, Gruh Pravesh',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-13.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony, Birthday, Gruh Pravesh',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-14.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony, Birthday, Gruh Pravesh',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-15.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony, Birthday, Gruh Pravesh',
+            ],
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-16.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony, Birthday, Gruh Pravesh',
+            ]
         ];
         //dd($bgImages);
         
