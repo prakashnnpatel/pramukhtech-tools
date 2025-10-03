@@ -166,7 +166,7 @@ class TemplateBackgroundSeeder extends Seeder
             ],
             [
                 'title' => '',
-                'image_path' => '/images/greeting-cards/backgrounds/love-4.jpg',
+                'image_path' => '/images/greeting-cards/backgrounds/love-4.png',
                 'category' => 'Love, Valentine Day, Anniversary, Wedding',
             ],
             [
