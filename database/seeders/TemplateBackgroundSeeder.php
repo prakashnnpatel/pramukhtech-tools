@@ -352,27 +352,27 @@ class TemplateBackgroundSeeder extends Seeder
             [
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/border-1.jpg',
-                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding, Ring Ceremony',
             ],
             [
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/border-2.png',
-                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding, Ring Ceremony',
             ],
             [
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/border-3.jpg',
-                'category' => 'Love, Valentine Day, Anniversary, Wedding',
+                'category' => 'Love, Valentine Day, Anniversary, Wedding, Ring Ceremony',
             ], 
             [
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/border-4.jpg',
-                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony',
             ], 
             [
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/border-5.jpg',
-                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual, Ring Ceremony',
             ],
         ];
         //dd($bgImages);

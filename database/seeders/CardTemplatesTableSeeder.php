@@ -1786,10 +1786,10 @@ class CardTemplatesTableSeeder extends Seeder
                 'category' => 'Ring Ceremony, Love',
                 'description' => 'Celebrate love and togetherness with our beautifully designed Ring Ceremony Invitation Card. Perfect for inviting family and friends to your special engagement day.',
                 'template_data' => json_encode([
-                    'bgColor' => '#f1e9df',
+                    'bgColor' => '#F7F0E5',
+                    'bgImage' => "",
                     "main-card-height" => "1024",
                     "main-card-width" => "1024",
-                    'bgImage' => "",
                     'elements' => [
                         [
                             'type' => 'image',
@@ -1814,8 +1814,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'img3',
                             'src' => '/images/greeting-cards/element/frame-2.png',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; width: 621.951px; height: 855.972px; cursor: move; bottom: 0px; z-index: 1; left: 30px; top: 87px;',
-                                'mobile' => 'position: absolute; height: 855.101px; cursor: move; bottom: 0px; z-index: 1; left: 26px; top: 89px; width: 241.465px;'
+                                'desktop' => 'position: absolute; width: 621.951px; height: 855.972px; cursor: move; bottom: 0px; z-index: 1; left: 30px; top: 87px; border:0px;',
+                                'mobile' => 'position: absolute; height: 855.101px; cursor: move; bottom: 0px; z-index: 1; left: 26px; top: 89px; width: 241.465px; border:0px;'
                             ]),
                         ],
                         [
@@ -1823,8 +1823,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'img4',
                             'src' => '/images/greeting-cards/element/ganesh-1.jpg',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; height: 70px; cursor: move; z-index: 2; left: 319px; top: 145px;',
-                                'mobile' => 'position: absolute; height: 70px; cursor: move; z-index: 2; left: 319px; top: 145px;'
+                                'desktop' => 'position: absolute; height: 70px; cursor: move; z-index: 2; left: 319px; top: 145px; border:0px;',
+                                'mobile' => 'position: absolute; height: 70px; cursor: move; z-index: 2; left: 121px; top: 145px; border:0px;'
                             ]),
                         ],
                         [
@@ -1833,7 +1833,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'We Request the Pleasure of Your Company',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 3; top: 240px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px;',
-                                'mobile' => 'z-index: 3; top: 240px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px;'
+                                'mobile' => 'z-index: 3; top: 240px; font-size: 18px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; padding-left:40px; padding-right:40px;'
                             ]),
                         ],
                         [
@@ -1842,7 +1842,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'Pranav & Anjali',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 4; top: 315px; font-size: 50px; font-weight: bold; color: rgb(206, 145, 64); width: 100%; text-align: center; left: -16px; letter-spacing: 4px; font-family: "Great Vibes", sans-serif;',
-                                'mobile' => 'z-index: 4; top: 315px; font-size: 50px; font-weight: bold; color: rgb(206, 145, 64); width: 100%; text-align: center; left: -16px; letter-spacing:4px; font-family: "Great Vibes", sans-serif;'
+                                'mobile' => 'z-index: 4; top: 331px; font-size: 25px; font-weight: bold; color: rgb(206, 145, 64); width: 100%; text-align: center; left: 0px; letter-spacing: 4px; font-family: "Great Vibes", sans-serif;'
                             ]),
                         ], 
                         [
@@ -1850,8 +1850,8 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'img5',
                             'src' => '/images/greeting-cards/element/ring.png',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute;height: 70px;cursor: move;z-index: 4;left: 313px;top: 400px;',
-                                'mobile' => 'position: absolute;height: 70px;cursor: move;z-index: 4;left: 313px;top: 400px;'
+                                'desktop' => 'position: absolute;height: 70px;cursor: move;z-index: 4;left: 313px;top: 400px; border:0px;',
+                                'mobile' => 'position: absolute;height: 70px;cursor: move;z-index: 4;left: 121px;top: 370px; border:0px;'
                             ]),
                         ],
                         [
@@ -1860,7 +1860,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'request the honour of your presence at their',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 4;top: 498px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
-                                'mobile' => 'z-index: 4;top: 498px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                                'mobile' => 'z-index: 4;top: 450px;font-size: 14px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px; padding-left:50px; padding-right:40px;'
                             ]),
                         ],
                         [
@@ -1869,7 +1869,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'Ring Ceremony',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 3;top: 563px;font-size: 50px;font-weight: bold;color: rgb(206, 145, 64);width: 100%;text-align: center; letter-spacing: 4px;font-family: "Great Vibes", sans-serif;',
-                                'mobile' => 'z-index: 3;top: 563px;font-size: 50px;font-weight: bold;color: rgb(206, 145, 64);width: 100%;text-align: center; letter-spacing: 4px;font-family: "Great Vibes", sans-serif;'
+                                'mobile' => 'z-index: 3;top: 515px;font-size: 25px;font-weight: bold;color: rgb(206, 145, 64);width: 100%;text-align: center; letter-spacing: 4px;font-family: "Great Vibes", sans-serif;'
                             ]),
                         ],
                         [
@@ -1878,7 +1878,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'Monday, 22th December 2025',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 5;top: 656px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
-                                'mobile' => 'z-index: 5;top: 656px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                                'mobile' => 'z-index: 5;top: 572px;font-size: 18px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px; padding-left:50px; padding-right:55px;'
                             ]),
                         ],
                         [
@@ -1887,7 +1887,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => '7:30 PM Onwards',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 6;top: 698px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
-                                'mobile' => 'z-index: 6;top: 698px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                                'mobile' => 'z-index: 6;top: 640px;font-size: 18px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
                             ]),
                         ],
                         [
@@ -1896,7 +1896,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'The Grand Ballroom, Celebration St, Mumbai',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 5;top: 741px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
-                                'mobile' => 'z-index: 5;top: 741px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                                'mobile' => 'z-index: 5;top: 683px;font-size: 18px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px; padding-left:20px; padding-right:20px;'
                             ]),
                         ],
                         [
@@ -1905,7 +1905,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'Dinner to Follow',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 6;top: 790px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;',
-                                'mobile' => 'z-index: 6;top: 790px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                                'mobile' => 'z-index: 6;top: 787px;font-size: 18px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
                             ]),
                         ],
                     ]
