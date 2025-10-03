@@ -363,7 +363,17 @@ class TemplateBackgroundSeeder extends Seeder
                 'title' => '',
                 'image_path' => '/images/greeting-cards/backgrounds/border-3.jpg',
                 'category' => 'Love, Valentine Day, Anniversary, Wedding',
-            ],           
+            ], 
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-4.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual',
+            ], 
+            [
+                'title' => '',
+                'image_path' => '/images/greeting-cards/backgrounds/border-5.jpg',
+                'category' => 'Festival, New Year, Diwali, Holi, Religious, Spiritual',
+            ],
         ];
         //dd($bgImages);
         
