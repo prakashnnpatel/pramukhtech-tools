@@ -1172,10 +1172,7 @@ class CardTemplatesTableSeeder extends Seeder
                 "seo_keywords" => "the best couple anniversary card, anniversary greeting card, personalized anniversary card, online anniversary card maker, custom couple card, romantic anniversary card, free anniversary card design",
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],                     
-        ];*/
-
-         $cards = [
+            ],
             [
                 'title' => 'Love is Blind',
                 'slug' => 'love-is-blind',
@@ -1505,7 +1502,210 @@ class CardTemplatesTableSeeder extends Seeder
                 "seo_keywords" => "christmas card maker online, free editable christmas cards, personalized christmas card templates, custom christmas greeting card, christmas card with photo and text, create christmas card online free, printable christmas cards editable, christmas card background editor, christmas wishes card design free, christmas card customization tool",               
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],                      
+            ],                     
+        ];*/
+
+         $cards = [            
+            [
+                'title' => 'Shop Visiting Card',
+                'slug' => 'shop-visiting-card',
+                'thumbnail' => '/images/greeting-cards/shop-visiting-card-thumb.png',
+                'category' => 'Visiting Card, Business',
+                'description' => 'Visiting Card',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "300",
+                    'bgImage' => "/images/greeting-cards/backgrounds/visitor-1.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/fake_logo.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 61px; left: 167px; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 98;',
+                                'mobile' => 'position: absolute; top: 61px; left: -1%; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 1;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Pramukh Electric",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 99; left: 241px; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 99; left: 22%; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 23px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Your Trusted Source for electronics',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 63; left: 240px; top: 93px; color: rgb(255, 255, 255); font-size: 16px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 63; left: 24%; top: 93px; color: rgb(255, 255, 255); font-size: 12px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/b-line.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 119px; left: 111px; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;',
+                                'mobile' => 'position: absolute; top: 119px; left: 20%; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'Hasamukh Chaudhary',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 102; left: 231px; top: 145px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 102; left: 11%; top: 145px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => 'Proprietor',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 79; left: 293px; top: 173px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif; font-size: 15px;',
+                                'mobile' => 'z-index: 79; left: 33%; top: 173px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif; font-size: 15px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Phone: 569-879-6549',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 101; left: 144px; top: 214px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 5; left: 2%; top: 214px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'Address: 123 Main Street, Anytown, Gujarat, 380001',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 96; left: 144px; top: 237px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 96; left: 2%; top: 237px; color: rgb(255, 255, 255); font-size: 10px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title6',
+                            'text' => 'Email: pramukhelectric@gmail.com',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 97; left: 143px; top: 263px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 97; left: 2%; top: 263px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                    ]
+                ]),
+                "seo_title" => "Shop Visiting Card - Free Editable Visiting Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Shop Visiting Card online. Add your own text, images, and colors. Free editable visiting card template at ToolHubSpot.",
+                "seo_keywords" => "visiting card maker online, free editable visiting cards, personalized visiting card templates, custom business card, visiting card with photo and text, create visiting card online free, printable visiting cards editable, visiting card background editor, business card design free, visiting card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Business Visiting Card',
+                'slug' => 'business-visiting-card',
+                'thumbnail' => '/images/greeting-cards/business-visiting-card-thumb.png',
+                'category' => 'Visiting Card, Business',
+                'description' => 'Visiting Card',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "300",
+                    'bgImage' => "/images/greeting-cards/backgrounds/visitor-3.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/fake_logo.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 61px; left: 167px; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 98;',
+                                'mobile' => 'position: absolute; top: 61px; left: -1%; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 1;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Pramukh Electric",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 99; left: 241px; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 99; left: 22%; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 23px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Your Trusted Source for electronics',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 63; left: 240px; top: 93px; color: rgb(255, 255, 255); font-size: 16px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 63; left: 24%; top: 93px; color: rgb(255, 255, 255); font-size: 12px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/b-line.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 119px; left: 111px; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;',
+                                'mobile' => 'position: absolute; top: 119px; left: 20%; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'Hasamukh Chaudhary',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 102; left: 231px; top: 145px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 102; left: 11%; top: 145px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => 'Proprietor',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 79; left: 293px; top: 173px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif; font-size: 15px;',
+                                'mobile' => 'z-index: 79; left: 33%; top: 173px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif; font-size: 15px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Phone: 569-879-6549',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 101; left: 144px; top: 214px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 5; left: 2%; top: 214px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'Address: 123 Main Street, Anytown, Gujarat, 380001',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 96; left: 144px; top: 237px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 96; left: 2%; top: 237px; color: rgb(255, 255, 255); font-size: 10px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title6',
+                            'text' => 'Email: pramukhelectric@gmail.com',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 97; left: 143px; top: 263px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 97; left: 2%; top: 263px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                    ]
+                ]),
+                "seo_title" => "Shop Visiting Card - Free Editable Visiting Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Shop Visiting Card online. Add your own text, images, and colors. Free editable visiting card template at ToolHubSpot.",
+                "seo_keywords" => "visiting card maker online, free editable visiting cards, personalized visiting card templates, custom business card, visiting card with photo and text, create visiting card online free, printable visiting cards editable, visiting card background editor, business card design free, visiting card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],                     
         ];
 
         foreach ($cards as $index => $card) {
