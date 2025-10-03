@@ -1778,7 +1778,88 @@ class CardTemplatesTableSeeder extends Seeder
                 "seo_keywords" => "visiting card maker online, free editable visiting cards, personalized visiting card templates, custom business card, visiting card with photo and text, create visiting card online free, printable visiting cards editable, visiting card background editor, business card design free, visiting card customization tool",               
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],                    
+            ],
+            [
+                'title' => 'Ring Ceremony Invitation Card',
+                'slug' => 'ring-ceremony-invitation-card',
+                'thumbnail' => '/images/greeting-cards/ring-ceremony-invitation-card-thumb.png',
+                'category' => 'Ring Ceremony, Love',
+                'description' => 'Celebrate love and togetherness with our beautifully designed Ring Ceremony Invitation Card. Perfect for inviting family and friends to your special engagement day.',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/border-2.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/frame-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 61px; left: 167px; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 98;',
+                                'mobile' => 'position: absolute; top: 61px; left: -1%; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 1;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Pramukh Electric",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 99; left: 241px; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 99; left: 22%; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 23px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'Your Trusted Source for electronics',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 63; left: 240px; top: 93px; color: rgb(255, 255, 255); font-size: 16px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 63; left: 24%; top: 93px; color: rgb(255, 255, 255); font-size: 12px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/ganesh-4.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 119px; left: 111px; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;',
+                                'mobile' => 'position: absolute; top: 119px; left: 20%; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Phone: 569-879-6549',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 101; left: 144px; top: 214px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 5; left: 2%; top: 214px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'Address: 123 Main Street, Anytown, Gujarat, 380001',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 96; left: 144px; top: 237px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 96; left: 2%; top: 237px; color: rgb(255, 255, 255); font-size: 10px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title6',
+                            'text' => 'Email: pramukhelectric@gmail.com',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 97; left: 143px; top: 263px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 97; left: 2%; top: 263px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],
+                    ]
+                ]),
+                "seo_title" => "Ring Ceremony Invitation Card - Elegant Engagement Invite Designs",
+                "seo_description" => "Discover beautiful Ring Ceremony Invitation Cards to invite your loved ones to your engagement. Elegant, customizable designs perfect for creating lasting memories.",
+                "seo_keywords" => "Ring Ceremony Invitation Card, Engagement Invitation Card, Engagement Ceremony Invite, Wedding Ring Ceremony Card, Custom Invitation Cards, Printable Engagement Invite, Elegant Ring Ceremony Design, Personalized Invitation Card, Engagement Party Invitation, Digital Invitation Card",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         foreach ($cards as $index => $card) {
