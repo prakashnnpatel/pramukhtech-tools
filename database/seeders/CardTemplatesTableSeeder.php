@@ -1622,26 +1622,26 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'img2',
                             'src' => '/images/greeting-cards/element/fake_logo.png',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; top: 61px; left: 167px; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 98;',
-                                'mobile' => 'position: absolute; top: 61px; left: -1%; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 1;'
+                                'desktop' => 'position: absolute; top: 61px; left: 41px; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 39;',
+                                'mobile' => 'position: absolute; top: 61px; left: 0%; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 86;'
                             ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title1',
-                            'text' => "Pramukh Electric",
+                            'text' => "Architetur",
                             'css' => json_encode([
-                                'desktop' => 'z-index: 99; left: 241px; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 99; left: 22%; top: 53px; color: rgb(255, 255, 255); font-weight: bold; font-size: 23px; font-family: Merriweather, sans-serif;'
+                                'desktop' => 'z-index: 85; left: 116px; top: 54px; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 85; left: 26%; top: 54px; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px; font-family: Merriweather, sans-serif;'
                             ]),
                         ],                        
                         [
                             'type' => 'text',
                             'id' => 'title2',
-                            'text' => 'Your Trusted Source for electronics',
+                            'text' => 'Real Estate Agent',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 63; left: 240px; top: 93px; color: rgb(255, 255, 255); font-size: 16px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 63; left: 24%; top: 93px; color: rgb(255, 255, 255); font-size: 12px; font-family: Merriweather, sans-serif;'
+                                'desktop' => 'z-index: 78; left: 116px; top: 93px; color: rgb(255, 255, 255); font-size: 16px; font-family: Merriweather, sans-seri',
+                                'mobile' => 'z-index: 78; left: 26%; top: 93px; color: rgb(255, 255, 255); font-size: 16px; font-family: Merriweather, sans-serif;'
                             ]),
                         ],
                         [
@@ -1649,63 +1649,136 @@ class CardTemplatesTableSeeder extends Seeder
                             'id' => 'img2',
                             'src' => '/images/greeting-cards/element/b-line.png',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; top: 119px; left: 111px; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;',
-                                'mobile' => 'position: absolute; top: 119px; left: 20%; width: 462px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 69;'
+                                'desktop' => 'position: absolute; top: 114px; left: 55px; width: 351px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 43;',
+                                'mobile' => 'position: absolute; top: 114px; left: 6%; width: 351px; height: 51.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 43;'
                             ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title7',
-                            'text' => 'Hasamukh Chaudhary',
+                            'text' => 'Phone: 569-879-6549',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 102; left: 231px; top: 145px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 102; left: 11%; top: 145px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif;'
+                                'desktop' => 'z-index: 53; left: 56px; top: 159px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 53; left: 6%; top: 159px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;'
                             ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title8',
-                            'text' => 'Proprietor',
+                            'text' => 'Email: architetur@gmail.com',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 79; left: 293px; top: 173px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif; font-size: 15px;',
-                                'mobile' => 'z-index: 79; left: 33%; top: 173px; color: rgb(255, 255, 255); font-family: Merriweather, sans-serif; font-size: 15px;'
+                                'desktop' => 'z-index: 82; left: 57px; top: 184px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 82; left: 6%; top: 184px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;'
                             ]),
                         ],
                         [
                             'type' => 'text',
                             'id' => 'title3',
-                            'text' => 'Phone: 569-879-6549',
+                            'text' => 'Lara Andreson',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 101; left: 144px; top: 214px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 5; left: 2%; top: 214px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                                'desktop' => 'color: rgb(255, 255, 255); z-index: 68; font-weight: bold; font-size: 15px; left: 0px; top: 0px;',
+                                'mobile' => 'color: rgb(255, 255, 255); z-index: 68; font-weight: bold; font-size: 15px; left: 0px; top: 0px;'
                             ]),
                         ],
                         [
                             'type' => 'text',
-                            'id' => 'title4',
-                            'text' => 'Address: 123 Main Street, Anytown, Gujarat, 380001',
+                            'id' => 'title9',
+                            'text' => 'Website: www.pramukhtech.com',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 96; left: 144px; top: 237px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 96; left: 2%; top: 237px; color: rgb(255, 255, 255); font-size: 10px; font-family: Merriweather, sans-serif;'
+                                'desktop' => 'z-index: 65; left: 56px; top: 211px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 65; left: 6%; top: 211px; color: rgb(255, 255, 255); font-size: 13px; font-family: Merriweather, sans-serif;'
+                            ]),
+                        ],                     
+                    ]
+                ]),
+                "seo_title" => "Business Visiting Card - Free Editable Visiting Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Business Visiting Card online. Add your own text, images, and colors. Free editable visiting card template at ToolHubSpot.",
+                "seo_keywords" => "visiting card maker online, free editable visiting cards, personalized visiting card templates, custom business card, visiting card with photo and text, create visiting card online free, printable visiting cards editable, visiting card background editor, business card design free, visiting card customization tool",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Social Visiting Card',
+                'slug' => 'social-visiting-card',
+                'thumbnail' => '/images/greeting-cards/social-visiting-card-thumb.png',
+                'category' => 'Visiting Card, Business',
+                'description' => 'Visiting Card',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "300",
+                    'bgImage' => "/images/greeting-cards/backgrounds/visitor-4.png",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/fake_logo.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 38px; left: 54px; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 62;',
+                                'mobile' => 'position: absolute; top: 38px; left: -3%; width: 88px; height: 66.2933px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 1;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => "Architetur",
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 14; left: 24px; top: 108px; color: rgb(255, 255, 255); font-weight: bold; font-size: 30px; font-family: Merriweather, sans-serif;',
+                                'mobile' => 'z-index: 14; left: 0%; top: 108px; color: rgb(255, 255, 255); font-weight: bold; font-size: 14px; font-family: Merriweather, sans-serif;'
                             ]),
                         ],                        
                         [
                             'type' => 'text',
-                            'id' => 'title6',
-                            'text' => 'Email: pramukhelectric@gmail.com',
+                            'id' => 'title2',
+                            'text' => 'Real Estate Agent',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 97; left: 143px; top: 263px; color: rgb(255, 255, 255); font-size: 15px; font-family: Merriweather, sans-serif;',
-                                'mobile' => 'z-index: 97; left: 2%; top: 263px; color: rgb(255, 255, 255); font-size: 11px; font-family: Merriweather, sans-serif;'
+                                'desktop' => 'z-index: 12; left: 29px; top: 158px; color: rgb(255, 255, 255); font-size: 16px; font-family: Merriweather, sans-seri;',
+                                'mobile' => 'z-index: 12; left: -1%; top: 131px; color: rgb(255, 255, 255); font-size: 10px; font-family: Merriweather, sans-seri;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'Phone: 569-879-6549',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 61; left: 301px; top: 116px; color: rgb(64, 0, 64); font-size: 13px; font-family: Merriweather, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 61; left: 44%; top: 116px; color: rgb(64, 0, 64); font-size: 13px; font-family: Merriweather, sans-serif; font-weight: bold;'
                             ]),
                         ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => 'Email: architetur@gmail.com',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 57; left: 301px; top: 182px; color: rgb(64, 0, 64); font-size: 13px; font-family: Merriweather, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 57; left: 41%; top: 181px; color: rgb(64, 0, 64); font-size: 13px; font-family: Merriweather, sans-serif; font-weight: bold;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title9',
+                            'text' => 'Website: www.pramukhtech.com',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 54; left: 300px; top: 209px; color: rgb(64, 0, 64); font-size: 13px; font-family: Merriweather, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 54; left: 40%; top: 227px; color: rgb(64, 0, 64); font-size: 13px; font-family: Merriweather, sans-serif; font-weight: bold;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Address: 123 Main Street, Anytown, GJ, 380001',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 50; left: 302px; top: 141px; font-size: 13px; font-family: Merriweather, sans-serif; font-weight: bold;',
+                                'mobile' => 'z-index: 50; left: 43%; top: 141px; font-size: 11px; font-family: Merriweather, sans-serif; font-weight: bold;'
+                            ]),
+                        ],                     
                     ]
                 ]),
-                "seo_title" => "Shop Visiting Card - Free Editable Visiting Card Template | ToolHubSpot",
-                "seo_description" => "Create and customize this Shop Visiting Card online. Add your own text, images, and colors. Free editable visiting card template at ToolHubSpot.",
+                "seo_title" => "Social Visiting Card - Free Editable Visiting Card Template | ToolHubSpot",
+                "seo_description" => "Create and customize this Social Visiting Card online. Add your own text, images, and colors. Free editable visiting card template at ToolHubSpot.",
                 "seo_keywords" => "visiting card maker online, free editable visiting cards, personalized visiting card templates, custom business card, visiting card with photo and text, create visiting card online free, printable visiting cards editable, visiting card background editor, business card design free, visiting card customization tool",               
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],                     
+            ],                    
         ];
 
         foreach ($cards as $index => $card) {
