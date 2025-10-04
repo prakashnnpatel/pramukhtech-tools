@@ -2317,17 +2317,8 @@ class CardTemplatesTableSeeder extends Seeder
                 'template_data' => json_encode([
                     'bgColor' => '',
                     "main-card-height" => "800",
-                    'bgImage' => "/images/greeting-cards/backgrounds/funeral-8.jpg",
-                    'elements' => [
-                        [
-                            'type' => 'image',
-                            'id' => 'img1',
-                            'src' => '/images/greeting-cards/element/frame-6.png',
-                            'css' => json_encode([
-                                'desktop' => 'position: absolute; top: 1px; left: 1px; width: 597px; height: 799.1px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 1;',
-                                'mobile' => 'position: absolute; top: 1px; left: 1px; width: 597px; height: 799.1px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 1;'
-                            ]),
-                        ],
+                    'bgImage' => "/images/greeting-cards/backgrounds/border-19.png",
+                    'elements' => [                        
                         [
                             'type' => 'text',
                             'id' => 'title1',
@@ -2480,17 +2471,8 @@ class CardTemplatesTableSeeder extends Seeder
                 'template_data' => json_encode([
                     'bgColor' => '',
                     "main-card-height" => "730",
-                    'bgImage' => "/images/greeting-cards/backgrounds/funeral-8.jpg",
-                    'elements' => [
-                        [
-                            'type' => 'image',
-                            'id' => 'img1',
-                            'src' => '/images/greeting-cards/element/frame-5.png',
-                            'css' => json_encode([
-                                'desktop' => 'position: absolute; top: 0px; left: 0px; width: 598px; height: 728.5px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 1;',
-                                'mobile' => 'position: absolute; top: 0px; left: 0px; width: 100%; height: 728.5px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 1;'
-                            ]),
-                        ],
+                    'bgImage' => "/images/greeting-cards/backgrounds/border-17.png",
+                    'elements' => [                        
                         [
                             'type' => 'image',
                             'id' => 'img2',
