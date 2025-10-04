@@ -2068,10 +2068,10 @@ class CardTemplatesTableSeeder extends Seeder
                         [
                             'type' => 'image',
                             'id' => 'img2',
-                            'src' => '/images/greeting-cards/element/separator-3.png',
+                            'src' => '/images/greeting-cards/element/separator-1.png',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; height: 118.941px; cursor: move; z-index: 4; left: 213px; top: 350px; border: 1px none rgb(0, 0, 0); width: 280.097px;',
-                                'mobile' => 'position: absolute;height: 100px;cursor: move;z-index: 1;left: 10px;top: 280px;border: 1px none rgb(0, 0, 0);width: 280.097px;'
+                                'desktop' => 'position: absolute; cursor: move; z-index: 6; left: 272px; top: 391px; border: 1px none rgb(0, 0, 0); height: 25px;',
+                                'mobile' => 'position: absolute; height: 40px; cursor: move; z-index: 5; left: 35px; top: 299px; border: 1px none rgb(0, 0, 0);'
                             ]),
                         ],
                         [
@@ -2113,10 +2113,10 @@ class CardTemplatesTableSeeder extends Seeder
                         [
                             'type' => 'image',
                             'id' => 'img3',
-                            'src' => '/images/greeting-cards/element/separator-3.png',
+                            'src' => '/images/greeting-cards/element/separator-1.png',
                             'css' => json_encode([
-                                'desktop' => 'position: absolute; height: 104.927px; cursor: move; z-index: 7; left: 212px; top: 624px; border: 1px none rgb(0, 0, 0); width: 280.097px;',
-                                'mobile' => 'position: absolute;height: 100px;cursor: move;z-index: 2;left: 10px;top: 624px;border: 1px none rgb(0, 0, 0);width: 280.097px;'
+                                'desktop' => 'position: absolute; cursor: move; z-index: 2; left: 272px; top: 656px; border: 1px none rgb(0, 0, 0); height: 25px;',
+                                'mobile' => 'position: absolute;height: 40px;cursor: move;z-index: 1;left: 35px;top: 653px;border: 1px none rgb(0, 0, 0);/* width: 280.097px; */'
                             ]),
                         ],
                         [
