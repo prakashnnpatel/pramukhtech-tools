@@ -2439,8 +2439,8 @@ class CardTemplatesTableSeeder extends Seeder
                             અનિલકુમાર કાંતિલાલ પટેલ
                             જગદીશકુમાર કાંતિલાલ પટેલ',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 253; left: 22%; top: 585px; font-size: 13px; font-weight: bold; width: 30%;',
-                                'mobile' => 'z-index: 253; left: 22%; top: 585px; font-size: 13px; font-weight: bold; width: 30%;'
+                                'desktop' => 'z-index: 253; left: 22%; top: 585px; font-size: 13px; font-weight: bold; width: 35%;',
+                                'mobile' => 'z-index: 253; left: 22%; top: 585px; font-size: 13px; font-weight: bold; width: 35%;'
                             ]),
                         ],
                         [
@@ -2450,8 +2450,8 @@ class CardTemplatesTableSeeder extends Seeder
                             જશવંતકુમાર કાંતિલાલ પટેલ
                             પરિવારજન તથા સગાં-વ્હાલાં',
                             'css' => json_encode([
-                                'desktop' => 'z-index: 254; left: 50%; top: 585px; font-size: 13px; font-weight: bold; width: 30%;',
-                                'mobile' => 'z-index: 254; left: 50%; top: 585px; font-size: 13px; font-weight: bold; width: 30%;'
+                                'desktop' => 'z-index: 254; left: 50%; top: 585px; font-size: 13px; font-weight: bold; width: 35%;',
+                                'mobile' => 'z-index: 254; left: 50%; top: 585px; font-size: 13px; font-weight: bold; width: 35%;'
                             ]),
                         ],
                         [
