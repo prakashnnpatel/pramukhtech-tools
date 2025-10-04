@@ -2164,6 +2164,151 @@ class CardTemplatesTableSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
+                'title' => 'New Home Blessings Card',
+                'slug' => 'new-home-blessings-card',
+                'thumbnail' => '/images/greeting-cards/new-home-blessings-card-thumb.png',
+                'category' => 'Gruh Pravesh, Love, Wedding',
+                'description' => 'Celebrate the joy of a fresh beginning with our New Home Blessings Card, designed to invite loved ones to your housewarming. Share your happiness and seek their warm wishes in style',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/border-14.jpg",
+                    "main-card-height" => "1064",
+                    'elements' => [
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'વાસ્તુ પૂજન',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 7; top: 165px; font-size: 30px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(220, 4, 37); width: 100%; text-align: center; letter-spacing: 0.9px; left: 2px; padding: 0px 131px;',
+                                'mobile' => 'z-index: 7; top: 165px; font-size: 30px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(220, 4, 37); width: 100%; text-align: center; letter-spacing: 0.9px; left: 2px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'સહર્ષ ખુશાલી સાથે જણાવવાનું કે શ્રી ઉમિયા માતાજીની અસીમ કૃપા અને વડીલોના આશીર્વાદ થી અમારા નૂતન ઘરમાં વાસ્તુ યજ્ઞ સંવત ૨૦૮૧ મહા વદ સાતમ ને શુક્રવાર તા. ૨૧-૦૧-૨૦૨૬ ના રોજ રાખેલ છે, તો આ શુભ પ્રસંગે આપ સ્નેહીશ્રી ને પધારવા ભાવભર્યું આમંત્રણ છે.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5;top: 231px;font-size: 16px;font-family: Georgia, sans-serif;color: rgb(53, 61, 22);width: 100%;text-align: center;letter-spacing: 0.9px;left: 4px;padding: 0;padding: 0px 131px;',
+                                'mobile' => 'z-index: 5;top: 231px;font-size: 16px;font-family: Georgia, sans-serif;color: rgb(53, 61, 22);width: 100%;text-align: center;letter-spacing: 0.9px;left: 4px;padding: 0;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/separator-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute;height: 20px;cursor: move;z-index: 5;left: 200px;top: 406px;border: 1px none rgb(0, 0, 0);',
+                                'mobile' => 'position: absolute;height: 20px;cursor: move;z-index: 5;left: 15%;top: 406px;border: 1px none rgb(0, 0, 0);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'વાસ્તુ યજ્ઞ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 430px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px; padding: 0px 131px;',
+                                'mobile' => 'z-index: 5; top: 430px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'તા ૨૧-૦૧-૨૦૨૬ સવારે ૯:૦૦ થી ૪:૧૫ કલાક સુધી',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 461px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px;',
+                                'mobile' => 'z-index: 5; top: 461px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px;'
+                            ]),
+                        ],     
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/separator-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 20px; cursor: move; z-index: 25; left: 200px; top: 500px; border: 1px none rgb(0, 0, 0);',
+                                'mobile' => 'position: absolute; height: 20px; cursor: move; z-index: 25; left: 15%; top: 510px; border: 1px none rgb(0, 0, 0);'
+                            ]),
+                        ],            
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'ભોજન સમારંભ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 530px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px; padding: 0px 131px;',
+                                'mobile' => 'z-index: 5; top: 530px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title6',
+                            'text' => 'સાંજે ૬:૦૦ કલાકે',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 28; top: 568px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;',
+                                'mobile' => 'z-index: 28; top: 567px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;'
+                            ]),
+                        ], 
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => '૧૦૧, શ્રી હરિ બંગલૉ, VIP રોડ, અમદાવાદ, ગુજરાત',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 28; top: 590px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;',
+                                'mobile' => 'z-index: 28; top: 593px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;'
+                            ]),
+                        ],  
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
+                            'src' => '/images/greeting-cards/element/separator-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 20px; cursor: move; z-index: 25; left: 200px; top: 640px; border: 1px none rgb(0, 0, 0);',
+                                'mobile' => 'position: absolute; height: 20px; cursor: move; z-index: 25; left: 15%; top: 650px; border: 1px none rgb(0, 0, 0);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => ' શુભેચ્છક',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 11;top: 670px;font-size: 22px;font-family: Georgia, sans-serif;font-weight: bold;color: rgb(53, 61, 22);width: 100%;text-align: center;letter-spacing: 0.9px;padding: 0px 131px;',
+                                'mobile' => 'z-index: 11;top: 670px;font-size: 22px;font-family: Georgia, sans-serif;font-weight: bold;color: rgb(53, 61, 22);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title9',
+                            'text' => 'શ્રી નવીનભાઈ મહેશભાઈ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 11; top: 703px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 5px;',
+                                'mobile' => 'z-index: 11; top: 703px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 5px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title10',
+                            'text' => 'શ્રીમતી મીરાબેન નવીનભાઈ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 9; top: 727px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 2px;',
+                                'mobile' => 'z-index: 9; top: 727px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 2px;'
+                            ]),
+                        ], 
+                        [
+                            'type' => 'text',
+                            'id' => 'title11',
+                            'text' => 'શ્રી કુશ નવીનભાઈ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 10; top: 747px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 8px;',
+                                'mobile' => 'z-index: 10; top: 747px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(53, 61, 22); width: 100%; text-align: center; letter-spacing: 0.9px; left: 8px;'
+                            ]),
+                        ], 
+                    ]
+                ]),
+                "seo_title" => "New Home Blessings Card | Personalized Housewarming Invitation Online",
+                "seo_description" => "Create and share beautiful New Home Blessings Cards to invite family and friends to your housewarming ceremony. Customize your card with names, dates, and auspicious designs.",
+                "seo_keywords" => "new home blessings card, housewarming invitation card, personalized new home card, digital housewarming invite, new home entry card, online housewarming invitation, home blessings card design",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'title' => 'Funeral Card',
                 'slug' => 'funeral-card',
                 'thumbnail' => '/images/greeting-cards/funeral-thumb.png',
