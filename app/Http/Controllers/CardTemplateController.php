@@ -30,7 +30,7 @@ class CardTemplateController extends Controller
         if(!empty($category)) {
             $cards = $cards->where("category","LIKE", "%".$category."%");
         }
-        $cards = $cards->paginate(12)->appends($request->all());
+        $cards = $cards->orderBy("id","desc")->paginate(12)->appends($request->all());
 
         $currentTool = Tools::select(["id", "slug","category"])->where("slug",'cards')->first();
         

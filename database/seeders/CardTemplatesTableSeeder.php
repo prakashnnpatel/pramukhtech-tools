@@ -2026,6 +2026,143 @@ class CardTemplatesTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'title' => 'New Home Invitation',
+                'slug' => 'new-home-invitation',
+                'thumbnail' => '/images/greeting-cards/new-home-invitation-thumb.png',
+                'category' => 'Gruh Pravesh, Love, Wedding',
+                'description' => 'Invite your loved ones to bless your new home with our beautifully designed Gruh Pravesh invitation card. Perfect for sharing the joy of your housewarming ceremony in a traditional yet elegant way',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/border-13.jpg",
+                    "main-card-height" => "1024",
+                    "main-card-width" => "1024",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/ganesh-3.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 80px; cursor: move; z-index: 3; left: 305px; top: 12px; border: 0px; width: 85.9882px;',
+                                'mobile' => 'position: absolute;height: 80px;cursor: move;z-index: 3;left: 100px;top: 12px;border: 0px;width: 85.9882px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Warmly Invite You to Grace the Auspicious Occasion of Our',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 2; top: 154px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: 17px; padding: 0px 150px;',
+                                'mobile' => 'z-index: 1;top: 90px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'NEW HOME & GRUH PRAVESH',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 3; top: 260px; font-size: 40px; font-weight: bold; color: #AA7A2D; width: 100%; text-align: center; left: -19px; letter-spacing: 0px; text-decoration: none; padding: 0px 140px 0px 195px;',
+                                'mobile' => 'z-index: 2;top: 230px;font-size: 22px;font-weight: bold;color: rgb(170, 122, 45);width: 100%;text-align: center;letter-spacing: 0px;text-decoration: none;'
+                            ]),
+                        ], 
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/separator-3.webp',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 118.941px; cursor: move; z-index: 4; left: 213px; top: 350px; border: 1px none rgb(0, 0, 0); width: 280.097px;',
+                                'mobile' => 'position: absolute;height: 100px;cursor: move;z-index: 1;left: 10px;top: 280px;border: 1px none rgb(0, 0, 0);width: 280.097px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'Followed by Dinner',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 444px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: -2px;',
+                                'mobile' => 'z-index: 5; top: 350px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: -2px;'
+                            ]),
+                        ],                        
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'Tuesday, 07th July 2026',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 491px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: 8px;',
+                                'mobile' => 'z-index: 5; top: 400px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: 8px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => '7:30 PM Onwards',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 538px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: -6px;',
+                                'mobile' => 'z-index: 5; top: 460px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: -6px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title6',
+                            'text' => 'Address: The Grand Ballroom, Celebration St, Mumbai',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 22;top: 590px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;left: 16px;padding: 0 50px 0 50px;',
+                                'mobile' => 'z-index: 2;top: 520px;font-size: 24px;font-family: Lobster, sans-serif;font-weight: normal;color: rgb(206, 145, 64);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
+                            'src' => '/images/greeting-cards/element/separator-3.webp',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 104.927px; cursor: move; z-index: 7; left: 212px; top: 624px; border: 1px none rgb(0, 0, 0); width: 280.097px;',
+                                'mobile' => 'position: absolute;height: 100px;cursor: move;z-index: 2;left: 10px;top: 624px;border: 1px none rgb(0, 0, 0);width: 280.097px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'With Love & Regards,',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 3; top: 723px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: -1px;',
+                                'mobile' => 'z-index: 3; top: 710px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: -1px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => 'Your Name 1',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 8; top: 770px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px;',
+                                'mobile' => 'z-index: 8; top: 760px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title9',
+                            'text' => 'Name 2',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 7; top: 815px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: 3px;',
+                                'mobile' => 'z-index: 7; top: 805px; font-size: 24px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0.9px; left: 3px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title10',
+                            'text' => 'Look forward to your gracious presence',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 7; top: 881px; font-size: 18px; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0px; left: -2px; line-height: 1.2;',
+                                'mobile' => 'z-index: 7; top: 881px; font-size: 18px; font-weight: normal; color: rgb(206, 145, 64); width: 100%; text-align: center; letter-spacing: 0px; left: -2px; line-height: 1.2;'
+                            ]),
+                        ],
+                    ]
+                ]),
+                "seo_title" => "Gruh Pravesh Invitation Card | Traditional & Customizable Housewarming Cards",
+                "seo_description" => "Design and share elegant Gruh Pravesh invitation cards online. Celebrate your housewarming ceremony with beautifully crafted cards featuring traditional motifs and personalized details.",
+                "seo_keywords" => "Gruh Pravesh card, Gruh Pravesh invitation, Griha Pravesh card online, housewarming invitation card, home entry card, Griha Pravesh digital invite, traditional housewarming card, personalized Gruh Pravesh invitation",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         foreach ($cards as $index => $card) {
