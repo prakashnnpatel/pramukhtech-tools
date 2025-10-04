@@ -1262,4 +1262,11 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 	}
+
+	/* Tip close icon for mobile screen */
+	if ($('#close-tips-btn').length > 0) {
+		$("#close-tips-btn").click(function(){
+			$("#card-tips-list").hide();
+		});
+	}
 });

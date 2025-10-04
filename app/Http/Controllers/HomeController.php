@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use PDF;
-use App\Models\Lead;
 use Illuminate\Http\Request;
+use App\Models\Lead;
 use App\Models\Tools;
+use App\Models\CardTemplates;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Illuminate\Support\Arr;
@@ -359,6 +360,18 @@ class HomeController extends Controller
                     Url::create(route('toollist', $tool->slug))
                         ->setLastModificationDate($tool->updated_at)
                         ->setChangeFrequency($changeFreq)
+                        ->setPriority(0.8)
+                );
+            }
+        });
+
+        /* Greeting Cards */
+        CardTemplates::select('id','slug','updated_at')->chunkById(1000, function($cards) use ($sitemap) {
+            foreach($cards as $card) {
+                $sitemap->add(
+                    Url::create(route('greeting-cards.show', $card->slug))
+                        ->setLastModificationDate($card->updated_at)
+                        ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
                         ->setPriority(0.8)
                 );
             }

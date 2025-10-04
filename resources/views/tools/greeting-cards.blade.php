@@ -13,6 +13,9 @@
 	#card-canvas {
 	 touch-action: none;   /* Prevent browser scroll/zoom on touch */
 	}
+	@media (min-width: 992px) {
+		.mobile-only-tips { display: none !important; }
+	}
 </style>
 @endpush
 
@@ -72,6 +75,30 @@
 						<div class="calculator-card">
 							<div class="card-body">
 								<p class="calculator-subtitle">Create personalized greeting cards for every special moment.</p>
+								<!-- Tips Section: Improved UI and Highlighted Text -->
+								<div class="card-tips-list mb-2 mobile-only-tips" id="card-tips-list" style="background: #f8fafc; border-radius: 8px; padding: 18px 22px; margin-bottom: 0; border: 1px solid #e0e7ef; box-shadow: 0 2px 8px 0 #e9e9e9; position: relative;">
+									<button type="button" id="close-tips-btn" aria-label="Close tips" style="position: absolute; top: 0px; right: 5px; background: none; border: none; font-size: 22px; color: #888; cursor: pointer; z-index: 2;">
+										<span aria-hidden="true">&times;</span>
+									</button>
+									<div style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+										<span style="font-weight:600; color:#f43f5e; min-width: 32px;"><i class="fas fa-mobile-alt"></i></span>
+										<span style="margin-left: 10px;">
+											<u>Mobile Users</u>: You can use this tool on mobile, but for <b>advanced editing</b> and <b>best results</b>, switch to a larger screen.
+										</span>
+									</div>
+									<div style="margin-bottom: 10px; display: flex; align-items: flex-start;">
+										<span style="font-weight:600; color:#2d6cdf; min-width: 32px;"><i class="fas fa-desktop"></i></span>
+										<span style="margin-left: 10px;">
+											<u>Best Experience</u>: Use this tool on a <b>desktop or laptop</b> for easier editing and <span style="color:#16a34a;font-weight:500;">full feature access</span>.
+										</span>
+									</div>
+									<div style="display: flex; align-items: flex-start;">
+										<span style="font-weight:600; color:#eab308; min-width: 32px;"><i class="fas fa-save"></i></span>
+										<span style="margin-left: 10px;">
+											<u>Important</u>: <b>Download your card</b> before closing or refreshing the page to <span style="color:#dc2626;">avoid losing your work</span>.
+										</span>
+									</div>
+								</div>
 								<div id="card-editor-wrapper" class="d-flex justify-content-center align-items-center">
 									<div id="card-canvas" style="position: relative; background: #fff; overflow: hidden; height: 400px; width: 600px;">
 										<!-- Card elements (text/images) will be added here dynamically -->
