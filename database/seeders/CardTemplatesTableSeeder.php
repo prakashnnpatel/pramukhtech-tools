@@ -2316,7 +2316,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'description' => 'Funeral Card',
                 'template_data' => json_encode([
                     'bgColor' => '',
-                    "main-card-height" => "800",
+                    "main-card-height" => "853",
                     'bgImage' => "/images/greeting-cards/backgrounds/border-19.png",
                     'elements' => [                        
                         [
@@ -2470,7 +2470,7 @@ class CardTemplatesTableSeeder extends Seeder
                 'description' => 'Funeral Card',
                 'template_data' => json_encode([
                     'bgColor' => '',
-                    "main-card-height" => "730",
+                    "main-card-height" => "773",
                     'bgImage' => "/images/greeting-cards/backgrounds/border-17.png",
                     'elements' => [                        
                         [
@@ -2574,9 +2574,118 @@ class CardTemplatesTableSeeder extends Seeder
                         ],                                                   
                     ]
                 ]),
-                "seo_title" => "Funeral Card Maker - Create Custom Funeral Invitation Cards Online",
-                "seo_description" => "Design and personalize Funeral Cards online with our easy-to-use template. Create respectful and elegant funeral invitation cards to honor your loved ones.",
-                "seo_keywords" => "Funeral card, Funeral invitation card, Memorial card, Sympathy card, Obituary card, Funeral announcement card, Custom funeral card, Printable funeral invitation, Digital funeral card, Personalized memorial card",               
+                "seo_title" => "Funeral Photo Card Maker - Create Custom Funeral Invitation Cards Online",
+                "seo_description" => "Design and personalize Funeral Photo Cards online with our easy-to-use template. Create respectful and elegant funeral invitation cards featuring a photo to honor your loved ones.",
+                "seo_keywords" => "Funeral photo card, Funeral invitation card with photo, Memorial card with picture, Sympathy card with image, Obituary card with photo, Funeral announcement card with picture, Custom funeral photo card, Printable funeral invitation with image, Digital funeral card with photo, Personalized memorial card with picture",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Funeral piece Card',
+                'slug' => 'funeral-piece-card',
+                'thumbnail' => '/images/greeting-cards/funeral-piece-card-thumb.png',
+                'category' => 'Funeral Card, Business',
+                'description' => 'Funeral Card',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "773",
+                    'bgImage' => "/images/greeting-cards/backgrounds/border-20.jpg",
+                    'elements' => [  
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'શ્રદ્ધાંજલિ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 91; left: 245px; top: 54px; color: rgb(255, 255, 255);',
+                                'mobile' => 'z-index: 91; left: 33%; top: 20px; color: rgb(255, 255, 255);'
+                            ]),
+                        ],                      
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/photoframe-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 109px; left: 213px; width: 150px; height: 150px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 62;',
+                                'mobile' => 'position: absolute; top: 109px; left: 24%; width: 150px; height: 150px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 62;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/fakeman-1.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 113px; left: 229px; width: 126px; height: 126.844px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 9; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 113px; left: 30%; width: 126px; height: 126.844px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 9; border-radius: 50%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'સ્વ. સુરેશભાઈ કુપલભાઈ ભારોલા',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 16; left: 166px; top: 259px; color: rgb(255, 255, 255);',
+                                'mobile' => 'z-index: 16; left: 14%; top: 259px; color: rgb(255, 255, 255); font-size: 16px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'સ્વર્ગવાસ: સંવત ૨૦૮૧ ના ભાદરવા વદ ૫ ને બુધવાર તા. ૧૦/૦૯/૨૦૨૨',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 92; left: 151px; top: 296px; color: rgb(255, 255, 255); font-size: 15px; text-align: center; width: 50%;',
+                                'mobile' => 'z-index: 92; left: 2%; top: 296px; color: rgb(255, 255, 255); font-size: 15px; text-align: center; width: 100%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
+                            'src' => '/images/greeting-cards/element/separator-1.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 348px; left: 190px; width: 200px; height: 37px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 27;',
+                                'mobile' => 'position: absolute; top: 348px; left: 20%; width: 200px; height: 37px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 27;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'આત્મા કદી જન્મતો નથી કે મૃત્યુ પામતો નથી. જે નાશ પામે છે તે શરીર છે. આત્મા આજીવન શાશ્વત અને અમર છે. ઈશ્વર આપના દિવ્ય આત્માને પરમશાંતિ અર્પે તેવી પ્રાર્થના.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 93; left: 156px; top: 383px; color: rgb(255, 255, 255); font-size: 15px; text-align: center; width: 50%;',
+                                'mobile' => 'z-index: 93; left: 9%; top: 383px; color: rgb(255, 255, 255); font-size: 15px; text-align: center;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
+                            'src' => '/images/greeting-cards/element/separator-1.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 500px; left: 192px; width: 200px; height: 31.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 94;',
+                                'mobile' => 'position: absolute; top: 500px; left: 20%; width: 200px; height: 31.6px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 94;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'લિ.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 56; left: 254px; top: 535px; color: rgb(255, 255, 255); text-align: center;',
+                                'mobile' => 'z-index: 56; left: 46%; top: 535px; color: rgb(255, 255, 255); text-align: center;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'મનોજભાઈ કુપલભાઈ ભારોલા દિપકભાઈ કુપલભાઈ ભારોલા',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 95; left: 179px; top: 573px; color: rgb(255, 255, 255); font-size: 18px; width: 50%;',
+                                'mobile' => 'z-index: 95; left: 15%; top: 573px; color: rgb(255, 255, 255); font-size: 18px; width: 94%;'
+                            ]),
+                        ],                                                                      
+                    ]
+                ]),
+                "seo_title" => "Funeral Piece Card Maker - Create Custom Funeral Invitation Cards Online",
+                "seo_description" => "Design and personalize Funeral Piece Cards online with our easy-to-use template. Create respectful and elegant funeral invitation cards to honor your loved ones.",
+                "seo_keywords" => "Funeral piece card, Funeral invitation card, Memorial card, Sympathy card, Obituary card, Funeral announcement card, Custom funeral piece card, Printable funeral invitation, Digital funeral piece card, Personalized memorial card",               
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
