@@ -2163,6 +2163,169 @@ class CardTemplatesTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'title' => 'Funeral Card',
+                'slug' => 'funeral-card',
+                'thumbnail' => '/images/greeting-cards/funeral-thumb.png',
+                'category' => 'Funeral Card, Business',
+                'description' => 'Funeral Card',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "800",
+                    'bgImage' => "/images/greeting-cards/backgrounds/funeral-8.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/frame-6.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 1px; left: 1px; width: 597px; height: 799.1px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 1;',
+                                'mobile' => 'position: absolute; top: 1px; left: 1px; width: 597px; height: 799.1px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 1;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'બેસણું',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 145; left: 251px; top: 50px; font-weight: bold; font-family: "Times New Roman", sans-serif; font-size: 30px; font-style: italic; text-decoration: underline;',
+                                'mobile' => 'z-index: 145; left: 251px; top: 50px; font-weight: bold; font-family: "Times New Roman", sans-serif; font-size: 30px; font-style: italic; text-decoration: underline;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/photoframe-1.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 98px; left: 228px; width: 152px; height: 143px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 160;',
+                                'mobile' => 'position: absolute; top: 98px; left: 228px; width: 152px; height: 143px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 160;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
+                            'src' => '/images/greeting-cards/element/fakeman-1.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 114px; left: 248px; width: 109px; height: 109px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 201;',
+                                'mobile' => 'position: absolute; top: 114px; left: 248px; width: 109px; height: 109px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 201;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'સ્વ. હીરાભાઈ  કાંતિલાલ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 246; left: 185px; top: 241px; font-weight: bold; font-size: 20px; color: rgb(64, 0, 0); font-family: Arial, sans-serif;',
+                                'mobile' => 'z-index: 246; left: 185px; top: 241px; font-weight: bold; font-size: 20px; color: rgb(64, 0, 0); font-family: Arial, sans-serif;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => '(વયઃ ૬૦) ગામ : ગરયાધાર
+                            હિન્દુધર્મ મુજબ જણાવાનું કે
+                            અમારા દાદા હીરાભાઈ કાંતિલાલ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 1; left: 35%; top: 272px; text-align: center; font-size: 13px; font-weight: bold; font-family: Arial, sans-serif; width: 33%;',
+                                'mobile' => 'z-index: 1; left: 35%; top: 272px; text-align: center; font-size: 13px; font-weight: bold; font-family: Arial, sans-serif; width: 33%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'તા.-૧૧-૦૧-૨૦૨૪ ના રોજ અકાલકાળે સ્વર્ગવાસ પામ્યા છે.
+                            ભગવાન એમના દિવ્ય આત્માને શાંતિ આપે એવી અમારી પ્રાર્થના.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 6; left: 129px; top: 335px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 60%;',
+                                'mobile' => 'z-index: 6; left: 129px; top: 335px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 60%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'બેસણું',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 236; left: 255px; top: 384px; font-weight: bold; text-decoration: underline;',
+                                'mobile' => 'z-index: 236; left: 255px; top: 384px; font-weight: bold; text-decoration: underline;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title6',
+                            'text' => 'તા.- ૧૩-૦૧-૨૦૨૪ ના રોજ
+                            સાંજ ૪:૩૦ થી ૭:૦૦ સુધી રાખેલ છે.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 2; left: 32%; top: 419px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 33%;',
+                                'mobile' => 'z-index: 2; left: 32%; top: 419px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 33%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'બેસણાનું સ્થળ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 238; left: 236px; top: 469px; font-weight: bold; font-size: 18px; text-decoration: underline;',
+                                'mobile' => 'z-index: 238; left: 236px; top: 469px; font-weight: bold; font-size: 18px; text-decoration: underline;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'રાજમહેલ હોટેલ સમક્ષ પાઠીડાર સમાજવાડી,
+                            અંબાલિયાળ રોડ, રાજકોટ.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 2; left: 177px; top: 503px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 43%;',
+                                'mobile' => 'z-index: 2; left: 177px; top: 503px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 43%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => 'સ્નેહાધીન',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 252; left: 250px; top: 552px; font-size: 18px; font-weight: bold; text-decoration: underline;',
+                                'mobile' => 'z-index: 252; left: 250px; top: 552px; font-size: 18px; font-weight: bold; text-decoration: underline;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title9',
+                            'text' => 'બાબુલાલ અંબાલાલભાઈ પટેલ
+                            અનિલકુમાર કાંતિલાલ પટેલ
+                            જગદીશકુમાર કાંતિલાલ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 253; left: 22%; top: 585px; font-size: 13px; font-weight: bold; width: 30%;',
+                                'mobile' => 'z-index: 253; left: 22%; top: 585px; font-size: 13px; font-weight: bold; width: 30%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title10',
+                            'text' => 'દિપકકુમાર કાંતિલાલ પટેલ
+                            જશવંતકુમાર કાંતિલાલ પટેલ
+                            પરિવારજન તથા સગાં-વ્હાલાં',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 254; left: 50%; top: 585px; font-size: 13px; font-weight: bold; width: 30%;',
+                                'mobile' => 'z-index: 254; left: 50%; top: 585px; font-size: 13px; font-weight: bold; width: 30%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title10',
+                            'text' => 'પટેલ પરિવાર ના જય શ્રી કૃષ્ણ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 243; left: 175px; top: 668px; font-weight: bold; text-decoration: none; font-size: 18px;',
+                                'mobile' => 'z-index: 243; left: 175px; top: 668px; font-weight: bold; text-decoration: none; font-size: 18px;'
+                            ]),
+                        ],          
+                    ]
+                ]),
+                "seo_title" => "Funeral Card Maker - Create Custom Funeral Invitation Cards Online",
+                "seo_description" => "Design and personalize Funeral Cards online with our easy-to-use template. Create respectful and elegant funeral invitation cards to honor your loved ones.",
+                "seo_keywords" => "Funeral card, Funeral invitation card, Memorial card, Sympathy card, Obituary card, Funeral announcement card, Custom funeral card, Printable funeral invitation, Digital funeral card, Personalized memorial card",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         foreach ($cards as $index => $card) {
