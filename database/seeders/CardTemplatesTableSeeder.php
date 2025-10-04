@@ -2325,7 +2325,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'બેસણું',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 145; left: 251px; top: 50px; font-weight: bold; font-family: "Times New Roman", sans-serif; font-size: 30px; font-style: italic; text-decoration: underline;',
-                                'mobile' => 'z-index: 145; left: 251px; top: 50px; font-weight: bold; font-family: "Times New Roman", sans-serif; font-size: 30px; font-style: italic; text-decoration: underline;'
+                                'mobile' => 'z-index: 145; left: 33%; top: 50px; font-weight: bold; font-family: "Times New Roman", sans-serif; font-size: 30px; font-style: italic; text-decoration: underline;'
                             ]),
                         ],
                         [
@@ -2334,7 +2334,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'src' => '/images/greeting-cards/element/photoframe-1.png',
                             'css' => json_encode([
                                 'desktop' => 'position: absolute; top: 98px; left: 228px; width: 152px; height: 143px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 160;',
-                                'mobile' => 'position: absolute; top: 98px; left: 228px; width: 152px; height: 143px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 160;'
+                                'mobile' => 'position: absolute; top: 98px; left: 25%; width: 152px; height: 143px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 160;'
                             ]),
                         ],
                         [
@@ -2343,7 +2343,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'src' => '/images/greeting-cards/element/fakeman-1.png',
                             'css' => json_encode([
                                 'desktop' => 'position: absolute; top: 114px; left: 248px; width: 109px; height: 109px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 201;',
-                                'mobile' => 'position: absolute; top: 114px; left: 248px; width: 109px; height: 109px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 201;'
+                                'mobile' => 'position: absolute; top: 114px; left: 31%; width: 109px; height: 109px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 201;'
                             ]),
                         ],
                         [
@@ -2352,7 +2352,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'સ્વ. હીરાભાઈ  કાંતિલાલ પટેલ',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 246; left: 185px; top: 241px; font-weight: bold; font-size: 20px; color: rgb(64, 0, 0); font-family: Arial, sans-serif;',
-                                'mobile' => 'z-index: 246; left: 185px; top: 241px; font-weight: bold; font-size: 20px; color: rgb(64, 0, 0); font-family: Arial, sans-serif;'
+                                'mobile' => 'z-index: 246; left: 6%; top: 241px; font-weight: bold; font-size: 20px; color: rgb(64, 0, 0); font-family: Arial, sans-serif;'
                             ]),
                         ],
                         [
@@ -2363,7 +2363,7 @@ class CardTemplatesTableSeeder extends Seeder
                             અમારા દાદા હીરાભાઈ કાંતિલાલ પટેલ',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 1; left: 35%; top: 272px; text-align: center; font-size: 13px; font-weight: bold; font-family: Arial, sans-serif; width: 33%;',
-                                'mobile' => 'z-index: 1; left: 35%; top: 272px; text-align: center; font-size: 13px; font-weight: bold; font-family: Arial, sans-serif; width: 33%;'
+                                'mobile' => 'z-index: 1; left: -1%; top: 272px; text-align: center; font-size: 13px; font-weight: bold; font-family: Arial, sans-serif;'
                             ]),
                         ],
                         [
@@ -2373,7 +2373,7 @@ class CardTemplatesTableSeeder extends Seeder
                             ભગવાન એમના દિવ્ય આત્માને શાંતિ આપે એવી અમારી પ્રાર્થના.',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 6; left: 129px; top: 335px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 60%;',
-                                'mobile' => 'z-index: 6; left: 129px; top: 335px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 60%;'
+                                'mobile' => 'z-index: 6; left: 0%; top: 335px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif;'
                             ]),
                         ],
                         [
@@ -2382,7 +2382,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'બેસણું',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 236; left: 255px; top: 384px; font-weight: bold; text-decoration: underline;',
-                                'mobile' => 'z-index: 236; left: 255px; top: 384px; font-weight: bold; text-decoration: underline;'
+                                'mobile' => 'z-index: 236; left: 39%; top: 394px; font-weight: bold; text-decoration: underline;'
                             ]),
                         ],
                         [
@@ -2392,7 +2392,7 @@ class CardTemplatesTableSeeder extends Seeder
                             સાંજ ૪:૩૦ થી ૭:૦૦ સુધી રાખેલ છે.',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 2; left: 32%; top: 419px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 33%;',
-                                'mobile' => 'z-index: 2; left: 32%; top: 419px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 33%;'
+                                'mobile' => 'z-index: 2; left: 7%; top: 425px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif;'
                             ]),
                         ],
                         [
@@ -2401,7 +2401,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'બેસણાનું સ્થળ',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 238; left: 236px; top: 469px; font-weight: bold; font-size: 18px; text-decoration: underline;',
-                                'mobile' => 'z-index: 238; left: 236px; top: 469px; font-weight: bold; font-size: 18px; text-decoration: underline;'
+                                'mobile' => 'z-index: 238; left: 33%; top: 469px; font-weight: bold; font-size: 18px; text-decoration: underline;'
                             ]),
                         ],
                         [
@@ -2411,7 +2411,7 @@ class CardTemplatesTableSeeder extends Seeder
                             અંબાલિયાળ રોડ, રાજકોટ.',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 2; left: 177px; top: 503px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 43%;',
-                                'mobile' => 'z-index: 2; left: 177px; top: 503px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif; width: 43%;'
+                                'mobile' => 'z-index: 2; left: 13%; top: 503px; font-size: 13px; text-align: center; font-weight: bold; font-family: Arial, sans-serif;'
                             ]),
                         ],
                         [
@@ -2420,7 +2420,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'સ્નેહાધીન',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 252; left: 250px; top: 552px; font-size: 18px; font-weight: bold; text-decoration: underline;',
-                                'mobile' => 'z-index: 252; left: 250px; top: 552px; font-size: 18px; font-weight: bold; text-decoration: underline;'
+                                'mobile' => 'z-index: 252; left: 37%; top: 552px; font-size: 18px; font-weight: bold; text-decoration: underline;'
                             ]),
                         ],
                         [
@@ -2431,7 +2431,7 @@ class CardTemplatesTableSeeder extends Seeder
                             જગદીશકુમાર કાંતિલાલ પટેલ',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 253; left: 22%; top: 585px; font-size: 13px; font-weight: bold; width: 35%;',
-                                'mobile' => 'z-index: 253; left: 22%; top: 585px; font-size: 13px; font-weight: bold; width: 35%;'
+                                'mobile' => 'z-index: 253; left: 23%; top: 585px; font-size: 13px; font-weight: bold; width: 78%;'
                             ]),
                         ],
                         [
@@ -2442,7 +2442,7 @@ class CardTemplatesTableSeeder extends Seeder
                             પરિવારજન તથા સગાં-વ્હાલાં',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 254; left: 50%; top: 585px; font-size: 13px; font-weight: bold; width: 35%;',
-                                'mobile' => 'z-index: 254; left: 50%; top: 585px; font-size: 13px; font-weight: bold; width: 35%;'
+                                'mobile' => 'z-index: 254; left: 23%; top: 646px; font-size: 13px; font-weight: bold; width: 78%;'
                             ]),
                         ],
                         [
@@ -2451,7 +2451,7 @@ class CardTemplatesTableSeeder extends Seeder
                             'text' => 'પટેલ પરિવાર ના જય શ્રી કૃષ્ણ',
                             'css' => json_encode([
                                 'desktop' => 'z-index: 243; left: 175px; top: 668px; font-weight: bold; text-decoration: none; font-size: 18px;',
-                                'mobile' => 'z-index: 243; left: 175px; top: 668px; font-weight: bold; text-decoration: none; font-size: 18px;'
+                                'mobile' => 'z-index: 243; left: 8%; top: 711px; font-weight: bold; text-decoration: none; font-size: 18px;'
                             ]),
                         ],          
                     ]
