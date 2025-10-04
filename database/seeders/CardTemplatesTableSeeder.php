@@ -2471,6 +2471,133 @@ class CardTemplatesTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'title' => 'Funeral Photo Card',
+                'slug' => 'funeral-photo-card',
+                'thumbnail' => '/images/greeting-cards/funeral-photo-card-thumb.png',
+                'category' => 'Funeral Card, Business',
+                'description' => 'Funeral Card',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    "main-card-height" => "730",
+                    'bgImage' => "/images/greeting-cards/backgrounds/funeral-8.jpg",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/frame-5.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 0px; left: 0px; width: 598px; height: 728.5px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 1;',
+                                'mobile' => 'position: absolute; top: 0px; left: 0px; width: 100%; height: 728.5px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 1;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/photoframe-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 206px; left: 184px; width: 200px; height: 198px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 64;',
+                                'mobile' => 'position: absolute; top: 206px; left: 13%; width: 200px; height: 198px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 64;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
+                            'src' => '/images/greeting-cards/element/fakeman-1.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 211px; left: 208px; width: 167px; height: 150px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 65; border-radius: 50%;',
+                                'mobile' => 'position: absolute; top: 213px; left: 21%; width: 167px; height: 150px; border: 1px solid rgb(136, 136, 136); cursor: move; z-index: 65; border-radius: 50%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'Celebrating the life of',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 66; left: 179px; top: 128px; font-weight: bold; font-family: Georgia, sans-serif;',
+                                'mobile' => 'z-index: 1; left: 18%; top: 128px; font-weight: bold; font-family: Georgia, sans-serif; font-size: 15px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'james smith',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 69; left: 221px; top: 157px; font-weight: bold; font-family: Pacifico, sans-serif; font-size: 25px;',
+                                'mobile' => 'z-index: 69; left: 26%; top: 157px; font-weight: bold; font-family: Pacifico, sans-serif; font-size: 25px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => '(March 20, 1991 - March 2, 2023)',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 89; left: 166px; top: 405px; font-family: Merriweather, sans-serif; font-size: 15px; font-weight: bold;',
+                                'mobile' => 'z-index: 1; left: 16%; top: 405px; font-family: Merriweather, sans-serif; font-size: 12px; font-weight: bold;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img4',
+                            'src' => '/images/greeting-cards/element/separator-1.webp',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 391px; left: 187px; width: 200px; height: 120px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 88;',
+                                'mobile' => 'position: absolute; top: 391px; left: 20%; width: 200px; height: 120px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 88;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'Monday, Mar 10th 2024 | 10:00 AM',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 93; left: 162px; top: 461px; font-size: 15px; font-weight: bold;',
+                                'mobile' => 'z-index: 93; left: 16%; top: 461px; font-size: 12px; font-weight: bold;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img5',
+                            'src' => '/images/greeting-cards/element/separator-1.webp',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 463px; left: 187px; width: 200px; height: 89px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 108;',
+                                'mobile' => 'position: absolute; top: 463px; left: 20%; width: 200px; height: 89px; border: 1px rgb(0, 0, 0); cursor: move; z-index: 108;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => '47 V 12st, NY 1002, USA',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 132; left: 231px; top: 524px; font-family: Merriweather, sans-serif; font-size: 15px; text-align: center; font-weight: bold; width: 19%;',
+                                'mobile' => 'z-index: 1; left: 16%; top: 524px; font-family: Merriweather, sans-serif; font-size: 12px; text-align: center; font-weight: bold; width: 73%;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img5',
+                            'src' => '/images/greeting-cards/element/separator-1.webp',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; top: 557px; left: 186px; width: 200px; height: 67px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 6;',
+                                'mobile' => 'position: absolute; top: 557px; left: 20%; width: 200px; height: 67px; border: 0px solid rgb(0, 0, 0); cursor: move; z-index: 6;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'RSVP to John\'s at +123-111-111',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 1; left: 214px; top: 601px; text-align: center; font-weight: bold; font-size: 15px; width: 25%;',
+                                'mobile' => 'z-index: 1; left: 20%; top: 601px; text-align: center; font-weight: bold; font-size: 15px; width: 69%;'
+                            ]),
+                        ],                                                   
+                    ]
+                ]),
+                "seo_title" => "Funeral Card Maker - Create Custom Funeral Invitation Cards Online",
+                "seo_description" => "Design and personalize Funeral Cards online with our easy-to-use template. Create respectful and elegant funeral invitation cards to honor your loved ones.",
+                "seo_keywords" => "Funeral card, Funeral invitation card, Memorial card, Sympathy card, Obituary card, Funeral announcement card, Custom funeral card, Printable funeral invitation, Digital funeral card, Personalized memorial card",               
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         foreach ($cards as $index => $card) {
