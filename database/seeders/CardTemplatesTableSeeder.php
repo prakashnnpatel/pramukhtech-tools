@@ -2309,6 +2309,332 @@ class CardTemplatesTableSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
+                'title' => 'Gruh Pravesh',
+                'slug' => 'gruh-pravesh',
+                'thumbnail' => '/images/greeting-cards/gruh-pravesh-thumb.png',
+                'category' => 'Gruh Pravesh, Love, Wedding',
+                'description' => 'Invite your dear ones to bless your new home with our Sacred Home Entry Card, designed with traditional elegance for your Gruh Pravesh ceremony',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/border-12.jpg",
+                    "main-card-height" => "1064",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img0',
+                            'src' => '/images/greeting-cards/element/ganesh-6.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 96.734px; cursor: move; z-index: 3; left: 253px; top: 44px; border: 0px; width: 103.979px;',
+                                'mobile' => 'position: absolute; height: 96.734px; cursor: move; z-index: 3; left: 34%; top: 44px; border: 0px; width: 103.979px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'સહર્ષ ખુશાલી સાથે જણાવવાનું કે શ્રી ઉમિયા માતાજીની અસીમ કૃપા અને વડીલોના આશીર્વાદ થી અમારા નૂતન ઘરમાં',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 3; top: 212px; font-size: 18px; font-family: Georgia, sans-serif; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 1px; padding: 0px 50px;',
+                                'mobile' => 'z-index: 4;top: 155px;font-size: 16px;font-family: Georgia, sans-serif;color: rgb(180, 104, 4);width: 100%;text-align: center;letter-spacing: 0.9px;padding: 0px 1px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'વાસ્તુ પૂજન',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 7; top: 273px; font-size: 30px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: 7px; padding: 0px 131px;',
+                                'mobile' => 'z-index: 15; top: 248px; font-size: 30px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: 9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'સંવત ૨૦૮૧ મહા વદ સાતમ ને શુક્રવાર તા. ૨૧-૦૧-૨૦૨૬ ના રોજ રાખેલ છે, તો આ શુભ પ્રસંગે આપ સ્નેહીશ્રી ને પધારવા ભાવભર્યું આમંત્રણ છે.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 3; top: 323px; font-size: 18px; font-family: Georgia, sans-serif; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 33px; padding: 0px 50px;',
+                                'mobile' => 'index: 17;top: 315px;font-size: 16px;font-family: Georgia, sans-serif;color: rgb(180, 104, 4);width: 100%;text-align: center;letter-spacing: 0.9px;padding: 0px 10px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/separator-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 20px; cursor: move; z-index: 5; left: 203px; top: 414px; border: 1px none rgb(0, 0, 0);',
+                                'mobile' => 'position: absolute;height: 20px;cursor: move;z-index: 5;left: 15%;top: 418px;border: 1px none rgb(0, 0, 0);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'વાસ્તુ યજ્ઞ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 441px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: 1px; padding: 0px 131px;',
+                                'mobile' => 'z-index: 5; top: 441px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'તા ૨૧-૦૧-૨૦૨૬ સવારે ૯:૦૦ થી ૪:૧૫ કલાક સુધી',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 2; top: 479px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 5px;',
+                                'mobile' => 'z-index: 5; top: 479px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px;'
+                            ]),
+                        ],     
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/separator-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 20px; cursor: move; z-index: 4; left: 201px; top: 517px; border: 1px none rgb(0, 0, 0);',
+                                'mobile' => 'position: absolute; height: 20px; cursor: move; z-index: 25; left: 15%; top: 540px; border: 1px none rgb(0, 0, 0);'
+                            ]),
+                        ],            
+                        [
+                            'type' => 'text',
+                            'id' => 'title6',
+                            'text' => 'ભોજન સમારંભ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 540px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px; padding: 0px 131px;',
+                                'mobile' => 'z-index: 5; top: 560px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'સાંજે ૬:૦૦ કલાકે',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 28; top: 578px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;',
+                                'mobile' => 'z-index: 28; top: 597px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px;'
+                            ]),
+                        ], 
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => '૧૦૧, શ્રી હરિ બંગલૉ, VIP રોડ, અમદાવાદ, ગુજરાત',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 28; top: 610px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;',
+                                'mobile' => 'z-index: 28; top: 623px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px;'
+                            ]),
+                        ],  
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
+                            'src' => '/images/greeting-cards/element/separator-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 20px; cursor: move; z-index: 25; left: 200px; top: 650px; border: 1px none rgb(0, 0, 0);',
+                                'mobile' => 'position: absolute; height: 20px; cursor: move; z-index: 25; left: 15%; top: 700px; border: 1px none rgb(0, 0, 0);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title9',
+                            'text' => ' શુભેચ્છક',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 11;top: 680px;font-size: 22px;font-family: Georgia, sans-serif;font-weight: bold;color: rgb(185, 142, 72);width: 100%;text-align: center;letter-spacing: 0.9px;padding: 0px 131px;',
+                                'mobile' => 'z-index: 11;top: 720px;font-size: 22px;font-family: Georgia, sans-serif;font-weight: bold;color: rgb(185, 142, 72);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title10',
+                            'text' => 'શ્રી નવીનભાઈ મહેશભાઈ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 11; top: 715px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 5px;',
+                                'mobile' => 'z-index: 11; top: 753px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 5px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title11',
+                            'text' => 'શ્રીમતી મીરાબેન નવીનભાઈ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 9; top: 740px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 2px;',
+                                'mobile' => 'z-index: 9; top: 777px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 2px;'
+                            ]),
+                        ], 
+                        [
+                            'type' => 'text',
+                            'id' => 'title12',
+                            'text' => 'શ્રી કુશ નવીનભાઈ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 2; top: 763px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 8px;',
+                                'mobile' => 'z-index: 10; top: 800px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 8px;'
+                            ]),
+                        ], 
+                        [
+                            'type' => 'text',
+                            'id' => 'title13',
+                            'text' => 'મો.નં. +૯૧ ૯૮૧-XXX-XXX૧',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 2; top: 788px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: -1px;',
+                                'mobile' => 'z-index: 2; top: 840px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 8px;'
+                            ]),
+                        ], 
+                    ]
+                ]),
+                "seo_title" => "Sacred Home Entry Card | Elegant Gruh Pravesh Invitation Online",
+                "seo_description" => "Design a beautiful Sacred Home Entry Card to invite family and friends for your Gruh Pravesh ceremony. Customize with names, dates, and traditional motifs to share your joyous new beginning.",
+                "seo_keywords" => "Sacred Home Entry Card, Gruh Pravesh card, Griha Pravesh invitation, housewarming invitation card, home entry card online, traditional home entry invite, personalized Gruh Pravesh card",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Traditional Griha Pravesh',
+                'slug' => 'traditional-griha-pravesh',
+                'thumbnail' => '/images/greeting-cards/traditional-griha-pravesh-thumb.png',
+                'category' => 'Gruh Pravesh, Love, Wedding',
+                'description' => 'Celebrate your housewarming in the most authentic way with our Traditional Griha Pravesh Card, designed with cultural motifs and auspicious symbols to invite blessings and joy',
+                'template_data' => json_encode([
+                    'bgColor' => '',
+                    'bgImage' => "/images/greeting-cards/backgrounds/border-2.png",
+                    "main-card-height" => "800",
+                    'elements' => [
+                        [
+                            'type' => 'image',
+                            'id' => 'img0',
+                            'src' => '/images/greeting-cards/element/ganesh-5.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 80px; cursor: move; z-index: 2; left: 260px; top: 76px; border: 0px;',
+                                'mobile' => 'position: absolute; height: 60px; cursor: move; z-index: 3; left: 40%; top: 75px; border: 0px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title1',
+                            'text' => 'સહર્ષ ખુશાલી સાથે જણાવવાનું કે શ્રી ઉમિયા માતાજીની અસીમ કૃપા અને વડીલોના આશીર્વાદ થી અમારા નૂતન ઘરમાં',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 3; top: 150px; font-size: 18px; font-family: Georgia, sans-serif; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 1px; padding: 0px 50px;',
+                                'mobile' => 'z-index: 4;top: 130px;font-size: 16px;font-family: Georgia, sans-serif;color: rgb(180, 104, 4);width: 100%;text-align: center;letter-spacing: 0.9px;padding: 0px 1px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title2',
+                            'text' => 'વાસ્તુ પૂજન',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 7; top: 208px; font-size: 30px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: 7px; padding: 0px 131px;',
+                                'mobile' => 'z-index: 15; top: 220px; font-size: 28px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: 9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title3',
+                            'text' => 'સંવત ૨૦૮૧ મહા વદ સાતમ ને શુક્રવાર તા. ૨૧-૦૧-૨૦૨૬ ના રોજ રાખેલ છે, તો આ શુભ પ્રસંગે આપ સ્નેહીશ્રી ને પધારવા ભાવભર્યું આમંત્રણ છે.',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 3; top: 265px; font-size: 18px; font-family: Georgia, sans-serif; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; padding: 0px 50px;',
+                                'mobile' => 'index: 17;top: 270px;font-size: 16px;font-family: Georgia, sans-serif;color: rgb(180, 104, 4);width: 100%;text-align: center;letter-spacing: 0.9px;padding: 0px 10px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'image',
+                            'id' => 'img1',
+                            'src' => '/images/greeting-cards/element/separator-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 20px; cursor: move; z-index: 5; left: 203px; top: 350px; border: 1px none rgb(0, 0, 0);',
+                                'mobile' => 'position: absolute;height: 20px;cursor: move;z-index: 5;left: 15%;top: 360px;border: 1px none rgb(0, 0, 0);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title4',
+                            'text' => 'વાસ્તુ યજ્ઞ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 370px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: 1px; padding: 0px 131px;',
+                                'mobile' => 'z-index: 5; top: 369px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title5',
+                            'text' => 'તા ૨૧-૦૧-૨૦૨૬ સવારે ૯:૦૦ થી ૪:૧૫ કલાક સુધી',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 2; top: 400px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 5px;',
+                                'mobile' => 'z-index: 5; top: 400px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px;'
+                            ]),
+                        ],     
+                        [
+                            'type' => 'image',
+                            'id' => 'img2',
+                            'src' => '/images/greeting-cards/element/separator-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 20px; cursor: move; z-index: 4; left: 201px; top: 430px; border: 1px none rgb(0, 0, 0);',
+                                'mobile' => 'position: absolute; height: 20px; cursor: move; z-index: 4; left: 15%; top: 445px; border: 1px none rgb(0, 0, 0);'
+                            ]),
+                        ],            
+                        [
+                            'type' => 'text',
+                            'id' => 'title6',
+                            'text' => 'ભોજન સમારંભ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 5; top: 450px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px; left: 4px; padding: 0px 131px;',
+                                'mobile' => 'z-index: 5; top: 450px; font-size: 22px; font-family: Georgia, sans-serif; font-weight: bold; color: rgb(185, 142, 72); width: 100%; text-align: center; letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title7',
+                            'text' => 'સાંજે ૬:૦૦ કલાકે',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 28; top: 480px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;',
+                                'mobile' => 'z-index: 28; top: 480px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px;'
+                            ]),
+                        ], 
+                        [
+                            'type' => 'text',
+                            'id' => 'title8',
+                            'text' => '૧૦૧, શ્રી હરિ બંગલૉ, VIP રોડ, અમદાવાદ, ગુજરાત',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 28; top: 500px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: -3px;',
+                                'mobile' => 'z-index: 28; top: 500px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px;'
+                            ]),
+                        ],  
+                        [
+                            'type' => 'image',
+                            'id' => 'img3',
+                            'src' => '/images/greeting-cards/element/separator-2.png',
+                            'css' => json_encode([
+                                'desktop' => 'position: absolute; height: 20px; cursor: move; z-index: 25; left: 200px; top: 530px; border: 1px none rgb(0, 0, 0);',
+                                'mobile' => 'position: absolute; height: 20px; cursor: move; z-index: 25; left: 15%; top: 546px; border: 1px none rgb(0, 0, 0);'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title9',
+                            'text' => ' શુભેચ્છક',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 11;top: 550px;font-size: 22px;font-family: Georgia, sans-serif;font-weight: bold;color: rgb(185, 142, 72);width: 100%;text-align: center;letter-spacing: 0.9px;padding: 0px 131px;',
+                                'mobile' => 'z-index: 11;top: 560px;font-size: 22px;font-family: Georgia, sans-serif;font-weight: bold;color: rgb(185, 142, 72);width: 100%;text-align: center;letter-spacing: 0.9px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title10',
+                            'text' => 'શ્રી નવીનભાઈ મહેશભાઈ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 11; top: 575px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 5px;',
+                                'mobile' => 'z-index: 11; top: 585px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 5px;'
+                            ]),
+                        ],
+                        [
+                            'type' => 'text',
+                            'id' => 'title11',
+                            'text' => 'શ્રીમતી મીરાબેન નવીનભાઈ પટેલ',
+                            'css' => json_encode([
+                                'desktop' => 'z-index: 9; top: 600px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 2px;',
+                                'mobile' => 'z-index: 9; top: 610px; font-size: 16px; font-family: Lobster, sans-serif; font-weight: normal; color: rgb(180, 104, 4); width: 100%; text-align: center; letter-spacing: 0.9px; left: 2px;'
+                            ]),
+                        ],
+                    ]
+                ]),
+                "seo_title" => "Traditional Griha Pravesh Card | Authentic Housewarming Invitation",
+                "seo_description" => "Invite family and friends to your sacred housewarming with our Traditional Griha Pravesh Card. Designed with auspicious symbols and cultural elegance, perfect for sharing your new beginning.",
+                "seo_keywords" => "Traditional Griha Pravesh card, Griha Pravesh invitation, housewarming card online, authentic home entry card, traditional housewarming invitation, personalized griha pravesh invite, auspicious home entry card",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'title' => 'Funeral Card',
                 'slug' => 'funeral-card',
                 'thumbnail' => '/images/greeting-cards/funeral-thumb.png',
